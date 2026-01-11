@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Property Loans | Lehumo La Edishela - Loans Against Property</title>
+    <meta name="description" content="Get cash loans against your property, land, or real estate assets. Fast approvals, competitive rates, FSCA registered. Use your property without selling it.">
+    <meta name="keywords" content="property loans, real estate loans, land loans, property finance, South Africa property loans">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <!-- Template Custom CSS -->
+    <style>
+        :root {
+            --primary-blue: #1A365D;
+            --primary-red: #E63946;
+            --accent-teal: #2A9D8F;
+            --light-gray: #F8F9FA;
+            --dark-gray: #212529;
+            --text-color: #333333;
+            --border-color: #E0E0E0;
+        }
+
+        /* Header Enhancements */
+        .header {
+            background-color: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .sitename {
+            color: var(--primary-blue);
+            font-weight: 800;
+            font-size: 1.8rem;
+        }
+
+        .navmenu a {
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .btn-getstarted {
+            background: linear-gradient(135deg, var(--primary-red) 0%, #c53030 100%);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            font-size: 0.95rem;
+            letter-spacing: 0.3px;
+        }
+
+            .btn-getstarted:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 10px 20px rgba(230, 57, 70, 0.2);
+                color: white;
+            }
+
+        .btn-primary {
+            background-color: var(--primary-red);
+            border-color: var(--primary-red);
+            padding: 0.875rem 2rem;
+            font-weight: 600;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+            .btn-primary:hover {
+                background-color: #c53030;
+                border-color: #c53030;
+                transform: translateY(-2px);
+                box-shadow: 0 10px 20px rgba(230, 57, 70, 0.2);
+            }
+
+        .btn-outline-primary {
+            color: var(--primary-red);
+            border-color: var(--primary-red);
+            padding: 0.875rem 2rem;
+            font-weight: 600;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+            .btn-outline-primary:hover {
+                background-color: var(--primary-red);
+                color: white;
+                border-color: var(--primary-red);
+                transform: translateY(-2px);
+            }
+
+        /* Page Title */
+        .page-title {
+            background: linear-gradient(rgba(26, 54, 93, 0.85), rgba(26, 54, 93, 0.9)), url('assets/img/property-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 120px 0 60px;
+            position: relative;
+        }
+
+            .page-title h1 {
+                color: white;
+                font-size: 3rem;
+                font-weight: 800;
+                margin-bottom: 1rem;
+            }
+
+        /* Loan Cards */
+        .loan-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            height: 100%;
+            border: 1px solid var(--border-color);
+            margin-bottom: 2rem;
+        }
+
+            .loan-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+                border-color: var(--primary-red);
+            }
+
+        .loan-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+            .loan-image img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.3s ease;
+            }
+
+        .loan-card:hover .loan-image img {
+            transform: scale(1.05);
+        }
+
+        .loan-content {
+            padding: 2rem;
+        }
+
+        .loan-badge {
+            display: inline-block;
+            background: var(--primary-red);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        /* Feature Cards */
+        .feature-card {
+            border-radius: 12px;
+            padding: 2rem;
+            height: 100%;
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+            background: white;
+            text-align: center;
+        }
+
+            .feature-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+                border-color: var(--primary-red);
+            }
+
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary-red) 0%, #c53030 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: white;
+            font-size: 1.8rem;
+        }
+
+        /* Process Steps */
+        .process-step {
+            text-align: center;
+            padding: 1.5rem;
+            position: relative;
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary-red) 0%, #c53030 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin: 0 auto 1rem;
+            box-shadow: 0 5px 15px rgba(230, 57, 70, 0.2);
+        }
+
+        /* Documents Section */
+        .documents-section {
+            background: var(--light-gray);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .document-item {
+            display: flex;
+            align-items: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+            .document-item:last-child {
+                border-bottom: none;
+            }
+
+        .document-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            flex-shrink: 0;
+            color: white;
+        }
+
+        /* CTA Banner */
+        .cta-banner {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-teal) 100%);
+            border-radius: 16px;
+            padding: 3rem;
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            margin-top: 3rem;
+        }
+
+        .cta-content h3 {
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Eligibility Section */
+        .eligibility-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .eligibility-item {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            border-left: 4px solid var(--primary-red);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Property Value Badge */
+        .value-badge {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(42, 157, 143, 0.1);
+            color: var(--accent-teal);
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+            font-weight: 600;
+            margin: 0.5rem 0;
+        }
+
+            .value-badge i {
+                margin-right: 0.5rem;
+            }
+
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .page-title h1 {
+                font-size: 2.5rem;
+            }
+
+            .btn-getstarted {
+                padding: 0.6rem 1.2rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .page-title h1 {
+                font-size: 2rem;
+            }
+
+            .page-title {
+                padding: 100px 0 40px;
+            }
+
+            .cta-banner {
+                padding: 2rem;
+            }
+
+            .cta-content h3 {
+                font-size: 1.75rem;
+            }
+
+            .loan-card {
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .eligibility-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body class="property-loans-page">
+
+    <header id="header" class="header d-flex align-items-center fixed-top">
+        <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+            <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+                <h1 class="sitename">LEHUMO LA EDISHELA</h1>
+            </a>
+
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="active"><span>Asset Loans</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="vehicle-loans.html">Vehicle Loans</a></li>
+                            <li><a href="luxury-loans.html">Luxury Assets</a></li>
+                            <li><a href="propertyloans.html" class="active">Property Loans</a></li>
+                            <li><a href="equipmentfinance.html">Equipment Finance</a></li>
+                            <li><a href="artcollectibles.html">Art & Collectibles</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#"><span>Commercial Fleet</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="fleetfinancing.html">Fleet Financing</a></li>
+                            <li><a href="vehiclesourcing.html">Vehicle Sourcing</a></li>
+                            <li><a href="truckloans.html">Truck & Trailer Loans</a></li>
+                            <li><a href="maintenance.html">Maintenance Packages</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#"><span>Bridging Finance</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="property-bridging.html">Property Bridging</a></li>
+                            <li><a href="auction-finance.html">Auction Finance</a></li>
+                            <li><a href="renovation-loans.html">Renovation Finance</a></li>
+                            <li><a href="development-finance.html">Development Finance</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#"><span>FAQ</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="faq-general.html">General Questions</a></li>
+                            <li><a href="faq-application.html">Application Process</a></li>
+                            <li><a href="faq-interest-rates.html">Interest & Rates</a></li>
+                            <li><a href="faq-asset-requirements.html">Asset Requirements</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#"><span>How To Apply</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="apply-requirements.html">Requirements</a></li>
+                            <li><a href="apply-documentation.html">Documentation</a></li>
+                            <li><a href="apply-process.html">Process Steps</a></li>
+                            <li><a href="apply-timeline.html">Timeline</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+
+            <a class="btn-getstarted" href="apply.html">Apply Now</a>
+
+        </div>
+    </header>
+
+    <main class="main">
+
+        <!-- Page Title -->
+        <div class="page-title dark-background" data-aos="fade">
+            <div class="container position-relative">
+                <h1>Property Loans</h1>
+                <p>Get cash against your property or land. Use your real estate assets to access funds without selling. Fast approvals, competitive rates.</p>
+                <nav class="breadcrumbs">
+                    <ol>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="propertyloans.html">Asset Loans</a></li>
+                        <li class="current">Property Loans</li>
+                    </ol>
+                </nav>
+            </div>
+        </div><!-- End Page Title -->
+        <!-- Property Loans Section -->
+        <section id="property-loans" class="property-loans section">
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="row mb-5">
+                    <div class="col-lg-8 mx-auto text-center">
+                        <h2>Unlock Cash From Your Property</h2>
+                        <p class="mb-4">Use your residential or commercial property as security for a loan. Keep your property while accessing the funds you need for investments, renovations, or other opportunities.</p>
+                        <div class="value-badge">
+                            <i class="bi bi-house-check"></i>
+                            <span>Up to 70% of Property Value</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Loans Against Property -->
+                <div class="row mb-5">
+                    <div class="col-lg-12">
+                        <h3 class="mb-4" style="color: var(--primary-blue);">Loans Against Property</h3>
+                        <p class="mb-4">We provide loans against various types of property. Whether you own a house, commercial building, or vacant land, we can help you unlock its value.</p>
+                    </div>
+                </div>
+
+                <div class="row g-4 mb-5">
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="loan-card">
+                            <div class="loan-image">
+                                <img src="assets/img/property/residential-loan.jpg" alt="Residential Property Loans" loading="lazy">
+                            </div>
+                            <div class="loan-content">
+                                <span class="loan-badge">Most Common</span>
+                                <h4>Residential Property</h4>
+                                <p>Use your house, townhouse, or apartment as security for a loan. Keep living in your home while accessing funds.</p>
+                                <ul class="list-unstyled mb-3">
+                                    <li><i class="bi bi-check-circle text-success me-2"></i> Freehold and sectional title</li>
+                                    <li><i class="bi bi-check-circle text-success me-2"></i> Up to 70% of market value</li>
+                                    <li><i class="bi bi-check-circle text-success me-2"></i> Continue living in property</li>
+                                </ul>
+                                <div class="loan-details">
+                                    <div class="detail-item">
+                                        <strong>Loan Amount:</strong> R200,000 - R20,000,000
+                                    </div>
+                                    <div class="detail-item">
+                                        <strong>Term:</strong> 6 - 60 months
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                        <div class="loan-card">
+                            <div class="loan-image">
+                                <img src="assets/img/property/commercial-loan.jpg" alt="Commercial Property Loans" loading="lazy">
+                            </div>
+                            <div class="loan-content">
+                                <span class="loan-badge">Business Focused</span>
+                                <h4>Commercial Property</h4>
+                                <p>Loans against office buildings, retail spaces, warehouses, and industrial properties. Ideal for business expansion.</p>
+                                <ul class="list-unstyled mb-3">
+                                    <li><i class="bi bi-check-circle text-success me-2"></i> Office and retail spaces</li>
+                                    <li><i class="bi bi-check-circle text-success me-2"></i> Industrial and warehouse</li>
+                                    <li><i class="bi bi-check-circle text-success me-2"></i> Continue business operations</li>
+                                </ul>
+                                <div class="loan-details">
+                                    <div class="detail-item">
+                                        <strong>Loan Amount:</strong> R500,000 - R50,000,000
+                                    </div>
+                                    <div class="detail-item">
+                                        <strong>Term:</strong> 12 - 120 months
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                        <div class="loan-card">
+                            <div class="loan-image">
+                                <img src="assets/img/property/land-loan.jpg" alt="Land & Vacant Property Loans" loading="lazy">
+                            </div>
+                            <div class="loan-content">
+                                <span class="loan-badge">Development Focus</span>
+                                <h4>Land & Vacant Property</h4>
+                                <p>Use vacant land or undeveloped property as security. Perfect for development funding or holding costs.</p>
+                                <ul class="list-unstyled mb-3">
+                                    <li><i class="bi bi-check-circle text-success me-2"></i> Residential and commercial land</li>
+                                    <li><i class="bi bi-check-circle text-success me-2"></i> Agricultural land accepted</li>
+                                    <li><i class="bi bi-check-circle text-success me-2"></i> Development potential considered</li>
+                                </ul>
+                                <div class="loan-details">
+                                    <div class="detail-item">
+                                        <strong>Loan Amount:</strong> R100,000 - R10,000,000
+                                    </div>
+                                    <div class="detail-item">
+                                        <strong>Term:</strong> 6 - 36 months
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Property Requirements -->
+                <div class="row mb-5">
+                    <div class="col-lg-12">
+                        <h4 class="mb-3">Property Eligibility Criteria</h4>
+                        <div class="eligibility-grid">
+                            <div class="eligibility-item" data-aos="fade-up" data-aos-delay="200">
+                                <h5><i class="bi bi-check-circle-fill text-success me-2"></i> Clear Title</h5>
+                                <p class="mb-0">Property must be free of any bonds or legal encumbrances, or have sufficient equity.</p>
+                            </div>
+                            <div class="eligibility-item" data-aos="fade-up" data-aos-delay="250">
+                                <h5><i class="bi bi-check-circle-fill text-success me-2"></i> Market Value</h5>
+                                <p class="mb-0">Recent professional valuation or municipal valuation required.</p>
+                            </div>
+                            <div class="eligibility-item" data-aos="fade-up" data-aos-delay="300">
+                                <h5><i class="bi bi-check-circle-fill text-success me-2"></i> Location</h5>
+                                <p class="mb-0">Properties in established areas with good market demand preferred.</p>
+                            </div>
+                            <div class="eligibility-item" data-aos="fade-up" data-aos-delay="350">
+                                <h5><i class="bi bi-check-circle-fill text-success me-2"></i> Condition</h5>
+                                <p class="mb-0">Properties must be in reasonable condition and meet basic safety standards.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Loans Against Property Documents -->
+                <div class="row mb-5">
+                    <div class="col-lg-12">
+                        <h3 class="mb-4" style="color: var(--primary-blue);">Property Documentation Requirements</h3>
+                        <p class="mb-4">Proper documentation is essential for property loans. We guide you through the process and help gather all necessary paperwork.</p>
+                    </div>
+                </div>
+
+                <div class="documents-section" data-aos="fade-up" data-aos-delay="200">
+                    <h4 class="mb-4">Required Property Documents</h4>
+
+                    <div class="document-item">
+                        <div class="document-icon">
+                            <i class="bi bi-file-earmark-text"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">Title Deed</h5>
+                            <p class="mb-0">Original title deed showing clear ownership and property registration details.</p>
+                        </div>
+                    </div>
+
+                    <div class="document-item">
+                        <div class="document-icon">
+                            <i class="bi bi-building"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">Rates & Taxes Certificate</h5>
+                            <p class="mb-0">Municipal rates and taxes clearance certificate (not older than 3 months).</p>
+                        </div>
+                    </div>
+
+                    <div class="document-item">
+                        <div class="document-icon">
+                            <i class="bi bi-graph-up"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">Valuation Report</h5>
+                            <p class="mb-0">Professional property valuation report from a registered valuer.</p>
+                        </div>
+                    </div>
+
+                    <div class="document-item">
+                        <div class="document-icon">
+                            <i class="bi bi-person-badge"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">Owner Identification</h5>
+                            <p class="mb-0">Valid SA ID/passport and proof of residence for all property owners.</p>
+                        </div>
+                    </div>
+
+                    <div class="document-item">
+                        <div class="document-icon">
+                            <i class="bi bi-receipt"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">Bond Statements</h5>
+                            <p class="mb-0">Latest bond statements if there's existing financing on the property.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Key Benefits -->
+                <div class="row mb-5">
+                    <div class="col-lg-12">
+                        <h3 class="mb-4 text-center" style="color: var(--primary-blue);">Benefits of Property Loans</h3>
+                        <div class="row g-4">
+                            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                                <div class="feature-card">
+                                    <div class="feature-icon">
+                                        <i class="bi bi-house"></i>
+                                    </div>
+                                    <h4>Keep Your Property</h4>
+                                    <p>Continue using and living in your property while accessing the cash you need.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                                <div class="feature-card">
+                                    <div class="feature-icon">
+                                        <i class="bi bi-cash-stack"></i>
+                                    </div>
+                                    <h4>Higher Loan Amounts</h4>
+                                    <p>Property values typically allow for larger loan amounts than other asset types.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                                <div class="feature-card">
+                                    <div class="feature-icon">
+                                        <i class="bi bi-clock-history"></i>
+                                    </div>
+                                    <h4>Longer Terms</h4>
+                                    <p>Property loans often come with longer repayment terms compared to other asset loans.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- How It Works -->
+                <div class="row mb-5">
+                    <div class="col-lg-12">
+                        <h3 class="mb-4 text-center" style="color: var(--primary-blue);">Property Loan Process</h3>
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                                <div class="process-step">
+                                    <div class="step-number">1</div>
+                                    <h4>Initial Assessment</h4>
+                                    <p>Submit basic property details for preliminary assessment and loan indication.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                                <div class="process-step">
+                                    <div class="step-number">2</div>
+                                    <h4>Property Valuation</h4>
+                                    <p>Professional valuation conducted by registered property valuers.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                                <div class="process-step">
+                                    <div class="step-number">3</div>
+                                    <h4>Document Verification</h4>
+                                    <p>Verification of all property documents and ownership details.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                                <div class="process-step">
+                                    <div class="step-number">4</div>
+                                    <h4>Registration & Payment</h4>
+                                    <p>Bond registration at Deeds Office and funds disbursement.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA Section -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="cta-banner" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="cta-content">
+                                <h3>Ready to Access Cash From Your Property?</h3>
+                                <p class="mb-4">Contact us for a free property assessment and loan quotation.</p>
+                                <div class="cta-buttons">
+                                    <a href="apply.html" class="btn btn-primary me-3">Apply Now</a>
+                                    <a href="tel:0861000534" class="btn btn-outline-primary">Call 0861 000 534</a>
+                                </div>
+                                <p class="mt-3 small">
+                                    <i class="bi bi-info-circle me-1"></i> FSCA Registered • Professional Valuations • Transparent Process
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section><!-- /Property Loans Section -->
+
+    </main>
+
+    <footer id="footer" class="footer position-relative dark-background">
+        <div class="container footer-top">
+            <div class="row gy-4">
+                <div class="col-lg-4 col-md-6 footer-about">
+                    <a href="index.html" class="d-flex align-items-center mb-3" style="text-decoration: none;">
+                        <h1 class="sitename">LEHUMO LA EDISHELA</h1>
+                    </a>
+                    <div class="footer-contact">
+                        <p class="mb-3">Your trusted partner for asset-backed loans. Fast approvals, great rates, and FSCA registered for your peace of mind.</p>
+                        <p class="mb-2"><strong>Need to talk to us?</strong></p>
+                        <p class="mb-2"><i class="bi bi-telephone me-2"></i> 0861 000 534</p>
+                        <p class="mb-3"><i class="bi bi-envelope me-2"></i> info@lehumo.co.za</p>
+                        <p><i class="bi bi-shield-check me-2"></i> FSCA Registered</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 footer-links">
+                    <h4 class="mb-3">Quick Links</h4>
+                    <ul>
+                        <li><i class="bi bi-chevron-right"></i> <a href="index.html">Home</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="about.html">About Us</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="contact.html">Contact Us</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="apply.html">Apply Now</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="faq.html">FAQ & Help</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-3 footer-links">
+                    <h4 class="mb-3">Our Services</h4>
+                    <ul>
+                        <li><i class="bi bi-chevron-right"></i> <a href="vehicleloans.html">Vehicle Loans</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="luxuryassets.html">Luxury Asset Loans</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="propertyloans.html">Property Loans</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="equipmentfinance.html">Equipment Finance</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="artcollectibles.html">Art & Collectibles</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-12">
+                    <h4 class="mb-3">Contact Details</h4>
+                    <div class="contact-info mb-3">
+                        <p><i class="bi bi-geo-alt me-2"></i> Sandton, Johannesburg</p>
+                        <p><i class="bi bi-clock me-2"></i> Mon-Fri: 8am-6pm | Sat: 9am-1pm</p>
+                        <p><i class="bi bi-building me-2"></i> Nationwide Service</p>
+                    </div>
+                    <div class="social-links d-flex mt-4">
+                        <a href="#" class="me-3"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="me-3"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="me-3"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container copyright text-center mt-4 pt-4 border-top border-secondary">
+            <p class="mb-2">© 2023 Lehumo La Edishela Financial Services. All rights reserved.</p>
+            <div class="credits">
+                <a href="privacy.html" class="me-3">Privacy Policy</a> |
+                <a href="terms.html" class="mx-3">Terms of Service</a> |
+                <a href="complaints.html" class="ms-3">Complaints Procedure</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

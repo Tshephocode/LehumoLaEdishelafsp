@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Fleet Financing | Lehumo La Edishela - Complete Fleet Management Solutions</title>
+    <meta name="description" content="Complete fleet financing solutions including operational leases, hire purchase, and fleet management services for businesses across South Africa.">
+    <meta name="keywords" content="fleet financing, operational leasing, hire purchase, fleet management, South Africa fleet finance">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <!-- Template Custom CSS -->
+    <style>
+        :root {
+            --primary-blue: #1A365D;
+            --primary-red: #E63946;
+            --accent-teal: #2A9D8F;
+            --light-gray: #F8F9FA;
+            --dark-gray: #212529;
+            --text-color: #333333;
+            --border-color: #E0E0E0;
+        }
+
+        /* Header Enhancements */
+        .header {
+            background-color: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .sitename {
+            color: var(--primary-blue);
+            font-weight: 800;
+            font-size: 1.8rem;
+        }
+
+        .navmenu a {
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .btn-getstarted {
+            background: linear-gradient(135deg, var(--primary-red) 0%, #c53030 100%);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            font-size: 0.95rem;
+            letter-spacing: 0.3px;
+        }
+
+            .btn-getstarted:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 10px 20px rgba(230, 57, 70, 0.2);
+                color: white;
+            }
+
+        .btn-primary {
+            background-color: var(--primary-red);
+            border-color: var(--primary-red);
+            padding: 0.875rem 2rem;
+            font-weight: 600;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+            .btn-primary:hover {
+                background-color: #c53030;
+                border-color: #c53030;
+                transform: translateY(-2px);
+                box-shadow: 0 10px 20px rgba(230, 57, 70, 0.2);
+            }
+
+        .btn-outline-primary {
+            color: var(--primary-red);
+            border-color: var(--primary-red);
+            padding: 0.875rem 2rem;
+            font-weight: 600;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+            .btn-outline-primary:hover {
+                background-color: var(--primary-red);
+                color: white;
+                border-color: var(--primary-red);
+                transform: translateY(-2px);
+            }
+
+        /* Page Title */
+        .page-title {
+            background: linear-gradient(rgba(26, 54, 93, 0.85), rgba(26, 54, 93, 0.9)), url('https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 120px 0 60px;
+            position: relative;
+        }
+
+            .page-title h1 {
+                color: white;
+                font-size: 3rem;
+                font-weight: 800;
+                margin-bottom: 1rem;
+            }
+
+        /* Financing Cards */
+        .financing-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            height: 100%;
+            border: 1px solid var(--border-color);
+            margin-bottom: 2rem;
+        }
+
+            .financing-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+                border-color: var(--primary-red);
+            }
+
+        .financing-header {
+            padding: 2rem;
+            text-align: center;
+            background: var(--primary-blue);
+            color: white;
+        }
+
+        .financing-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent-teal);
+        }
+
+        .financing-content {
+            padding: 2rem;
+        }
+
+        .financing-badge {
+            display: inline-block;
+            background: var(--primary-red);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        /* Feature Cards */
+        .feature-card {
+            border-radius: 12px;
+            padding: 2rem;
+            height: 100%;
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+            background: white;
+            text-align: center;
+        }
+
+            .feature-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+                border-color: var(--primary-red);
+            }
+
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary-red) 0%, #c53030 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: white;
+            font-size: 1.8rem;
+        }
+
+        /* Process Steps */
+        .process-step {
+            text-align: center;
+            padding: 1.5rem;
+            position: relative;
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary-red) 0%, #c53030 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin: 0 auto 1rem;
+            box-shadow: 0 5px 15px rgba(230, 57, 70, 0.2);
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            margin: 3rem 0;
+        }
+
+        .comparison-header {
+            background: var(--primary-blue);
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .comparison-row {
+            display: flex;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+            .comparison-row:last-child {
+                border-bottom: none;
+            }
+
+        .comparison-feature {
+            flex: 1;
+            padding: 1rem;
+            border-right: 1px solid var(--border-color);
+            font-weight: 500;
+        }
+
+            .comparison-feature:last-child {
+                border-right: none;
+            }
+
+        .comparison-option {
+            flex: 1;
+            padding: 1rem;
+            text-align: center;
+            border-right: 1px solid var(--border-color);
+        }
+
+            .comparison-option:last-child {
+                border-right: none;
+            }
+
+        .comparison-check {
+            color: var(--accent-teal);
+            font-weight: bold;
+        }
+
+        .comparison-cross {
+            color: var(--primary-red);
+            font-weight: bold;
+        }
+
+        /* Fleet Badge */
+        .fleet-badge {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(26, 54, 93, 0.1);
+            color: var(--primary-blue);
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+            font-weight: 600;
+            margin: 0.5rem 0;
+        }
+
+            .fleet-badge i {
+                margin-right: 0.5rem;
+            }
+
+        /* Financing Types */
+        .financing-types {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .financing-item {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+            .financing-item:hover {
+                border-color: var(--primary-red);
+                transform: translateY(-3px);
+            }
+
+        .financing-item-icon {
+            font-size: 1.8rem;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+        }
+
+        /* Page Indicator */
+        .page-indicator {
+            display: flex;
+            justify-content: center;
+            margin: 2rem 0 3rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .indicator-item {
+            padding: 0.75rem 1.5rem;
+            background: white;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            color: var(--text-color);
+            border: 2px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+            .indicator-item:hover, .indicator-item.active {
+                background: var(--primary-blue);
+                color: white;
+                border-color: var(--primary-blue);
+            }
+
+        /* CTA Banner */
+        .cta-banner {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-teal) 100%);
+            border-radius: 16px;
+            padding: 3rem;
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            margin-top: 3rem;
+        }
+
+        .cta-content h3 {
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Benefits Grid */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .benefit-item {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            border-left: 4px solid var(--primary-red);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Calculator Section */
+        .calculator-section {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            border: 1px solid var(--border-color);
+            margin: 3rem 0;
+        }
+
+        .calculator-result {
+            background: var(--light-gray);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+            border-left: 4px solid var(--accent-teal);
+            display: none;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .page-title h1 {
+                font-size: 2.5rem;
+            }
+
+            .btn-getstarted {
+                padding: 0.6rem 1.2rem;
+                font-size: 0.9rem;
+            }
+
+            .financing-types {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .comparison-row {
+                flex-direction: column;
+            }
+
+            .comparison-feature, .comparison-option {
+                border-right: none;
+                border-bottom: 1px solid var(--border-color);
+            }
+
+                .comparison-feature:last-child, .comparison-option:last-child {
+                    border-bottom: none;
+                }
+        }
+
+        @media (max-width: 768px) {
+            .page-title h1 {
+                font-size: 2rem;
+            }
+
+            .page-title {
+                padding: 100px 0 40px;
+            }
+
+            .cta-banner {
+                padding: 2rem;
+            }
+
+            .cta-content h3 {
+                font-size: 1.75rem;
+            }
+
+            .financing-card {
+                margin-bottom: 1.5rem;
+            }
+
+            .financing-types {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .page-indicator {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .indicator-item {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 0.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body class="fleet-financing-page">
+
+    <header id="header" class="header d-flex align-items-center fixed-top">
+        <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+            <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+                <h1 class="sitename">LEHUMO LA EDISHELA</h1>
+            </a>
+
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li class="dropdown">
+                        <a href="#"><span>Asset Loans</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="vehicle-loans.html">Vehicle Loans</a></li>
+                            <li><a href="luxury-loans.html">Luxury Assets</a></li>
+                            <li><a href="propertyloans.html">Property Loans</a></li>
+                            <li><a href="equipmentfinance.html">Equipment Finance</a></li>
+                            <li><a href="artcollectibles.html">Art & Collectibles</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="index.html" class="active"><span>Commercial Fleet</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="vehiclesourcing.html">Vehicle Sourcing</a></li>
+                            <li><a href="truckloans.html">Truck & Trailer Loans</a></li>
+                            <li><a href="maintenance.html">Maintenance Packages</a></li>
+                            <li><a href="fleetfinancing.html" class="active">Fleet Financing</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#"><span>Bridging Finance</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="property-bridging.html">Property Bridging</a></li>
+                            <li><a href="auction-finance.html">Auction Finance</a></li>
+                            <li><a href="renovation-loans.html">Renovation Finance</a></li>
+                            <li><a href="development-finance.html">Development Finance</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#"><span>FAQ</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="faq-general.html">General Questions</a></li>
+                            <li><a href="faq-application.html">Application Process</a></li>
+                            <li><a href="faq-interest-rates.html">Interest & Rates</a></li>
+                            <li><a href="faq-asset-requirements.html">Asset Requirements</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#"><span>How To Apply</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="apply-requirements.html">Requirements</a></li>
+                            <li><a href="apply-documentation.html">Documentation</a></li>
+                            <li><a href="apply-process.html">Process Steps</a></li>
+                            <li><a href="apply-timeline.html">Timeline</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+
+            <a class="btn-getstarted" href="apply.html">Apply Now</a>
+
+        </div>
+    </header>
+
+    <main class="main">
+
+        <!-- Page Title -->
+        <div class="page-title dark-background" data-aos="fade">
+            <div class="container position-relative">
+                <h1>Fleet Financing</h1>
+                <p>Complete fleet financing solutions including operational leases, hire purchase, and comprehensive fleet management services for businesses of all sizes.</p>
+                <nav class="breadcrumbs">
+                    <ol>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="commercialfleet.html">Commercial Fleet</a></li>
+                        <li class="current">Fleet Financing</li>
+                    </ol>
+                </nav>
+            </div>
+        </div><!-- End Page Title -->
+        <!-- Page Indicator -->
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+            <div class="page-indicator">
+                <a href="fleetfinancing.html" class="indicator-item">Vehicle Sourcing</a>
+                <a href="truck-trailor-loans.html" class="indicator-item">Truck & Trailer Loans</a>
+                <a href="maintenance-packages.html" class="indicator-item">Maintenance Packages</a>
+                <a href="fleet-financing.html" class="indicator-item active">Fleet Financing</a>
+            </div>
+        </div>
+
+        <!-- Fleet Financing Section -->
+        <section id="fleet-financing" class="fleet-financing section">
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="row mb-5">
+                    <div class="col-lg-8 mx-auto text-center">
+                        <h2>Complete Fleet Management Solutions</h2>
+                        <p class="mb-4">Our comprehensive fleet financing solutions go beyond traditional loans to provide complete fleet management services. We help businesses optimize their fleet operations, reduce costs, and improve efficiency through tailored financing and management solutions.</p>
+                        <div class="fleet-badge">
+                            <i class="bi bi-gear"></i>
+                            <span>End-to-End Fleet Management</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Financing Types -->
+                <div class="row mb-5">
+                    <div class="col-lg-12">
+                        <h4 class="mb-4 text-center">Our Fleet Financing Options</h4>
+                        <div class="financing-types">
+                            <div class="financing-item" data-aos="fade-up" data-aos-delay="200">
+                                <div class="financing-item-icon">
+                                    <i class="bi bi-cash-coin"></i>
+                                </div>
+                                <h5>Operational Lease</h5>
+                                <p class="small mb-0">Fixed monthly payments, vehicle maintenance included, return vehicle at end of term</p>
+                            </div>
+                            <div class="financing-item" data-aos="fade-up" data-aos-delay="250">
+                                <div class="financing-item-icon">
+                                    <i class="bi bi-credit-card"></i>
+                                </div>
+                                <h5>Hire Purchase</h5>
+                                <p class="small mb-0">Own the vehicle after final payment, fixed interest rates, flexible terms</p>
+                            </div>
+                            <div class="financing-item" data-aos="fade-up" data-aos-delay="300">
+                                <div class="financing-item-icon">
+                                    <i class="bi bi-truck"></i>
+                                </div>
+                                <h5>Finance Lease</h5>
+                                <p class="small mb-0">Asset on balance sheet, tax benefits, balloon payment options</p>
+                            </div>
+                            <div class="financing-item" data-aos="fade-up" data-aos-delay="350">
+                                <div class="financing-item-icon">
+                                    <i class="bi bi-clipboard-data"></i>
+                                </div>
+                                <h5>Fleet Management</h5>
+                                <p class="small mb-0">Complete fleet administration, reporting, compliance, and optimization</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Financing Solutions -->
+                <div class="row mb-5">
+                    <div class="col-lg-12">
+                        <h3 class="mb-4" style="color: var(--primary-blue);">Comprehensive Fleet Solutions</h3>
+                        <p class="mb-4">Choose from our range of fleet financing solutions designed to meet the specific needs of your business, from small startups to large enterprises.</p>
+                    </div>
+                </div>
+
+                <div class="row g-4 mb-5">
+                    <!-- Operational Lease -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="financing-card">
+                            <div class="financing-header">
+                                <div class="financing-icon">
+                                    <i class="bi bi-cash-coin"></i>
+                                </div>
+                                <h4>Operational Lease</h4>
+                                <p>All-inclusive monthly payments</p>
+                            </div>
+                            <div class="financing-content">
+                                <span class="financing-badge">No Ownership</span>
+                                <p>Perfect for businesses that want predictable costs and no long-term commitment to vehicle ownership.</p>
+                                <ul class="list-unstyled mb-3">
+                                    <li><i class="bi bi-check-circle text-success me-2"></i> Fixed monthly payments</li>
+                                    <li><i class="bi bi-check-circle text-success me-2"></i> Maintenance and repairs included</li>
+                                    <li><i class="bi bi-check-circle text-success me-2"></i> Road tax and licensing included</li>
+                                    <li><i class="bi bi-check-circle text-success me-2"></i> Vehicle replacement options</li>
+                                    <li><i class="bi bi-check-circle text-success me-2"></i> Off-balance sheet financing</li>
+                                </ul>
+                                <div class="financing-details">
+                                    <div class="detail-item">
+                                        <strong>Ideal For:</strong> Businesses that regularly update their fleet
+                                    </div>
+                                    <div class="detail-item">
+                                        <strong>Term:</strong> 24-60 months
+                                    </div>
+                                </div>
+                                <div class="text-center mt-4">
+                                    <a href="apply.html" class="btn btn-primary w-100">Get Quote</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hire Purchase -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                        <div class="financing-card">
+                            <div class="financing-header">
+                                <div class="financing-icon">
+                                    <i class="bi bi-credit-card"></i>
+                                </div>
+                                <h4>Hire Purchase</h4>
+                                <p>Own the vehicle at the end</p>
+                            </div>
+                            <div class="financing-content">
+                                <span class="financing-badge">Ownership</span>
+                                <p>For businesses that want to own their vehicles while spreading the cost over manageable monthly payments.</p>
+                                <ul class="list-unstyled mb-3">
+                                    <li><i class="bi bi-check-circle text-success me-2"></i> Own the vehicle after final payment</li>
+                                    <li><i class="bi bi-check-circle text-success me-2"></i> Fixed interest rates</li>
+                                    <li><i class="bi bi-check-circle text-success me-2"></i> Flexible deposit options</li>
+                                    <li><i class="bi bi-check-circle text-success me-2"></i> Balloon payment options</li>
+                                    <li><i class="bi bi-check-circle text-success me-2"></i> Tax benefits on interest</li>
+                                </ul>
+                                <div class="financing-details">
+                                    <div class="detail-item">
+                                        <strong>Ideal For:</strong> Long-term fleet ownership
+                                    </div>
+                                    <div class="detail-item">
+                                        <strong>Term:</strong> 12-72 months
+                                    </div>
+                                </div>
+                                <div class="text-center mt-4">
+                                    <a href="apply.html" class="btn btn-primary w-100">Get Quote</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fleet Management -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                        <div class="financing-card">
+                            <div class="financing-header">
+                                <div class="financing-icon">
+                                    <i class="bi bi-clipboard-data"></i>
+                                </div>
+                                <h4>Complete Fleet Management</h4>
+                                <p>End-to-end fleet solutions</p>
+                            </div>
+                            <div class="financing-content">
+                                <span class="financing-badge">Full Service</span>
+                                <p>Comprehensive fleet management service that handles everything from acquisition to disposal.</p>
+                                <ul class="list-unstyled mb-3">
+                                    <li><i class="bi bi-check-circle text-success me-2"></i> Vehicle sourcing and acquisition</li>
+                                    <li><i class="bi bi-check-circle text-success me-2"></i> Maintenance and repairs management</li>
+                                    <li><i class="bi bi-check-circle text-success me-2"></i> Fuel management and optimization</li>
+                                    <li><i class="bi bi-check-circle text-success me-2"></i> Compliance and licensing</li>
+                                    <li><i class="bi bi-check-circle text-success me-2"></i> Disposal and replacement planning</li>
+                                </ul>
+                                <div class="financing-details">
+                                    <div class="detail-item">
+                                        <strong>Ideal For:</strong> Businesses wanting to outsource fleet management
+                                    </div>
+                                    <div class="detail-item">
+                                        <strong>Term:</strong> Customizable contracts
+                                    </div>
+                                </div>
+                                <div class="text-center mt-4">
+                                    <a href="apply.html" class="btn btn-primary w-100">Get Quote</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Comparison Table -->
+                <div class="row mb-5">
+                    <div class="col-lg-12">
+                        <h3 class="mb-4 text-center" style="color: var(--primary-blue);">Financing Options Comparison</h3>
+                        <div class="comparison-table" data-aos="fade-up" data-aos-delay="200">
+                            <div class="comparison-header">Compare Our Fleet Financing Options</div>
+                            <div class="comparison-row">
+                                <div class="comparison-feature">Feature</div>
+                                <div class="comparison-option">Operational Lease</div>
+                                <div class="comparison-option">Hire Purchase</div>
+                                <div class="comparison-option">Fleet Management</div>
+                            </div>
+                            <div class="comparison-row">
+                                <div class="comparison-feature">Vehicle Ownership</div>
+                                <div class="comparison-option">No</div>
+                                <div class="comparison-option">Yes (after term)</div>
+                                <div class="comparison-option">Optional</div>
+                            </div>
+                            <div class="comparison-row">
+                                <div class="comparison-feature">Maintenance Included</div>
+                                <div class="comparison-option comparison-check">✓</div>
+                                <div class="comparison-option comparison-cross">✗</div>
+                                <div class="comparison-option comparison-check">✓</div>
+                            </div>
+                            <div class="comparison-row">
+                                <div class="comparison-feature">Flexible Terms</div>
+                                <div class="comparison-option comparison-check">✓</div>
+                                <div class="comparison-option comparison-check">✓</div>
+                                <div class="comparison-option comparison-check">✓</div>
+                            </div>
+                            <div class="comparison-row">
+                                <div class="comparison-feature">Tax Benefits</div>
+                                <div class="comparison-option comparison-check">✓</div>
+                                <div class="comparison-option comparison-check">✓</div>
+                                <div class="comparison-option comparison-check">✓</div>
+                            </div>
+                            <div class="comparison-row">
+                                <div class="comparison-feature">Off-Balance Sheet</div>
+                                <div class="comparison-option comparison-check">✓</div>
+                                <div class="comparison-option comparison-cross">✗</div>
+                                <div class="comparison-option comparison-check">✓</div>
+                            </div>
+                            <div class="comparison-row">
+                                <div class="comparison-feature">Vehicle Disposal</div>
+                                <div class="comparison-option">Lease Company</div>
+                                <div class="comparison-option">Client</div>
+                                <div class="comparison-option">We Manage</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Benefits Section -->
+                <div class="row mb-5">
+                    <div class="col-lg-12">
+                        <h3 class="mb-4" style="color: var(--primary-blue);">Benefits of Fleet Financing</h3>
+                        <div class="benefits-grid">
+                            <div class="benefit-item" data-aos="fade-up" data-aos-delay="200">
+                                <h5><i class="bi bi-graph-down text-success me-2"></i> Cash Flow Management</h5>
+                                <p class="mb-0">Spread the cost of your fleet over manageable monthly payments instead of large upfront investments.</p>
+                            </div>
+                            <div class="benefit-item" data-aos="fade-up" data-aos-delay="250">
+                                <h5><i class="bi bi-shield-check text-success me-2"></i> Risk Reduction</h5>
+                                <p class="mb-0">Transfer vehicle depreciation and maintenance risks to the financing company.</p>
+                            </div>
+                            <div class="benefit-item" data-aos="fade-up" data-aos-delay="300">
+                                <h5><i class="bi bi-calculator text-success me-2"></i> Tax Efficiency</h5>
+                                <p class="mb-0">Maximize tax benefits through structured financing arrangements tailored to your business.</p>
+                            </div>
+                            <div class="benefit-item" data-aos="fade-up" data-aos-delay="350">
+                                <h5><i class="bi bi-clock text-success me-2"></i> Time Savings</h5>
+                                <p class="mb-0">Free up your time by outsourcing fleet administration, maintenance, and compliance management.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- How It Works -->
+                <div class="row mb-5">
+                    <div class="col-lg-12">
+                        <h3 class="mb-4 text-center" style="color: var(--primary-blue);">Our Fleet Financing Process</h3>
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                                <div class="process-step">
+                                    <div class="step-number">1</div>
+                                    <h4>Needs Assessment</h4>
+                                    <p>We analyze your business requirements, fleet size, and operational needs.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                                <div class="process-step">
+                                    <div class="step-number">2</div>
+                                    <h4>Solution Design</h4>
+                                    <p>We design a customized fleet financing solution that matches your budget and objectives.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                                <div class="process-step">
+                                    <div class="step-number">3</div>
+                                    <h4>Implementation</h4>
+                                    <p>We handle vehicle acquisition, financing setup, and integration with your operations.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                                <div class="process-step">
+                                    <div class="step-number">4</div>
+                                    <h4>Ongoing Management</h4>
+                                    <p>We provide continuous fleet management, reporting, and optimization services.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fleet Management Tools -->
+                <div class="row mb-5">
+                    <div class="col-lg-12">
+                        <h3 class="mb-4 text-center" style="color: var(--primary-blue);">Fleet Management Tools & Services</h3>
+                        <div class="row g-4">
+                            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                                <div class="feature-card">
+                                    <div class="feature-icon">
+                                        <i class="bi bi-speedometer2"></i>
+                                    </div>
+                                    <h4>Telematics & Tracking</h4>
+                                    <p>Real-time GPS tracking, route optimization, and driver behavior monitoring.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                                <div class="feature-card">
+                                    <div class="feature-icon">
+                                        <i class="bi bi-fuel-pump"></i>
+                                    </div>
+                                    <h4>Fuel Management</h4>
+                                    <p>Fuel consumption monitoring, cost optimization, and fuel card management.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                                <div class="feature-card">
+                                    <div class="feature-icon">
+                                        <i class="bi bi-clipboard-data"></i>
+                                    </div>
+                                    <h4>Compliance Reporting</h4>
+                                    <p>Automatic compliance reporting for COF, license renewals, and safety inspections.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                                <div class="feature-card">
+                                    <div class="feature-icon">
+                                        <i class="bi bi-bar-chart"></i>
+                                    </div>
+                                    <h4>Performance Analytics</h4>
+                                    <p>Detailed analytics on fleet performance, costs, and utilization.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+                                <div class="feature-card">
+                                    <div class="feature-icon">
+                                        <i class="bi bi-shield-check"></i>
+                                    </div>
+                                    <h4>Risk Management</h4>
+                                    <p>Insurance management, accident reporting, and risk assessment services.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="700">
+                                <div class="feature-card">
+                                    <div class="feature-icon">
+                                        <i class="bi bi-arrow-repeat"></i>
+                                    </div>
+                                    <h4>Lifecycle Management</h4>
+                                    <p>Vehicle lifecycle planning from acquisition to disposal and replacement.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cost Calculator -->
+                <div class="row mb-5">
+                    <div class="col-lg-12">
+                        <div class="calculator-section" data-aos="fade-up" data-aos-delay="200">
+                            <h3 class="mb-4" style="color: var(--primary-blue);">Fleet Financing Calculator</h3>
+
+                            <form id="fleetFinancingCalculator">
+                                <div class="row g-3 mb-4">
+                                    <div class="col-md-4">
+                                        <label for="totalFleetValue" class="form-label">Total Fleet Value (ZAR)</label>
+                                        <input type="number" id="totalFleetValue" class="form-control" min="500000" max="50000000" value="5000000">
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <label for="financingOption" class="form-label">Financing Option</label>
+                                        <select id="financingOption" class="form-select">
+                                            <option value="operational">Operational Lease</option>
+                                            <option value="hire" selected>Hire Purchase</option>
+                                            <option value="finance">Finance Lease</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <label for="financingTerm" class="form-label">Financing Term (Months)</label>
+                                        <select id="financingTerm" class="form-select">
+                                            <option value="24">24 Months</option>
+                                            <option value="36" selected>36 Months</option>
+                                            <option value="48">48 Months</option>
+                                            <option value="60">60 Months</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="row g-3 mb-4">
+                                    <div class="col-md-6">
+                                        <label for="depositPercentage" class="form-label">Deposit Percentage (%)</label>
+                                        <input type="number" id="depositPercentage" class="form-control" min="0" max="50" value="20">
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label for="interestRate" class="form-label">Interest Rate (%)</label>
+                                        <input type="number" id="interestRate" class="form-control" min="8" max="20" step="0.1" value="11.5">
+                                    </div>
+                                </div>
+
+                                <div class="row g-3 mb-4">
+                                    <div class="col-md-6">
+                                        <label for="maintenancePackage" class="form-label">Maintenance Package</label>
+                                        <select id="maintenancePackage" class="form-select">
+                                            <option value="none">No Maintenance</option>
+                                            <option value="essential">Essential Care</option>
+                                            <option value="premium" selected>Premium Care</option>
+                                            <option value="ultimate">Ultimate Care</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label for="vehicleCount" class="form-label">Number of Vehicles</label>
+                                        <input type="number" id="vehicleCount" class="form-control" min="1" max="100" value="10">
+                                    </div>
+                                </div>
+
+                                <button type="button" class="btn btn-primary" id="calculateFleetBtn">Calculate Monthly Cost</button>
+
+                                <div class="calculator-result" id="fleetFinancingResult">
+                                    <h4>Fleet Financing Summary</h4>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <p>Total Fleet Value: <strong id="summaryFleetValue" class="float-end">ZAR 0</strong></p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p>Deposit Amount: <strong id="summaryDeposit" class="float-end">ZAR 0</strong></p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p>Amount Financed: <strong id="summaryFinanced" class="float-end">ZAR 0</strong></p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p>Monthly Payment: <strong id="summaryMonthly" class="float-end text-primary">ZAR 0</strong></p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p>Maintenance Cost: <strong id="summaryMaintenance" class="float-end">ZAR 0</strong></p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p>Total Monthly Cost: <strong id="summaryTotalMonthly" class="float-end">ZAR 0</strong></p>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-2">
+                                        <div class="col-md-12">
+                                            <p>Total Cost of Financing: <strong id="summaryTotalCost" class="float-end">ZAR 0</strong></p>
+                                        </div>
+                                    </div>
+                                    <div class="mt-3">
+                                        <p class="mb-0 text-muted"><small><i class="bi bi-info-circle me-1"></i> This is an estimate. Contact us for a detailed proposal.</small></p>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA Section -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="cta-banner" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="cta-content">
+                                <h3>Ready to Optimize Your Fleet Financing?</h3>
+                                <p class="mb-4">Contact our fleet financing specialists today for a customized solution that reduces costs and improves your fleet operations.</p>
+                                <div class="cta-buttons">
+                                    <a href="apply.html" class="btn btn-primary me-3">Get Started</a>
+                                    <a href="tel:0861000534" class="btn btn-outline-primary">Call 0861 000 534</a>
+                                </div>
+                                <p class="mt-3 small">
+                                    <i class="bi bi-info-circle me-1"></i> FSCA Registered • Fleet Specialists • Comprehensive Solutions
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section><!-- /Fleet Financing Section -->
+
+    </main>
+
+    <footer id="footer" class="footer position-relative dark-background">
+        <div class="container footer-top">
+            <div class="row gy-4">
+                <div class="col-lg-4 col-md-6 footer-about">
+                    <a href="index.html" class="d-flex align-items-center mb-3" style="text-decoration: none;">
+                        <h1 class="sitename">LEHUMO LA EDISHELA</h1>
+                    </a>
+                    <div class="footer-contact">
+                        <p class="mb-3">Your trusted partner for asset-backed loans. Fast approvals, great rates, and FSCA registered for your peace of mind.</p>
+                        <p class="mb-2"><strong>Need to talk to us?</strong></p>
+                        <p class="mb-2"><i class="bi bi-telephone me-2"></i> 0861 000 534</p>
+                        <p class="mb-3"><i class="bi bi-envelope me-2"></i> info@lehumo.co.za</p>
+                        <p><i class="bi bi-shield-check me-2"></i> FSCA Registered</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6 footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="artcollectibles.html">Art & Collectibles</a></li>
+                        <li><a href="apply.html">Apply Now</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6 footer-links">
+                    <h4>Commercial Fleet</h4>
+                    <ul>
+                        <li><a href="commercialfleet.html">Commercial Fleet Overview</a></li>
+                        <li><a href="fleetfinancing.html">Vehicle Sourcing</a></li>
+                        <li><a href="truck-trailor-loans.html">Truck & Trailer Loans</a></li>
+                        <li><a href="maintenance-packages.html">Maintenance Packages</a></li>
+                        <li><a href="fleet-financing.html" class="active">Fleet Financing</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-6 footer-newsletter">
+                    <h4>Business Hours</h4>
+                    <div class="business-hours">
+                        <p class="mb-2"><strong>Monday - Friday:</strong> 8:00 AM - 5:00 PM</p>
+                        <p class="mb-2"><strong>Saturday:</strong> 9:00 AM - 1:00 PM</p>
+                        <p class="mb-3"><strong>Sunday & Holidays:</strong> Closed</p>
+                    </div>
+                    <div class="social-links d-flex mt-4">
+                        <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container copyright text-center">
+            <p>&copy; 2023 <strong>Lehumo La Edishela</strong>. All Rights Reserved. FSP No. 12345</p>
+            <p class="mb-0">Designed for Commercial Fleet Financing Solutions</p>
+        </div>
+
+    </footer>
+
+    <!-- Scroll Top Button -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+    <!-- Calculator Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Set up event listener for calculate button
+            document.getElementById('calculateFleetBtn').addEventListener('click', calculateFleetFinancing);
+
+            // Calculate on page load
+            calculateFleetFinancing();
+
+            // AOS initialization
+            if (typeof AOS !== 'undefined') {
+                AOS.init({
+                    duration: 1000,
+                    easing: 'ease-in-out',
+                    once: true,
+                    mirror: false
+                });
+            }
+        });
+
+        // Fleet financing calculator function
+        function calculateFleetFinancing() {
+            // Get form values
+            const totalFleetValue = parseFloat(document.getElementById('totalFleetValue').value) || 0;
+            const financingOption = document.getElementById('financingOption').value;
+            const financingTerm = parseInt(document.getElementById('financingTerm').value) || 0;
+            const depositPercentage = parseFloat(document.getElementById('depositPercentage').value) / 100 || 0;
+            const interestRate = parseFloat(document.getElementById('interestRate').value) / 100 / 12 || 0; // Monthly rate
+            const maintenancePackage = document.getElementById('maintenancePackage').value;
+            const vehicleCount = parseInt(document.getElementById('vehicleCount').value) || 0;
+
+            // Validate inputs
+            if (totalFleetValue <= 0 || financingTerm <= 0 || vehicleCount <= 0) {
+                alert('Please enter valid numbers for fleet value, term, and vehicle count');
+                return;
+            }
+
+            // Calculate deposit amount
+            const depositAmount = totalFleetValue * depositPercentage;
+            const amountFinanced = totalFleetValue - depositAmount;
+
+            // Calculate monthly payment based on financing option
+            let monthlyPayment = 0;
+
+            if (financingOption === 'operational') {
+                // Operational lease: simpler calculation with higher rates
+                monthlyPayment = (amountFinanced * 0.85) / financingTerm; // 85% of value spread over term
+            } else {
+                // Hire purchase or finance lease: standard loan calculation
+                if (interestRate > 0) {
+                    monthlyPayment = (amountFinanced * interestRate * Math.pow(1 + interestRate, financingTerm)) /
+                        (Math.pow(1 + interestRate, financingTerm) - 1);
+                } else {
+                    monthlyPayment = amountFinanced / financingTerm;
+                }
+            }
+
+            // Calculate maintenance cost
+            let maintenanceCost = 0;
+            switch (maintenancePackage) {
+                case 'essential':
+                    maintenanceCost = 850 * vehicleCount;
+                    break;
+                case 'premium':
+                    maintenanceCost = 1450 * vehicleCount;
+                    break;
+                case 'ultimate':
+                    maintenanceCost = 2200 * vehicleCount;
+                    break;
+                default:
+                    maintenanceCost = 0;
+            }
+
+            // Calculate totals
+            const totalMonthlyCost = monthlyPayment + maintenanceCost;
+            const totalCost = (monthlyPayment * financingTerm) + depositAmount;
+
+            // Format currency
+            const formatCurrency = (amount) => {
+                return 'ZAR ' + amount.toLocaleString('en-ZA', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+            };
+
+            // Display results
+            document.getElementById('summaryFleetValue').textContent = formatCurrency(totalFleetValue);
+            document.getElementById('summaryDeposit').textContent = formatCurrency(depositAmount);
+            document.getElementById('summaryFinanced').textContent = formatCurrency(amountFinanced);
+            document.getElementById('summaryMonthly').textContent = formatCurrency(monthlyPayment);
+            document.getElementById('summaryMaintenance').textContent = formatCurrency(maintenanceCost);
+            document.getElementById('summaryTotalMonthly').textContent = formatCurrency(totalMonthlyCost);
+            document.getElementById('summaryTotalCost').textContent = formatCurrency(totalCost);
+            document.getElementById('fleetFinancingResult').style.display = 'block';
+
+            // Smooth scroll to results
+            document.getElementById('fleetFinancingResult').scrollIntoView({
+                behavior: 'smooth',
+                block: 'nearest'
+            });
+        }
+    </script>
+
+</body>
+
+</html>

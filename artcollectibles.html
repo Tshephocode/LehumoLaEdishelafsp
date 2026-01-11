@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Art & Collectibles | Lehumo La Edishela - Loans Against Fine Art & Collectibles</title>
+    <meta name="description" content="Get cash loans against your fine art, antiques, rare collectibles, and memorabilia. Expert valuations, secure storage, confidential service.">
+    <meta name="keywords" content="art loans, collectible loans, fine art finance, antique loans, memorabilia loans, South Africa art loans">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <!-- Template Custom CSS -->
+    <style>
+        :root {
+            --primary-blue: #1A365D;
+            --primary-red: #E63946;
+            --accent-teal: #2A9D8F;
+            --light-gray: #F8F9FA;
+            --dark-gray: #212529;
+            --text-color: #333333;
+            --border-color: #E0E0E0;
+        }
+
+        /* Header Enhancements */
+        .header {
+            background-color: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .sitename {
+            color: var(--primary-blue);
+            font-weight: 800;
+            font-size: 1.8rem;
+        }
+
+        .navmenu a {
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .btn-getstarted {
+            background: linear-gradient(135deg, var(--primary-red) 0%, #c53030 100%);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            font-size: 0.95rem;
+            letter-spacing: 0.3px;
+        }
+
+            .btn-getstarted:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 10px 20px rgba(230, 57, 70, 0.2);
+                color: white;
+            }
+
+        .btn-primary {
+            background-color: var(--primary-red);
+            border-color: var(--primary-red);
+            padding: 0.875rem 2rem;
+            font-weight: 600;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+            .btn-primary:hover {
+                background-color: #c53030;
+                border-color: #c53030;
+                transform: translateY(-2px);
+                box-shadow: 0 10px 20px rgba(230, 57, 70, 0.2);
+            }
+
+        .btn-outline-primary {
+            color: var(--primary-red);
+            border-color: var(--primary-red);
+            padding: 0.875rem 2rem;
+            font-weight: 600;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+            .btn-outline-primary:hover {
+                background-color: var(--primary-red);
+                color: white;
+                border-color: var(--primary-red);
+                transform: translateY(-2px);
+            }
+
+        /* Page Title */
+        .page-title {
+            background: linear-gradient(rgba(26, 54, 93, 0.85), rgba(26, 54, 93, 0.9)), url('assets/img/art-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 120px 0 60px;
+            position: relative;
+        }
+
+            .page-title h1 {
+                color: white;
+                font-size: 3rem;
+                font-weight: 800;
+                margin-bottom: 1rem;
+            }
+
+        /* Loan Cards */
+        .loan-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            height: 100%;
+            border: 1px solid var(--border-color);
+            margin-bottom: 2rem;
+        }
+
+            .loan-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+                border-color: var(--primary-red);
+            }
+
+        .loan-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+            .loan-image img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.3s ease;
+            }
+
+        .loan-card:hover .loan-image img {
+            transform: scale(1.05);
+        }
+
+        .loan-content {
+            padding: 2rem;
+        }
+
+        .loan-badge {
+            display: inline-block;
+            background: var(--primary-red);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        /* Feature Cards */
+        .feature-card {
+            border-radius: 12px;
+            padding: 2rem;
+            height: 100%;
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+            background: white;
+            text-align: center;
+        }
+
+            .feature-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+                border-color: var(--primary-red);
+            }
+
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary-red) 0%, #c53030 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: white;
+            font-size: 1.8rem;
+        }
+
+        /* Process Steps */
+        .process-step {
+            text-align: center;
+            padding: 1.5rem;
+            position: relative;
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary-red) 0%, #c53030 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin: 0 auto 1rem;
+            box-shadow: 0 5px 15px rgba(230, 57, 70, 0.2);
+        }
+
+        /* Documents Section */
+        .documents-section {
+            background: var(--light-gray);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .document-item {
+            display: flex;
+            align-items: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+            .document-item:last-child {
+                border-bottom: none;
+            }
+
+        .document-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            flex-shrink: 0;
+            color: white;
+        }
+
+        /* CTA Banner */
+        .cta-banner {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-teal) 100%);
+            border-radius: 16px;
+            padding: 3rem;
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            margin-top: 3rem;
+        }
+
+        .cta-content h3 {
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Eligibility Section */
+        .eligibility-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .eligibility-item {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            border-left: 4px solid var(--primary-red);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Art Badge */
+        .art-badge {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(42, 157, 143, 0.1);
+            color: var(--accent-teal);
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+            font-weight: 600;
+            margin: 0.5rem 0;
+        }
+
+            .art-badge i {
+                margin-right: 0.5rem;
+            }
+
+        /* Collectible Categories */
+        .collectible-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .category-item {
+            background: white;
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+            .category-item:hover {
+                border-color: var(--primary-red);
+                transform: translateY(-3px);
+            }
+
+        .category-icon {
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .page-title h1 {
+                font-size: 2.5rem;
+            }
+
+            .btn-getstarted {
+                padding: 0.6rem 1.2rem;
+                font-size: 0.9rem;
+            }
+
+            .collectible-categories {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .page-title h1 {
+                font-size: 2rem;
+            }
+
+            .page-title {
+                padding: 100px 0 40px;
+            }
+
+            .cta-banner {
+                padding: 2rem;
+            }
+
+            .cta-content h3 {
+                font-size: 1.75rem;
+            }
+
+            .loan-card {
+                margin-bottom: 1.5rem;
+            }
+
+            .collectible-categories {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .eligibility-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body class="art-collectibles-page">
+
+    <header id="header" class="header d-flex align-items-center fixed-top">
+        <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+            <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+                <h1 class="sitename">LEHUMO LA EDISHELA</h1>
+            </a>
+
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="active"><span>Asset Loans</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="vehicle-loans.html">Vehicle Loans</a></li>
+                            <li><a href="luxury-loans.html">Luxury Assets</a></li>
+                            <li><a href="propertyloans.html">Property Loans</a></li>
+                            <li><a href="equipmentfinance.html">Equipment Finance</a></li>
+                            <li><a href="artcollectibles.html" class="active">Art & Collectibles</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#"><span>Commercial Fleet</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="fleetfinancing.html">Fleet Financing</a></li>
+                            <li><a href="vehiclesourcing.html">Vehicle Sourcing</a></li>
+                            <li><a href="truckloans.html">Truck & Trailer Loans</a></li>
+                            <li><a href="maintenance.html">Maintenance Packages</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#"><span>Bridging Finance</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="property-bridging.html">Property Bridging</a></li>
+                            <li><a href="auction-finance.html">Auction Finance</a></li>
+                            <li><a href="renovation-loans.html">Renovation Finance</a></li>
+                            <li><a href="development-finance.html">Development Finance</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#"><span>FAQ</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="faq-general.html">General Questions</a></li>
+                            <li><a href="faq-application.html">Application Process</a></li>
+                            <li><a href="faq-interest-rates.html">Interest & Rates</a></li>
+                            <li><a href="faq-asset-requirements.html">Asset Requirements</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#"><span>How To Apply</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="apply-requirements.html">Requirements</a></li>
+                            <li><a href="apply-documentation.html">Documentation</a></li>
+                            <li><a href="apply-process.html">Process Steps</a></li>
+                            <li><a href="apply-timeline.html">Timeline</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+
+            <a class="btn-getstarted" href="apply.html">Apply Now</a>
+
+        </div>
+    </header>
+
+    <main class="main">
+
+        <!-- Page Title -->
+        <div class="page-title dark-background" data-aos="fade">
+            <div class="container position-relative">
+                <h1>Art & Collectibles</h1>
+                <p>Get cash loans against your fine art, antiques, rare collectibles, and memorabilia. Expert valuations, secure storage, and confidential service for collectors.</p>
+                <nav class="breadcrumbs">
+                    <ol>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="artcollectibles.html">Asset Loans</a></li>
+                        <li class="current">Art & Collectibles</li>
+                    </ol>
+                </nav>
+            </div>
+        </div><!-- End Page Title -->
+        <!-- Art & Collectibles Section -->
+        <section id="art-collectibles" class="art-collectibles section">
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="row mb-5">
+                    <div class="col-lg-8 mx-auto text-center">
+                        <h2>Unlock Value From Your Collection</h2>
+                        <p class="mb-4">Turn your valuable art and collectibles into immediate cash without selling them. We provide specialized loans for collectors with expert authentication and museum-grade storage.</p>
+                        <div class="art-badge">
+                            <i class="bi bi-palette"></i>
+                            <span>Specialist Art & Collectible Experts</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Collectible Categories -->
+                <div class="row mb-5">
+                    <div class="col-lg-12">
+                        <h4 class="mb-4 text-center">Types of Collectibles We Finance</h4>
+                        <div class="collectible-categories">
+                            <div class="category-item" data-aos="fade-up" data-aos-delay="200">
+                                <div class="category-icon">
+                                    <i class="bi bi-paint-bucket"></i>
+                                </div>
+                                <h6>Fine Art</h6>
+                                <p class="small mb-0">Paintings, sculptures, prints</p>
+                            </div>
+                            <div class="category-item" data-aos="fade-up" data-aos-delay="250">
+                                <div class="category-icon">
+                                    <i class="bi bi-clock-history"></i>
+                                </div>
+                                <h6>Antiques</h6>
+                                <p class="small mb-0">Furniture, ceramics, silver</p>
+                            </div>
+                            <div class="category-item" data-aos="fade-up" data-aos-delay="300">
+                                <div class="category-icon">
+                                    <i class="bi bi-coin"></i>
+                                </div>
+                                <h6>Numismatics</h6>
+                                <p class="small mb-0">Coins, medals, banknotes</p>
+                            </div>
+                            <div class="category-item" data-aos="fade-up" data-aos-delay="350">
+                                <div class="category-icon">
+                                    <i class="bi bi-book"></i>
+                                </div>
+                                <h6>Philately</h6>
+                                <p class="small mb-0">Rare stamps, collections</p>
+                            </div>
+                            <div class="category-item" data-aos="fade-up" data-aos-delay="400">
+                                <div class="category-icon">
+                                    <i class="bi bi-controller"></i>
+                                </div>
+                                <h6>Memorabilia</h6>
+                                <p class="small mb-0">Sports, music, film items</p>
+                            </div>
+                            <div class="category-item" data-aos="fade-up" data-aos-delay="450">
+                                <div class="category-icon">
+                                    <i class="bi bi-wine"></i>
+                                </div>
+                                <h6>Fine Wine</h6>
+                                <p class="small mb-0">Rare vintages, collections</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Loans Against Art & Collectibles -->
+                <div class="row mb-5">
+                    <div class="col-lg-12">
+                        <h3 class="mb-4" style="color: var(--primary-blue);">Loans Against Art & Collectibles</h3>
+                        <p class="mb-4">We provide specialized financing for valuable collections. Our experts understand the unique nature of collectibles and provide fair valuations based on market trends and auction records.</p>
+                    </div>
+                </div>
+
+                <div class="row g-4 mb-5">
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="loan-card">
+                            <div class="loan-image">
+                                <img src="assets/img/art/fine-art-loan.jpg" alt="Fine Art Loans" loading="lazy">
+                            </div>
+                            <div class="loan-content">
+                                <span class="loan-badge">Premium Service</span>
+                                <h4>Fine Art & Paintings</h4>
+                                <p>Loans against paintings, sculptures, drawings, and prints by established and emerging artists.</p>
+                                <ul class="list-unstyled mb-3">
+                                    <li><i class="bi bi-check-circle text-success me-2"></i> Established artists preferred</li>
+                                    <li><i class="bi bi-check-circle text-success me-2"></i> Up to 60% of auction value</li>
+                                    <li><i class="bi bi-check-circle text-success me-2"></i> Expert art historical research</li>
+                                </ul>
+                                <div class="loan-details">
+                                    <div class="detail-item">
+                                        <strong>Loan Amount:</strong> R50,000 - R10,000,000
+                                    </div>
+                                    <div class="detail-item">
+                                        <strong>Term:</strong> 3 - 24 months
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                        <div class="loan-card">
+                            <div class="loan-image">
+                                <img src="assets/img/art/antique-loan.jpg" alt="Antique Loans" loading="lazy">
+                            </div>
+                            <div class="loan-content">
+                                <span class="loan-badge">Historical Value</span>
+                                <h4>Antiques & Vintage Items</h4>
+                                <p>Loans against furniture, ceramics, silver, glassware, and other historical collectibles.</p>
+                                <ul class="list-unstyled mb-3">
+                                    <li><i class="bi bi-check-circle text-success me-2"></i> 50+ years old typically</li>
+                                    <li><i class="bi bi-check-circle text-success me-2"></i> Provenance documentation</li>
+                                    <li><i class="bi bi-check-circle text-success me-2"></i> Condition assessment</li>
+                                </ul>
+                                <div class="loan-details">
+                                    <div class="detail-item">
+                                        <strong>Loan Amount:</strong> R20,000 - R2,000,000
+                                    </div>
+                                    <div class="detail-item">
+                                        <strong>Term:</strong> 3 - 18 months
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                        <div class="loan-card">
+                            <div class="loan-image">
+                                <img src="assets/img/art/memorabilia-loan.jpg" alt="Memorabilia Loans" loading="lazy">
+                            </div>
+                            <div class="loan-content">
+                                <span class="loan-badge">Pop Culture</span>
+                                <h4>Memorabilia & Collectibles</h4>
+                                <p>Loans against sports memorabilia, music collectibles, movie props, and rare items.</p>
+                                <ul class="list-unstyled mb-3">
+                                    <li><i class="bi bi-check-circle text-success me-2"></i> Authentication critical</li>
+                                    <li><i class="bi bi-check-circle text-success me-2"></i> Limited edition items</li>
+                                    <li><i class="bi bi-check-circle text-success me-2"></i> Market demand considered</li>
+                                </ul>
+                                <div class="loan-details">
+                                    <div class="detail-item">
+                                        <strong>Loan Amount:</strong> R10,000 - R1,000,000
+                                    </div>
+                                    <div class="detail-item">
+                                        <strong>Term:</strong> 3 - 12 months
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Collectible Requirements -->
+                <div class="row mb-5">
+                    <div class="col-lg-12">
+                        <h4 class="mb-3">Collectible Eligibility Criteria</h4>
+                        <div class="eligibility-grid">
+                            <div class="eligibility-item" data-aos="fade-up" data-aos-delay="200">
+                                <h5><i class="bi bi-check-circle-fill text-success me-2"></i> Authentication</h5>
+                                <p class="mb-0">Items must be authentic with proper documentation or expert verification.</p>
+                            </div>
+                            <div class="eligibility-item" data-aos="fade-up" data-aos-delay="250">
+                                <h5><i class="bi bi-check-circle-fill text-success me-2"></i> Provenance</h5>
+                                <p class="mb-0">Clear ownership history and documentation of previous sales or exhibitions.</p>
+                            </div>
+                            <div class="eligibility-item" data-aos="fade-up" data-aos-delay="300">
+                                <h5><i class="bi bi-check-circle-fill text-success me-2"></i> Condition</h5>
+                                <p class="mb-0">Good condition appropriate for age and type of collectible.</p>
+                            </div>
+                            <div class="eligibility-item" data-aos="fade-up" data-aos-delay="350">
+                                <h5><i class="bi bi-check-circle-fill text-success me-2"></i> Market Value</h5>
+                                <p class="mb-0">Established auction records or comparable market sales.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Documentation Requirements -->
+                <div class="row mb-5">
+                    <div class="col-lg-12">
+                        <h3 class="mb-4" style="color: var(--primary-blue);">Art & Collectible Documentation</h3>
+                        <p class="mb-4">Proper documentation is essential for accurate valuation of art and collectibles. We work with you to gather all necessary paperwork.</p>
+                    </div>
+                </div>
+
+                <div class="documents-section" data-aos="fade-up" data-aos-delay="200">
+                    <h4 class="mb-4">Required Documentation</h4>
+
+                    <div class="document-item">
+                        <div class="document-icon">
+                            <i class="bi bi-file-earmark-check"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">Authentication Certificates</h5>
+                            <p class="mb-0">Certificates from recognized experts, galleries, or authentication services.</p>
+                        </div>
+                    </div>
+
+                    <div class="document-item">
+                        <div class="document-icon">
+                            <i class="bi bi-journal-text"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">Provenance Documentation</h5>
+                            <p class="mb-0">Documented history of ownership, exhibition records, and publication history.</p>
+                        </div>
+                    </div>
+
+                    <div class="document-item">
+                        <div class="document-icon">
+                            <i class="bi bi-receipt"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">Purchase Documentation</h5>
+                            <p class="mb-0">Original purchase receipts, auction house invoices, or gallery paperwork.</p>
+                        </div>
+                    </div>
+
+                    <div class="document-item">
+                        <div class="document-icon">
+                            <i class="bi bi-images"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">Professional Photographs</h5>
+                            <p class="mb-0">High-quality photographs showing front, back, signatures, and any markings.</p>
+                        </div>
+                    </div>
+
+                    <div class="document-item">
+                        <div class="document-icon">
+                            <i class="bi bi-clipboard-data"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">Condition Reports</h5>
+                            <p class="mb-0">Professional condition reports detailing any restoration or damage.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Storage & Security -->
+                <div class="row mb-5">
+                    <div class="col-lg-12">
+                        <h3 class="mb-4 text-center" style="color: var(--primary-blue);">Museum-Grade Storage Solutions</h3>
+                        <div class="row g-4">
+                            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                                <div class="feature-card">
+                                    <div class="feature-icon">
+                                        <i class="bi bi-thermometer-snow"></i>
+                                    </div>
+                                    <h4>Climate Controlled</h4>
+                                    <p>Temperature and humidity controlled environments to preserve delicate collectibles.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                                <div class="feature-card">
+                                    <div class="feature-icon">
+                                        <i class="bi bi-shield-lock"></i>
+                                    </div>
+                                    <h4>Maximum Security</h4>
+                                    <p>24/7 monitored facilities with state-of-the-art security systems and insurance.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                                <div class="feature-card">
+                                    <div class="feature-icon">
+                                        <i class="bi bi-eye"></i>
+                                    </div>
+                                    <h4>Regular Condition Checks</h4>
+                                    <p>Regular inspections and condition monitoring by our conservation specialists.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- How It Works -->
+                <div class="row mb-5">
+                    <div class="col-lg-12">
+                        <h3 class="mb-4 text-center" style="color: var(--primary-blue);">Specialist Valuation Process</h3>
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                                <div class="process-step">
+                                    <div class="step-number">1</div>
+                                    <h4>Initial Consultation</h4>
+                                    <p>Confidential discussion about your collection and preliminary assessment.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                                <div class="process-step">
+                                    <div class="step-number">2</div>
+                                    <h4>Expert Research</h4>
+                                    <p>Market research, auction records, and comparable sales analysis.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                                <div class="process-step">
+                                    <div class="step-number">3</div>
+                                    <h4>Condition Assessment</h4>
+                                    <p>Detailed examination by specialists in the relevant collectible category.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                                <div class="process-step">
+                                    <div class="step-number">4</div>
+                                    <h4>Secure Storage & Funding</h4>
+                                    <p>Items stored in climate-controlled vaults with immediate funding available.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA Section -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="cta-banner" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="cta-content">
+                                <h3>Ready to Access Cash From Your Collection?</h3>
+                                <p class="mb-4">Contact our specialist team for a confidential consultation and expert valuation.</p>
+                                <div class="cta-buttons">
+                                    <a href="apply.html" class="btn btn-primary me-3">Apply Now</a>
+                                    <a href="tel:0861000534" class="btn btn-outline-primary">Call 0861 000 534</a>
+                                </div>
+                                <p class="mt-3 small">
+                                    <i class="bi bi-info-circle me-1"></i> FSCA Registered • Specialist Experts • Museum-Grade Storage
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section><!-- /Art & Collectibles Section -->
+
+    </main>
+
+    <footer id="footer" class="footer position-relative dark-background">
+        <div class="container footer-top">
+            <div class="row gy-4">
+                <div class="col-lg-4 col-md-6 footer-about">
+                    <a href="index.html" class="d-flex align-items-center mb-3" style="text-decoration: none;">
+                        <h1 class="sitename">LEHUMO LA EDISHELA</h1>
+                    </a>
+                    <div class="footer-contact">
+                        <p class="mb-3">Your trusted partner for asset-backed loans. Fast approvals, great rates, and FSCA registered for your peace of mind.</p>
+                        <p class="mb-2"><strong>Need to talk to us?</strong></p>
+                        <p class="mb-2"><i class="bi bi-telephone me-2"></i> 0861 000 534</p>
+                        <p class="mb-3"><i class="bi bi-envelope me-2"></i> info@lehumo.co.za</p>
+                        <p><i class="bi bi-shield-check me-2"></i> FSCA Registered</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 footer-links">
+                    <h4 class="mb-3">Quick Links</h4>
+                    <ul>
+                        <li><i class="bi bi-chevron-right"></i> <a href="index.html">Home</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="about.html">About Us</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="contact.html">Contact Us</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="apply.html">Apply Now</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="faq.html">FAQ & Help</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-3 footer-links">
+                    <h4 class="mb-3">Our Services</h4>
+                    <ul>
+                        <li><i class="bi bi-chevron-right"></i> <a href="vehicleloans.html">Vehicle Loans</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="luxuryassets.html">Luxury Asset Loans</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="propertyloans.html">Property Loans</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="equipmentfinance.html">Equipment Finance</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="artcollectibles.html">Art & Collectibles</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-12">
+                    <h4 class="mb-3">Contact Details</h4>
+                    <div class="contact-info mb-3">
+                        <p><i class="bi bi-geo-alt me-2"></i> Sandton, Johannesburg</p>
+                        <p><i class="bi bi-clock me-2"></i> Mon-Fri: 8am-6pm | Sat: 9am-1pm</p>
+                        <p><i class="bi bi-building me-2"></i> Nationwide Service</p>
+                    </div>
+                    <div class="social-links d-flex mt-4">
+                        <a href="#" class="me-3"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="me-3"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="me-3"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container copyright text-center mt-4 pt-4 border-top border-secondary">
+            <p class="mb-2">© 2023 Lehumo La Edishela Financial Services. All rights reserved.</p>
+            <div class="credits">
+                <a href="privacy.html" class="me-3">Privacy Policy</a> |
+                <a href="terms.html" class="mx-3">Terms of Service</a> |
+                <a href="complaints.html" class="ms-3">Complaints Procedure</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

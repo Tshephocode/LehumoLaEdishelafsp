@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Luxury Assets | Lehumo La Edishela - Loans Against Luxury Items</title>
+    <meta name="description" content="Get cash loans against your luxury watches, jewellery, art, and collectibles. Expert valuations, secure storage, confidential service. FSCA registered.">
+    <meta name="keywords" content="luxury loans, watch loans, jewellery loans, art loans, collectible loans, luxury asset finance">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <!-- Template Custom CSS -->
+    <style>
+        :root {
+            --primary-blue: #1A365D;
+            --primary-red: #E63946;
+            --accent-teal: #2A9D8F;
+            --light-gray: #F8F9FA;
+            --dark-gray: #212529;
+            --text-color: #333333;
+            --border-color: #E0E0E0;
+        }
+
+        /* Header Enhancements */
+        .header {
+            background-color: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .sitename {
+            color: var(--primary-blue);
+            font-weight: 800;
+            font-size: 1.8rem;
+        }
+
+        .navmenu a {
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .btn-getstarted {
+            background: linear-gradient(135deg, var(--primary-red) 0%, #c53030 100%);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            font-size: 0.95rem;
+            letter-spacing: 0.3px;
+        }
+
+            .btn-getstarted:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 10px 20px rgba(230, 57, 70, 0.2);
+                color: white;
+            }
+
+        .btn-primary {
+            background-color: var(--primary-red);
+            border-color: var(--primary-red);
+            padding: 0.875rem 2rem;
+            font-weight: 600;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+            .btn-primary:hover {
+                background-color: #c53030;
+                border-color: #c53030;
+                transform: translateY(-2px);
+                box-shadow: 0 10px 20px rgba(230, 57, 70, 0.2);
+            }
+
+        .btn-outline-primary {
+            color: var(--primary-red);
+            border-color: var(--primary-red);
+            padding: 0.875rem 2rem;
+            font-weight: 600;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+            .btn-outline-primary:hover {
+                background-color: var(--primary-red);
+                color: white;
+                border-color: var(--primary-red);
+                transform: translateY(-2px);
+            }
+
+        /* Page Title */
+        .page-title {
+            background: linear-gradient(rgba(26, 54, 93, 0.85), rgba(26, 54, 93, 0.9)), url('assets/img/luxury-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 120px 0 60px;
+            position: relative;
+        }
+
+            .page-title h1 {
+                color: white;
+                font-size: 3rem;
+                font-weight: 800;
+                margin-bottom: 1rem;
+            }
+
+        /* Loan Cards */
+        .loan-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            height: 100%;
+            border: 1px solid var(--border-color);
+            margin-bottom: 2rem;
+        }
+
+            .loan-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+                border-color: var(--primary-red);
+            }
+
+        .loan-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+            .loan-image img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.3s ease;
+            }
+
+        .loan-card:hover .loan-image img {
+            transform: scale(1.05);
+        }
+
+        .loan-content {
+            padding: 2rem;
+        }
+
+        .loan-badge {
+            display: inline-block;
+            background: var(--primary-red);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        /* Feature Cards */
+        .feature-card {
+            border-radius: 12px;
+            padding: 2rem;
+            height: 100%;
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+            background: white;
+            text-align: center;
+        }
+
+            .feature-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+                border-color: var(--primary-red);
+            }
+
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary-red) 0%, #c53030 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: white;
+            font-size: 1.8rem;
+        }
+
+        /* Process Steps */
+        .process-step {
+            text-align: center;
+            padding: 1.5rem;
+            position: relative;
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary-red) 0%, #c53030 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin: 0 auto 1rem;
+            box-shadow: 0 5px 15px rgba(230, 57, 70, 0.2);
+        }
+
+        /* Documents Section */
+        .documents-section {
+            background: var(--light-gray);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .document-item {
+            display: flex;
+            align-items: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+            .document-item:last-child {
+                border-bottom: none;
+            }
+
+        .document-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            flex-shrink: 0;
+            color: white;
+        }
+
+        /* CTA Banner */
+        .cta-banner {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-teal) 100%);
+            border-radius: 16px;
+            padding: 3rem;
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            margin-top: 3rem;
+        }
+
+        .cta-content h3 {
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Eligibility Section */
+        .eligibility-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .eligibility-item {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            border-left: 4px solid var(--primary-red);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Security Badge */
+        .security-badge {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(42, 157, 143, 0.1);
+            color: var(--accent-teal);
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+            font-weight: 600;
+            margin: 0.5rem 0;
+        }
+
+            .security-badge i {
+                margin-right: 0.5rem;
+            }
+
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .page-title h1 {
+                font-size: 2.5rem;
+            }
+
+            .btn-getstarted {
+                padding: 0.6rem 1.2rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .page-title h1 {
+                font-size: 2rem;
+            }
+
+            .page-title {
+                padding: 100px 0 40px;
+            }
+
+            .cta-banner {
+                padding: 2rem;
+            }
+
+            .cta-content h3 {
+                font-size: 1.75rem;
+            }
+
+            .loan-card {
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .eligibility-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body class="luxury-assets-page">
+
+    <header id="header" class="header d-flex align-items-center fixed-top">
+        <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+            <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+                <h1 class="sitename">LEHUMO LA EDISHELA</h1>
+            </a>
+
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="active"><span>Asset Loans</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="vehicle-loans.html">Vehicle Loans</a></li>
+                            <li><a href="luxury-loans.html" class="active">Luxury Assets</a></li>
+                            <li><a href="propertyloans.html">Property Loans</a></li>
+                            <li><a href="equipmentfinance.html">Equipment Finance</a></li>
+                            <li><a href="artcollectibles.html">Art & Collectibles</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#"><span>Commercial Fleet</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="fleetfinancing.html">Fleet Financing</a></li>
+                            <li><a href="vehiclesourcing.html">Vehicle Sourcing</a></li>
+                            <li><a href="truckloans.html">Truck & Trailer Loans</a></li>
+                            <li><a href="maintenance.html">Maintenance Packages</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#"><span>Bridging Finance</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="property-bridging.html">Property Bridging</a></li>
+                            <li><a href="auction-finance.html">Auction Finance</a></li>
+                            <li><a href="renovation-loans.html">Renovation Finance</a></li>
+                            <li><a href="development-finance.html">Development Finance</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#"><span>FAQ</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="faq-general.html">General Questions</a></li>
+                            <li><a href="faq-application.html">Application Process</a></li>
+                            <li><a href="faq-interest-rates.html">Interest & Rates</a></li>
+                            <li><a href="faq-asset-requirements.html">Asset Requirements</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#"><span>How To Apply</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="apply-requirements.html">Requirements</a></li>
+                            <li><a href="apply-documentation.html">Documentation</a></li>
+                            <li><a href="apply-process.html">Process Steps</a></li>
+                            <li><a href="apply-timeline.html">Timeline</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+
+            <a class="btn-getstarted" href="apply.html">Apply Now</a>
+
+        </div>
+    </header>
+
+    <main class="main">
+
+        <!-- Page Title -->
+        <div class="page-title dark-background" data-aos="fade">
+            <div class="container position-relative">
+                <h1>Luxury Assets</h1>
+                <p>Get cash against your luxury watches, jewellery, art, and collectibles. Expert valuations, secure storage, and confidential service.</p>
+                <nav class="breadcrumbs">
+                    <ol>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="luxuryassets.html">Asset Loans</a></li>
+                        <li class="current">Luxury Assets</li>
+                    </ol>
+                </nav>
+            </div>
+        </div><!-- End Page Title -->
+        <!-- Luxury Assets Section -->
+        <section id="luxury-assets" class="luxury-assets section">
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="row mb-5">
+                    <div class="col-lg-8 mx-auto text-center">
+                        <h2>Unlock Value From Your Luxury Items</h2>
+                        <p class="mb-4">Turn your valuable luxury items into immediate cash without selling them. We provide discreet, professional loans against high-value assets with expert valuations and secure storage.</p>
+                        <div class="security-badge">
+                            <i class="bi bi-shield-lock"></i>
+                            <span>100% Confidential & Secure</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Loans Against Luxury Items -->
+                <div class="row mb-5">
+                    <div class="col-lg-12">
+                        <h3 class="mb-4" style="color: var(--primary-blue);">Loans Against Luxury Items</h3>
+                        <p class="mb-4">We accept a wide range of luxury items as collateral. Our expert valuers assess each item individually to ensure you receive the best possible loan value.</p>
+                    </div>
+                </div>
+
+                <div class="row g-4 mb-5">
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="loan-card">
+                            <div class="loan-image">
+                                <img src="assets/img/luxury/watch-loan.jpg" alt="Luxury Watch Loans" loading="lazy">
+                            </div>
+                            <div class="loan-content">
+                                <span class="loan-badge">Most Popular</span>
+                                <h4>Luxury Watches</h4>
+                                <p>Use your luxury watches as security for a loan. We accept Rolex, Patek Philippe, Audemars Piguet, and other premium brands.</p>
+                                <ul class="list-unstyled mb-3">
+                                    <li><i class="bi bi-check-circle text-success me-2"></i> All major luxury brands</li>
+                                    <li><i class="bi bi-check-circle text-success me-2"></i> Up to 70% of market value</li>
+                                    <li><i class="bi bi-check-circle text-success me-2"></i> Expert horological valuation</li>
+                                </ul>
+                                <div class="loan-details">
+                                    <div class="detail-item">
+                                        <strong>Loan Amount:</strong> R20,000 - R2,000,000
+                                    </div>
+                                    <div class="detail-item">
+                                        <strong>Term:</strong> 3 - 12 months
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                        <div class="loan-card">
+                            <div class="loan-image">
+                                <img src="assets/img/luxury/jewellery-loan.jpg" alt="Jewellery Loans" loading="lazy">
+                            </div>
+                            <div class="loan-content">
+                                <span class="loan-badge">High Demand</span>
+                                <h4>Fine Jewellery</h4>
+                                <p>Loans against diamonds, gemstones, and precious metal jewellery. We provide certified gemological assessments.</p>
+                                <ul class="list-unstyled mb-3">
+                                    <li><i class="bi bi-check-circle text-success me-2"></i> Diamonds & colored gems</li>
+                                    <li><i class="bi bi-check-circle text-success me-2"></i> Gold, platinum, silver</li>
+                                    <li><i class="bi bi-check-circle text-success me-2"></i> Designer pieces accepted</li>
+                                </ul>
+                                <div class="loan-details">
+                                    <div class="detail-item">
+                                        <strong>Loan Amount:</strong> R10,000 - R1,500,000
+                                    </div>
+                                    <div class="detail-item">
+                                        <strong>Term:</strong> 3 - 12 months
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                        <div class="loan-card">
+                            <div class="loan-image">
+                                <img src="assets/img/luxury/art-loan.jpg" alt="Art & Collectibles Loans" loading="lazy">
+                            </div>
+                            <div class="loan-content">
+                                <span class="loan-badge">Specialist Service</span>
+                                <h4>Art & Collectibles</h4>
+                                <p>Loans against fine art, antiques, rare coins, stamps, and other collectibles. Expert valuation by specialists.</p>
+                                <ul class="list-unstyled mb-3">
+                                    <li><i class="bi bi-check-circle text-success me-2"></i> Paintings & sculptures</li>
+                                    <li><i class="bi bi-check-circle text-success me-2"></i> Antiques & vintage items</li>
+                                    <li><i class="bi bi-check-circle text-success me-2"></i> Rare collectibles</li>
+                                </ul>
+                                <div class="loan-details">
+                                    <div class="detail-item">
+                                        <strong>Loan Amount:</strong> R50,000 - R5,000,000
+                                    </div>
+                                    <div class="detail-item">
+                                        <strong>Term:</strong> 3 - 24 months
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Asset Requirements -->
+                <div class="row mb-5">
+                    <div class="col-lg-12">
+                        <h4 class="mb-3">What We Look For in Luxury Assets</h4>
+                        <div class="eligibility-grid">
+                            <div class="eligibility-item" data-aos="fade-up" data-aos-delay="200">
+                                <h5><i class="bi bi-check-circle-fill text-success me-2"></i> Authentication</h5>
+                                <p class="mb-0">Items must be authentic with proof of purchase or certification where applicable.</p>
+                            </div>
+                            <div class="eligibility-item" data-aos="fade-up" data-aos-delay="250">
+                                <h5><i class="bi bi-check-circle-fill text-success me-2"></i> Condition</h5>
+                                <p class="mb-0">Good condition with minimal wear. Original boxes and papers add value.</p>
+                            </div>
+                            <div class="eligibility-item" data-aos="fade-up" data-aos-delay="300">
+                                <h5><i class="bi bi-check-circle-fill text-success me-2"></i> Market Value</h5>
+                                <p class="mb-0">Items must have established market value and demand.</p>
+                            </div>
+                            <div class="eligibility-item" data-aos="fade-up" data-aos-delay="350">
+                                <h5><i class="bi bi-check-circle-fill text-success me-2"></i> Ownership</h5>
+                                <p class="mb-0">Clear proof of ownership required for all luxury items.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Loans Against Documents -->
+                <div class="row mb-5">
+                    <div class="col-lg-12">
+                        <h3 class="mb-4" style="color: var(--primary-blue);">Valuation & Documentation</h3>
+                        <p class="mb-4">Our specialist valuers assess each item individually. We provide detailed valuation reports and handle all documentation professionally.</p>
+                    </div>
+                </div>
+
+                <div class="documents-section" data-aos="fade-up" data-aos-delay="200">
+                    <h4 class="mb-4">Required Documentation for Luxury Assets</h4>
+
+                    <div class="document-item">
+                        <div class="document-icon">
+                            <i class="bi bi-file-earmark-text"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">Proof of Purchase</h5>
+                            <p class="mb-0">Original receipts, invoices, or purchase documentation showing ownership history.</p>
+                        </div>
+                    </div>
+
+                    <div class="document-item">
+                        <div class="document-icon">
+                            <i class="bi bi-award"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">Certification Papers</h5>
+                            <p class="mb-0">Gemological certificates, watch papers, art authentication certificates, or appraisal documents.</p>
+                        </div>
+                    </div>
+
+                    <div class="document-item">
+                        <div class="document-icon">
+                            <i class="bi bi-card-checklist"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">Ownership Verification</h5>
+                            <p class="mb-0">Valid identification and proof of residence matching ownership records.</p>
+                        </div>
+                    </div>
+
+                    <div class="document-item">
+                        <div class="document-icon">
+                            <i class="bi bi-images"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">Quality Photographs</h5>
+                            <p class="mb-0">Clear photographs showing all angles, markings, serial numbers, and any imperfections.</p>
+                        </div>
+                    </div>
+
+                    <div class="document-item">
+                        <div class="document-icon">
+                            <i class="bi bi-box-seam"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">Original Packaging</h5>
+                            <p class="mb-0">Original boxes, cases, or packaging materials when available (adds to value).</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Security Features -->
+                <div class="row mb-5">
+                    <div class="col-lg-12">
+                        <h4 class="mb-4 text-center">Our Security Features</h4>
+                        <div class="row g-4">
+                            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                                <div class="feature-card">
+                                    <div class="feature-icon">
+                                        <i class="bi bi-shield-lock"></i>
+                                    </div>
+                                    <h4>Bank-Grade Vaults</h4>
+                                    <p>Your items are stored in temperature-controlled, high-security vaults with 24/7 monitoring.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                                <div class="feature-card">
+                                    <div class="feature-icon">
+                                        <i class="bi bi-incognito"></i>
+                                    </div>
+                                    <h4>Complete Confidentiality</h4>
+                                    <p>Your privacy is protected. All transactions and storage are handled with absolute discretion.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                                <div class="feature-card">
+                                    <div class="feature-icon">
+                                        <i class="bi bi-shield-check"></i>
+                                    </div>
+                                    <h4>Full Insurance</h4>
+                                    <p>All items are fully insured for their full valuation amount while in our care.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- How It Works -->
+                <div class="row mb-5">
+                    <div class="col-lg-12">
+                        <h3 class="mb-4 text-center" style="color: var(--primary-blue);">How Our Luxury Asset Process Works</h3>
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                                <div class="process-step">
+                                    <div class="step-number">1</div>
+                                    <h4>Initial Consultation</h4>
+                                    <p>Contact us with details of your luxury items. We discuss valuation and loan options confidentially.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                                <div class="process-step">
+                                    <div class="step-number">2</div>
+                                    <h4>Expert Valuation</h4>
+                                    <p>Our specialists assess your items and provide a detailed valuation report.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                                <div class="process-step">
+                                    <div class="step-number">3</div>
+                                    <h4>Secure Storage</h4>
+                                    <p>Items are securely stored in our vaults with full insurance coverage.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                                <div class="process-step">
+                                    <div class="step-number">4</div>
+                                    <h4>Receive Funds</h4>
+                                    <p>Approved funds are transferred to your account, usually within 24 hours.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA Section -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="cta-banner" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="cta-content">
+                                <h3>Ready to Access Cash From Your Luxury Assets?</h3>
+                                <p class="mb-4">Contact us for a confidential consultation and expert valuation of your luxury items.</p>
+                                <div class="cta-buttons">
+                                    <a href="apply.html" class="btn btn-primary me-3">Apply Now</a>
+                                    <a href="tel:0861000534" class="btn btn-outline-primary">Call 0861 000 534</a>
+                                </div>
+                                <p class="mt-3 small">
+                                    <i class="bi bi-info-circle me-1"></i> FSCA Registered • 100% Confidential • Expert Valuations
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section><!-- /Luxury Assets Section -->
+
+    </main>
+
+    <footer id="footer" class="footer position-relative dark-background">
+        <div class="container footer-top">
+            <div class="row gy-4">
+                <div class="col-lg-4 col-md-6 footer-about">
+                    <a href="index.html" class="d-flex align-items-center mb-3" style="text-decoration: none;">
+                        <h1 class="sitename">LEHUMO LA EDISHELA</h1>
+                    </a>
+                    <div class="footer-contact">
+                        <p class="mb-3">Your trusted partner for asset-backed loans. Fast approvals, great rates, and FSCA registered for your peace of mind.</p>
+                        <p class="mb-2"><strong>Need to talk to us?</strong></p>
+                        <p class="mb-2"><i class="bi bi-telephone me-2"></i> 0861 000 534</p>
+                        <p class="mb-3"><i class="bi bi-envelope me-2"></i> info@lehumo.co.za</p>
+                        <p><i class="bi bi-shield-check me-2"></i> FSCA Registered</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 footer-links">
+                    <h4 class="mb-3">Quick Links</h4>
+                    <ul>
+                        <li><i class="bi bi-chevron-right"></i> <a href="index.html">Home</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="about.html">About Us</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="contact.html">Contact Us</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="apply.html">Apply Now</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="faq.html">FAQ & Help</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-3 footer-links">
+                    <h4 class="mb-3">Our Services</h4>
+                    <ul>
+                        <li><i class="bi bi-chevron-right"></i> <a href="vehicleloans.html">Vehicle Loans</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="luxuryassets.html">Luxury Asset Loans</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="propertyloans.html">Property Loans</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="equipmentfinance.html">Equipment Finance</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="artcollectibles.html">Art & Collectibles</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-12">
+                    <h4 class="mb-3">Contact Details</h4>
+                    <div class="contact-info mb-3">
+                        <p><i class="bi bi-geo-alt me-2"></i> Sandton, Johannesburg</p>
+                        <p><i class="bi bi-clock me-2"></i> Mon-Fri: 8am-6pm | Sat: 9am-1pm</p>
+                        <p><i class="bi bi-building me-2"></i> Nationwide Service</p>
+                    </div>
+                    <div class="social-links d-flex mt-4">
+                        <a href="#" class="me-3"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="me-3"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="me-3"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container copyright text-center mt-4 pt-4 border-top border-secondary">
+            <p class="mb-2">© 2023 Lehumo La Edishela Financial Services. All rights reserved.</p>
+            <div class="credits">
+                <a href="privacy.html" class="me-3">Privacy Policy</a> |
+                <a href="terms.html" class="mx-3">Terms of Service</a> |
+                <a href="complaints.html" class="ms-3">Complaints Procedure</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
