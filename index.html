@@ -12,6 +12,9 @@
     <link href="assets/img/favicon.png" rel="icon">
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
+    <!-- Font Awesome for WhatsApp Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
@@ -37,6 +40,118 @@
             --dark-gray: #212529;
             --text-color: #333333;
             --border-color: #E0E0E0;
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+            .whatsapp-float:hover {
+                background-color: #128C7E;
+                color: white;
+                transform: scale(1.1);
+                box-shadow: 0 6px 25px rgba(37, 211, 102, 0.4);
+            }
+
+            .whatsapp-float i {
+                margin-top: 2px;
+            }
+
+        /* Animated Logo Frame */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 15px;
+        }
+
+        .logo-frame {
+            width: 70px;
+            height: 70px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-blue), var(--accent-teal), var(--primary-red));
+            background-size: 400% 400%;
+            animation: gradientShift 8s ease infinite;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+            .logo-frame::before {
+                content: '';
+                position: absolute;
+                width: 64px;
+                height: 64px;
+                background: white;
+                border-radius: 50%;
+                z-index: 1;
+            }
+
+        .logo-image {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+            border-radius: 50%;
+            position: relative;
+            z-index: 2;
+            transition: transform 0.5s ease;
+        }
+
+        .logo-frame:hover .logo-image {
+            transform: scale(1.05);
+        }
+
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Pulsing effect for attention */
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(230, 57, 70, 0.4);
+            }
+
+            70% {
+                box-shadow: 0 0 0 10px rgba(230, 57, 70, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(230, 57, 70, 0);
+            }
+        }
+
+        .logo-frame:hover {
+            animation: gradientShift 8s ease infinite, pulse 2s infinite;
         }
 
         /* Header Enhancements */
@@ -282,8 +397,27 @@
             padding: 100px 0;
         }
 
-        /* Responsive Adjustments */
+        /* Logo Frame Mobile Adjustments */
         @media (max-width: 992px) {
+            .logo-frame {
+                width: 60px;
+                height: 60px;
+            }
+
+                .logo-frame::before {
+                    width: 54px;
+                    height: 54px;
+                }
+
+            .logo-image {
+                width: 42px;
+                height: 42px;
+            }
+
+            .sitename {
+                font-size: 1.5rem;
+            }
+
             .hero-title {
                 font-size: 2.5rem;
             }
@@ -296,9 +430,40 @@
                 padding: 0.6rem 1.2rem;
                 font-size: 0.9rem;
             }
+
+            .whatsapp-float {
+                width: 55px;
+                height: 55px;
+                font-size: 26px;
+                bottom: 25px;
+                right: 25px;
+            }
         }
 
         @media (max-width: 768px) {
+            .logo-frame {
+                width: 50px;
+                height: 50px;
+            }
+
+                .logo-frame::before {
+                    width: 44px;
+                    height: 44px;
+                }
+
+            .logo-image {
+                width: 35px;
+                height: 35px;
+            }
+
+            .sitename {
+                font-size: 1.3rem;
+            }
+
+            .logo-container {
+                gap: 10px;
+            }
+
             .hero-title {
                 font-size: 2rem;
             }
@@ -310,17 +475,60 @@
             .quick-quote {
                 padding: 1.5rem;
             }
+
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 24px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo-container {
+                gap: 8px;
+            }
+
+            .logo-frame {
+                width: 45px;
+                height: 45px;
+            }
+
+                .logo-frame::before {
+                    width: 39px;
+                    height: 39px;
+                }
+
+            .logo-image {
+                width: 32px;
+                height: 32px;
+            }
+
+            .sitename {
+                font-size: 1.1rem;
+            }
         }
     </style>
 </head>
 
 <body class="index-page">
 
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/27861000534?text=Hello%20Lehumo%20La%20Edishela,%20I%20would%20like%20to%20inquire%20about%20your%20loan%20services" class="whatsapp-float" target="_blank" aria-label="Chat with us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
     <header id="header" class="header d-flex align-items-center fixed-top">
         <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
             <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-                <h1 class="sitename">LEHUMO LA EDISHELA</h1>
+                <div class="logo-container">
+                    <div class="logo-frame">
+                        <img src="assets/img/logo.png" alt="Lehumo La Edishela Logo" class="logo-image">
+                    </div>
+                    <h1 class="sitename">LEHUMO LA EDISHELA</h1>
+                </div>
             </a>
 
             <nav id="navmenu" class="navmenu">
@@ -779,7 +987,12 @@
             <div class="row gy-4">
                 <div class="col-lg-4 col-md-6 footer-about">
                     <a href="index.html" class="d-flex align-items-center mb-3" style="text-decoration: none;">
-                        <h1 class="sitename">LEHUMO LA EDISHELA</h1>
+                        <div class="logo-container">
+                            <div class="logo-frame">
+                                <img src="assets/img/logo.png" alt="Lehumo La Edishela Logo" class="logo-image">
+                            </div>
+                            <h1 class="sitename">LEHUMO LA EDISHELA</h1>
+                        </div>
                     </a>
                     <div class="footer-contact">
                         <p class="mb-3">Your trusted partner for asset-backed loans. Fast approvals, great rates, and FSCA registered for your peace of mind.</p>
@@ -927,6 +1140,15 @@
                 header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
             }
         });
+
+        // WhatsApp button interaction
+        const whatsappBtn = document.querySelector('.whatsapp-float');
+        if (whatsappBtn) {
+            whatsappBtn.addEventListener('click', function () {
+                // Optional: Track WhatsApp clicks
+                console.log('WhatsApp button clicked');
+            });
+        }
     </script>
 
 </body>
