@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Lehumo La Edishela | Financial Service Provider </title>
+    <title>Lehumo La Edishela | Financial Service Provider</title>
     <meta name="description" content="Premium asset-backed financing solutions for vehicles, luxury assets, and property. FSCA registered with same-day approvals.">
     <meta name="keywords" content="asset loans, vehicle finance, luxury asset loans, bridging finance, commercial finance, secured loans, South Africa">
 
@@ -74,84 +74,22 @@
                 margin-top: 2px;
             }
 
-        /* Animated Logo Frame */
+        /* Logo Container - Header Logo same as Footer */
         .logo-container {
             display: flex;
             align-items: center;
             justify-content: flex-start;
-            gap: 15px;
+            gap: 0px;
         }
 
-        .logo-frame {
-            width: 70px;
-            height: 70px;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--primary-blue), var(--accent-teal), var(--primary-red));
-            background-size: 400% 400%;
-            animation: gradientShift 8s ease infinite;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-        }
-
-            .logo-frame::before {
-                content: '';
-                position: absolute;
-                width: 64px;
-                height: 64px;
-                background: white;
-                border-radius: 50%;
-                z-index: 1;
-            }
 
         .logo-image {
-            width: 50px;
-            height: 50px;
+            width: 60px;
+            height: 120px;
             object-fit: contain;
-            border-radius: 50%;
+            border-radius: 100%;
             position: relative;
             z-index: 2;
-            transition: transform 0.5s ease;
-        }
-
-        .logo-frame:hover .logo-image {
-            transform: scale(1.05);
-        }
-
-        @keyframes gradientShift {
-            0% {
-                background-position: 0% 50%;
-            }
-
-            50% {
-                background-position: 100% 50%;
-            }
-
-            100% {
-                background-position: 0% 50%;
-            }
-        }
-
-        /* Pulsing effect for attention */
-        @keyframes pulse {
-            0% {
-                box-shadow: 0 0 0 0 rgba(230, 57, 70, 0.4);
-            }
-
-            70% {
-                box-shadow: 0 0 0 10px rgba(230, 57, 70, 0);
-            }
-
-            100% {
-                box-shadow: 0 0 0 0 rgba(230, 57, 70, 0);
-            }
-        }
-
-        .logo-frame:hover {
-            animation: gradientShift 8s ease infinite, pulse 2s infinite;
         }
 
         /* Header Enhancements */
@@ -250,12 +188,13 @@
                 transform: translateY(-2px);
             }
 
-        /* Quick Quote Form */
+        /* Quick Quote Form - Enhanced like Lamna.co.za */
         .quick-quote {
             background-color: white;
             border-radius: 12px;
             padding: 2.5rem;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            border: 1px solid var(--border-color);
         }
 
         .form-title {
@@ -263,6 +202,15 @@
             font-size: 1.75rem;
             margin-bottom: 1.5rem;
             font-weight: 700;
+            text-align: center;
+        }
+
+        .form-subtitle {
+            color: #666;
+            font-size: 1rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            line-height: 1.5;
         }
 
         .form-control, .form-select {
@@ -270,12 +218,47 @@
             border: 1px solid var(--border-color);
             border-radius: 6px;
             transition: all 0.3s ease;
+            font-size: 0.95rem;
         }
 
             .form-control:focus, .form-select:focus {
                 border-color: var(--primary-red);
                 box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.1);
             }
+
+        .form-label {
+            font-weight: 600;
+            color: #444;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        /* Quote Benefits */
+        .quote-benefits {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+            border-left: 4px solid var(--primary-red);
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 0.75rem;
+        }
+
+        .benefit-icon {
+            color: var(--primary-red);
+            margin-right: 10px;
+            font-size: 1.1rem;
+            margin-top: 2px;
+        }
+
+        .benefit-text {
+            color: #555;
+            font-size: 0.9rem;
+        }
 
         /* Feature Cards */
         .feature-card {
@@ -400,18 +383,13 @@
         /* Logo Frame Mobile Adjustments */
         @media (max-width: 992px) {
             .logo-frame {
-                width: 60px;
-                height: 60px;
+                width: 54px;
+                height: 54px;
             }
 
-                .logo-frame::before {
-                    width: 54px;
-                    height: 54px;
-                }
-
             .logo-image {
-                width: 42px;
-                height: 42px;
+                width: 54px;
+                height: 54px;
             }
 
             .sitename {
@@ -438,6 +416,10 @@
                 bottom: 25px;
                 right: 25px;
             }
+
+            .quick-quote {
+                padding: 2rem;
+            }
         }
 
         @media (max-width: 768px) {
@@ -446,14 +428,9 @@
                 height: 50px;
             }
 
-                .logo-frame::before {
-                    width: 44px;
-                    height: 44px;
-                }
-
             .logo-image {
-                width: 35px;
-                height: 35px;
+                width: 44px;
+                height: 44px;
             }
 
             .sitename {
@@ -461,7 +438,7 @@
             }
 
             .logo-container {
-                gap: 10px;
+                gap: 2px;
             }
 
             .hero-title {
@@ -495,11 +472,6 @@
                 height: 45px;
             }
 
-                .logo-frame::before {
-                    width: 39px;
-                    height: 39px;
-                }
-
             .logo-image {
                 width: 32px;
                 height: 32px;
@@ -507,6 +479,14 @@
 
             .sitename {
                 font-size: 1.1rem;
+            }
+
+            .quick-quote {
+                padding: 1.25rem;
+            }
+
+            .form-title {
+                font-size: 1.5rem;
             }
         }
     </style>
@@ -527,7 +507,6 @@
                     <div class="logo-frame">
                         <img src="assets/img/logo.png" alt="Lehumo La Edishela Logo" class="logo-image">
                     </div>
-                    <h1 class="sitename">LEHUMO LA EDISHELA</h1>
                 </div>
             </a>
 
@@ -637,22 +616,26 @@
 
                     <div class="col-lg-5">
                         <div class="quick-quote" data-aos="fade-left" data-aos-delay="300" id="quick-quote">
-                            <h3 class="form-title mb-4">Get Your Free Quote in Minutes</h3>
+                            <h3 class="form-title mb-3">Get Your Personalised Quote Now</h3>
+                            <p class="form-subtitle">Complete the form below and receive a tailored quote within minutes. No obligation, no hidden fees.</p>
+
                             <form id="quoteForm">
                                 <div class="form-group mb-3">
                                     <label for="loanAmount" class="form-label">How Much Do You Need? (R)</label>
                                     <input type="number" id="loanAmount" class="form-control" placeholder="e.g. R100,000" min="10000" max="10000000" required>
+                                    <small class="form-text text-muted">Minimum amount: R10,000</small>
                                 </div>
 
                                 <div class="form-group mb-3">
-                                    <label for="assetType" class="form-label">What's Your Asset?</label>
+                                    <label for="assetType" class="form-label">What Type of Asset Do You Have?</label>
                                     <select id="assetType" class="form-select" required>
-                                        <option value="">Choose Your Asset Type</option>
+                                        <option value="">Select Your Asset Type</option>
                                         <option value="vehicle">Car, Truck or Vehicle</option>
                                         <option value="luxury">Luxury Item or Jewelry</option>
                                         <option value="property">Property or Land</option>
                                         <option value="equipment">Equipment or Machinery</option>
                                         <option value="fleet">Fleet or Multiple Vehicles</option>
+                                        <option value="art">Art, Collectibles or Antiques</option>
                                     </select>
                                 </div>
 
@@ -671,17 +654,42 @@
                                     </div>
                                 </div>
 
-                                <div class="form-group mb-4">
-                                    <label for="phone" class="form-label">Phone Number</label>
-                                    <input type="tel" id="phone" class="form-control" placeholder="Your contact number" required>
+                                <div class="form-group mb-3">
+                                    <label for="email" class="form-label">Email Address</label>
+                                    <input type="email" id="email" class="form-control" placeholder="your.email@example.com" required>
                                 </div>
 
-                                <button type="submit" class="btn btn-primary w-100 py-3">
-                                    <i class="bi bi-send me-2"></i>Get My Personalised Quote
+                                <div class="form-group mb-4">
+                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <input type="tel" id="phone" class="form-control" placeholder="071 234 5678" required>
+                                    <small class="form-text text-muted">We'll contact you on this number</small>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary w-100 py-3 mb-3" style="font-size: 1.1rem; font-weight: 600;">
+                                    <i class="bi bi-send me-2"></i>GET MY PERSONALISED QUOTE
                                 </button>
 
+                                <div class="quote-benefits">
+                                    <div class="benefit-item">
+                                        <i class="bi bi-check-circle benefit-icon"></i>
+                                        <span class="benefit-text">No impact on your credit score</span>
+                                    </div>
+                                    <div class="benefit-item">
+                                        <i class="bi bi-check-circle benefit-icon"></i>
+                                        <span class="benefit-text">Fast approval - often within 24 hours</span>
+                                    </div>
+                                    <div class="benefit-item">
+                                        <i class="bi bi-check-circle benefit-icon"></i>
+                                        <span class="benefit-text">Keep using your asset while you repay</span>
+                                    </div>
+                                    <div class="benefit-item">
+                                        <i class="bi bi-check-circle benefit-icon"></i>
+                                        <span class="benefit-text">Competitive rates from 12% p.a.</span>
+                                    </div>
+                                </div>
+
                                 <p class="text-muted text-center mt-3 small">
-                                    <i class="bi bi-lock me-1"></i>Your information is secure and confidential
+                                    <i class="bi bi-lock me-1"></i>Your information is 100% secure and confidential. We comply with POPIA regulations.
                                 </p>
                             </form>
                         </div>
@@ -1083,12 +1091,16 @@
                 assetType: document.getElementById('assetType').value,
                 firstName: document.getElementById('firstName').value,
                 lastName: document.getElementById('lastName').value,
+                email: document.getElementById('email').value,
                 phone: document.getElementById('phone').value
             };
 
             // Validation
-            if (!formData.loanAmount || !formData.assetType || !formData.firstName || !formData.lastName || !formData.phone) {
-                alert('Please fill in all the required fields so we can help you.');
+            const requiredFields = ['loanAmount', 'assetType', 'firstName', 'lastName', 'email', 'phone'];
+            const missingFields = requiredFields.filter(field => !formData[field]);
+
+            if (missingFields.length > 0) {
+                alert('Please fill in all the required fields so we can prepare your personalised quote.');
                 return;
             }
 
@@ -1097,19 +1109,39 @@
                 return;
             }
 
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(formData.email)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+
+            // Phone validation (basic)
+            const phoneRegex = /^[0-9\s\+\-\(\)]{10,}$/;
+            if (!phoneRegex.test(formData.phone.replace(/\s/g, ''))) {
+                alert('Please enter a valid phone number.');
+                return;
+            }
+
             // Simulate submission
             const submitBtn = this.querySelector('button[type="submit"]');
             const originalText = submitBtn.innerHTML;
 
-            submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Getting Your Quote...';
+            submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Processing Your Quote...';
             submitBtn.disabled = true;
 
             setTimeout(() => {
-                alert('Thank you! One of our loan specialists will call you within 30 minutes with your personalised quote.');
+                alert('Thank you for your request! One of our loan specialists will contact you within 30 minutes with your personalised quote. We\'ll call you on ' + formData.phone + ' and email the quote to ' + formData.email + '.');
                 this.reset();
                 submitBtn.innerHTML = originalText;
                 submitBtn.disabled = false;
-            }, 1500);
+
+                // Scroll to top to show confirmation
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            }, 2000);
         });
 
         // Smooth scrolling
@@ -1149,6 +1181,23 @@
                 console.log('WhatsApp button clicked');
             });
         }
+
+        // Auto-format phone number
+        document.getElementById('phone')?.addEventListener('input', function (e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length > 0) {
+                if (value.length <= 2) {
+                    value = value;
+                } else if (value.length <= 5) {
+                    value = value.substring(0, 2) + ' ' + value.substring(2);
+                } else if (value.length <= 8) {
+                    value = value.substring(0, 2) + ' ' + value.substring(2, 5) + ' ' + value.substring(5);
+                } else {
+                    value = value.substring(0, 2) + ' ' + value.substring(2, 5) + ' ' + value.substring(5, 8) + ' ' + value.substring(8, 10);
+                }
+            }
+            e.target.value = value;
+        });
     </script>
 
 </body>
