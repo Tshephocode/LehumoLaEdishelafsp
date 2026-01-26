@@ -8,6 +8,13 @@
     <meta name="description" content="Complete fleet financing solutions including operational leases, hire purchase, and fleet management services for businesses across South Africa.">
     <meta name="keywords" content="fleet financing, operational leasing, hire purchase, fleet management, South Africa fleet finance">
 
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Font Awesome for WhatsApp Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
@@ -33,6 +40,69 @@
             --dark-gray: #212529;
             --text-color: #333333;
             --border-color: #E0E0E0;
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+            .whatsapp-float:hover {
+                background-color: #128C7E;
+                color: white;
+                transform: scale(1.1);
+                box-shadow: 0 6px 25px rgba(37, 211, 102, 0.4);
+            }
+
+            .whatsapp-float i {
+                margin-top: 2px;
+            }
+
+        /* Logo Container - Header Logo same as Footer */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 0px;
+        }
+
+        .logo-frame {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 2;
+        }
+
+        .logo-image {
+            width: 60px;
+            height: 120px;
+            object-fit: contain;
+            border-radius: 100%;
+            position: relative;
+            z-index: 2;
         }
 
         /* Header Enhancements */
@@ -110,8 +180,9 @@
             background-size: cover;
             background-position: center;
             color: white;
-            padding: 120px 0 60px;
+            padding: 140px 0 60px;
             position: relative;
+            margin-top: 80px;
         }
 
             .page-title h1 {
@@ -427,6 +498,28 @@
                 .comparison-feature:last-child, .comparison-option:last-child {
                     border-bottom: none;
                 }
+
+            .logo-frame {
+                width: 54px;
+                height: 54px;
+            }
+
+            .logo-image {
+                width: 54px;
+                height: 54px;
+            }
+
+            .sitename {
+                font-size: 1.5rem;
+            }
+
+            .whatsapp-float {
+                width: 55px;
+                height: 55px;
+                font-size: 26px;
+                bottom: 25px;
+                right: 25px;
+            }
         }
 
         @media (max-width: 768px) {
@@ -435,7 +528,7 @@
             }
 
             .page-title {
-                padding: 100px 0 40px;
+                padding: 120px 0 40px;
             }
 
             .cta-banner {
@@ -452,6 +545,28 @@
 
             .financing-types {
                 grid-template-columns: 1fr;
+            }
+
+            .logo-frame {
+                width: 50px;
+                height: 50px;
+            }
+
+            .logo-image {
+                width: 44px;
+                height: 44px;
+            }
+
+            .sitename {
+                font-size: 1.3rem;
+            }
+
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 24px;
+                bottom: 20px;
+                right: 20px;
             }
         }
 
@@ -470,17 +585,44 @@
                 text-align: center;
                 margin-bottom: 0.5rem;
             }
+
+            .logo-container {
+                gap: 8px;
+            }
+
+            .logo-frame {
+                width: 45px;
+                height: 45px;
+            }
+
+            .logo-image {
+                width: 32px;
+                height: 32px;
+            }
+
+            .sitename {
+                font-size: 1.1rem;
+            }
         }
     </style>
 </head>
 
 <body class="fleet-financing-page">
 
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/27861000534?text=Hello%20Lehumo%20La%20Edishela,%20I%20would%20like%20to%20inquire%20about%20Fleet%20Financing" class="whatsapp-float" target="_blank" aria-label="Chat with us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
     <header id="header" class="header d-flex align-items-center fixed-top">
         <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
             <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-                <h1 class="sitename">LEHUMO LA EDISHELA</h1>
+                <div class="logo-container">
+                    <div class="logo-frame">
+                        <img src="assets/img/logo.png" alt="Lehumo La Edishela Logo" class="logo-image">
+                    </div>
+                </div>
             </a>
 
             <nav id="navmenu" class="navmenu">
@@ -498,7 +640,7 @@
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="index.html" class="active"><span>Commercial Fleet</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <a href="#" class="active"><span>Commercial Fleet</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                         <ul>
                             <li><a href="vehiclesourcing.html">Vehicle Sourcing</a></li>
                             <li><a href="truckloans.html">Truck & Trailer Loans</a></li>
@@ -553,7 +695,7 @@
                 <nav class="breadcrumbs">
                     <ol>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="commercialfleet.html">Commercial Fleet</a></li>
+                        <li><a href="index.html">Commercial Fleet</a></li>
                         <li class="current">Fleet Financing</li>
                     </ol>
                 </nav>
@@ -562,10 +704,10 @@
         <!-- Page Indicator -->
         <div class="container" data-aos="fade-up" data-aos-delay="100">
             <div class="page-indicator">
-                <a href="fleetfinancing.html" class="indicator-item">Vehicle Sourcing</a>
-                <a href="truck-trailor-loans.html" class="indicator-item">Truck & Trailer Loans</a>
-                <a href="maintenance-packages.html" class="indicator-item">Maintenance Packages</a>
-                <a href="fleet-financing.html" class="indicator-item active">Fleet Financing</a>
+                <a href="vehiclesourcing.html" class="indicator-item">Vehicle Sourcing</a>
+                <a href="truckloans.html" class="indicator-item">Truck & Trailer Loans</a>
+                <a href="maintenance.html" class="indicator-item">Maintenance Packages</a>
+                <a href="fleetfinancing.html" class="indicator-item active">Fleet Financing</a>
             </div>
         </div>
 
@@ -1052,7 +1194,12 @@
             <div class="row gy-4">
                 <div class="col-lg-4 col-md-6 footer-about">
                     <a href="index.html" class="d-flex align-items-center mb-3" style="text-decoration: none;">
-                        <h1 class="sitename">LEHUMO LA EDISHELA</h1>
+                        <div class="logo-container">
+                            <div class="logo-frame">
+                                <img src="assets/img/logo.png" alt="Lehumo La Edishela Logo" class="logo-image">
+                            </div>
+                            <h1 class="sitename">LEHUMO LA EDISHELA</h1>
+                        </div>
                     </a>
                     <div class="footer-contact">
                         <p class="mb-3">Your trusted partner for asset-backed loans. Fast approvals, great rates, and FSCA registered for your peace of mind.</p>
@@ -1063,54 +1210,55 @@
                     </div>
                 </div>
 
-                <div class="col-lg-2 col-md-6 footer-links">
-                    <h4>Quick Links</h4>
+                <div class="col-lg-2 col-md-3 footer-links">
+                    <h4 class="mb-3">Quick Links</h4>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="artcollectibles.html">Art & Collectibles</a></li>
-                        <li><a href="apply.html">Apply Now</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="index.html">Home</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="about.html">About Us</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="contact.html">Contact Us</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="apply.html">Apply Now</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="faq.html">FAQ & Help</a></li>
                     </ul>
                 </div>
 
-                <div class="col-lg-2 col-md-6 footer-links">
-                    <h4>Commercial Fleet</h4>
+                <div class="col-lg-2 col-md-3 footer-links">
+                    <h4 class="mb-3">Commercial Fleet</h4>
                     <ul>
-                        <li><a href="commercialfleet.html">Commercial Fleet Overview</a></li>
-                        <li><a href="fleetfinancing.html">Vehicle Sourcing</a></li>
-                        <li><a href="truck-trailor-loans.html">Truck & Trailer Loans</a></li>
-                        <li><a href="maintenance-packages.html">Maintenance Packages</a></li>
-                        <li><a href="fleet-financing.html" class="active">Fleet Financing</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="vehiclesourcing.html">Vehicle Sourcing</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="truckloans.html">Truck & Trailer Loans</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="maintenance.html">Maintenance Packages</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="fleetfinancing.html" class="active">Fleet Financing</a></li>
                     </ul>
                 </div>
 
-                <div class="col-lg-4 col-md-6 footer-newsletter">
-                    <h4>Business Hours</h4>
-                    <div class="business-hours">
-                        <p class="mb-2"><strong>Monday - Friday:</strong> 8:00 AM - 5:00 PM</p>
-                        <p class="mb-2"><strong>Saturday:</strong> 9:00 AM - 1:00 PM</p>
-                        <p class="mb-3"><strong>Sunday & Holidays:</strong> Closed</p>
+                <div class="col-lg-4 col-md-12">
+                    <h4 class="mb-3">Contact Details</h4>
+                    <div class="contact-info mb-3">
+                        <p><i class="bi bi-geo-alt me-2"></i> Sandton, Johannesburg</p>
+                        <p><i class="bi bi-clock me-2"></i> Mon-Fri: 8am-6pm | Sat: 9am-1pm</p>
+                        <p><i class="bi bi-building me-2"></i> Nationwide Service</p>
                     </div>
                     <div class="social-links d-flex mt-4">
-                        <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-                        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="me-3"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="me-3"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="me-3"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
                     </div>
                 </div>
-
             </div>
         </div>
 
-        <div class="container copyright text-center">
-            <p>&copy; 2023 <strong>Lehumo La Edishela</strong>. All Rights Reserved. FSP No. 12345</p>
-            <p class="mb-0">Designed for Commercial Fleet Financing Solutions</p>
+        <div class="container copyright text-center mt-4 pt-4 border-top border-secondary">
+            <p class="mb-2">© 2025 Lehumo La Edishela Financial Services. All rights reserved.</p>
+            <div class="credits">
+                <a href="privacy.html" class="me-3">Privacy Policy</a> |
+                <a href="terms.html" class="mx-3">Terms of Service</a> |
+                <a href="complaints.html" class="ms-3">Complaints Procedure</a>
+            </div>
         </div>
-
     </footer>
 
-    <!-- Scroll Top Button -->
+    <!-- Scroll Top -->
     <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
     <!-- Preloader -->

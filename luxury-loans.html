@@ -12,6 +12,9 @@
     <link href="assets/img/favicon.png" rel="icon">
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
+    <!-- Font Awesome for WhatsApp Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
@@ -37,6 +40,55 @@
             --dark-gray: #212529;
             --text-color: #333333;
             --border-color: #E0E0E0;
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+            .whatsapp-float:hover {
+                background-color: #128C7E;
+                color: white;
+                transform: scale(1.1);
+                box-shadow: 0 6px 25px rgba(37, 211, 102, 0.4);
+            }
+
+            .whatsapp-float i {
+                margin-top: 2px;
+            }
+
+        /* Logo Container - Same as index.html */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 0px;
+        }
+
+        .logo-image {
+            width: 60px;
+            height: 120px;
+            object-fit: contain;
+            border-radius: 100%;
+            position: relative;
+            z-index: 2;
         }
 
         /* Header Enhancements */
@@ -308,8 +360,17 @@
                 margin-right: 0.5rem;
             }
 
-        /* Responsive Adjustments */
+        /* Logo Frame Mobile Adjustments - Same as index.html */
         @media (max-width: 992px) {
+            .logo-image {
+                width: 54px;
+                height: 54px;
+            }
+
+            .sitename {
+                font-size: 1.5rem;
+            }
+
             .page-title h1 {
                 font-size: 2.5rem;
             }
@@ -318,9 +379,30 @@
                 padding: 0.6rem 1.2rem;
                 font-size: 0.9rem;
             }
+
+            .whatsapp-float {
+                width: 55px;
+                height: 55px;
+                font-size: 26px;
+                bottom: 25px;
+                right: 25px;
+            }
         }
 
         @media (max-width: 768px) {
+            .logo-image {
+                width: 44px;
+                height: 44px;
+            }
+
+            .sitename {
+                font-size: 1.3rem;
+            }
+
+            .logo-container {
+                gap: 2px;
+            }
+
             .page-title h1 {
                 font-size: 2rem;
             }
@@ -340,6 +422,29 @@
             .loan-card {
                 margin-bottom: 1.5rem;
             }
+
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 24px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo-container {
+                gap: 8px;
+            }
+
+            .logo-image {
+                width: 32px;
+                height: 32px;
+            }
+
+            .sitename {
+                font-size: 1.1rem;
+            }
         }
 
         @media (max-width: 576px) {
@@ -352,11 +457,18 @@
 
 <body class="luxury-assets-page">
 
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/27861000534?text=Hello%20Lehumo%20La%20Edishela,%20I%20would%20like%20to%20inquire%20about%20your%20loan%20services" class="whatsapp-float" target="_blank" aria-label="Chat with us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
     <header id="header" class="header d-flex align-items-center fixed-top">
         <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
             <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-                <h1 class="sitename">LEHUMO LA EDISHELA</h1>
+                <div class="logo-container">
+                    <img src="assets/img/logo.png" alt="Lehumo La Edishela Logo" class="logo-image">
+                </div>
             </a>
 
             <nav id="navmenu" class="navmenu">
@@ -734,7 +846,10 @@
             <div class="row gy-4">
                 <div class="col-lg-4 col-md-6 footer-about">
                     <a href="index.html" class="d-flex align-items-center mb-3" style="text-decoration: none;">
-                        <h1 class="sitename">LEHUMO LA EDISHELA</h1>
+                        <div class="logo-container">
+                            <img src="assets/img/logo.png" alt="Lehumo La Edishela Logo" class="logo-image">
+                            <h1 class="sitename">LEHUMO LA EDISHELA</h1>
+                        </div>
                     </a>
                     <div class="footer-contact">
                         <p class="mb-3">Your trusted partner for asset-backed loans. Fast approvals, great rates, and FSCA registered for your peace of mind.</p>
@@ -759,8 +874,8 @@
                 <div class="col-lg-2 col-md-3 footer-links">
                     <h4 class="mb-3">Our Services</h4>
                     <ul>
-                        <li><i class="bi bi-chevron-right"></i> <a href="vehicleloans.html">Vehicle Loans</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="luxuryassets.html">Luxury Asset Loans</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="vehicle-loans.html">Vehicle Loans</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="luxury-loans.html">Luxury Asset Loans</a></li>
                         <li><i class="bi bi-chevron-right"></i> <a href="propertyloans.html">Property Loans</a></li>
                         <li><i class="bi bi-chevron-right"></i> <a href="equipmentfinance.html">Equipment Finance</a></li>
                         <li><i class="bi bi-chevron-right"></i> <a href="artcollectibles.html">Art & Collectibles</a></li>
@@ -812,6 +927,47 @@
 
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
+
+    <!-- Custom JS -->
+    <script>
+        // WhatsApp button interaction
+        const whatsappBtn = document.querySelector('.whatsapp-float');
+        if (whatsappBtn) {
+            whatsappBtn.addEventListener('click', function () {
+                // Optional: Track WhatsApp clicks
+                console.log('WhatsApp button clicked from Luxury Loans page');
+            });
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if (this.getAttribute('href') === '#') return;
+
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+            }
+        });
+    </script>
 
 </body>
 
