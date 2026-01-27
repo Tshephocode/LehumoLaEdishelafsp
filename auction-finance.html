@@ -74,84 +74,21 @@
                 margin-top: 2px;
             }
 
-        /* Animated Logo Frame */
+        /* Logo Container */
         .logo-container {
             display: flex;
             align-items: center;
             justify-content: flex-start;
-            gap: 15px;
+            gap: 10px;
         }
-
-        .logo-frame {
-            width: 70px;
-            height: 70px;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--primary-blue), var(--accent-teal), var(--primary-red));
-            background-size: 400% 400%;
-            animation: gradientShift 8s ease infinite;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-        }
-
-            .logo-frame::before {
-                content: '';
-                position: absolute;
-                width: 64px;
-                height: 64px;
-                background: white;
-                border-radius: 50%;
-                z-index: 1;
-            }
 
         .logo-image {
-            width: 50px;
-            height: 50px;
+            width: 60px;
+            height: 120px;
             object-fit: contain;
-            border-radius: 50%;
+            border-radius: 100%;
             position: relative;
             z-index: 2;
-            transition: transform 0.5s ease;
-        }
-
-        .logo-frame:hover .logo-image {
-            transform: scale(1.05);
-        }
-
-        @keyframes gradientShift {
-            0% {
-                background-position: 0% 50%;
-            }
-
-            50% {
-                background-position: 100% 50%;
-            }
-
-            100% {
-                background-position: 0% 50%;
-            }
-        }
-
-        /* Pulsing effect for attention */
-        @keyframes pulse {
-            0% {
-                box-shadow: 0 0 0 0 rgba(230, 57, 70, 0.4);
-            }
-
-            70% {
-                box-shadow: 0 0 0 10px rgba(230, 57, 70, 0);
-            }
-
-            100% {
-                box-shadow: 0 0 0 0 rgba(230, 57, 70, 0);
-            }
-        }
-
-        .logo-frame:hover {
-            animation: gradientShift 8s ease infinite, pulse 2s infinite;
         }
 
         /* Header Enhancements */
@@ -197,13 +134,13 @@
             background-size: cover;
             background-position: center;
             color: white;
-            padding: 120px 0 60px;
+            padding: 150px 0 60px;
             position: relative;
         }
 
             .page-title h1 {
                 color: white;
-                font-size: 3rem;
+                font-size: 3.5rem;
                 font-weight: 800;
                 margin-bottom: 1rem;
             }
@@ -250,7 +187,7 @@
                 margin: 0 auto;
             }
 
-        /* Cards */
+        /* Feature Cards */
         .feature-card {
             border-radius: 12px;
             padding: 2rem;
@@ -279,6 +216,7 @@
             font-size: 1.8rem;
         }
 
+        /* Use Case Cards */
         .use-case-card {
             background: white;
             border-radius: 12px;
@@ -433,6 +371,7 @@
             border-radius: 12px;
             padding: 2.5rem;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--border-color);
         }
 
         .form-title {
@@ -484,21 +423,11 @@
             font-weight: 600;
         }
 
-        /* Logo Frame Mobile Adjustments */
+        /* Logo Mobile Adjustments */
         @media (max-width: 992px) {
-            .logo-frame {
-                width: 60px;
-                height: 60px;
-            }
-
-                .logo-frame::before {
-                    width: 54px;
-                    height: 54px;
-                }
-
             .logo-image {
-                width: 42px;
-                height: 42px;
+                width: 54px;
+                height: 54px;
             }
 
             .sitename {
@@ -550,27 +479,13 @@
         }
 
         @media (max-width: 768px) {
-            .logo-frame {
+            .logo-image {
                 width: 50px;
                 height: 50px;
             }
 
-                .logo-frame::before {
-                    width: 44px;
-                    height: 44px;
-                }
-
-            .logo-image {
-                width: 35px;
-                height: 35px;
-            }
-
             .sitename {
                 font-size: 1.3rem;
-            }
-
-            .logo-container {
-                gap: 10px;
             }
 
             .page-title h1 {
@@ -578,7 +493,7 @@
             }
 
             .page-title {
-                padding: 100px 0 40px;
+                padding: 120px 0 40px;
             }
 
             .hero-banner {
@@ -604,22 +519,12 @@
 
         @media (max-width: 480px) {
             .logo-container {
-                gap: 8px;
+                gap: 5px;
             }
-
-            .logo-frame {
-                width: 45px;
-                height: 45px;
-            }
-
-                .logo-frame::before {
-                    width: 39px;
-                    height: 39px;
-                }
 
             .logo-image {
-                width: 32px;
-                height: 32px;
+                width: 45px;
+                height: 45px;
             }
 
             .sitename {
@@ -645,10 +550,7 @@
 
             <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
                 <div class="logo-container">
-                    <div class="logo-frame">
-                        <img src="assets/img/logo.png" alt="Lehumo La Edishela Logo" class="logo-image">
-                    </div>
-                    <h1 class="sitename">LEHUMO LA EDISHELA</h1>
+                    <img src="assets/img/logo.png" alt="Lehumo La Edishela Logo" class="logo-image">
                 </div>
             </a>
 
@@ -675,7 +577,7 @@
                             <li><a href="maintenance.html">Maintenance Packages</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown">
+                    <li class="dropdown active">
                         <a href="#"><span>Bridging Finance</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                         <ul>
                             <li><a href="property-bridging.html">Property Bridging</a></li>
@@ -722,7 +624,7 @@
                 <nav class="breadcrumbs">
                     <ol>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="bridging-finance.html">Bridging Finance</a></li>
+                        <li><a href="#">Bridging Finance</a></li>
                         <li class="current">Auction Finance</li>
                     </ol>
                 </nav>
@@ -1154,9 +1056,7 @@
                 <div class="col-lg-4 col-md-6 footer-about">
                     <a href="index.html" class="d-flex align-items-center mb-3" style="text-decoration: none;">
                         <div class="logo-container">
-                            <div class="logo-frame">
-                                <img src="assets/img/logo.png" alt="Lehumo La Edishela Logo" class="logo-image">
-                            </div>
+                            <img src="assets/img/logo.png" alt="Lehumo La Edishela Logo" class="logo-image me-2">
                             <h1 class="sitename">LEHUMO LA EDISHELA</h1>
                         </div>
                     </a>
@@ -1187,7 +1087,7 @@
                         <li><i class="bi bi-chevron-right"></i> <a href="auction-finance.html">Auction Finance</a></li>
                         <li><i class="bi bi-chevron-right"></i> <a href="renovation-loans.html">Renovation Finance</a></li>
                         <li><i class="bi bi-chevron-right"></i> <a href="development-finance.html">Development Finance</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="bridging-finance.html">All Bridging Loans</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#">All Bridging Loans</a></li>
                     </ul>
                 </div>
 
@@ -1209,7 +1109,7 @@
         </div>
 
         <div class="container copyright text-center mt-4 pt-4 border-top border-secondary">
-            <p class="mb-2">© 2023 Lehumo La Edishela Financial Services. All rights reserved.</p>
+            <p class="mb-2">© 2025 Lehumo La Edishela Financial Services. All rights reserved.</p>
             <div class="credits">
                 <a href="privacy.html" class="me-3">Privacy Policy</a> |
                 <a href="terms.html" class="mx-3">Terms of Service</a> |
@@ -1356,5 +1256,4 @@
     </script>
 
 </body>
-
 </html>
