@@ -97,6 +97,7 @@
             background-color: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(10px);
             box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            height: 80px;
         }
 
         .sitename {
@@ -127,6 +128,106 @@
                 transform: translateY(-2px);
                 box-shadow: 0 10px 20px rgba(230, 57, 70, 0.2);
                 color: white;
+            }
+
+        /* Mobile Header Adjustments */
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        /* Mobile Navigation Toggle */
+        .mobile-nav-toggle {
+            display: none;
+        }
+
+        /* Mobile Dropdown Filter - NEW */
+        .mobile-menu-container {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            right: 0;
+            background: white;
+            z-index: 999;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+            max-height: calc(100vh - 80px);
+            overflow-y: auto;
+        }
+
+        .mobile-menu {
+            padding: 1rem 0;
+        }
+
+        .mobile-menu-item {
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .mobile-menu-link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 1.5rem;
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+            .mobile-menu-link:hover,
+            .mobile-menu-link.active {
+                color: var(--primary-red);
+                background: rgba(230, 57, 70, 0.05);
+            }
+
+        .mobile-submenu {
+            display: none;
+            background: var(--light-gray);
+            padding: 0;
+        }
+
+        .mobile-submenu-link {
+            display: block;
+            padding: 0.75rem 2rem;
+            color: var(--text-color);
+            text-decoration: none;
+            border-left: 3px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+            .mobile-submenu-link:hover {
+                background: white;
+                color: var(--primary-red);
+                border-left-color: var(--primary-red);
+                padding-left: 2.5rem;
+            }
+
+        .mobile-menu-toggle {
+            transition: transform 0.3s ease;
+        }
+
+            .mobile-menu-toggle.rotated {
+                transform: rotate(180deg);
+            }
+
+        /* Apply Now Button on Mobile */
+        .mobile-apply-btn {
+            display: none;
+            background: linear-gradient(135deg, var(--primary-red) 0%, #c53030 100%);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            font-weight: 600;
+            text-decoration: none;
+            border: none;
+            width: 100%;
+        }
+
+            .mobile-apply-btn:hover {
+                color: white;
+                background: linear-gradient(135deg, #c53030 0%, #a02626 100%);
             }
 
         /* Hero Section */
@@ -380,7 +481,41 @@
             padding: 100px 0;
         }
 
-        /* Logo Frame Mobile Adjustments */
+        /* =========================== */
+        /* RESPONSIVE DESIGN - MOBILE */
+        /* =========================== */
+        @media (max-width: 1199px) {
+            .navmenu {
+                display: none !important;
+            }
+
+            .btn-getstarted {
+                display: none !important;
+            }
+
+            .mobile-nav-toggle {
+                display: block !important;
+                font-size: 1.5rem;
+                color: var(--primary-blue);
+                cursor: pointer;
+                margin-left: auto;
+                padding: 0.5rem;
+                z-index: 1002;
+            }
+
+            .mobile-menu-container {
+                display: block;
+            }
+
+            .mobile-apply-btn {
+                display: block;
+            }
+
+            .mobile-nav-toggle.hidden {
+                display: none !important;
+            }
+        }
+
         @media (max-width: 992px) {
             .logo-frame {
                 width: 54px;
@@ -404,11 +539,6 @@
                 font-size: 1.1rem;
             }
 
-            .btn-getstarted {
-                padding: 0.6rem 1.2rem;
-                font-size: 0.9rem;
-            }
-
             .whatsapp-float {
                 width: 55px;
                 height: 55px;
@@ -419,6 +549,15 @@
 
             .quick-quote {
                 padding: 2rem;
+            }
+
+            .header {
+                height: 70px;
+            }
+
+            .mobile-menu-container {
+                top: 70px;
+                max-height: calc(100vh - 70px);
             }
         }
 
@@ -460,6 +599,15 @@
                 bottom: 20px;
                 right: 20px;
             }
+
+            .header {
+                height: 65px;
+            }
+
+            .mobile-menu-container {
+                top: 65px;
+                max-height: calc(100vh - 65px);
+            }
         }
 
         @media (max-width: 480px) {
@@ -488,6 +636,15 @@
             .form-title {
                 font-size: 1.5rem;
             }
+
+            .header {
+                height: 60px;
+            }
+
+            .mobile-menu-container {
+                top: 60px;
+                max-height: calc(100vh - 60px);
+            }
         }
     </style>
 </head>
@@ -509,6 +666,11 @@
                     </div>
                 </div>
             </a>
+
+            <!-- Mobile Menu Toggle -->
+            <div class="mobile-nav-toggle" id="mobile-nav-toggle">
+                <i class="bi bi-list"></i>
+            </div>
 
             <nav id="navmenu" class="navmenu">
                 <ul>
@@ -562,11 +724,121 @@
                     </li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
-                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
 
             <a class="btn-getstarted" href="apply.html">Apply Now</a>
 
+        </div>
+
+        <!-- Mobile Dropdown Filter -->
+        <div class="mobile-menu-container" id="mobile-menu-container">
+            <div class="mobile-menu">
+                <!-- Mobile Apply Now Button -->
+                <a href="apply.html" class="mobile-apply-btn">
+                    <i class="bi bi-arrow-right-circle me-2"></i>APPLY NOW
+                </a>
+
+                <!-- Main Navigation Items -->
+                <div class="mobile-menu-item">
+                    <a href="index.html" class="mobile-menu-link active">
+                        <span>Home</span>
+                        <i class="bi bi-chevron-right mobile-menu-toggle"></i>
+                    </a>
+                </div>
+
+                <div class="mobile-menu-item">
+                    <a href="about.html" class="mobile-menu-link">
+                        <span>About Us</span>
+                        <i class="bi bi-chevron-right mobile-menu-toggle"></i>
+                    </a>
+                </div>
+
+                <!-- Asset Loans Dropdown -->
+                <div class="mobile-menu-item">
+                    <a href="#" class="mobile-menu-link" data-toggle="submenu" data-target="asset-loans">
+                        <span>Asset Loans</span>
+                        <i class="bi bi-chevron-down mobile-menu-toggle"></i>
+                    </a>
+                    <div class="mobile-submenu" id="asset-loans">
+                        <a href="vehicle-loans.html" class="mobile-submenu-link">Vehicle Loans</a>
+                        <a href="luxury-loans.html" class="mobile-submenu-link">Luxury Assets</a>
+                        <a href="propertyloans.html" class="mobile-submenu-link">Property Loans</a>
+                        <a href="equipmentfinance.html" class="mobile-submenu-link">Equipment Finance</a>
+                        <a href="artcollectibles.html" class="mobile-submenu-link">Art & Collectibles</a>
+                    </div>
+                </div>
+
+                <!-- Commercial Fleet Dropdown -->
+                <div class="mobile-menu-item">
+                    <a href="#" class="mobile-menu-link" data-toggle="submenu" data-target="commercial-fleet">
+                        <span>Commercial Fleet</span>
+                        <i class="bi bi-chevron-down mobile-menu-toggle"></i>
+                    </a>
+                    <div class="mobile-submenu" id="commercial-fleet">
+                        <a href="fleetfinancing.html" class="mobile-submenu-link">Fleet Financing</a>
+                        <a href="vehiclesourcing.html" class="mobile-submenu-link">Vehicle Sourcing</a>
+                        <a href="truckloans.html" class="mobile-submenu-link">Truck & Trailer Loans</a>
+                        <a href="maintenance.html" class="mobile-submenu-link">Maintenance Packages</a>
+                    </div>
+                </div>
+
+                <!-- Bridging Finance Dropdown -->
+                <div class="mobile-menu-item">
+                    <a href="#" class="mobile-menu-link" data-toggle="submenu" data-target="bridging-finance">
+                        <span>Bridging Finance</span>
+                        <i class="bi bi-chevron-down mobile-menu-toggle"></i>
+                    </a>
+                    <div class="mobile-submenu" id="bridging-finance">
+                        <a href="property-bridging.html" class="mobile-submenu-link">Property Bridging</a>
+                        <a href="auction-finance.html" class="mobile-submenu-link">Auction Finance</a>
+                        <a href="renovation-loans.html" class="mobile-submenu-link">Renovation Finance</a>
+                        <a href="development-finance.html" class="mobile-submenu-link">Development Finance</a>
+                    </div>
+                </div>
+
+                <!-- FAQ Dropdown -->
+                <div class="mobile-menu-item">
+                    <a href="#" class="mobile-menu-link" data-toggle="submenu" data-target="faq">
+                        <span>FAQ</span>
+                        <i class="bi bi-chevron-down mobile-menu-toggle"></i>
+                    </a>
+                    <div class="mobile-submenu" id="faq">
+                        <a href="faq-general.html" class="mobile-submenu-link">General Questions</a>
+                        <a href="faq-application.html" class="mobile-submenu-link">Application Process</a>
+                        <a href="faq-interest-rates.html" class="mobile-submenu-link">Interest & Rates</a>
+                        <a href="faq-asset-requirements.html" class="mobile-submenu-link">Asset Requirements</a>
+                    </div>
+                </div>
+
+                <!-- How To Apply Dropdown -->
+                <div class="mobile-menu-item">
+                    <a href="#" class="mobile-menu-link" data-toggle="submenu" data-target="how-to-apply">
+                        <span>How To Apply</span>
+                        <i class="bi bi-chevron-down mobile-menu-toggle"></i>
+                    </a>
+                    <div class="mobile-submenu" id="how-to-apply">
+                        <a href="apply-requirements.html" class="mobile-submenu-link">Requirements</a>
+                        <a href="apply-documentation.html" class="mobile-submenu-link">Documentation</a>
+                        <a href="apply-process.html" class="mobile-submenu-link">Process Steps</a>
+                        <a href="apply-timeline.html" class="mobile-submenu-link">Timeline</a>
+                    </div>
+                </div>
+
+                <div class="mobile-menu-item">
+                    <a href="contact.html" class="mobile-menu-link">
+                        <span>Contact</span>
+                        <i class="bi bi-chevron-right mobile-menu-toggle"></i>
+                    </a>
+                </div>
+
+                <!-- Additional Contact Info for Mobile -->
+                <div class="mobile-menu-item">
+                    <a href="tel:0861000534" class="mobile-menu-link">
+                        <span><i class="bi bi-telephone me-2"></i>CALL 0861 000 534</span>
+                        <i class="bi bi-chevron-right mobile-menu-toggle"></i>
+                    </a>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -1144,6 +1416,126 @@
             }, 2000);
         });
 
+        // ============================================
+        // MOBILE NAVIGATION FUNCTIONALITY
+        // ============================================
+        const mobileMenuToggle = document.getElementById('mobile-nav-toggle');
+        const mobileMenuContainer = document.getElementById('mobile-menu-container');
+        let isMobileMenuOpen = false;
+
+        // Toggle mobile menu
+        mobileMenuToggle.addEventListener('click', function () {
+            isMobileMenuOpen = !isMobileMenuOpen;
+
+            if (isMobileMenuOpen) {
+                mobileMenuContainer.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+                this.innerHTML = '<i class="bi bi-x-lg"></i>';
+                this.classList.add('hidden');
+            } else {
+                mobileMenuContainer.style.display = 'none';
+                document.body.style.overflow = '';
+                this.innerHTML = '<i class="bi bi-list"></i>';
+                this.classList.remove('hidden');
+            }
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function (event) {
+            const isClickInsideMenu = mobileMenuContainer.contains(event.target);
+            const isClickOnToggle = mobileMenuToggle.contains(event.target);
+
+            if (isMobileMenuOpen && !isClickInsideMenu && !isClickOnToggle) {
+                isMobileMenuOpen = false;
+                mobileMenuContainer.style.display = 'none';
+                document.body.style.overflow = '';
+                mobileMenuToggle.innerHTML = '<i class="bi bi-list"></i>';
+                mobileMenuToggle.classList.remove('hidden');
+
+                // Close all submenus
+                document.querySelectorAll('.mobile-submenu').forEach(submenu => {
+                    submenu.style.display = 'none';
+                });
+
+                // Reset all toggle icons
+                document.querySelectorAll('.mobile-menu-toggle').forEach(icon => {
+                    icon.classList.remove('rotated');
+                });
+            }
+        });
+
+        // Submenu functionality
+        document.querySelectorAll('.mobile-menu-link[data-toggle="submenu"]').forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('data-target');
+                const submenu = document.getElementById(targetId);
+                const toggleIcon = this.querySelector('.mobile-menu-toggle');
+
+                // Close all other submenus
+                document.querySelectorAll('.mobile-submenu').forEach(otherSubmenu => {
+                    if (otherSubmenu.id !== targetId) {
+                        otherSubmenu.style.display = 'none';
+                        otherSubmenu.previousElementSibling.querySelector('.mobile-menu-toggle').classList.remove('rotated');
+                    }
+                });
+
+                // Toggle current submenu
+                if (submenu.style.display === 'block') {
+                    submenu.style.display = 'none';
+                    toggleIcon.classList.remove('rotated');
+                } else {
+                    submenu.style.display = 'block';
+                    toggleIcon.classList.add('rotated');
+                }
+            });
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.mobile-menu-link, .mobile-submenu-link').forEach(link => {
+            link.addEventListener('click', function () {
+                // If it's a direct link (not a submenu toggle), close the menu
+                if (!this.hasAttribute('data-toggle') || !this.getAttribute('data-toggle').includes('submenu')) {
+                    isMobileMenuOpen = false;
+                    mobileMenuContainer.style.display = 'none';
+                    document.body.style.overflow = '';
+                    mobileMenuToggle.innerHTML = '<i class="bi bi-list"></i>';
+                    mobileMenuToggle.classList.remove('hidden');
+
+                    // Close all submenus
+                    document.querySelectorAll('.mobile-submenu').forEach(submenu => {
+                        submenu.style.display = 'none';
+                    });
+
+                    // Reset all toggle icons
+                    document.querySelectorAll('.mobile-menu-toggle').forEach(icon => {
+                        icon.classList.remove('rotated');
+                    });
+                }
+            });
+        });
+
+        // Close menu on escape key
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && isMobileMenuOpen) {
+                isMobileMenuOpen = false;
+                mobileMenuContainer.style.display = 'none';
+                document.body.style.overflow = '';
+                mobileMenuToggle.innerHTML = '<i class="bi bi-list"></i>';
+                mobileMenuToggle.classList.remove('hidden');
+
+                // Close all submenus
+                document.querySelectorAll('.mobile-submenu').forEach(submenu => {
+                    submenu.style.display = 'none';
+                });
+
+                // Reset all toggle icons
+                document.querySelectorAll('.mobile-menu-toggle').forEach(icon => {
+                    icon.classList.remove('rotated');
+                });
+            }
+        });
+
         // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -1197,6 +1589,14 @@
                 }
             }
             e.target.value = value;
+        });
+
+        // AOS Initialization
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false
         });
     </script>
 
