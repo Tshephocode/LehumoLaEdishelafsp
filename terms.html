@@ -2,355 +2,1065 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Terms - Tour Bootstrap Template</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Terms of Service | Lehumo La Edishela - Financial Services</title>
+    <meta name="description" content="Read the terms of service for Lehumo La Edishela Financial Services. Understand our policies, terms, and conditions for using our financial services.">
+    <meta name="keywords" content="terms of service, loan terms, financial services terms, legal agreements, South Africa financial terms">
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Font Awesome for WhatsApp Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Tour
-  * Template URL: https://bootstrapmade.com/tour-bootstrap-travel-website-template/
-  * Updated: Jul 01 2025 with Bootstrap v5.3.7
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <!-- Template Custom CSS -->
+    <style>
+        :root {
+            --primary-blue: #1A365D;
+            --primary-red: #E63946;
+            --accent-teal: #2A9D8F;
+            --light-gray: #F8F9FA;
+            --dark-gray: #212529;
+            --text-color: #333333;
+            --border-color: #E0E0E0;
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+            .whatsapp-float:hover {
+                background-color: #128C7E;
+                color: white;
+                transform: scale(1.1);
+                box-shadow: 0 6px 25px rgba(37, 211, 102, 0.4);
+            }
+
+            .whatsapp-float i {
+                margin-top: 2px;
+            }
+
+        /* Logo Container */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 10px;
+        }
+
+        .logo-image {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            border-radius: 50%;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Header Enhancements */
+        .header {
+            background-color: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .sitename {
+            color: var(--primary-blue);
+            font-weight: 800;
+            font-size: 1.8rem;
+        }
+
+        .navmenu a {
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .btn-getstarted {
+            background: linear-gradient(135deg, var(--primary-red) 0%, #c53030 100%);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            font-size: 0.95rem;
+            letter-spacing: 0.3px;
+        }
+
+            .btn-getstarted:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 10px 20px rgba(230, 57, 70, 0.2);
+                color: white;
+            }
+
+        /* Page Title */
+        .page-title {
+            background: linear-gradient(rgba(26, 54, 93, 0.85), rgba(26, 54, 93, 0.9)), url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 150px 0 60px;
+            position: relative;
+        }
+
+            .page-title h1 {
+                color: white;
+                font-size: 3.5rem;
+                font-weight: 800;
+                margin-bottom: 1rem;
+            }
+
+        /* Terms Section */
+        .terms-section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+            .section-title h2 {
+                color: var(--primary-blue);
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
+            }
+
+            .section-title p {
+                color: var(--text-color);
+                font-size: 1.1rem;
+                max-width: 700px;
+                margin: 0 auto;
+            }
+
+        /* Terms Content */
+        .terms-content {
+            background: white;
+            border-radius: 12px;
+            padding: 3rem;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+            border: 2px solid var(--border-color);
+        }
+
+        .terms-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 3px solid var(--primary-red);
+        }
+
+        .last-updated {
+            display: inline-block;
+            background: var(--light-gray);
+            color: var(--primary-blue);
+            padding: 0.5rem 1.5rem;
+            border-radius: 30px;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .terms-header h2 {
+            color: var(--primary-blue);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .content-section {
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+            .content-section:last-child {
+                border-bottom: none;
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+
+            .content-section h3 {
+                color: var(--primary-blue);
+                font-size: 1.5rem;
+                margin-bottom: 1.5rem;
+                font-weight: 700;
+            }
+
+            .content-section p {
+                color: var(--text-color);
+                line-height: 1.6;
+                margin-bottom: 1.5rem;
+            }
+
+        .info-box {
+            background: rgba(42, 157, 143, 0.1);
+            border-left: 4px solid var(--accent-teal);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            display: flex;
+            align-items: flex-start;
+        }
+
+            .info-box i {
+                color: var(--accent-teal);
+                font-size: 1.5rem;
+                margin-right: 1rem;
+                margin-top: 0.2rem;
+            }
+
+        .alert-box {
+            background: rgba(230, 57, 70, 0.1);
+            border-left: 4px solid var(--primary-red);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            display: flex;
+            align-items: flex-start;
+        }
+
+            .alert-box i {
+                color: var(--primary-red);
+                font-size: 1.5rem;
+                margin-right: 1rem;
+                margin-top: 0.2rem;
+            }
+
+        .alert-content h5 {
+            color: var(--primary-red);
+            margin: 0 0 0.5rem 0;
+            font-weight: 700;
+        }
+
+        .notice-box {
+            background: rgba(26, 54, 93, 0.1);
+            border-left: 4px solid var(--primary-blue);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            display: flex;
+            align-items: flex-start;
+        }
+
+            .notice-box i {
+                color: var(--primary-blue);
+                font-size: 1.5rem;
+                margin-right: 1rem;
+                margin-top: 0.2rem;
+            }
+
+        .list-items {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+        }
+
+            .list-items li {
+                padding: 0.5rem 0 0.5rem 2rem;
+                position: relative;
+                color: var(--text-color);
+            }
+
+                .list-items li:before {
+                    content: "•";
+                    color: var(--primary-red);
+                    font-weight: bold;
+                    position: absolute;
+                    left: 0;
+                }
+
+        .disclaimer-box {
+            background: var(--light-gray);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+            .disclaimer-box p {
+                font-weight: 600;
+                color: var(--primary-blue);
+                margin-bottom: 1rem;
+            }
+
+            .disclaimer-box ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            .disclaimer-box li {
+                padding: 0.5rem 0 0.5rem 1.5rem;
+                position: relative;
+                color: var(--text-color);
+            }
+
+                .disclaimer-box li:before {
+                    content: "—";
+                    color: var(--primary-red);
+                    position: absolute;
+                    left: 0;
+                }
+
+        /* Contact Box */
+        .terms-contact {
+            margin-top: 4rem;
+        }
+
+        .contact-box {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, #152642 100%);
+            border-radius: 16px;
+            padding: 2.5rem;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .contact-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+            .contact-icon i {
+                font-size: 2.5rem;
+                color: var(--accent-teal);
+            }
+
+        .contact-content h4 {
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-link {
+            display: inline-block;
+            background: white;
+            color: var(--primary-blue);
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            font-weight: 600;
+            text-decoration: none;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+        }
+
+            .contact-link:hover {
+                background: var(--light-gray);
+                color: var(--primary-blue);
+                transform: translateY(-2px);
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            }
+
+        /* Table of Contents */
+        .toc-container {
+            background: var(--light-gray);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            border: 2px solid var(--border-color);
+        }
+
+        .toc-title {
+            color: var(--primary-blue);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .toc-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 0.75rem;
+        }
+
+            .toc-list li {
+                margin-bottom: 0.5rem;
+            }
+
+            .toc-list a {
+                color: var(--text-color);
+                text-decoration: none;
+                padding: 0.5rem 1rem;
+                display: block;
+                border-radius: 6px;
+                transition: all 0.3s ease;
+                border-left: 3px solid transparent;
+            }
+
+                .toc-list a:hover {
+                    background: white;
+                    color: var(--primary-blue);
+                    border-left-color: var(--primary-red);
+                    transform: translateX(5px);
+                }
+
+                .toc-list a i {
+                    margin-right: 0.5rem;
+                    color: var(--primary-blue);
+                    font-size: 0.9rem;
+                }
+
+        /* Footer */
+        .footer {
+            background: var(--primary-blue);
+            color: white;
+        }
+
+        /* Logo Mobile Adjustments */
+        @media (max-width: 992px) {
+            .logo-image {
+                width: 54px;
+                height: 54px;
+            }
+
+            .sitename {
+                font-size: 1.5rem;
+            }
+
+            .page-title h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .terms-header h2 {
+                font-size: 2rem;
+            }
+
+            .btn-getstarted {
+                padding: 0.6rem 1.2rem;
+                font-size: 0.9rem;
+            }
+
+            .contact-box {
+                flex-direction: column;
+                text-align: center;
+                gap: 1.5rem;
+            }
+
+            .contact-icon {
+                width: 70px;
+                height: 70px;
+            }
+
+            .toc-list {
+                grid-template-columns: 1fr;
+            }
+
+            .whatsapp-float {
+                width: 55px;
+                height: 55px;
+                font-size: 26px;
+                bottom: 25px;
+                right: 25px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .logo-image {
+                width: 50px;
+                height: 50px;
+            }
+
+            .sitename {
+                font-size: 1.3rem;
+            }
+
+            .page-title h1 {
+                font-size: 2rem;
+            }
+
+            .page-title {
+                padding: 120px 0 40px;
+            }
+
+            .terms-section {
+                padding: 60px 0;
+            }
+
+            .terms-content {
+                padding: 2rem;
+            }
+
+            .content-section h3 {
+                font-size: 1.3rem;
+            }
+
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 24px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo-container {
+                gap: 5px;
+            }
+
+            .logo-image {
+                width: 45px;
+                height: 45px;
+            }
+
+            .sitename {
+                font-size: 1.1rem;
+            }
+
+            .terms-content {
+                padding: 1.5rem;
+            }
+
+            .contact-box {
+                padding: 1.5rem;
+            }
+        }
+    </style>
 </head>
 
 <body class="terms-page">
 
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/27639483064?text=Hello%20Lehumo%20La%20Edishela,%20I%20have%20a%20question%20about%20your%20terms%20of%20service" class="whatsapp-float" target="_blank" aria-label="Chat with us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.webp" alt=""> -->
-        <h1 class="sitename">Tour</h1>
-      </a>
+    <header id="header" class="header d-flex align-items-center fixed-top">
+        <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="destinations.html">Destinations</a></li>
-          <li><a href="tours.html">Tours</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li class="dropdown"><a href="#"><span>More Pages</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="destination-details.html">Destination Details</a></li>
-              <li><a href="tour-details.html">Tour Details</a></li>
-              <li><a href="booking.html">Booking</a></li>
-              <li><a href="testimonials">Testimonials</a></li>
-              <li><a href="faq.html">Frequently Asked Questions</a></li>
-              <li><a href="blog-details.html">Blog Details</a></li>
-              <li><a href="terms.html" class="active">Terms</a></li>
-              <li><a href="privacy.html">Privacy</a></li>
-              <li><a href="404.html">404</a></li>
-            </ul>
-          </li>
-          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+                <div class="logo-container">
+                    <img src="assets/img/logo.png" alt="Lehumo La Edishela Logo" class="logo-image">
+                </div>
+            </a>
+
+            <nav id="navmenu" class="navmenu">
                 <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li class="dropdown">
+                        <a href="#"><span>Asset Loans</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="vehicle-loans.html">Vehicle Loans</a></li>
+                            <li><a href="luxury-loans.html">Luxury Assets</a></li>
+                            <li><a href="propertyloans.html">Property Loans</a></li>
+                            <li><a href="equipmentfinance.html">Equipment Finance</a></li>
+                            <li><a href="artcollectibles.html">Art & Collectibles</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#"><span>Commercial Fleet</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="fleetfinancing.html">Fleet Financing</a></li>
+                            <li><a href="vehiclesourcing.html">Vehicle Sourcing</a></li>
+                            <li><a href="truckloans.html">Truck & Trailer Loans</a></li>
+                            <li><a href="maintenance.html">Maintenance Packages</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#"><span>Bridging Finance</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="property-bridging.html">Property Bridging</a></li>
+                            <li><a href="auction-finance.html">Auction Finance</a></li>
+                            <li><a href="renovation-loans.html">Renovation Finance</a></li>
+                            <li><a href="development-finance.html">Development Finance</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#"><span>FAQ</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="faq-general.html">General Questions</a></li>
+                            <li><a href="faq-application.html">Application Process</a></li>
+                            <li><a href="faq-interest-rates.html">Interest & Rates</a></li>
+                            <li><a href="faq-asset-requirements.html">Asset Requirements</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#"><span>How To Apply</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="apply-requirements.html">Requirements</a></li>
+                            <li><a href="apply-documentation.html">Documentation</a></li>
+                            <li><a href="apply-process.html">Process Steps</a></li>
+                            <li><a href="apply-timeline.html">Timeline</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
 
-      <a class="btn-getstarted" href="destiantios.html">Get Started</a>
+            <a class="btn-getstarted" href="apply.html">Apply Now</a>
 
-    </div>
-  </header>
-
-  <main class="main">
-
-    <!-- Page Title -->
-    <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/travel/showcase-8.webp);">
-      <div class="container position-relative">
-        <h1>Terms</h1>
-        <p>Esse dolorum voluptatum ullam est sint nemo et est ipsa porro placeat quibusdam quia assumenda numquam molestias.</p>
-        <nav class="breadcrumbs">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Terms</li>
-          </ol>
-        </nav>
-      </div>
-    </div><!-- End Page Title -->
-
-    <!-- Terms Of Service Section -->
-    <section id="terms-of-service" class="terms-of-service section">
-
-      <div class="container" data-aos="fade-up">
-        <!-- Page Header -->
-        <div class="tos-header text-center" data-aos="fade-up">
-          <span class="last-updated">Last Updated: February 27, 2025</span>
-          <h2>Terms of Service</h2>
-          <p>Please read these terms of service carefully before using our services</p>
         </div>
+    </header>
 
-        <!-- Content -->
-        <div class="tos-content" data-aos="fade-up" data-aos-delay="200">
-          <!-- Agreement Section -->
-          <div id="agreement" class="content-section">
-            <h3>1. Agreement to Terms</h3>
-            <p>By accessing our website and services, you agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with any of these terms, you are prohibited from using or accessing our services.</p>
-            <div class="info-box">
-              <i class="bi bi-info-circle"></i>
-              <p>These terms apply to all users, visitors, and others who access or use our services.</p>
+    <main class="main">
+
+        <!-- Page Title -->
+        <div class="page-title dark-background" data-aos="fade">
+            <div class="container position-relative">
+                <h1>Terms of Service</h1>
+                <p>Please read these terms carefully before using our financial services. Understanding your rights and responsibilities is important.</p>
+                <nav class="breadcrumbs">
+                    <ol>
+                        <li><a href="index.html">Home</a></li>
+                        <li class="current">Terms of Service</li>
+                    </ol>
+                </nav>
             </div>
-          </div>
+        </div><!-- End Page Title -->
+        <!-- Terms Of Service Section -->
+        <section id="terms-of-service" class="terms-section">
 
-          <!-- Intellectual Property -->
-          <div id="intellectual-property" class="content-section">
-            <h3>2. Intellectual Property Rights</h3>
-            <p>Our service and its original content, features, and functionality are owned by us and are protected by international copyright, trademark, patent, trade secret, and other intellectual property laws.</p>
-            <ul class="list-items">
-              <li>All content is our exclusive property</li>
-              <li>You may not copy or modify the content</li>
-              <li>Our trademarks may not be used without permission</li>
-              <li>Content is for personal, non-commercial use only</li>
-            </ul>
-          </div>
+            <div class="container" data-aos="fade-up">
+                <!-- Table of Contents -->
+                <div class="toc-container" data-aos="fade-up">
+                    <h3 class="toc-title">Table of Contents</h3>
+                    <ul class="toc-list">
+                        <li><a href="#agreement"><i class="bi bi-1-circle"></i> Agreement to Terms</a></li>
+                        <li><a href="#services"><i class="bi bi-2-circle"></i> Our Services</a></li>
+                        <li><a href="#eligibility"><i class="bi bi-3-circle"></i> Eligibility</a></li>
+                        <li><a href="#application"><i class="bi bi-4-circle"></i> Application Process</a></li>
+                        <li><a href="#loan-terms"><i class="bi bi-5-circle"></i> Loan Terms</a></li>
+                        <li><a href="#repayment"><i class="bi bi-6-circle"></i> Repayment</a></li>
+                        <li><a href="#security"><i class="bi bi-7-circle"></i> Security & Collateral</a></li>
+                        <li><a href="#fees"><i class="bi bi-8-circle"></i> Fees & Charges</a></li>
+                        <li><a href="#default"><i class="bi bi-9-circle"></i> Default</a></li>
+                        <li><a href="#privacy"><i class="bi bi-10-circle"></i> Privacy & Data</a></li>
+                        <li><a href="#disclaimer"><i class="bi bi-11-circle"></i> Disclaimers</a></li>
+                        <li><a href="#changes"><i class="bi bi-12-circle"></i> Changes to Terms</a></li>
+                    </ul>
+                </div>
 
-          <!-- User Accounts -->
-          <div id="user-accounts" class="content-section">
-            <h3>3. User Accounts</h3>
-            <p>When you create an account with us, you must provide accurate, complete, and current information. Failure to do so constitutes a breach of the Terms, which may result in immediate termination of your account.</p>
-            <div class="alert-box">
-              <i class="bi bi-exclamation-triangle"></i>
-              <div class="alert-content">
-                <h5>Important Notice</h5>
-                <p>You are responsible for safeguarding the password and for all activities that occur under your account.</p>
-              </div>
+                <!-- Content -->
+                <div class="terms-content" data-aos="fade-up" data-aos-delay="200">
+                    <!-- Page Header -->
+                    <div class="terms-header">
+                        <span class="last-updated">Last Updated: February 27, 2025</span>
+                        <h2>Terms of Service</h2>
+                        <p>These Terms of Service govern your use of Lehumo La Edishela's financial services. By applying for or using our services, you agree to these terms.</p>
+                    </div>
+
+                    <!-- Agreement Section -->
+                    <div id="agreement" class="content-section">
+                        <h3>1. Agreement to Terms</h3>
+                        <p>By accessing our website, applying for our services, or using any financial products offered by Lehumo La Edishela Financial Services (Registration Number: [Insert Registration Number]), you agree to be bound by these Terms of Service and all applicable laws and regulations of South Africa, including the National Credit Act (NCA) and Financial Sector Conduct Authority (FSCA) regulations.</p>
+                        <div class="info-box">
+                            <i class="bi bi-info-circle"></i>
+                            <p>These terms apply to all applicants, borrowers, and users of our services. If you do not agree with any of these terms, you are prohibited from using our services.</p>
+                        </div>
+                    </div>
+
+                    <!-- Our Services -->
+                    <div id="services" class="content-section">
+                        <h3>2. Our Services</h3>
+                        <p>Lehumo La Edishela provides asset-backed loan facilities and bridging finance solutions to qualifying individuals and businesses. Our services include:</p>
+                        <ul class="list-items">
+                            <li>Asset-backed loans using vehicles, property, luxury items, equipment, or collectibles as security</li>
+                            <li>Bridging finance for property transactions and developments</li>
+                            <li>Commercial fleet financing</li>
+                            <li>Financial advisory services related to asset-based lending</li>
+                        </ul>
+                        <p>We are a registered financial services provider operating in compliance with South African financial regulations.</p>
+                    </div>
+
+                    <!-- Eligibility -->
+                    <div id="eligibility" class="content-section">
+                        <h3>3. Eligibility</h3>
+                        <p>To be eligible for our services, you must:</p>
+                        <ul class="list-items">
+                            <li>Be 18 years of age or older</li>
+                            <li>Be a South African citizen or permanent resident with valid identification</li>
+                            <li>Own qualifying assets that can be used as security</li>
+                            <li>Have a verifiable source of income or repayment capacity</li>
+                            <li>Provide accurate and complete information in your application</li>
+                            <li>Not be under debt review or sequestration</li>
+                        </ul>
+                        <div class="alert-box">
+                            <i class="bi bi-exclamation-triangle"></i>
+                            <div class="alert-content">
+                                <h5>Important Notice</h5>
+                                <p>Providing false or misleading information in your application constitutes fraud and may result in legal action and blacklisting with credit bureaus.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Application Process -->
+                    <div id="application" class="content-section">
+                        <h3>4. Application Process</h3>
+                        <p>Our application process involves several steps that you agree to by applying:</p>
+                        <ul class="list-items">
+                            <li>You authorize us to conduct credit and background checks</li>
+                            <li>You agree to provide all requested documentation</li>
+                            <li>You consent to the valuation of your proposed security assets</li>
+                            <li>You understand that approval is subject to our credit policies</li>
+                            <li>You agree that we may verify all information provided</li>
+                        </ul>
+                        <p>Application fees may apply and will be disclosed before you proceed. These fees cover valuation and administrative costs.</p>
+                    </div>
+
+                    <!-- Loan Terms -->
+                    <div id="loan-terms" class="content-section">
+                        <h3>5. Loan Terms</h3>
+                        <p>If your application is approved, the specific terms of your loan will be detailed in your loan agreement, including:</p>
+                        <ul class="list-items">
+                            <li>Loan amount (based on asset valuation and our loan-to-value ratio)</li>
+                            <li>Interest rate (fixed or variable as specified)</li>
+                            <li>Repayment period and schedule</li>
+                            <li>All fees and charges</li>
+                            <li>Security arrangements</li>
+                            <li>Early repayment terms</li>
+                        </ul>
+                        <p>The loan agreement is the binding document that governs your specific loan. These general terms supplement but do not replace your specific loan agreement.</p>
+                    </div>
+
+                    <!-- Repayment -->
+                    <div id="repayment" class="content-section">
+                        <h3>6. Repayment</h3>
+                        <p>You agree to make all payments as specified in your loan agreement. Important repayment terms include:</p>
+                        <ul class="list-items">
+                            <li>Payments are due on specified dates each month</li>
+                            <li>Late payments incur penalties as specified in your agreement</li>
+                            <li>We may debit payments directly from your nominated account</li>
+                            <li>Early repayment may be subject to terms specified in your agreement</li>
+                            <li>Missed payments may affect your credit rating</li>
+                        </ul>
+                        <div class="info-box">
+                            <i class="bi bi-info-circle"></i>
+                            <p>If you anticipate difficulty making a payment, contact us immediately. We may be able to arrange alternative payment arrangements to avoid default.</p>
+                        </div>
+                    </div>
+
+                    <!-- Security & Collateral -->
+                    <div id="security" class="content-section">
+                        <h3>7. Security & Collateral</h3>
+                        <p>Our loans are secured by assets you pledge as collateral. By accepting a loan, you agree to:</p>
+                        <ul class="list-items">
+                            <li>Maintain the security asset in good condition</li>
+                            <li>Insure the asset for its full value with us noted as loss payee</li>
+                            <li>Not sell, transfer, or further encumber the asset without our consent</li>
+                            <li>Allow us to inspect the asset periodically</li>
+                            <li>Register appropriate security interests (notarial bonds, mortgages, etc.)</li>
+                        </ul>
+                        <p>If you default on the loan, we have the right to take possession of and sell the security asset to recover the outstanding balance.</p>
+                    </div>
+
+                    <!-- Fees & Charges -->
+                    <div id="fees" class="content-section">
+                        <h3>8. Fees & Charges</h3>
+                        <p>Our fee structure includes but is not limited to:</p>
+                        <ul class="list-items">
+                            <li>Initiation fees (as regulated by the NCA)</li>
+                            <li>Monthly service fees</li>
+                            <li>Valuation fees</li>
+                            <li>Administration fees</li>
+                            <li>Late payment penalties</li>
+                            <li>Early termination fees (if applicable)</li>
+                        </ul>
+                        <p>All fees will be fully disclosed in your loan agreement and quotation. We comply with the National Credit Act's requirements for fee transparency.</p>
+                    </div>
+
+                    <!-- Default -->
+                    <div id="default" class="content-section">
+                        <h3>9. Default</h3>
+                        <p>You will be considered in default if:</p>
+                        <ul class="list-items">
+                            <li>You fail to make payments as agreed</li>
+                            <li>You breach any term of your loan agreement</li>
+                            <li>You provide false information</li>
+                            <li>The security asset is damaged, lost, or improperly handled</li>
+                            <li>You become insolvent or undergo debt review</li>
+                        </ul>
+                        <p>In case of default, we may:</p>
+                        <ul class="list-items">
+                            <li>Charge default interest as per your agreement</li>
+                            <li>Take possession of the security asset</li>
+                            <li>Report the default to credit bureaus</li>
+                            <li>Institute legal proceedings for recovery</li>
+                            <li>Claim all costs associated with recovery</li>
+                        </ul>
+                    </div>
+
+                    <!-- Privacy & Data -->
+                    <div id="privacy" class="content-section">
+                        <h3>10. Privacy & Data Protection</h3>
+                        <p>We collect, use, and protect your personal information in accordance with the Protection of Personal Information Act (POPIA). By using our services, you consent to:</p>
+                        <ul class="list-items">
+                            <li>Collection of personal and financial information</li>
+                            <li>Credit bureau checks and reporting</li>
+                            <li>Sharing information with credit providers and regulators as required by law</li>
+                            <li>Using your information for service improvement and marketing (with opt-out rights)</li>
+                        </ul>
+                        <p>See our Privacy Policy for detailed information on how we handle your data.</p>
+                    </div>
+
+                    <!-- Disclaimers -->
+                    <div id="disclaimer" class="content-section">
+                        <h3>11. Disclaimers</h3>
+                        <p>Your use of our service is at your sole risk. The service is provided "AS IS" and "AS AVAILABLE" without warranties of any kind, whether express or implied.</p>
+                        <div class="disclaimer-box">
+                            <p>We do not guarantee that:</p>
+                            <ul>
+                                <li>The service will meet your specific requirements</li>
+                                <li>The service will be uninterrupted or error-free</li>
+                                <li>Any errors will be corrected</li>
+                                <li>Asset valuations will match market expectations</li>
+                                <li>Loan applications will be approved</li>
+                            </ul>
+                        </div>
+                        <p>We are not financial advisors. Our services provide financing based on asset security, not financial advice.</p>
+                    </div>
+
+                    <!-- Changes -->
+                    <div id="changes" class="content-section">
+                        <h3>12. Changes to Terms</h3>
+                        <p>We reserve the right to modify or replace these Terms at any time. We will provide notice of any changes by posting the new Terms on this page and updating the "Last Updated" date.</p>
+                        <div class="notice-box">
+                            <i class="bi bi-bell"></i>
+                            <p>By continuing to access or use our service after those revisions become effective, you agree to be bound by the revised terms. For existing loans, the terms in your loan agreement remain valid.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Section -->
+                <div class="terms-contact" data-aos="fade-up" data-aos-delay="300">
+                    <div class="contact-box">
+                        <div class="contact-icon">
+                            <i class="bi bi-envelope"></i>
+                        </div>
+                        <div class="contact-content">
+                            <h4>Questions About Terms?</h4>
+                            <p>If you have any questions about these Terms of Service, please contact our legal department.</p>
+                            <a href="mailto:legal@lehumo.co.za" class="contact-link">Contact Legal Department</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
 
-          <!-- Prohibited Activities -->
-          <div id="prohibited" class="content-section">
-            <h3>4. Prohibited Activities</h3>
-            <p>You may not access or use the Service for any purpose other than that for which we make it available.</p>
-            <div class="prohibited-list">
-              <div class="prohibited-item">
-                <i class="bi bi-x-circle"></i>
-                <span>Systematic retrieval of data or content</span>
-              </div>
-              <div class="prohibited-item">
-                <i class="bi bi-x-circle"></i>
-                <span>Publishing malicious content</span>
-              </div>
-              <div class="prohibited-item">
-                <i class="bi bi-x-circle"></i>
-                <span>Engaging in unauthorized framing</span>
-              </div>
-              <div class="prohibited-item">
-                <i class="bi bi-x-circle"></i>
-                <span>Attempting to gain unauthorized access</span>
-              </div>
+        </section><!-- /Terms Of Service Section -->
+
+    </main>
+
+    <footer id="footer" class="footer position-relative dark-background">
+
+        <div class="container footer-top">
+            <div class="row gy-4">
+                <div class="col-lg-4 col-md-6 footer-about">
+                    <a href="index.html" class="d-flex align-items-center mb-3" style="text-decoration: none;">
+                        <div class="logo-container">
+                            <img src="assets/img/logo.png" alt="Lehumo La Edishela Logo" class="logo-image me-2">
+                            <h1 class="sitename">LEHUMO LA EDISHELA</h1>
+                        </div>
+                    </a>
+                    <div class="footer-contact pt-3">
+                        <p class="mb-3">Your trusted partner for asset-backed loans. Fast approvals, great rates, and FSCA registered for your peace of mind.</p>
+                        <p><strong>Legal & Compliance:</strong></p>
+                        <p class="mb-2"><i class="bi bi-telephone me-2"></i> 063 948 3064</p>
+                        <p class="mb-2"><i class="bi bi-envelope me-2"></i> legal@lehumo.co.za</p>
+                        <p><i class="bi bi-shield-check me-2"></i> FSCA Registered</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 footer-links">
+                    <h4 class="mb-3">Quick Links</h4>
+                    <ul>
+                        <li><i class="bi bi-chevron-right"></i> <a href="index.html">Home</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="about.html">About Us</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="contact.html">Contact Us</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="apply.html">Apply Now</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="faq-general.html">FAQ & Help</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-3 footer-links">
+                    <h4 class="mb-3">Legal</h4>
+                    <ul>
+                        <li><i class="bi bi-chevron-right"></i> <a href="terms.html" class="active">Terms of Service</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="privacy.html">Privacy Policy</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="complaints.html">Complaints Procedure</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#">Credit Information</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#">PAIA Manual</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-12">
+                    <h4 class="mb-3">Contact Details</h4>
+                    <div class="contact-info mb-3">
+                        <p><i class="bi bi-geo-alt me-2"></i> Sandton, Johannesburg</p>
+                        <p><i class="bi bi-clock me-2"></i> Mon-Fri: 8am-6pm | Sat: 9am-1pm</p>
+                        <p><i class="bi bi-building me-2"></i> Nationwide Service</p>
+                    </div>
+                    <div class="social-links d-flex mt-4">
+                        <a href="#" class="me-3"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="me-3"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="me-3"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+
             </div>
-          </div>
+        </div>
 
-          <!-- Disclaimers -->
-          <div id="disclaimer" class="content-section">
-            <h3>5. Disclaimers</h3>
-            <p>Your use of our service is at your sole risk. The service is provided "AS IS" and "AS AVAILABLE" without warranties of any kind, whether express or implied.</p>
-            <div class="disclaimer-box">
-              <p>We do not guarantee that:</p>
-              <ul>
-                <li>The service will meet your requirements</li>
-                <li>The service will be uninterrupted or error-free</li>
-                <li>Results from using the service will be accurate</li>
-                <li>Any errors will be corrected</li>
-              </ul>
+        <div class="container copyright text-center mt-4 pt-4 border-top border-secondary">
+            <p class="mb-2">© 2025 Lehumo La Edishela Financial Services. All rights reserved.</p>
+            <div class="credits">
+                <a href="privacy.html" class="me-3">Privacy Policy</a> |
+                <a href="terms.html" class="mx-3">Terms of Service</a> |
+                <a href="complaints.html" class="ms-3">Complaints Procedure</a>
             </div>
-          </div>
-
-          <!-- Limitation of Liability -->
-          <div id="limitation" class="content-section">
-            <h3>6. Limitation of Liability</h3>
-            <p>In no event shall we be liable for any indirect, punitive, incidental, special, consequential, or exemplary damages arising out of or in connection with your use of the service.</p>
-          </div>
-
-          <!-- Indemnification -->
-          <div id="indemnification" class="content-section">
-            <h3>7. Indemnification</h3>
-            <p>You agree to defend, indemnify, and hold us harmless from and against any claims, liabilities, damages, losses, and expenses arising out of your use of the service.</p>
-          </div>
-
-          <!-- Termination -->
-          <div id="termination" class="content-section">
-            <h3>8. Termination</h3>
-            <p>We may terminate or suspend your account immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms.</p>
-          </div>
-
-          <!-- Governing Law -->
-          <div id="governing-law" class="content-section">
-            <h3>9. Governing Law</h3>
-            <p>These Terms shall be governed by and construed in accordance with the laws of [Your Country], without regard to its conflict of law provisions.</p>
-          </div>
-
-          <!-- Changes -->
-          <div id="changes" class="content-section">
-            <h3>10. Changes to Terms</h3>
-            <p>We reserve the right to modify or replace these Terms at any time. We will provide notice of any changes by posting the new Terms on this page.</p>
-            <div class="notice-box">
-              <i class="bi bi-bell"></i>
-              <p>By continuing to access or use our service after those revisions become effective, you agree to be bound by the revised terms.</p>
-            </div>
-          </div>
         </div>
 
-        <!-- Contact Section -->
-        <div class="tos-contact" data-aos="fade-up" data-aos-delay="300">
-          <div class="contact-box">
-            <div class="contact-icon">
-              <i class="bi bi-envelope"></i>
-            </div>
-            <div class="contact-content">
-              <h4>Questions About Terms?</h4>
-              <p>If you have any questions about these Terms, please contact us.</p>
-              <a href="#" class="contact-link">Contact Support</a>
-            </div>
-          </div>
-        </div>
-      </div>
+    </footer>
 
-    </section><!-- /Terms Of Service Section -->
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  </main>
+    <!-- Preloader -->
+    <div id="preloader"></div>
 
-  <footer id="footer" class="footer position-relative dark-background">
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
 
-    <div class="footer-newsletter">
-      <div class="container">
-        <div class="row justify-content-center text-center">
-          <div class="col-lg-6">
-            <h4>Join Our Newsletter</h4>
-            <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
-            <form action="forms/newsletter.php" method="post" class="php-email-form">
-              <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Your subscription request has been sent. Thank you!</div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
 
-    <div class="container footer-top">
-      <div class="row gy-4">
-        <div class="col-lg-4 col-md-6 footer-about">
-          <a href="index.html" class="d-flex align-items-center">
-            <span class="sitename">Tour</span>
-          </a>
-          <div class="footer-contact pt-3">
-            <p>A108 Adam Street</p>
-            <p>New York, NY 535022</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-            <p><strong>Email:</strong> <span>info@example.com</span></p>
-          </div>
-        </div>
+    <!-- Custom JS -->
+    <script>
+        // Smooth scrolling for table of contents links
+        document.querySelectorAll('.toc-list a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
 
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Useful Links</h4>
-          <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
-          </ul>
-        </div>
+        // Smooth scrolling for all anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if (this.getAttribute('href') === '#') return;
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
 
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Our Services</h4>
-          <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Design</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Development</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Product Management</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
-          </ul>
-        </div>
+        // Header scroll effect
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+            }
+        });
 
-        <div class="col-lg-4 col-md-12">
-          <h4>Follow Us</h4>
-          <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
-          <div class="social-links d-flex">
-            <a href=""><i class="bi bi-twitter-x"></i></a>
-            <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
-            <a href=""><i class="bi bi-linkedin"></i></a>
-          </div>
-        </div>
+        // WhatsApp button interaction
+        const whatsappBtn = document.querySelector('.whatsapp-float');
+        if (whatsappBtn) {
+            whatsappBtn.addEventListener('click', function () {
+                console.log('WhatsApp button clicked from Terms page');
+            });
+        }
 
-      </div>
-    </div>
+        // Initialize AOS animations
+        document.addEventListener('DOMContentLoaded', function () {
+            if (typeof AOS !== 'undefined') {
+                AOS.init({
+                    duration: 800,
+                    easing: 'ease-in-out',
+                    once: true,
+                    mirror: false
+                });
+            }
+        });
 
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">MyWebsite</strong> <span>All Rights Reserved</span></p>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
-    </div>
+        // Scroll to top functionality
+        const scrollTop = document.getElementById('scroll-top');
+        if (scrollTop) {
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > 100) {
+                    scrollTop.style.display = 'flex';
+                } else {
+                    scrollTop.style.display = 'none';
+                }
+            });
 
-  </footer>
-
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+            scrollTop.addEventListener('click', function (e) {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+    </script>
 
 </body>
-
 </html>

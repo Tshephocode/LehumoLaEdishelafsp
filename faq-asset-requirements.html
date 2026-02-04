@@ -74,84 +74,21 @@
                 margin-top: 2px;
             }
 
-        /* Animated Logo Frame */
+        /* Logo Container */
         .logo-container {
             display: flex;
             align-items: center;
             justify-content: flex-start;
-            gap: 15px;
+            gap: 10px;
         }
-
-        .logo-frame {
-            width: 70px;
-            height: 70px;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--primary-blue), var(--accent-teal), var(--primary-red));
-            background-size: 400% 400%;
-            animation: gradientShift 8s ease infinite;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-        }
-
-            .logo-frame::before {
-                content: '';
-                position: absolute;
-                width: 64px;
-                height: 64px;
-                background: white;
-                border-radius: 50%;
-                z-index: 1;
-            }
 
         .logo-image {
-            width: 50px;
-            height: 50px;
+            width: 60px;
+            height: 60px;
             object-fit: contain;
             border-radius: 50%;
             position: relative;
             z-index: 2;
-            transition: transform 0.5s ease;
-        }
-
-        .logo-frame:hover .logo-image {
-            transform: scale(1.05);
-        }
-
-        @keyframes gradientShift {
-            0% {
-                background-position: 0% 50%;
-            }
-
-            50% {
-                background-position: 100% 50%;
-            }
-
-            100% {
-                background-position: 0% 50%;
-            }
-        }
-
-        /* Pulsing effect for attention */
-        @keyframes pulse {
-            0% {
-                box-shadow: 0 0 0 0 rgba(230, 57, 70, 0.4);
-            }
-
-            70% {
-                box-shadow: 0 0 0 10px rgba(230, 57, 70, 0);
-            }
-
-            100% {
-                box-shadow: 0 0 0 0 rgba(230, 57, 70, 0);
-            }
-        }
-
-        .logo-frame:hover {
-            animation: gradientShift 8s ease infinite, pulse 2s infinite;
         }
 
         /* Header Enhancements */
@@ -197,22 +134,86 @@
             background-size: cover;
             background-position: center;
             color: white;
-            padding: 120px 0 60px;
+            padding: 150px 0 60px;
             position: relative;
         }
 
             .page-title h1 {
                 color: white;
-                font-size: 3rem;
+                font-size: 3.5rem;
                 font-weight: 800;
                 margin-bottom: 1rem;
             }
 
-        /* FAQ Styles */
+        /* FAQ Section Styling */
         .faq-section {
             padding: 80px 0;
         }
 
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+            .section-title h2 {
+                color: var(--primary-blue);
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
+            }
+
+            .section-title p {
+                color: var(--text-color);
+                font-size: 1.1rem;
+                max-width: 700px;
+                margin: 0 auto;
+            }
+
+        /* FAQ Search Box */
+        .faq-search {
+            background: white;
+            border-radius: 12px;
+            padding: 2.5rem;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+            border: 2px solid var(--border-color);
+            margin-bottom: 3rem;
+        }
+
+        .search-title {
+            color: var(--primary-blue);
+            font-size: 1.75rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .search-box {
+            position: relative;
+        }
+
+            .search-box input {
+                width: 100%;
+                padding: 1rem 1rem 1rem 3rem;
+                border: 2px solid var(--border-color);
+                border-radius: 8px;
+                font-size: 1rem;
+                transition: all 0.3s ease;
+            }
+
+                .search-box input:focus {
+                    border-color: var(--primary-red);
+                    box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.1);
+                    outline: none;
+                }
+
+            .search-box i {
+                position: absolute;
+                left: 1rem;
+                top: 50%;
+                transform: translateY(-50%);
+                color: var(--primary-blue);
+                font-size: 1.2rem;
+            }
+
+        /* FAQ Categories */
         .faq-category {
             margin-bottom: 4rem;
         }
@@ -236,16 +237,18 @@
                 background: var(--accent-teal);
             }
 
+        /* FAQ Items */
         .faq-item {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            border: 1px solid var(--border-color);
             transition: all 0.3s ease;
         }
 
             .faq-item:hover {
-                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+                border-color: var(--primary-blue);
             }
 
         .faq-question {
@@ -260,7 +263,7 @@
         }
 
             .faq-question:hover {
-                background: rgba(26, 54, 93, 0.05);
+                background: rgba(26, 54, 93, 0.03);
             }
 
             .faq-question.active {
@@ -273,12 +276,13 @@
             font-size: 1.1rem;
             font-weight: 600;
             flex: 1;
-            margin-right: 1rem;
+            margin-right: 1.5rem;
         }
 
         .toggle-icon {
             color: var(--primary-red);
-            font-size: 1.2rem;
+            font-size: 1.3rem;
+            font-weight: 600;
             transition: transform 0.3s ease;
         }
 
@@ -318,6 +322,10 @@
                 margin-bottom: 0.5rem;
             }
 
+            .answer-content strong {
+                color: var(--primary-blue);
+            }
+
         /* Asset Comparison Table */
         .asset-comparison {
             background: white;
@@ -325,7 +333,7 @@
             padding: 2rem;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
             border: 2px solid var(--border-color);
-            margin-top: 2rem;
+            margin: 2rem 0;
             overflow-x: auto;
         }
 
@@ -384,67 +392,6 @@
             background-color: #E76F51;
         }
 
-        /* Valuation Process Timeline */
-        .valuation-timeline {
-            position: relative;
-            padding: 2rem 0;
-        }
-
-        .timeline-container {
-            position: relative;
-        }
-
-        .timeline-phase {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 2rem;
-            position: relative;
-        }
-
-            .timeline-phase:last-child {
-                margin-bottom: 0;
-            }
-
-        .phase-marker {
-            width: 40px;
-            height: 40px;
-            background: var(--primary-red);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: 600;
-            flex-shrink: 0;
-            margin-right: 1.5rem;
-            position: relative;
-            z-index: 2;
-            font-size: 0.9rem;
-        }
-
-        .phase-content {
-            flex: 1;
-            background: white;
-            border-radius: 12px;
-            padding: 1.5rem;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-            border: 1px solid var(--border-color);
-        }
-
-        .phase-line {
-            position: absolute;
-            left: 19px;
-            top: 40px;
-            bottom: -2rem;
-            width: 2px;
-            background: var(--primary-red);
-            z-index: 1;
-        }
-
-        .timeline-phase:last-child .phase-line {
-            display: none;
-        }
-
         /* Requirements Checklist */
         .requirements-checklist {
             background: white;
@@ -452,7 +399,7 @@
             padding: 2rem;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
             border: 2px solid var(--border-color);
-            margin-top: 2rem;
+            margin: 2rem 0;
         }
 
         .checklist-title {
@@ -477,53 +424,17 @@
             color: var(--accent-teal);
             margin-right: 1rem;
             font-size: 1.2rem;
-            margin-top: 0.25rem;
+            margin-top: 0.2rem;
         }
 
-        /* Search Box */
-        .faq-search {
-            background: white;
-            border-radius: 12px;
-            padding: 2rem;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-            margin-bottom: 3rem;
-        }
-
-        .search-title {
-            color: var(--primary-blue);
+        /* Asset Icons */
+        .asset-icon {
             font-size: 1.5rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
+            margin-right: 0.75rem;
+            color: var(--primary-blue);
         }
 
-        .search-box {
-            position: relative;
-        }
-
-            .search-box input {
-                width: 100%;
-                padding: 1rem 1rem 1rem 3rem;
-                border: 2px solid var(--border-color);
-                border-radius: 8px;
-                font-size: 1rem;
-                transition: all 0.3s ease;
-            }
-
-                .search-box input:focus {
-                    border-color: var(--primary-red);
-                    box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.1);
-                    outline: none;
-                }
-
-            .search-box i {
-                position: absolute;
-                left: 1rem;
-                top: 50%;
-                transform: translateY(-50%);
-                color: var(--primary-blue);
-            }
-
-        /* Contact Help */
+        /* Contact Help Section */
         .contact-help {
             background: linear-gradient(135deg, var(--primary-blue) 0%, #152642 100%);
             border-radius: 16px;
@@ -555,15 +466,18 @@
             background: rgba(255, 255, 255, 0.1);
             border-radius: 10px;
             transition: all 0.3s ease;
+            text-decoration: none;
+            color: white;
         }
 
             .contact-method:hover {
                 background: rgba(255, 255, 255, 0.2);
                 transform: translateY(-3px);
+                color: white;
             }
 
             .contact-method i {
-                font-size: 1.5rem;
+                font-size: 1.8rem;
                 color: var(--accent-teal);
             }
 
@@ -619,28 +533,11 @@
                 transform: translateY(-2px);
             }
 
-        /* Asset Icons */
-        .asset-icon {
-            font-size: 1.5rem;
-            margin-right: 0.75rem;
-            color: var(--primary-blue);
-        }
-
-        /* Logo Frame Mobile Adjustments */
+        /* Logo Mobile Adjustments */
         @media (max-width: 992px) {
-            .logo-frame {
-                width: 60px;
-                height: 60px;
-            }
-
-                .logo-frame::before {
-                    width: 54px;
-                    height: 54px;
-                }
-
             .logo-image {
-                width: 42px;
-                height: 42px;
+                width: 54px;
+                height: 54px;
             }
 
             .sitename {
@@ -649,6 +546,10 @@
 
             .page-title h1 {
                 font-size: 2.5rem;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
             }
 
             .btn-getstarted {
@@ -666,22 +567,14 @@
                 max-width: 300px;
             }
 
-            .timeline-phase {
-                flex-direction: column;
+            .comparison-table {
+                font-size: 0.9rem;
             }
 
-            .phase-marker {
-                margin-right: 0;
-                margin-bottom: 1rem;
-            }
-
-            .phase-line {
-                left: 19px;
-                top: 40px;
-                bottom: -2rem;
-                height: 2px;
-                width: auto;
-            }
+                .comparison-table th,
+                .comparison-table td {
+                    padding: 0.75rem;
+                }
 
             .whatsapp-float {
                 width: 55px;
@@ -690,38 +583,16 @@
                 bottom: 25px;
                 right: 25px;
             }
-
-            .comparison-table {
-                font-size: 0.9rem;
-            }
-
-                .comparison-table th, .comparison-table td {
-                    padding: 0.75rem;
-                }
         }
 
         @media (max-width: 768px) {
-            .logo-frame {
+            .logo-image {
                 width: 50px;
                 height: 50px;
             }
 
-                .logo-frame::before {
-                    width: 44px;
-                    height: 44px;
-                }
-
-            .logo-image {
-                width: 35px;
-                height: 35px;
-            }
-
             .sitename {
                 font-size: 1.3rem;
-            }
-
-            .logo-container {
-                gap: 10px;
             }
 
             .page-title h1 {
@@ -729,11 +600,15 @@
             }
 
             .page-title {
-                padding: 100px 0 40px;
+                padding: 120px 0 40px;
             }
 
             .faq-section {
                 padding: 60px 0;
+            }
+
+            .faq-search {
+                padding: 2rem;
             }
 
             .contact-help {
@@ -744,6 +619,15 @@
                     font-size: 1.75rem;
                 }
 
+            .comparison-table {
+                font-size: 0.85rem;
+            }
+
+                .comparison-table th,
+                .comparison-table td {
+                    padding: 0.5rem;
+                }
+
             .whatsapp-float {
                 width: 50px;
                 height: 50px;
@@ -751,34 +635,16 @@
                 bottom: 20px;
                 right: 20px;
             }
-
-            .comparison-table {
-                font-size: 0.85rem;
-            }
-
-                .comparison-table th, .comparison-table td {
-                    padding: 0.5rem;
-                }
         }
 
         @media (max-width: 480px) {
             .logo-container {
-                gap: 8px;
+                gap: 5px;
             }
-
-            .logo-frame {
-                width: 45px;
-                height: 45px;
-            }
-
-                .logo-frame::before {
-                    width: 39px;
-                    height: 39px;
-                }
 
             .logo-image {
-                width: 32px;
-                height: 32px;
+                width: 45px;
+                height: 45px;
             }
 
             .sitename {
@@ -821,10 +687,7 @@
 
             <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
                 <div class="logo-container">
-                    <div class="logo-frame">
-                        <img src="assets/img/logo.png" alt="Lehumo La Edishela Logo" class="logo-image">
-                    </div>
-                    <h1 class="sitename">LEHUMO LA EDISHELA</h1>
+                    <img src="assets/img/logo.png" alt="Lehumo La Edishela Logo" class="logo-image">
                 </div>
             </a>
 
@@ -860,7 +723,7 @@
                             <li><a href="development-finance.html">Development Finance</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown">
+                    <li class="dropdown active">
                         <a href="#"><span>FAQ</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                         <ul>
                             <li><a href="faq-general.html">General Questions</a></li>
@@ -904,7 +767,7 @@
                 </nav>
             </div>
         </div><!-- End Page Title -->
-        <!-- Asset Comparison -->
+        <!-- FAQ Section -->
         <section class="faq-section">
             <div class="container">
                 <div class="section-title text-center mb-5" data-aos="fade-up">
@@ -912,6 +775,7 @@
                     <p>Learn about different asset types and how they qualify for loans</p>
                 </div>
 
+                <!-- Asset Comparison Table -->
                 <div class="asset-comparison" data-aos="fade-up">
                     <h3 class="comparison-title">Asset Type Comparison</h3>
                     <table class="comparison-table">
@@ -978,7 +842,7 @@
                         <i class="bi bi-search"></i>
                         <input type="text" id="faqSearch" placeholder="Type your asset requirement question here...">
                     </div>
-                    <p class="text-muted mt-2 small">Can't find your answer? <a href="#contact-help">Contact our asset specialists</a> for personalized advice.</p>
+                    <p class="text-muted mt-3">Can't find your answer? <a href="#contact-help">Contact our asset specialists</a> for personalized advice.</p>
                 </div>
 
                 <!-- Qualifying Assets Questions -->
@@ -1036,14 +900,6 @@
                                             <p class="text-muted small">Requirements: Provenance, authentication, condition</p>
                                         </div>
                                     </div>
-                                    <div class="checklist-item">
-                                        <i class="bi bi-cash-coin checklist-icon"></i>
-                                        <div>
-                                            <strong>Financial Instruments</strong>
-                                            <p>Shares, bonds, investment portfolios (in some cases)</p>
-                                            <p class="text-muted small">Requirements: Liquid, easily valued</p>
-                                        </div>
-                                    </div>
                                 </div>
 
                                 <p class="mt-3"><strong>Assets We Typically Don't Accept:</strong></p>
@@ -1070,41 +926,34 @@
                             <div class="answer-content">
                                 <p>All assets must meet certain basic criteria to qualify as collateral. Here are our minimum requirements:</p>
 
-                                <div class="valuation-timeline">
-                                    <div class="timeline-container">
-                                        <div class="timeline-phase">
-                                            <div class="phase-marker">1</div>
-                                            <div class="phase-content">
-                                                <h4>Clear Legal Ownership</h4>
-                                                <p>You must be the legal owner with rights to use the asset as collateral. We verify ownership through official documents like title deeds, registration papers, or purchase receipts.</p>
-                                            </div>
-                                            <div class="phase-line"></div>
+                                <div class="requirements-checklist">
+                                    <h5 class="checklist-title">Minimum Asset Requirements:</h5>
+                                    <div class="checklist-item">
+                                        <i class="bi bi-shield-check checklist-icon"></i>
+                                        <div>
+                                            <strong>Clear Legal Ownership</strong>
+                                            <p>You must be the legal owner with rights to use the asset as collateral. We verify ownership through official documents.</p>
                                         </div>
-
-                                        <div class="timeline-phase">
-                                            <div class="phase-marker">2</div>
-                                            <div class="phase-content">
-                                                <h4>Minimum Value Threshold</h4>
-                                                <p>Assets typically need a minimum value of R50,000, though some specialized assets may have different thresholds. Higher value assets generally get better loan terms.</p>
-                                            </div>
-                                            <div class="phase-line"></div>
+                                    </div>
+                                    <div class="checklist-item">
+                                        <i class="bi bi-cash-stack checklist-icon"></i>
+                                        <div>
+                                            <strong>Minimum Value Threshold</strong>
+                                            <p>Assets typically need a minimum value of R50,000. Higher value assets generally get better loan terms.</p>
                                         </div>
-
-                                        <div class="timeline-phase">
-                                            <div class="phase-marker">3</div>
-                                            <div class="phase-content">
-                                                <h4>Verifiable Market Value</h4>
-                                                <p>The asset must have an established market value that can be verified through comparable sales, professional appraisals, or accepted valuation methods.</p>
-                                            </div>
-                                            <div class="phase-line"></div>
+                                    </div>
+                                    <div class="checklist-item">
+                                        <i class="bi bi-graph-up checklist-icon"></i>
+                                        <div>
+                                            <strong>Verifiable Market Value</strong>
+                                            <p>The asset must have an established market value that can be verified through comparable sales or professional appraisals.</p>
                                         </div>
-
-                                        <div class="timeline-phase">
-                                            <div class="phase-marker">4</div>
-                                            <div class="phase-content">
-                                                <h4>Good Condition & Marketability</h4>
-                                                <p>The asset should be in reasonable condition for its age/type and have a resale market. We consider factors like age, maintenance, and market demand.</p>
-                                            </div>
+                                    </div>
+                                    <div class="checklist-item">
+                                        <i class="bi bi-wrench checklist-icon"></i>
+                                        <div>
+                                            <strong>Good Condition & Marketability</strong>
+                                            <p>The asset should be in reasonable condition for its age/type and have a resale market.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -1130,7 +979,7 @@
                         </div>
                         <div class="faq-answer" id="faq-answer-3">
                             <div class="answer-content">
-                                <p>Yes, we frequently accept multiple assets as collateral for a single loan. This can be beneficial in several situations:</p>
+                                <p><strong>Yes</strong>, we frequently accept multiple assets as collateral for a single loan. This can be beneficial in several situations:</p>
 
                                 <p><strong>Benefits of Using Multiple Assets:</strong></p>
                                 <ul>
@@ -1163,13 +1012,6 @@
                                             <p>One loan agreement covering all assets, simplifying administration</p>
                                         </div>
                                     </div>
-                                    <div class="checklist-item">
-                                        <i class="bi bi-shield checklist-icon"></i>
-                                        <div>
-                                            <strong>Security Registration</strong>
-                                            <p>All assets are registered as security for the single loan</p>
-                                        </div>
-                                    </div>
                                 </div>
 
                                 <p><strong>Common Multiple Asset Combinations:</strong></p>
@@ -1180,15 +1022,6 @@
                                     <li>Equipment + vehicle</li>
                                     <li>Various luxury items (jewelry, watches, handbags)</li>
                                 </ul>
-
-                                <p><strong>Process for Multiple Assets:</strong></p>
-                                <ol>
-                                    <li>List all assets you wish to use as collateral</li>
-                                    <li>We value each asset individually</li>
-                                    <li>Determine combined value and appropriate LTV</li>
-                                    <li>Prepare single loan agreement covering all assets</li>
-                                    <li>Register security over all assets (where applicable)</li>
-                                </ol>
 
                                 <p><strong>Important Considerations:</strong></p>
                                 <ul>
@@ -1278,30 +1111,12 @@
                                     <li><strong>Current Market:</strong> Valuations reflect current market conditions</li>
                                 </ul>
 
-                                <p><strong>Valuation Process:</strong></p>
-                                <ol>
-                                    <li><strong>Initial Assessment:</strong> Based on information and photos you provide</li>
-                                    <li><strong>Physical Inspection:</strong> For most assets, we arrange an inspection</li>
-                                    <li><strong>Market Research:</strong> Analysis of comparable sales and market trends</li>
-                                    <li><strong>Valuation Report:</strong> Detailed report explaining the valuation</li>
-                                    <li><strong>Final Review:</strong> Quality check and approval process</li>
-                                </ol>
-
                                 <p><strong>If You Disagree with Our Valuation:</strong></p>
                                 <ul>
                                     <li>We provide the reasoning behind our valuation</li>
                                     <li>You can provide additional information or comparable sales</li>
                                     <li>We may consider a second opinion from another qualified valuer</li>
                                     <li>Valuation can be updated if market conditions change significantly</li>
-                                </ul>
-
-                                <p><strong>Tips for Maximizing Your Asset's Value:</strong></p>
-                                <ul>
-                                    <li>Provide complete documentation (service history, receipts, etc.)</li>
-                                    <li>Ensure the asset is clean and well-presented for inspection</li>
-                                    <li>Complete any minor repairs before valuation</li>
-                                    <li>Gather comparable sales data to support your expected value</li>
-                                    <li>Be prepared to explain unique features or recent improvements</li>
                                 </ul>
 
                                 <p>We aim for fair, transparent valuations that protect both you and us. Contact us if you have questions about how a specific asset would be valued.</p>
@@ -1330,7 +1145,6 @@
                                                 <li>Service history and maintenance records</li>
                                                 <li>Roadworthy certificate (if applicable)</li>
                                                 <li>Purchase receipt or previous ownership documents</li>
-                                                <li>Photos from multiple angles</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -1344,7 +1158,6 @@
                                                 <li>Rates clearance certificate</li>
                                                 <li>Latest utility bills</li>
                                                 <li>Site plans or building plans (if available)</li>
-                                                <li>Photos of property interior and exterior</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -1358,21 +1171,6 @@
                                                 <li>Brand/manufacturer documentation</li>
                                                 <li>Appraisal certificates (if previously appraised)</li>
                                                 <li>Clear photos from all angles</li>
-                                                <li>Original packaging and accessories (if available)</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <h5 class="checklist-title mt-4">Additional Documentation:</h5>
-                                    <div class="checklist-item">
-                                        <i class="bi bi-file-text checklist-icon"></i>
-                                        <div>
-                                            <strong>For All Assets</strong>
-                                            <ul>
-                                                <li>Your ID document (to verify ownership)</li>
-                                                <li>Proof of address</li>
-                                                <li>Any financing/loan agreements on the asset</li>
-                                                <li>Insurance documents (if insured)</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -1394,14 +1192,6 @@
                                     <li>Organize documents by category before submission</li>
                                     <li>Note any unique features or recent improvements</li>
                                     <li>Update service records/maintenance logs before applying</li>
-                                </ul>
-
-                                <p><strong>Verification Process:</strong></p>
-                                <ul>
-                                    <li>We verify all documents for authenticity</li>
-                                    <li>We check for liens or encumbrances on the asset</li>
-                                    <li>We confirm ownership matches your identity</li>
-                                    <li>We may request additional documents if needed</li>
                                 </ul>
 
                                 <p>Don't let missing documents delay your application - contact us to discuss what alternatives we can accept.</p>
@@ -1450,32 +1240,7 @@
                                             <p>Assets in major centers value faster than remote locations</p>
                                         </div>
                                     </div>
-                                    <div class="checklist-item">
-                                        <i class="bi bi-calendar-check checklist-icon"></i>
-                                        <div>
-                                            <strong>Valuer Availability</strong>
-                                            <p>Specialist valuers may have scheduling constraints</p>
-                                        </div>
-                                    </div>
                                 </div>
-
-                                <p><strong>Expedited Valuation Options:</strong></p>
-                                <ul>
-                                    <li><strong>Priority Service:</strong> Available for urgent needs (extra fee may apply)</li>
-                                    <li><strong>Remote Valuation:</strong> For some assets, based on photos and documentation</li>
-                                    <li><strong>Weekend Appointments:</strong> Available for urgent cases</li>
-                                    <li><strong>After-Hours:</strong> Possible for business-critical valuations</li>
-                                </ul>
-
-                                <p><strong>Valuation Process Steps & Timing:</strong></p>
-                                <ol>
-                                    <li><strong>Initial Review (1-4 hours):</strong> We assess provided information and documents</li>
-                                    <li><strong>Inspection Scheduling (4-24 hours):</strong> We arrange inspection time</li>
-                                    <li><strong>Physical Inspection (1-3 hours):</strong> Actual inspection time varies by asset</li>
-                                    <li><strong>Market Research (4-24 hours):</strong> Research comparable sales and values</li>
-                                    <li><strong>Report Preparation (4-24 hours):</strong> Compiling findings into valuation report</li>
-                                    <li><strong>Final Review (2-4 hours):</strong> Quality check and approval</li>
-                                </ol>
 
                                 <p><strong>How to Speed Up Your Valuation:</strong></p>
                                 <ul>
@@ -1487,21 +1252,13 @@
                                     <li>Respond quickly to any information requests</li>
                                 </ul>
 
-                                <p><strong>Updates During the Process:</strong></p>
-                                <ul>
-                                    <li>We'll confirm receipt of your application</li>
-                                    <li>We'll schedule inspection at mutually convenient time</li>
-                                    <li>We'll provide updates if there are delays</li>
-                                    <li>We'll share the valuation report once complete</li>
-                                </ul>
-
                                 <p>For time-sensitive needs, let us know upfront so we can prioritize your valuation accordingly.</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Asset Management & Insurance Questions -->
+                <!-- Asset Management Questions -->
                 <div class="faq-category" data-aos="fade-up" data-aos-delay="200">
                     <h3 class="category-title">Asset Management & Insurance</h3>
 
@@ -1512,7 +1269,7 @@
                         </div>
                         <div class="faq-answer" id="faq-answer-7">
                             <div class="answer-content">
-                                <p>In most cases, yes! We understand that assets often need to remain in use. Here's how it works for different asset types:</p>
+                                <p>In most cases, <strong>yes</strong>! We understand that assets often need to remain in use. Here's how it works for different asset types:</p>
 
                                 <div class="asset-comparison">
                                     <h5 class="comparison-title">Asset Usage During Loan Term</h5>
@@ -1523,7 +1280,6 @@
                                                 <th>Typical Usage</th>
                                                 <th>Requirements</th>
                                                 <th>Restrictions</th>
-                                                <th>Monitoring</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -1532,35 +1288,24 @@
                                                 <td>✅ Normal use allowed</td>
                                                 <td>Maintain insurance, roadworthiness</td>
                                                 <td>No major modifications without approval</td>
-                                                <td>Periodic condition checks</td>
                                             </tr>
                                             <tr>
                                                 <td><strong>Property</strong></td>
                                                 <td>✅ Live in/use normally</td>
                                                 <td>Maintain insurance, pay rates</td>
                                                 <td>No structural changes without approval</td>
-                                                <td>Annual inspections</td>
                                             </tr>
                                             <tr>
                                                 <td><strong>Luxury Items</strong></td>
                                                 <td>✅ Use with care</td>
                                                 <td>Proper storage, maintenance</td>
                                                 <td>Keep in good condition</td>
-                                                <td>Annual valuation updates</td>
                                             </tr>
                                             <tr>
                                                 <td><strong>Equipment</strong></td>
                                                 <td>✅ Business use allowed</td>
                                                 <td>Regular maintenance, insurance</td>
                                                 <td>No relocation without notice</td>
-                                                <td>Maintenance record reviews</td>
-                                            </tr>
-                                            <tr>
-                                                <td><strong>Art/Collectibles</strong></td>
-                                                <td>⚠️ Limited display</td>
-                                                <td>Secure display/storage, insurance</td>
-                                                <td>No restoration without approval</td>
-                                                <td>Condition monitoring</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -1572,44 +1317,15 @@
                                     <li><strong>Maintenance Required:</strong> You must maintain the asset in good condition</li>
                                     <li><strong>Insurance Required:</strong> Adequate insurance must be maintained</li>
                                     <li><strong>No Significant Depletion:</strong> Cannot significantly reduce asset value</li>
-                                    <li><strong>Location Restrictions:</strong> Some assets have geographical limits</li>
-                                </ul>
-
-                                <p><strong>What You Can Do:</strong></p>
-                                <ul>
-                                    <li>Drive your vehicle normally (within legal limits)</li>
-                                    <li>Live in or rent out your property</li>
-                                    <li>Wear luxury items (with reasonable care)</li>
-                                    <li>Use equipment for business operations</li>
-                                    <li>Display art in your home or office</li>
-                                    <li>Perform routine maintenance and repairs</li>
                                 </ul>
 
                                 <p><strong>What Requires Our Approval:</strong></p>
-                                <li>Major modifications or alterations</li>
-                                <li>Relocating the asset internationally</li>
-                                <li>Significant mileage increases (for vehicles)</li>
-                                <li>Structural changes to property</li>
-                                <li>Restoration of art/antiques</li>
-                                <li>Sub-leasing or renting to third parties</li>
-                                </ul>
-
-                                <p><strong>Insurance Requirements:</strong></p>
                                 <ul>
-                                    <li>Comprehensive insurance for full value</li>
-                                    <li>List us as loss payee on policy</li>
-                                    <li>Provide proof of insurance annually</li>
-                                    <li>Notify us of any policy changes</li>
-                                    <li>Maintain coverage for entire loan term</li>
-                                </ul>
-
-                                <p><strong>If You Want to Sell or Replace the Asset:</strong></p>
-                                <ul>
-                                    <li>Contact us before listing for sale</li>
-                                    <li>Loan must be settled from sale proceeds</li>
-                                    <li>We can transfer security to replacement asset</li>
-                                    <li>New asset must meet our requirements</li>
-                                    <li>Administration fee may apply for substitution</li>
+                                    <li>Major modifications or alterations</li>
+                                    <li>Relocating the asset internationally</li>
+                                    <li>Significant mileage increases (for vehicles)</li>
+                                    <li>Structural changes to property</li>
+                                    <li>Sub-leasing or renting to third parties</li>
                                 </ul>
 
                                 <p>We aim to be flexible while protecting our security interest. If you have specific usage questions, contact us to discuss your situation.</p>
@@ -1640,7 +1356,6 @@
                                     <li><strong>Normal Fluctuations:</strong> Minor value changes typically don't require action</li>
                                     <li><strong>Significant Drops:</strong> If value drops substantially, we'll contact you</li>
                                     <li><strong>Options Available:</strong> Several solutions depending on situation</li>
-                                    <li><strong>Proactive Approach:</strong> We monitor markets and may suggest preemptive actions</li>
                                 </ul>
 
                                 <div class="requirements-checklist">
@@ -1666,23 +1381,7 @@
                                             <p>Adjust loan terms to reflect current situation</p>
                                         </div>
                                     </div>
-                                    <div class="checklist-item">
-                                        <i class="bi bi-currency-exchange checklist-icon"></i>
-                                        <div>
-                                            <strong>Refinancing</strong>
-                                            <p>Refinance the loan based on current asset value</p>
-                                        </div>
-                                    </div>
                                 </div>
-
-                                <p><strong>Prevention & Protection:</strong></p>
-                                <ul>
-                                    <li><strong>Maintain Insurance:</strong> Adequate insurance is required</li>
-                                    <li><strong>Regular Maintenance:</strong> Keep assets in good condition</li>
-                                    <li><strong>Market Awareness:</strong> Be aware of factors affecting your asset's value</li>
-                                    <li><strong>Conservative LTV:</strong> Initial conservative LTV provides buffer</li>
-                                    <li><strong>Periodic Reviews:</strong> Regular value reviews catch issues early</li>
-                                </ul>
 
                                 <p><strong>Our Approach:</strong></p>
                                 <ul>
@@ -1690,24 +1389,6 @@
                                     <li><strong>Reasonable Timeframes:</strong> We provide time to address issues</li>
                                     <li><strong>Multiple Options:</strong> We offer various solutions</li>
                                     <li><strong>Fair Valuations:</strong> We use current market values, not panic prices</li>
-                                    <li><strong>Preservation Focus:</strong> We prefer preserving the arrangement</li>
-                                </ul>
-
-                                <p><strong>When Immediate Action Is Required:</strong></p>
-                                <ul>
-                                    <li>Asset becomes uninsured</li>
-                                    <li>Significant damage without repair plans</li>
-                                    <li>Asset used illegally or recklessly</li>
-                                    <li>Attempt to sell or transfer without notification</li>
-                                    <li>Substantial value drop with no corrective action</li>
-                                </ul>
-
-                                <p><strong>If You're Concerned About Value:</strong></p>
-                                <ul>
-                                    <li>Contact us proactively if you anticipate value issues</li>
-                                    <li>We can arrange early revaluation</li>
-                                    <li>Discuss preventive measures</li>
-                                    <li>Explore restructuring options before issues arise</li>
                                 </ul>
 
                                 <p>We understand that asset values can change. Our goal is to work with you to find mutually agreeable solutions when changes occur.</p>
@@ -1722,7 +1403,7 @@
                         </div>
                         <div class="faq-answer" id="faq-answer-9">
                             <div class="answer-content">
-                                <p>Yes, insurance is generally required for assets used as collateral. Here are our insurance requirements:</p>
+                                <p><strong>Yes</strong>, insurance is generally required for assets used as collateral. Here are our insurance requirements:</p>
 
                                 <p><strong>Mandatory Insurance Requirements:</strong></p>
                                 <ul>
@@ -1744,7 +1425,6 @@
                                                 <li>Theft, fire, accident coverage</li>
                                                 <li>Third party liability (minimum statutory)</li>
                                                 <li>Agreed value or market value</li>
-                                                <li>Roadside assistance (recommended)</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -1757,7 +1437,6 @@
                                                 <li>Fire, storm, flood coverage</li>
                                                 <li>Public liability (if rented out)</li>
                                                 <li>Contents insurance (if contents included)</li>
-                                                <li>Rental loss coverage (for investment properties)</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -1770,7 +1449,6 @@
                                                 <li>Worldwide coverage (if traveling with items)</li>
                                                 <li>Agreed value based on appraisal</li>
                                                 <li>Theft, loss, damage coverage</li>
-                                                <li>Mysterious disappearance coverage</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -1781,51 +1459,7 @@
                                     <li>We can usually work with your existing policy</li>
                                     <li>You may need to add us as loss payee</li>
                                     <li>We'll review coverage to ensure it meets requirements</li>
-                                    <li>You may need to increase coverage amounts</li>
                                     <li>No need to cancel and restart insurance</li>
-                                </ul>
-
-                                <p><strong>If You Need Insurance:</strong></p>
-                                <ul>
-                                    <li>We can recommend reputable insurers</li>
-                                    <li>We can help you get appropriate coverage</li>
-                                    <li>We understand different assets need different policies</li>
-                                    <li>We can advise on adequate coverage levels</li>
-                                </ul>
-
-                                <p><strong>Insurance Cost Considerations:</strong></p>
-                                <ul>
-                                    <li>Insurance cost is your responsibility</li>
-                                    <li>Consider insurance cost when budgeting for loan</li>
-                                    <li>Shop around for competitive rates</li>
-                                    <li>Higher excess can reduce premiums but increases your risk</li>
-                                    <li>Some assets have specialized insurance markets</li>
-                                </ul>
-
-                                <p><strong>What Happens Without Insurance:</strong></p>
-                                <ul>
-                                    <li>Breach of loan agreement terms</li>
-                                    <li>We may place insurance and charge you</li>
-                                    <li>Loan could be called for immediate repayment</li>
-                                    <li>Additional fees and charges may apply</li>
-                                    <li>Legal action to protect our security interest</li>
-                                </ul>
-
-                                <p><strong>Managing Your Insurance:</strong></p>
-                                <ul>
-                                    <li>Keep policy documents accessible</li>
-                                    <li>Notify us of any policy changes</li>
-                                    <li>Renew policies before expiration</li>
-                                    <li>Update coverage if asset value changes significantly</li>
-                                    <li>Provide renewal certificates annually</li>
-                                </ul>
-
-                                <p><strong>Exceptions & Special Cases:</strong></p>
-                                <ul>
-                                    <li>Some low-value assets may not require insurance</li>
-                                    <li>Business assets may have different requirements</li>
-                                    <li>Specialized insurance for unique assets</li>
-                                    <li>Group policies for multiple assets</li>
                                 </ul>
 
                                 <p>Insurance protects both you and us. If you have questions about insurance requirements for your specific asset, contact us for guidance.</p>
@@ -1901,9 +1535,7 @@
                 <div class="col-lg-4 col-md-6 footer-about">
                     <a href="index.html" class="d-flex align-items-center mb-3" style="text-decoration: none;">
                         <div class="logo-container">
-                            <div class="logo-frame">
-                                <img src="assets/img/logo.png" alt="Lehumo La Edishela Logo" class="logo-image">
-                            </div>
+                            <img src="assets/img/logo.png" alt="Lehumo La Edishela Logo" class="logo-image me-2">
                             <h1 class="sitename">LEHUMO LA EDISHELA</h1>
                         </div>
                     </a>
@@ -1957,7 +1589,7 @@
         </div>
 
         <div class="container copyright text-center mt-4 pt-4 border-top border-secondary">
-            <p class="mb-2">© 2023 Lehumo La Edishela Financial Services. All rights reserved.</p>
+            <p class="mb-2">© 2025 Lehumo La Edishela Financial Services. All rights reserved.</p>
             <div class="credits">
                 <a href="privacy.html" class="me-3">Privacy Policy</a> |
                 <a href="terms.html" class="mx-3">Terms of Service</a> |
@@ -2011,20 +1643,43 @@
 
         // FAQ Search Functionality
         document.getElementById('faqSearch')?.addEventListener('input', function () {
-            const searchTerm = this.value.toLowerCase();
+            const searchTerm = this.value.toLowerCase().trim();
             const faqItems = document.querySelectorAll('.faq-item');
 
-            faqItems.forEach(item => {
-                const question = item.querySelector('.question-text').textContent.toLowerCase();
-                const answer = item.querySelector('.answer-content').textContent.toLowerCase();
+            if (searchTerm.length === 0) {
+                // Show all items when search is empty
+                faqItems.forEach(item => {
+                    item.style.display = 'block';
+                    // Remove highlights
+                    const question = item.querySelector('.question-text');
+                    const answer = item.querySelector('.answer-content');
+                    if (question) question.innerHTML = question.textContent;
+                    if (answer) answer.innerHTML = answer.textContent;
+                });
 
-                if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+                // Show all categories
+                document.querySelectorAll('.faq-category').forEach(category => {
+                    category.style.display = 'block';
+                });
+
+                return;
+            }
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.question-text');
+                const answer = item.querySelector('.answer-content');
+
+                if (!question || !answer) return;
+
+                const questionText = question.textContent.toLowerCase();
+                const answerText = answer.textContent.toLowerCase();
+
+                if (questionText.includes(searchTerm) || answerText.includes(searchTerm)) {
                     item.style.display = 'block';
 
                     // Highlight matching text
-                    if (searchTerm.length > 2) {
-                        highlightText(item, searchTerm);
-                    }
+                    highlightText(question, searchTerm);
+                    highlightText(answer, searchTerm);
                 } else {
                     item.style.display = 'none';
                 }
@@ -2043,24 +1698,13 @@
 
         // Text highlighting function
         function highlightText(element, searchTerm) {
-            const question = element.querySelector('.question-text');
-            const answer = element.querySelector('.answer-content');
+            if (!element || searchTerm.length < 2) return;
 
-            // Remove previous highlights
-            question.innerHTML = question.textContent;
-            answer.innerHTML = answer.textContent;
+            const originalText = element.textContent;
+            const regex = new RegExp(`(${searchTerm})`, 'gi');
+            const highlightedText = originalText.replace(regex, '<mark class="bg-warning">$1</mark>');
 
-            // Highlight in question
-            if (question.textContent.toLowerCase().includes(searchTerm)) {
-                const regex = new RegExp(`(${searchTerm})`, 'gi');
-                question.innerHTML = question.textContent.replace(regex, '<mark class="bg-warning">$1</mark>');
-            }
-
-            // Highlight in answer
-            if (answer.textContent.toLowerCase().includes(searchTerm)) {
-                const regex = new RegExp(`(${searchTerm})`, 'gi');
-                answer.innerHTML = answer.textContent.replace(regex, '<mark class="bg-warning">$1</mark>');
-            }
+            element.innerHTML = highlightedText;
         }
 
         // Open first FAQ by default
@@ -2068,6 +1712,16 @@
             const firstQuestion = document.querySelector('.faq-question');
             if (firstQuestion) {
                 firstQuestion.click();
+            }
+
+            // Initialize AOS animations
+            if (typeof AOS !== 'undefined') {
+                AOS.init({
+                    duration: 800,
+                    easing: 'ease-in-out',
+                    once: true,
+                    mirror: false
+                });
             }
         });
 
@@ -2107,8 +1761,27 @@
                 console.log('WhatsApp button clicked from Asset Requirements FAQ page');
             });
         }
+
+        // Scroll to top functionality
+        const scrollTop = document.getElementById('scroll-top');
+        if (scrollTop) {
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > 100) {
+                    scrollTop.style.display = 'flex';
+                } else {
+                    scrollTop.style.display = 'none';
+                }
+            });
+
+            scrollTop.addEventListener('click', function (e) {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
     </script>
 
 </body>
-
 </html>

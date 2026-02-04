@@ -74,84 +74,21 @@
                 margin-top: 2px;
             }
 
-        /* Animated Logo Frame */
+        /* Logo Container - Header Logo same as Footer */
         .logo-container {
             display: flex;
             align-items: center;
             justify-content: flex-start;
-            gap: 15px;
+            gap: 0px;
         }
-
-        .logo-frame {
-            width: 70px;
-            height: 70px;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--primary-blue), var(--accent-teal), var(--primary-red));
-            background-size: 400% 400%;
-            animation: gradientShift 8s ease infinite;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-        }
-
-            .logo-frame::before {
-                content: '';
-                position: absolute;
-                width: 64px;
-                height: 64px;
-                background: white;
-                border-radius: 50%;
-                z-index: 1;
-            }
 
         .logo-image {
-            width: 50px;
-            height: 50px;
+            width: 60px;
+            height: 120px;
             object-fit: contain;
-            border-radius: 50%;
+            border-radius: 100%;
             position: relative;
             z-index: 2;
-            transition: transform 0.5s ease;
-        }
-
-        .logo-frame:hover .logo-image {
-            transform: scale(1.05);
-        }
-
-        @keyframes gradientShift {
-            0% {
-                background-position: 0% 50%;
-            }
-
-            50% {
-                background-position: 100% 50%;
-            }
-
-            100% {
-                background-position: 0% 50%;
-            }
-        }
-
-        /* Pulsing effect for attention */
-        @keyframes pulse {
-            0% {
-                box-shadow: 0 0 0 0 rgba(230, 57, 70, 0.4);
-            }
-
-            70% {
-                box-shadow: 0 0 0 10px rgba(230, 57, 70, 0);
-            }
-
-            100% {
-                box-shadow: 0 0 0 0 rgba(230, 57, 70, 0);
-            }
-        }
-
-        .logo-frame:hover {
-            animation: gradientShift 8s ease infinite, pulse 2s infinite;
         }
 
         /* Header Enhancements */
@@ -197,22 +134,46 @@
             background-size: cover;
             background-position: center;
             color: white;
-            padding: 120px 0 60px;
+            padding: 150px 0 80px;
             position: relative;
         }
 
             .page-title h1 {
                 color: white;
-                font-size: 3rem;
+                font-size: 3.5rem;
                 font-weight: 800;
                 margin-bottom: 1rem;
             }
 
-        /* FAQ Styles */
+            .page-title .lead {
+                font-size: 1.25rem;
+                opacity: 0.9;
+            }
+
+        /* FAQ Section */
         .faq-section {
             padding: 80px 0;
         }
 
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+            .section-title h2 {
+                color: var(--primary-blue);
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
+            }
+
+            .section-title p {
+                color: var(--text-color);
+                font-size: 1.1rem;
+                max-width: 700px;
+                margin: 0 auto;
+            }
+
+        /* FAQ Categories */
         .faq-category {
             margin-bottom: 4rem;
         }
@@ -236,16 +197,19 @@
                 background: var(--accent-teal);
             }
 
+        /* FAQ Items */
         .faq-item {
             margin-bottom: 1.5rem;
-            border-radius: 10px;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
             transition: all 0.3s ease;
+            border: 2px solid var(--border-color);
         }
 
             .faq-item:hover {
-                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+                border-color: var(--primary-red);
             }
 
         .faq-question {
@@ -467,103 +431,52 @@
             margin-top: 0.25rem;
         }
 
-        /* Search Box */
-        .faq-search {
-            background: white;
+        /* Feature Cards */
+        .feature-card {
             border-radius: 12px;
             padding: 2rem;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-            margin-bottom: 3rem;
+            height: 100%;
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+            background: white;
         }
 
-        .search-title {
-            color: var(--primary-blue);
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
-        }
-
-        .search-box {
-            position: relative;
-        }
-
-            .search-box input {
-                width: 100%;
-                padding: 1rem 1rem 1rem 3rem;
-                border: 2px solid var(--border-color);
-                border-radius: 8px;
-                font-size: 1rem;
-                transition: all 0.3s ease;
+            .feature-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+                border-color: var(--primary-red);
             }
 
-                .search-box input:focus {
-                    border-color: var(--primary-red);
-                    box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.1);
-                    outline: none;
-                }
-
-            .search-box i {
-                position: absolute;
-                left: 1rem;
-                top: 50%;
-                transform: translateY(-50%);
-                color: var(--primary-blue);
-            }
-
-        /* Contact Help */
-        .contact-help {
-            background: linear-gradient(135deg, var(--primary-blue) 0%, #152642 100%);
-            border-radius: 16px;
-            padding: 3rem;
-            color: white;
-            margin-top: 4rem;
-            text-align: center;
-        }
-
-            .contact-help h3 {
-                color: white;
-                font-size: 2rem;
-                margin-bottom: 1rem;
-            }
-
-        .contact-methods {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .contact-method {
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary-red) 0%, #c53030 100%);
+            border-radius: 50%;
             display: flex;
             align-items: center;
-            gap: 1rem;
-            padding: 1rem 1.5rem;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            transition: all 0.3s ease;
-        }
-
-            .contact-method:hover {
-                background: rgba(255, 255, 255, 0.2);
-                transform: translateY(-3px);
-            }
-
-            .contact-method i {
-                font-size: 1.5rem;
-                color: var(--accent-teal);
-            }
-
-        .method-info h4 {
-            margin: 0;
-            font-size: 1.1rem;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
             color: white;
+            font-size: 1.8rem;
         }
 
-        .method-info p {
-            margin: 0.25rem 0 0;
-            font-size: 0.9rem;
-            opacity: 0.9;
+        /* Alert Boxes */
+        .alert-info {
+            background-color: rgba(26, 54, 93, 0.1);
+            border-color: var(--primary-blue);
+            color: var(--primary-blue);
+        }
+
+        .alert-success {
+            background-color: rgba(42, 157, 143, 0.1);
+            border-color: var(--accent-teal);
+            color: #1a5d57;
+        }
+
+        .alert-warning {
+            background-color: rgba(230, 57, 70, 0.1);
+            border-color: var(--primary-red);
+            color: #8a2530;
         }
 
         /* CTA Section */
@@ -606,29 +519,37 @@
                 transform: translateY(-2px);
             }
 
-        /* Logo Frame Mobile Adjustments */
-        @media (max-width: 992px) {
-            .logo-frame {
-                width: 60px;
-                height: 60px;
+        /* Hero Features */
+        .hero-features .feature-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+            .hero-features .feature-item:hover {
+                background: rgba(255, 255, 255, 0.2);
+                transform: translateY(-5px);
             }
 
-                .logo-frame::before {
-                    width: 54px;
-                    height: 54px;
-                }
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .page-title h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
 
             .logo-image {
-                width: 42px;
-                height: 42px;
+                width: 54px;
+                height: 54px;
             }
 
             .sitename {
                 font-size: 1.5rem;
-            }
-
-            .page-title h1 {
-                font-size: 2.5rem;
             }
 
             .btn-getstarted {
@@ -636,14 +557,12 @@
                 font-size: 0.9rem;
             }
 
-            .contact-methods {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .contact-method {
-                width: 100%;
-                max-width: 300px;
+            .whatsapp-float {
+                width: 55px;
+                height: 55px;
+                font-size: 26px;
+                bottom: 25px;
+                right: 25px;
             }
 
             .timeline-phase {
@@ -662,13 +581,32 @@
                 height: 2px;
                 width: auto;
             }
+        }
+
+        @media (max-width: 768px) {
+            .page-title {
+                padding: 120px 0 60px;
+            }
+
+            .faq-section {
+                padding: 60px 0;
+            }
+
+            .logo-image {
+                width: 44px;
+                height: 44px;
+            }
+
+            .sitename {
+                font-size: 1.3rem;
+            }
 
             .whatsapp-float {
-                width: 55px;
-                height: 55px;
-                font-size: 26px;
-                bottom: 25px;
-                right: 25px;
+                width: 50px;
+                height: 50px;
+                font-size: 24px;
+                bottom: 20px;
+                right: 20px;
             }
 
             .comparison-table {
@@ -680,89 +618,9 @@
                 }
         }
 
-        @media (max-width: 768px) {
-            .logo-frame {
-                width: 50px;
-                height: 50px;
-            }
-
-                .logo-frame::before {
-                    width: 44px;
-                    height: 44px;
-                }
-
-            .logo-image {
-                width: 35px;
-                height: 35px;
-            }
-
-            .sitename {
-                font-size: 1.3rem;
-            }
-
-            .logo-container {
-                gap: 10px;
-            }
-
+        @media (max-width: 576px) {
             .page-title h1 {
                 font-size: 2rem;
-            }
-
-            .page-title {
-                padding: 100px 0 40px;
-            }
-
-            .faq-section {
-                padding: 60px 0;
-            }
-
-            .contact-help {
-                padding: 2rem;
-            }
-
-                .contact-help h3 {
-                    font-size: 1.75rem;
-                }
-
-            .whatsapp-float {
-                width: 50px;
-                height: 50px;
-                font-size: 24px;
-                bottom: 20px;
-                right: 20px;
-            }
-
-            .comparison-table {
-                font-size: 0.85rem;
-            }
-
-                .comparison-table th, .comparison-table td {
-                    padding: 0.5rem;
-                }
-        }
-
-        @media (max-width: 480px) {
-            .logo-container {
-                gap: 8px;
-            }
-
-            .logo-frame {
-                width: 45px;
-                height: 45px;
-            }
-
-                .logo-frame::before {
-                    width: 39px;
-                    height: 39px;
-                }
-
-            .logo-image {
-                width: 32px;
-                height: 32px;
-            }
-
-            .sitename {
-                font-size: 1.1rem;
             }
 
             .faq-question {
@@ -789,10 +647,10 @@
     </style>
 </head>
 
-<body class="faq-page">
+<body>
 
     <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/27639483064?text=Hello%20Lehumo%20La%20Edishela,%20I%20have%20questions%20about%20interest%20rates" class="whatsapp-float" target="_blank" aria-label="Chat with us on WhatsApp">
+    <a href="https://wa.me/27861000534?text=Hello%20Lehumo%20La%20Edishela,%20I%20have%20questions%20about%20interest%20rates" class="whatsapp-float" target="_blank" aria-label="Chat with us on WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -804,7 +662,6 @@
                     <div class="logo-frame">
                         <img src="assets/img/logo.png" alt="Lehumo La Edishela Logo" class="logo-image">
                     </div>
-                    <h1 class="sitename">LEHUMO LA EDISHELA</h1>
                 </div>
             </a>
 
@@ -871,84 +728,89 @@
     <main class="main">
 
         <!-- Page Title -->
-        <div class="page-title dark-background" data-aos="fade">
+        <section class="page-title section">
             <div class="container position-relative">
-                <h1>Interest Rates & Terms FAQ</h1>
-                <p>Understand how interest rates work, what affects your loan costs, and how to get the best rates for your asset-backed loan.</p>
-                <nav class="breadcrumbs">
-                    <ol>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li class="current">Interest & Rates</li>
-                    </ol>
-                </nav>
+                <div class="row">
+                    <div class="col-lg-8 mx-auto text-center">
+                        <h1>Interest Rates & Terms FAQ</h1>
+                        <p class="lead">Understand how interest rates work, what affects your loan costs, and how to get the best rates for your asset-backed loan.</p>
+                        <div class="hero-features mt-4">
+                            <div class="row justify-content-center">
+                                <div class="col-4 col-md-3">
+                                    <div class="feature-item text-center">
+                                        <i class="bi bi-shield-check fs-1 mb-2"></i>
+                                        <p class="mb-0">FSCA Approved</p>
+                                    </div>
+                                </div>
+                                <div class="col-4 col-md-3">
+                                    <div class="feature-item text-center">
+                                        <i class="bi bi-percent fs-1 mb-2"></i>
+                                        <p class="mb-0">Competitive Rates</p>
+                                    </div>
+                                </div>
+                                <div class="col-4 col-md-3">
+                                    <div class="feature-item text-center">
+                                        <i class="bi bi-calculator fs-1 mb-2"></i>
+                                        <p class="mb-0">Transparent Pricing</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div><!-- End Page Title -->
-        <!-- Interest Rate Comparison -->
-        <section class="faq-section">
+        </section><!-- /Page Title -->
+        <!-- FAQ Content -->
+        <section class="faq-section section">
             <div class="container">
-                <div class="section-title text-center mb-5" data-aos="fade-up">
+                <div class="section-title" data-aos="fade-up">
                     <h2>Understanding Interest Rates</h2>
-                    <p>Learn about different rate types and how they affect your loan payments</p>
+                    <p>Get clear answers to your questions about loan rates, calculations, and terms</p>
                 </div>
 
+                <!-- Rate Comparison -->
                 <div class="rate-comparison" data-aos="fade-up">
-                    <h3 class="comparison-title">Interest Rate Comparison</h3>
+                    <h3 class="comparison-title">Our Competitive Rate Structure</h3>
                     <table class="comparison-table">
                         <thead>
                             <tr>
-                                <th>Rate Type</th>
-                                <th>How It Works</th>
+                                <th>Asset Type</th>
+                                <th>Fixed Rates</th>
+                                <th>Variable Rates</th>
                                 <th>Best For</th>
-                                <th>Typical Rates*</th>
-                                <th>Key Feature</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td><strong>Fixed Rate</strong></td>
-                                <td>Rate stays the same for the entire loan term</td>
-                                <td>Budget-conscious borrowers who want predictable payments</td>
-                                <td><span class="rate-badge">12.5% - 16.5%</span></td>
-                                <td>Payment stability, immune to market changes</td>
+                                <td><strong>Vehicles</strong></td>
+                                <td><span class="rate-badge">12.5% - 15.5%</span></td>
+                                <td><span class="rate-badge">Prime + 2% - 4%</span></td>
+                                <td>Short-term needs, quick funding</td>
                             </tr>
                             <tr>
-                                <td><strong>Variable Rate</strong></td>
-                                <td>Rate adjusts periodically based on prime rate</td>
-                                <td>Borrowers comfortable with some payment fluctuation</td>
-                                <td><span class="rate-badge">Prime + 2% - 6%</span></td>
-                                <td>Can decrease if rates fall, tied to market</td>
+                                <td><strong>Luxury Assets</strong></td>
+                                <td><span class="rate-badge">13.5% - 16.5%</span></td>
+                                <td><span class="rate-badge">Prime + 2.5% - 4.5%</span></td>
+                                <td>High-value collateral, flexible terms</td>
                             </tr>
                             <tr>
-                                <td><strong>Hybrid Rate</strong></td>
-                                <td>Fixed for initial period, then variable</td>
-                                <td>Those wanting initial stability with flexibility later</td>
-                                <td><span class="rate-badge">Varies by term</span></td>
-                                <td>Combines benefits of both fixed and variable</td>
+                                <td><strong>Property</strong></td>
+                                <td><span class="rate-badge">11.5% - 14.5%</span></td>
+                                <td><span class="rate-badge">Prime + 1.5% - 3.5%</span></td>
+                                <td>Long-term financing, stable assets</td>
                             </tr>
                             <tr>
-                                <td><strong>Introductory Rate</strong></td>
-                                <td>Lower rate for first 6-12 months</td>
-                                <td>Short-term needs or those planning early repayment</td>
-                                <td><span class="rate-badge">9.5% - 12.5%</span></td>
-                                <td>Lower initial payments, higher later</td>
+                                <td><strong>Commercial Fleet</strong></td>
+                                <td><span class="rate-badge">12.0% - 15.0%</span></td>
+                                <td><span class="rate-badge">Prime + 2% - 4%</span></td>
+                                <td>Business financing, multiple assets</td>
                             </tr>
                         </tbody>
                     </table>
-                    <p class="text-muted mt-3 small">*Rates vary based on loan amount, asset type, credit profile, and market conditions. All rates are subject to change.</p>
+                    <p class="text-muted mt-3 small">*Rates vary based on loan amount, credit profile, asset condition, and market conditions. All rates subject to change.</p>
                 </div>
 
-                <!-- FAQ Search -->
-                <div class="faq-search" data-aos="fade-up">
-                    <h3 class="search-title">Search Interest Rate Questions</h3>
-                    <div class="search-box">
-                        <i class="bi bi-search"></i>
-                        <input type="text" id="faqSearch" placeholder="Type your interest rate question here...">
-                    </div>
-                    <p class="text-muted mt-2 small">Can't find your answer? <a href="#contact-help">Contact our rates specialists</a> for personalized advice.</p>
-                </div>
-
-                <!-- Rate Basics Questions -->
+                <!-- Rate Basics -->
                 <div class="faq-category" data-aos="fade-up" data-aos-delay="100">
                     <h3 class="category-title">Rate Basics & Calculations</h3>
 
@@ -959,43 +821,42 @@
                         </div>
                         <div class="faq-answer" id="faq-answer-1">
                             <div class="answer-content">
-                                <p><strong>Interest Rate</strong> is the percentage charged on your loan principal. It's the cost of borrowing the money itself.</p>
-                                <p><strong>APR (Annual Percentage Rate)</strong> includes the interest rate PLUS all other loan costs like initiation fees, monthly service fees, and any other charges. APR gives you the true cost of borrowing.</p>
+                                <p><strong>Interest Rate</strong> is the percentage charged on your loan principal. It's the basic cost of borrowing.</p>
+                                <p><strong>APR (Annual Percentage Rate)</strong> includes the interest rate PLUS all other loan costs like initiation fees, monthly service fees, and credit insurance (if applicable). APR gives you the true annual cost of borrowing.</p>
 
-                                <div class="factor-checklist">
-                                    <h5 class="checklist-title">What's Included in APR:</h5>
+                                <div class="factor-checklist mt-4">
+                                    <h5 class="checklist-title">What's Included in Our APR:</h5>
                                     <div class="checklist-item">
                                         <i class="bi bi-check-circle checklist-icon"></i>
                                         <div>
                                             <strong>Interest Charges</strong>
-                                            <p>The basic cost of borrowing the principal amount</p>
+                                            <p>The cost of borrowing the principal amount</p>
                                         </div>
                                     </div>
                                     <div class="checklist-item">
                                         <i class="bi bi-check-circle checklist-icon"></i>
                                         <div>
                                             <strong>Initiation Fees</strong>
-                                            <p>One-time fee to set up the loan (as per NCA regulations)</p>
+                                            <p>One-time fee as per NCA regulations (max R1,150 + VAT)</p>
                                         </div>
                                     </div>
                                     <div class="checklist-item">
                                         <i class="bi bi-check-circle checklist-icon"></i>
                                         <div>
                                             <strong>Monthly Service Fees</strong>
-                                            <p>Regular fees for administering your loan account</p>
+                                            <p>Regular administration fees for your loan account</p>
                                         </div>
                                     </div>
                                     <div class="checklist-item">
                                         <i class="bi bi-check-circle checklist-icon"></i>
                                         <div>
-                                            <strong>Credit Insurance (if applicable)</strong>
-                                            <p>Optional insurance to cover loan payments in case of unforeseen events</p>
+                                            <strong>Credit Insurance (Optional)</strong>
+                                            <p>Protects your payments in case of unforeseen events</p>
                                         </div>
                                     </div>
                                 </div>
 
-                                <p class="mt-3"><strong>Example:</strong> A loan with a 15% interest rate might have an 18% APR once all fees are included. Always compare APRs when evaluating loan offers, not just interest rates.</p>
-                                <p><strong>Why APR Matters:</strong> It allows you to compare different loan offers on a like-for-like basis, showing you the true annual cost of each option.</p>
+                                <p class="mt-4"><strong>Example:</strong> A loan with a 15% interest rate might have an 18% APR once all fees are included. Always compare APRs when evaluating loan offers, not just interest rates.</p>
                             </div>
                         </div>
                     </div>
@@ -1007,7 +868,7 @@
                         </div>
                         <div class="faq-answer" id="faq-answer-2">
                             <div class="answer-content">
-                                <p>Our interest rates are calculated based on several factors, with transparency at every step:</p>
+                                <p>Our interest rates are calculated based on several transparent factors:</p>
 
                                 <div class="rate-timeline">
                                     <div class="timeline-container">
@@ -1015,7 +876,7 @@
                                             <div class="phase-marker">1</div>
                                             <div class="phase-content">
                                                 <h4>Base Rate Determination</h4>
-                                                <p>We start with the South African prime lending rate as our benchmark. This is determined by the South African Reserve Bank and represents the lowest rate at which banks lend to their most creditworthy customers.</p>
+                                                <p>We start with the South African prime lending rate as our benchmark, determined by market conditions and SARB policy.</p>
                                             </div>
                                             <div class="phase-line"></div>
                                         </div>
@@ -1024,7 +885,7 @@
                                             <div class="phase-marker">2</div>
                                             <div class="phase-content">
                                                 <h4>Risk Assessment</h4>
-                                                <p>We evaluate your specific risk profile based on credit history, income stability, asset type, and loan-to-value ratio. Lower risk profiles receive better rates.</p>
+                                                <p>We evaluate your credit profile, income stability, asset type, and loan-to-value ratio. Better risk profiles receive better rates.</p>
                                             </div>
                                             <div class="phase-line"></div>
                                         </div>
@@ -1033,7 +894,7 @@
                                             <div class="phase-marker">3</div>
                                             <div class="phase-content">
                                                 <h4>Market Positioning</h4>
-                                                <p>We consider current market conditions, competitor rates, and economic factors to ensure our rates remain competitive while sustainable.</p>
+                                                <p>We consider current market rates, economic factors, and competitor offerings to ensure competitive yet sustainable rates.</p>
                                             </div>
                                             <div class="phase-line"></div>
                                         </div>
@@ -1042,14 +903,19 @@
                                             <div class="phase-marker">4</div>
                                             <div class="phase-content">
                                                 <h4>Final Rate Calculation</h4>
-                                                <p>All factors are combined to determine your personalized rate. For variable rates, we establish the spread above prime. For fixed rates, we lock in the rate for your chosen term.</p>
+                                                <p>All factors combine to determine your personalized rate. For variable rates, we establish your spread above prime.</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
 
-                                <p><strong>Daily vs. Monthly Interest:</strong> Most asset-backed loans calculate interest daily but charge it monthly. This means if you make early or extra payments, you save on interest from that day forward.</p>
-                                <p><strong>Transparency:</strong> We provide a full breakdown of how your rate was calculated and explain each component before you accept the loan.</p>
+                                <p class="mt-4"><strong>Key Points:</strong></p>
+                                <ul>
+                                    <li>Interest is calculated daily but charged monthly</li>
+                                    <li>Early or extra payments reduce interest from that day forward</li>
+                                    <li>We provide full rate calculation breakdown before you accept</li>
+                                    <li>All calculations comply with National Credit Act regulations</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -1061,79 +927,54 @@
                         </div>
                         <div class="faq-answer" id="faq-answer-3">
                             <div class="answer-content">
-                                <p>Your personalized interest rate is determined by a combination of personal factors and loan characteristics:</p>
+                                <p>Your personalized rate is determined by these key factors:</p>
 
                                 <div class="factor-checklist">
                                     <h5 class="checklist-title">Primary Rate Determinants:</h5>
                                     <div class="checklist-item">
-                                        <i class="bi bi-percent checklist-icon"></i>
+                                        <i class="bi bi-credit-card checklist-icon"></i>
                                         <div>
                                             <strong>Credit Profile & History</strong>
-                                            <p>Your credit score and repayment history (30-40% weighting). Better credit = better rates.</p>
+                                            <p>Your credit score and repayment history (30-40% weighting)</p>
                                         </div>
                                     </div>
                                     <div class="checklist-item">
                                         <i class="bi bi-graph-up checklist-icon"></i>
                                         <div>
                                             <strong>Loan-to-Value (LTV) Ratio</strong>
-                                            <p>Loan amount relative to asset value (20-30% weighting). Lower LTV = lower risk = better rates.</p>
+                                            <p>Loan amount relative to asset value (20-30% weighting)</p>
                                         </div>
                                     </div>
                                     <div class="checklist-item">
                                         <i class="bi bi-cash-coin checklist-icon"></i>
                                         <div>
                                             <strong>Income & Affordability</strong>
-                                            <p>Stable, verifiable income relative to loan payments (15-25% weighting).</p>
+                                            <p>Stable, verifiable income relative to payments (15-25% weighting)</p>
                                         </div>
                                     </div>
                                     <div class="checklist-item">
                                         <i class="bi bi-building checklist-icon"></i>
                                         <div>
                                             <strong>Asset Type & Quality</strong>
-                                            <p>Type of asset securing the loan and its condition/liquidity (10-20% weighting).</p>
-                                        </div>
-                                    </div>
-
-                                    <h5 class="checklist-title mt-4">Secondary Factors:</h5>
-                                    <div class="checklist-item">
-                                        <i class="bi bi-clock-history checklist-icon"></i>
-                                        <div>
-                                            <strong>Loan Term</strong>
-                                            <p>Shorter terms often have slightly better rates due to reduced risk exposure.</p>
-                                        </div>
-                                    </div>
-                                    <div class="checklist-item">
-                                        <i class="bi bi-currency-exchange checklist-icon"></i>
-                                        <div>
-                                            <strong>Market Conditions</strong>
-                                            <p>Current economic climate, prime rate, and market competition.</p>
-                                        </div>
-                                    </div>
-                                    <div class="checklist-item">
-                                        <i class="bi bi-people checklist-icon"></i>
-                                        <div>
-                                            <strong>Relationship Factors</strong>
-                                            <p>Existing customer status and banking relationship with us.</p>
+                                            <p>Type and condition of collateral asset (10-20% weighting)</p>
                                         </div>
                                     </div>
                                 </div>
 
-                                <p class="mt-3"><strong>Rate Improvement Tips:</strong></p>
+                                <p class="mt-4"><strong>Tips to Improve Your Rate:</strong></p>
                                 <ul>
-                                    <li>Provide additional collateral or a larger deposit to improve LTV ratio</li>
-                                    <li>Opt for a shorter loan term if affordable</li>
-                                    <li>Consider a co-signer with strong credit if your credit needs improvement</li>
-                                    <li>Choose more liquid assets as collateral (vehicles over specialized equipment)</li>
-                                    <li>Maintain stable employment and income documentation</li>
+                                    <li>Provide additional collateral to improve LTV ratio</li>
+                                    <li>Opt for shorter loan terms if affordable</li>
+                                    <li>Consider a co-signer with strong credit</li>
+                                    <li>Choose more liquid assets as collateral</li>
+                                    <li>Maintain stable employment documentation</li>
                                 </ul>
-
-                                <p>We're transparent about how each factor affects your rate and can advise on ways to improve your rate before applying.</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Rate Types & Comparisons -->
+                <!-- Rate Types -->
                 <div class="faq-category" data-aos="fade-up" data-aos-delay="150">
                     <h3 class="category-title">Rate Types & Comparisons</h3>
 
@@ -1144,14 +985,14 @@
                         </div>
                         <div class="faq-answer" id="faq-answer-4">
                             <div class="answer-content">
-                                <p>The choice between fixed and variable rates depends on your financial situation, risk tolerance, and market outlook:</p>
+                                <p>The choice depends on your financial situation and risk tolerance:</p>
 
                                 <div class="rate-comparison">
-                                    <h5 class="comparison-title">Fixed vs. Variable Rate Comparison</h5>
+                                    <h5 class="comparison-title">Fixed vs. Variable Comparison</h5>
                                     <table class="comparison-table">
                                         <thead>
                                             <tr>
-                                                <th>Consideration</th>
+                                                <th>Feature</th>
                                                 <th>Fixed Rate</th>
                                                 <th>Variable Rate</th>
                                             </tr>
@@ -1159,471 +1000,419 @@
                                         <tbody>
                                             <tr>
                                                 <td><strong>Payment Predictability</strong></td>
-                                                <td>✅ Payments never change during fixed term</td>
-                                                <td>❌ Payments can increase or decrease</td>
+                                                <td>✅ Never changes during term</td>
+                                                <td>❌ Can increase or decrease</td>
                                             </tr>
                                             <tr>
                                                 <td><strong>Interest Rate Risk</strong></td>
-                                                <td>✅ Protected from rate increases</td>
-                                                <td>❌ Exposed to rate increases</td>
+                                                <td>✅ We bear the risk</td>
+                                                <td>❌ You bear the risk</td>
                                             </tr>
                                             <tr>
-                                                <td><strong>Benefit from Rate Drops</strong></td>
-                                                <td>❌ Won't benefit if rates fall</td>
-                                                <td>✅ Payments decrease if rates fall</td>
+                                                <td><strong>Initial Rate</strong></td>
+                                                <td>Usually slightly higher</td>
+                                                <td>Usually starts lower</td>
                                             </tr>
                                             <tr>
-                                                <td><strong>Early Settlement Flexibility</strong></td>
-                                                <td>❌ May have breakage costs</td>
-                                                <td>✅ Usually no penalties for early settlement</td>
-                                            </tr>
-                                            <tr>
-                                                <td><strong>Typical Initial Rate</strong></td>
-                                                <td>Usually higher than variable initially</td>
-                                                <td>Usually lower than fixed initially</td>
+                                                <td><strong>Rate Changes</strong></td>
+                                                <td>Locked for entire term</td>
+                                                <td>Tied to prime rate changes</td>
                                             </tr>
                                             <tr>
                                                 <td><strong>Best For</strong></td>
-                                                <td>Budget-conscious borrowers, risk-averse individuals, when rates are expected to rise</td>
-                                                <td>Flexible borrowers, those expecting to pay off early, when rates are expected to fall</td>
+                                                <td>Budget-conscious borrowers</td>
+                                                <td>Short-term or flexible borrowers</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Early Settlement</strong></td>
+                                                <td>May have penalties</td>
+                                                <td>Typically flexible</td>
                                             </tr>
                                         </tbody>
                                     </table>
                                 </div>
 
-                                <p><strong>Current Market Considerations:</strong></p>
+                                <p class="mt-4"><strong>Our Recommendation:</strong></p>
                                 <ul>
-                                    <li><strong>When rates are low:</strong> Fixed rates lock in the low rate for your term</li>
-                                    <li><strong>When rates are high:</strong> Variable rates may be better if expecting decreases</li>
-                                    <li><strong>Economic uncertainty:</strong> Fixed rates provide stability</li>
-                                    <li><strong>Short-term needs:</strong> Variable rates often better for loans under 3 years</li>
+                                    <li><strong>Choose Fixed Rate</strong> if: You're on a strict budget, prefer predictable payments, or believe interest rates might rise.</li>
+                                    <li><strong>Choose Variable Rate</strong> if: You can handle payment fluctuations, plan to settle early, or believe rates might fall.</li>
+                                    <li><strong>Consider a Hybrid</strong>: Ask about fixed-for-period options that lock for 1-3 years then convert to variable.</li>
                                 </ul>
-
-                                <p><strong>Hybrid Option:</strong> Consider a fixed rate for 1-3 years then switching to variable, giving you initial stability with long-term flexibility.</p>
-                                <p>We recommend discussing your specific situation with our rates specialists who can analyze current market conditions and your financial profile to recommend the best option.</p>
+                                <p class="mb-0">Our consultants can help you choose based on your specific financial situation and market outlook.</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="faq-item">
                         <div class="faq-question" data-faq="5">
-                            <span class="question-text">How does the prime rate affect my loan interest?</span>
+                            <span class="question-text">How do prime-linked rates work?</span>
                             <span class="toggle-icon">+</span>
                         </div>
                         <div class="faq-answer" id="faq-answer-5">
                             <div class="answer-content">
-                                <p>The South African prime lending rate is the benchmark for most variable rate loans in the country. Here's how it affects your loan:</p>
+                                <p>Prime-linked rates are variable rates that move with the South African prime lending rate set by the Reserve Bank.</p>
 
-                                <p><strong>What is the Prime Rate?</strong></p>
+                                <h5 class="mt-4 mb-3">How Prime-Linked Rates Work:</h5>
+                                <div class="alert alert-info">
+                                    <strong>Your Rate Formula:</strong> Prime Rate + Your Personal Spread = Your Interest Rate
+                                </div>
+
+                                <p><strong>Example:</strong> If prime rate is 11.75% and your spread is 3%, your interest rate would be 14.75%.</p>
+
+                                <h5 class="mt-4 mb-3">What Affects Prime Rate Changes:</h5>
+                                <div class="row mt-3">
+                                    <div class="col-md-4 mb-3">
+                                        <div class="feature-card text-center h-100">
+                                            <div class="feature-icon">
+                                                <i class="bi bi-currency-exchange"></i>
+                                            </div>
+                                            <h5>Inflation</h5>
+                                            <p class="mb-0">SARB adjusts rates to control inflation within 3-6% target</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <div class="feature-card text-center h-100">
+                                            <div class="feature-icon">
+                                                <i class="bi bi-graph-up-arrow"></i>
+                                            </div>
+                                            <h5>Economic Growth</h5>
+                                            <p class="mb-0">Rates adjusted to stimulate or cool economic activity</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <div class="feature-card text-center h-100">
+                                            <div class="feature-icon">
+                                                <i class="bi bi-globe"></i>
+                                            </div>
+                                            <h5>Global Markets</h5>
+                                            <p class="mb-0">International rate movements influence local decisions</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <p class="mt-4"><strong>Prime Rate History (Last 3 Years):</strong></p>
                                 <ul>
-                                    <li>The rate at which banks lend to their most creditworthy customers</li>
-                                    <li>Set by individual banks but typically follows the South African Reserve Bank's repo rate</li>
-                                    <li>Currently fluctuates based on economic conditions and monetary policy</li>
-                                    <li>The benchmark for most variable rate loans including home loans, vehicle finance, and credit cards</li>
+                                    <li><strong>Current:</strong> 11.75% (as of latest SARB announcement)</li>
+                                    <li><strong>1 Year Ago:</strong> 11.25%</li>
+                                    <li><strong>2 Years Ago:</strong> 10.50%</li>
+                                    <li><strong>3 Years Ago:</strong> 9.50%</li>
                                 </ul>
-
-                                <p><strong>How It Works with Your Loan:</strong></p>
-                                <ul>
-                                    <li><strong>Variable Rate Loans:</strong> Your rate = Prime Rate + your personal margin (e.g., Prime + 3%)</li>
-                                    <li><strong>When Prime Changes:</strong> Your rate changes by the same amount (e.g., if Prime increases by 0.5%, your rate increases by 0.5%)</li>
-                                    <li><strong>Timing:</strong> Rate changes typically take effect from your next payment cycle after the Prime change</li>
-                                    <li><strong>Notification:</strong> We notify you of any rate changes affecting your payments</li>
-                                </ul>
-
-                                <p><strong>Example Calculation:</strong></p>
-                                <ul>
-                                    <li>Prime Rate: 11.75%</li>
-                                    <li>Your margin: +3.5%</li>
-                                    <li>Your rate: 15.25% (11.75% + 3.5%)</li>
-                                    <li>If Prime increases to 12.25%, your new rate becomes 15.75%</li>
-                                    <li>On a R300,000 loan over 60 months, this 0.5% increase adds approximately R90 to monthly payments</li>
-                                </ul>
-
-                                <p><strong>Factors That Influence Prime Rate Changes:</strong></p>
-                                <ul>
-                                    <li>South African Reserve Bank repo rate decisions</li>
-                                    <li>Inflation levels and forecasts</li>
-                                    <li>Economic growth indicators</li>
-                                    <li>Currency stability</li>
-                                    <li>Global economic conditions</li>
-                                </ul>
-
-                                <p><strong>Protection Strategies:</strong></p>
-                                <ul>
-                                    <li><strong>Fixed Rates:</strong> Lock in your rate regardless of Prime movements</li>
-                                    <li><strong>Rate Cap:</strong> Some variable products offer caps limiting how much your rate can increase</li>
-                                    <li><strong>Overpayment:</strong> Pay more when rates are low to reduce principal faster</li>
-                                    <li><strong>Regular Review:</strong> Monitor rates and consider refinancing if advantageous</li>
-                                </ul>
-
-                                <p>We monitor Prime Rate movements closely and can advise on strategies to manage rate risk based on your specific loan and financial situation.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <div class="faq-question" data-faq="6">
-                            <span class="question-text">Are there penalties for paying off my loan early?</span>
-                            <span class="toggle-icon">+</span>
-                        </div>
-                        <div class="faq-answer" id="faq-answer-6">
-                            <div class="answer-content">
-                                <p>Our early settlement policy is designed to be fair and transparent:</p>
-
-                                <p><strong>Variable Rate Loans:</strong></p>
-                                <ul>
-                                    <li><strong>No early settlement penalties</strong> for variable rate loans</li>
-                                    <li>You only pay interest up to the settlement date</li>
-                                    <li>Any unused portion of monthly fees may be refunded proportionally</li>
-                                    <li>We calculate the exact settlement amount based on the current outstanding balance</li>
-                                </ul>
-
-                                <p><strong>Fixed Rate Loans:</strong></p>
-                                <ul>
-                                    <li>May have <strong>breakage costs</strong> if settled during the fixed rate period</li>
-                                    <li>Breakage costs compensate for interest we would have earned had the loan continued</li>
-                                    <li>Calculation based on current interest rates vs. your fixed rate</li>
-                                    <li>Higher costs if current rates are lower than your fixed rate</li>
-                                    <li>No breakage costs if settled after the fixed rate period ends</li>
-                                </ul>
-
-                                <p><strong>Early Settlement Process:</strong></p>
-                                <ol>
-                                    <li><strong>Request Settlement Quote:</strong> Contact us for an exact settlement amount</li>
-                                    <li><strong>Quote Validity:</strong> Settlement quotes are valid for 7-14 days</li>
-                                    <li><strong>Payment:</strong> Pay the quoted amount by the validity date</li>
-                                    <li><strong>Confirmation:</strong> Receive written confirmation of loan settlement</li>
-                                    <li><strong>Asset Release:</strong> Any asset security is released (title deeds returned, etc.)</li>
-                                </ol>
-
-                                <p><strong>Benefits of Early Settlement:</strong></p>
-                                <ul>
-                                    <li>Save on future interest payments</li>
-                                    <li>Free up monthly cash flow</li>
-                                    <li>Remove debt from your credit profile</li>
-                                    <li>Release collateral for other uses</li>
-                                </ul>
-
-                                <p><strong>Partial Early Payments:</strong></p>
-                                <ul>
-                                    <li>We welcome partial early payments on most loans</li>
-                                    <li>Reduces your outstanding principal immediately</li>
-                                    <li>Lowers total interest paid over loan term</li>
-                                    <li>Can either reduce monthly payments or shorten loan term (your choice)</li>
-                                    <li>No fees for partial early payments</li>
-                                </ul>
-
-                                <p><strong>Before You Settle Early:</strong></p>
-                                <ul>
-                                    <li>Get a written settlement quote showing all amounts</li>
-                                    <li>Compare cost of early settlement vs. continuing payments</li>
-                                    <li>Consider any tax implications (for business loans)</li>
-                                    <li>Ensure you have alternative uses for the funds if needed</li>
-                                </ul>
-
-                                <p>We believe in giving our clients flexibility. Contact us to discuss your specific early settlement options and get an exact quote with no obligation.</p>
+                                <p class="mb-0">We notify all clients of prime rate changes within 7 business days and provide revised payment schedules.</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Rate Management & Changes -->
+                <!-- Loan Terms -->
                 <div class="faq-category" data-aos="fade-up" data-aos-delay="200">
-                    <h3 class="category-title">Rate Management & Changes</h3>
+                    <h3 class="category-title">Loan Terms & Conditions</h3>
 
                     <div class="faq-item">
-                        <div class="faq-question" data-faq="7">
-                            <span class="question-text">Can I switch from variable to fixed rate (or vice versa)?</span>
+                        <div class="faq-question" data-faq="6">
+                            <span class="question-text">How does loan term length affect my interest costs?</span>
                             <span class="toggle-icon">+</span>
                         </div>
-                        <div class="faq-answer" id="faq-answer-7">
+                        <div class="faq-answer" id="faq-answer-6">
                             <div class="answer-content">
-                                <p>Yes, we offer flexibility to switch between rate types in most cases. Here's how it works:</p>
+                                <p>The loan term significantly impacts your total interest paid, even with the same interest rate.</p>
 
-                                <p><strong>Switching from Variable to Fixed:</strong></p>
-                                <ul>
-                                    <li><strong>Available:</strong> Usually available at any time</li>
-                                    <li><strong>Process:</strong> Simple application, no full re-application needed</li>
-                                    <li><strong>New Rate:</strong> Based on current fixed rates for your remaining term</li>
-                                    <li><strong>Benefits:</strong> Lock in certainty, protect against rate increases</li>
-                                    <li><strong>Considerations:</strong> May have slightly higher rate than current variable rate</li>
-                                    <li><strong>Fees:</strong> Minimal administration fee may apply (typically R500-R1,500)</li>
-                                </ul>
-
-                                <p><strong>Switching from Fixed to Variable:</strong></p>
-                                <ul>
-                                    <li><strong>Timing:</strong> Usually only at end of fixed rate period</li>
-                                    <li><strong>During Fixed Term:</strong> May have breakage costs similar to early settlement</li>
-                                    <li><strong>Process:</strong> Automatic review at end of fixed period, opt for variable then</li>
-                                    <li><strong>Benefits:</strong> Potentially lower rate if variable rates drop</li>
-                                    <li><strong>Considerations:</strong> Exposure to future rate increases</li>
-                                </ul>
-
-                                <p><strong>Hybrid Options:</strong></p>
-                                <ul>
-                                    <li><strong>Fixed then Variable:</strong> Fix for 1-3 years, then switch to variable</li>
-                                    <li><strong>Capped Variable:</strong> Variable rate with a maximum cap</li>
-                                    <li><strong>Collared Variable:</strong> Variable rate with both minimum and maximum limits</li>
-                                </ul>
-
-                                <p><strong>When to Consider Switching:</strong></p>
-                                <div class="factor-checklist">
-                                    <div class="checklist-item">
-                                        <i class="bi bi-arrow-up-circle checklist-icon"></i>
-                                        <div>
-                                            <strong>Variable to Fixed</strong>
-                                            <p>When rates are low and expected to rise • When you need payment certainty for budgeting • When entering retirement or fixed income situation</p>
-                                        </div>
-                                    </div>
-                                    <div class="checklist-item">
-                                        <i class="bi bi-arrow-down-circle checklist-icon"></i>
-                                        <div>
-                                            <strong>Fixed to Variable</strong>
-                                            <p>When fixed term is ending and variable rates are attractive • When planning to sell asset soon • When expecting significant rate decreases</p>
-                                        </div>
-                                    </div>
+                                <div class="rate-comparison mt-4">
+                                    <h5 class="comparison-title">Term Length Impact Example: R200,000 Loan at 15%</h5>
+                                    <table class="comparison-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Term Length</th>
+                                                <th>Monthly Payment</th>
+                                                <th>Total Interest Paid</th>
+                                                <th>Total Repayment</th>
+                                                <th>Interest as % of Principal</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><strong>12 Months</strong></td>
+                                                <td>R18,026</td>
+                                                <td>R16,312</td>
+                                                <td>R216,312</td>
+                                                <td>8.2%</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>24 Months</strong></td>
+                                                <td>R9,698</td>
+                                                <td>R32,752</td>
+                                                <td>R232,752</td>
+                                                <td>16.4%</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>36 Months</strong></td>
+                                                <td>R6,933</td>
+                                                <td>R49,588</td>
+                                                <td>R249,588</td>
+                                                <td>24.8%</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>48 Months</strong></td>
+                                                <td>R5,567</td>
+                                                <td>R67,216</td>
+                                                <td>R267,216</td>
+                                                <td>33.6%</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>60 Months</strong></td>
+                                                <td>R4,758</td>
+                                                <td>R85,480</td>
+                                                <td>R285,480</td>
+                                                <td>42.7%</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
 
-                                <p><strong>Switching Process:</strong></p>
-                                <ol>
-                                    <li><strong>Consultation:</strong> Discuss your goals with our rates specialist</li>
-                                    <li><strong>Analysis:</strong> We analyze current rates vs. your situation</li>
-                                    <li><strong>Quote:</strong> Provide new rate quote and any costs</li>
-                                    <li><strong>Decision:</strong> You decide if switching makes financial sense</li>
-                                    <li><strong>Documentation:</strong> Sign simple amendment documents</li>
-                                    <li><strong>Implementation:</strong> New rate takes effect from next payment cycle</li>
-                                </ol>
-
-                                <p><strong>Things to Consider:</strong></p>
+                                <p class="mt-4"><strong>Strategic Considerations:</strong></p>
                                 <ul>
-                                    <li>Compare total cost of remaining loan under both scenarios</li>
-                                    <li>Consider your risk tolerance and need for certainty</li>
-                                    <li>Factor in any switching costs or breakage fees</li>
-                                    <li>Think about your future plans for the asset</li>
-                                    <li>Consider economic forecasts and rate trends</li>
+                                    <li><strong>Shorter Terms (12-24 months):</strong> Lower total interest, higher payments, better for income-generating assets</li>
+                                    <li><strong>Medium Terms (36-48 months):</strong> Balance of affordability and total cost, most common choice</li>
+                                    <li><strong>Longer Terms (60+ months):</strong> Lowest payments but highest total interest, best for long-term assets</li>
                                 </ul>
 
-                                <p>We recommend a rate review at least annually to ensure you have the best rate structure for your current situation. Contact us for a free rate review and switching analysis.</p>
+                                <div class="alert alert-warning mt-3">
+                                    <i class="bi bi-exclamation-triangle me-2"></i>
+                                    <strong>Important:</strong> Always choose the shortest term you can comfortably afford. The difference in total cost between 36 and 60 months on a R200,000 loan is approximately R35,892!
+                                </div>
                             </div>
                         </div>
                     </div>
 
                     <div class="faq-item">
+                        <div class="faq-question" data-faq="7">
+                            <span class="question-text">Are there penalties for early settlement?</span>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div class="faq-answer" id="faq-answer-7">
+                            <div class="answer-content">
+                                <p>We encourage early settlement and our penalty structure is transparent and regulated by the National Credit Act.</p>
+
+                                <div class="rate-timeline">
+                                    <div class="timeline-container">
+                                        <div class="timeline-phase">
+                                            <div class="phase-marker">1</div>
+                                            <div class="phase-content">
+                                                <h4>Early Settlement Calculation</h4>
+                                                <p>
+                                                    Your early settlement amount includes:
+                                                    <ul class="mb-0">
+                                                        <li>Outstanding principal balance</li>
+                                                        <li>Interest up to settlement date</li>
+                                                        <li>Any applicable early termination fee</li>
+                                                        <li>Less unearned interest rebate</li>
+                                                    </ul>
+                                                </p>
+                                            </div>
+                                            <div class="phase-line"></div>
+                                        </div>
+
+                                        <div class="timeline-phase">
+                                            <div class="phase-marker">2</div>
+                                            <div class="phase-content">
+                                                <h4>Interest Rebate</h4>
+                                                <p>You receive a rebate on future interest using the Rule of 78 method for fixed-rate loans, or simple interest calculation for variable-rate loans.</p>
+                                            </div>
+                                            <div class="phase-line"></div>
+                                        </div>
+
+                                        <div class="timeline-phase">
+                                            <div class="phase-marker">3</div>
+                                            <div class="phase-content">
+                                                <h4>Early Termination Fees</h4>
+                                                <p>
+                                                    Fixed-rate loans: Maximum 90 days interest as per NCA regulations.<br>
+                                                    Variable-rate loans: Typically no early termination fees after 6 months.
+                                                </p>
+                                            </div>
+                                            <div class="phase-line"></div>
+                                        </div>
+
+                                        <div class="timeline-phase">
+                                            <div class="phase-marker">4</div>
+                                            <div class="phase-content">
+                                                <h4>Settlement Certificate</h4>
+                                                <p>Within 5 business days of full settlement, we provide a paid-up letter and release all collateral documents.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <p class="mt-4"><strong>Early Settlement Example:</strong></p>
+                                <div class="alert alert-success">
+                                    <strong>R100,000 loan at 15% fixed, 36-month term</strong><br>
+                                    <strong>Settled after 12 months:</strong><br>
+                                    • Outstanding balance: R70,420<br>
+                                    • Early termination fee: R2,630 (approx. 90 days interest)<br>
+                                    • Interest rebate: R3,150<br>
+                                    • <strong>Total settlement: R69,900</strong><br>
+                                    <em>Savings vs. continuing: R14,280 in future interest</em>
+                                </div>
+
+                                <p class="mb-0">We provide a free settlement quote upon request at any time during your loan term.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rate Negotiation -->
+                <div class="faq-category" data-aos="fade-up" data-aos-delay="250">
+                    <h3 class="category-title">Rate Negotiation & Special Offers</h3>
+
+                    <div class="faq-item">
                         <div class="faq-question" data-faq="8">
-                            <span class="question-text">How often can my variable interest rate change?</span>
+                            <span class="question-text">Can I negotiate my interest rate?</span>
                             <span class="toggle-icon">+</span>
                         </div>
                         <div class="faq-answer" id="faq-answer-8">
                             <div class="answer-content">
-                                <p>Variable interest rates can change, but there are specific rules and limitations:</p>
+                                <p>Yes, we consider rate negotiation based on several qualifying factors. While we offer competitive market rates, there are ways to potentially improve your rate:</p>
 
-                                <p><strong>Trigger for Rate Changes:</strong></p>
-                                <ul>
-                                    <li><strong>Prime Rate Changes:</strong> When the South African prime lending rate changes</li>
-                                    <li><strong>Notice Period:</strong> We provide at least 20 business days' notice before rate increases take effect</li>
-                                    <li><strong>Frequency:</strong> Rates can change each time Prime changes, but typically not more than monthly</li>
-                                    <li><strong>Decreases:</strong> Rate decreases typically take effect immediately or from next payment</li>
-                                </ul>
+                                <div class="factor-checklist">
+                                    <h5 class="checklist-title">Negotiation Opportunities:</h5>
+                                    <div class="checklist-item">
+                                        <i class="bi bi-check-circle checklist-icon"></i>
+                                        <div>
+                                            <strong>Strong Credit Profile</strong>
+                                            <p>Credit scores above 650 may qualify for preferential rates</p>
+                                        </div>
+                                    </div>
+                                    <div class="checklist-item">
+                                        <i class="bi bi-check-circle checklist-icon"></i>
+                                        <div>
+                                            <strong>Multiple Assets</strong>
+                                            <p>Financing multiple vehicles/assets may earn volume discounts</p>
+                                        </div>
+                                    </div>
+                                    <div class="checklist-item">
+                                        <i class="bi bi-check-circle checklist-icon"></i>
+                                        <div>
+                                            <strong>Relationship Pricing</strong>
+                                            <p>Existing clients with good repayment history get loyalty discounts</p>
+                                        </div>
+                                    </div>
+                                    <div class="checklist-item">
+                                        <i class="bi bi-check-circle checklist-icon"></i>
+                                        <div>
+                                            <strong>Seasonal Promotions</strong>
+                                            <p>Watch for special offers during certain times of year</p>
+                                        </div>
+                                    </div>
+                                    <div class="checklist-item">
+                                        <i class="bi bi-check-circle checklist-icon"></i>
+                                        <div>
+                                            <strong>Large Loan Amounts</strong>
+                                            <p>Loans above R500,000 may qualify for tiered pricing</p>
+                                        </div>
+                                    </div>
+                                </div>
 
-                                <p><strong>Typical Change Scenarios:</strong></p>
-                                <ul>
-                                    <li><strong>SARB Repo Rate Changes:</strong> Usually 6-8 times per year when SARB Monetary Policy Committee meets</li>
-                                    <li><strong>Bank-Specific Changes:</strong> Occasionally banks adjust Prime independently of SARB</li>
-                                    <li><strong>Economic Events:</strong> Significant economic events may trigger rate changes</li>
-                                </ul>
+                                <div class="alert alert-info mt-4">
+                                    <i class="bi bi-lightbulb me-2"></i>
+                                    <strong>Negotiation Tips:</strong>
+                                    <ul class="mb-0 mt-2">
+                                        <li>Come prepared with credit reports and documentation</li>
+                                        <li>Consider timing your application during promotional periods</li>
+                                        <li>Ask about relationship discounts if you have other assets</li>
+                                        <li>Discuss rate vs. term trade-offs</li>
+                                        <li>Be transparent about your financial situation</li>
+                                    </ul>
+                                </div>
 
-                                <p><strong>Change Limits & Protections:</strong></p>
-                                <ul>
-                                    <li><strong>No Unlimited Increases:</strong> Rates cannot increase without limit in short periods</li>
-                                    <li><strong>Regulatory Oversight:</strong> National Credit Act protects consumers from unfair rate changes</li>
-                                    <li><strong>Contractual Limits:</strong> Some products have maximum increase limits per year</li>
-                                </ul>
-
-                                <p><strong>Historical Change Frequency:</strong></p>
-                                <ul>
-                                    <li><strong>2020-2021:</strong> Multiple decreases during COVID pandemic</li>
-                                    <li><strong>2022-2023:</strong> Several increases to combat inflation</li>
-                                    <li><strong>Typical Year:</strong> 2-4 rate changes in a normal economic year</li>
-                                    <li><strong>Average Change:</strong> Usually 0.25% or 0.50% increments</li>
-                                </ul>
-
-                                <p><strong>How We Communicate Changes:</strong></p>
-                                <ul>
-                                    <li><strong>Written Notice:</strong> Letter or email detailing change and effective date</li>
-                                    <li><strong>SMS Alert:</strong> Brief notification of rate change</li>
-                                    <li><strong>Website Updates:</strong> Current rates published on our website</li>
-                                    <li><strong>Payment Schedule:</strong> Updated payment schedule showing new amounts</li>
-                                    <li><strong>Customer Portal:</strong> Real-time updates in your online account</li>
-                                </ul>
-
-                                <p><strong>Planning for Rate Changes:</strong></p>
-                                <ul>
-                                    <li><strong>Budget Buffer:</strong> Consider potential increases when budgeting</li>
-                                    <li><strong>Rate Alerts:</strong> Set up alerts for SARB announcements</li>
-                                    <li><strong>Regular Reviews:</strong> Review your rate structure annually</li>
-                                    <li><strong>Emergency Fund:</strong> Maintain buffer for potential payment increases</li>
-                                </ul>
-
-                                <p><strong>If You're Concerned About Increases:</strong></p>
-                                <ul>
-                                    <li>Consider switching to fixed rate for certainty</li>
-                                    <li>Make extra payments when rates are low to reduce principal</li>
-                                    <li>Discuss rate cap options with our specialists</li>
-                                    <li>Consider shorter loan term to reduce interest rate risk exposure</li>
-                                </ul>
-
-                                <p>We're committed to transparent communication about rate changes. If you have concerns about potential rate increases, contact us to discuss options for managing your interest rate risk.</p>
+                                <p class="mt-4">Our consultants are authorized to offer rate adjustments within set parameters. We aim to provide the best possible rate while maintaining responsible lending standards.</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="faq-item">
                         <div class="faq-question" data-faq="9">
-                            <span class="question-text">Do you offer loyalty discounts or rate reductions for good payment history?</span>
+                            <span class="question-text">Do you offer any special rate programs?</span>
                             <span class="toggle-icon">+</span>
                         </div>
                         <div class="faq-answer" id="faq-answer-9">
                             <div class="answer-content">
-                                <p>Yes, we reward loyalty and responsible borrowing behavior with several benefits:</p>
+                                <p>We offer several specialized rate programs designed for different borrower situations:</p>
 
-                                <p><strong>Loyalty Rate Reductions:</strong></p>
-                                <ul>
-                                    <li><strong>After 12 Months:</strong> Rate review with potential reduction for perfect payment history</li>
-                                    <li><strong>After 24 Months:</strong> Additional loyalty discount for continued good standing</li>
-                                    <li><strong>Multiple Loans:</strong> Better rates on additional loans for existing customers</li>
-                                    <li><strong>Referral Benefits:</strong> Rate benefits for referring new clients to us</li>
-                                </ul>
-
-                                <p><strong>Payment History Rewards:</strong></p>
-                                <ul>
-                                    <li><strong>Perfect Payment History:</strong> Automatic rate review after 12 consecutive on-time payments</li>
-                                    <li><strong>Early Payment Habit:</strong> Additional consideration for consistent early payments</li>
-                                    <li><strong>Extra Payment Recognition:</strong> Acknowledgment of efforts to pay down principal faster</li>
-                                </ul>
-
-                                <p><strong>How to Qualify for Rate Reductions:</strong></p>
-                                <div class="factor-checklist">
-                                    <div class="checklist-item">
-                                        <i class="bi bi-calendar-check checklist-icon"></i>
-                                        <div>
-                                            <strong>Consistent On-Time Payments</strong>
-                                            <p>12+ consecutive payments made on or before due date</p>
+                                <div class="row mt-4">
+                                    <div class="col-md-6 mb-4">
+                                        <div class="feature-card h-100">
+                                            <div class="feature-icon">
+                                                <i class="bi bi-briefcase"></i>
+                                            </div>
+                                            <h4>Business Owner Program</h4>
+                                            <p><strong>Rate Discount:</strong> Up to 1% off standard rates</p>
+                                            <p><strong>Qualification:</strong> Registered businesses with 2+ years operation</p>
+                                            <p><strong>Benefits:</strong> Flexible payment terms, business expense tracking</p>
                                         </div>
                                     </div>
-                                    <div class="checklist-item">
-                                        <i class="bi bi-cash-stack checklist-icon"></i>
-                                        <div>
-                                            <strong>Improved Financial Position</strong>
-                                            <p>Demonstrated increase in income or reduced debt levels</p>
+                                    <div class="col-md-6 mb-4">
+                                        <div class="feature-card h-100">
+                                            <div class="feature-icon">
+                                                <i class="bi bi-shield-check"></i>
+                                            </div>
+                                            <h4>Loyalty Program</h4>
+                                            <p><strong>Rate Discount:</strong> 0.5% reduction on subsequent loans</p>
+                                            <p><strong>Qualification:</strong> Perfect repayment history on existing loan</p>
+                                            <p><strong>Benefits:</strong> Faster approval, reduced documentation</p>
                                         </div>
                                     </div>
-                                    <div class="checklist-item">
-                                        <i class="bi bi-graph-up-arrow checklist-icon"></i>
-                                        <div>
-                                            <strong>Credit Score Improvement</strong>
-                                            <p>Documented improvement in credit score since loan origination</p>
+                                    <div class="col-md-6 mb-4">
+                                        <div class="feature-card h-100">
+                                            <div class="feature-icon">
+                                                <i class="bi bi-coin"></i>
+                                            </div>
+                                            <h4>Green Asset Program</h4>
+                                            <p><strong>Rate Discount:</strong> 0.75% for eco-friendly assets</p>
+                                            <p><strong>Qualification:</strong> Electric/hybrid vehicles, energy-efficient equipment</p>
+                                            <p><strong>Benefits:</strong> Extended terms, specialized insurance options</p>
                                         </div>
                                     </div>
-                                    <div class="checklist-item">
-                                        <i class="bi bi-shield-check checklist-icon"></i>
-                                        <div>
-                                            <strong>Asset Maintenance</strong>
-                                            <p>Collateral asset maintained in good condition (where applicable)</p>
+                                    <div class="col-md-6 mb-4">
+                                        <div class="feature-card h-100">
+                                            <div class="feature-icon">
+                                                <i class="bi bi-graph-up-arrow"></i>
+                                            </div>
+                                            <h4>Fast-Track Program</h4>
+                                            <p><strong>Rate Discount:</strong> Competitive fixed rates for 12-month terms</p>
+                                            <p><strong>Qualification:</strong> Excellent credit + 30%+ deposit</p>
+                                            <p><strong>Benefits:</strong> 48-hour approval, minimal documentation</p>
                                         </div>
                                     </div>
                                 </div>
 
-                                <p><strong>Process for Requesting Rate Review:</strong></p>
-                                <ol>
-                                    <li><strong>Eligibility Check:</strong> Contact us after 12 months of perfect payments</li>
-                                    <li><strong>Documentation:</strong> Provide updated income/expense information if requested</li>
-                                    <li><strong>Review:</strong> We assess your payment history and current profile</li>
-                                    <li><strong>Offer:</strong> If eligible, we present reduced rate offer</li>
-                                    <li><strong>Implementation:</strong> New rate takes effect from next payment cycle</li>
-                                </ol>
+                                <div class="alert alert-success mt-3">
+                                    <i class="bi bi-megaphone me-2"></i>
+                                    <strong>Current Special Offer:</strong> First-time borrowers with credit scores above 680 qualify for our <strong>"Prime + 1.5%" introductory rate</strong> on loans up to R300,000. Offer valid until end of current quarter.
+                                </div>
 
-                                <p><strong>Other Loyalty Benefits:</strong></p>
-                                <ul>
-                                    <li><strong>Fee Reductions:</strong> Lower or waived fees on loan modifications</li>
-                                    <li><strong>Priority Service:</strong> Dedicated relationship manager for loyal clients</li>
-                                    <li><strong>Flexibility:</strong> More flexible terms on future loans</li>
-                                    <li><strong>Early Access:</strong> Access to new products before general release</li>
-                                </ul>
-
-                                <p><strong>Rate Reduction Examples:</strong></p>
-                                <ul>
-                                    <li>From 15.5% to 14.75% after 12 months perfect payments</li>
-                                    <li>From Prime+4% to Prime+3.25% after 24 months</li>
-                                    <li>Additional 0.25% reduction for referring a qualified client</li>
-                                </ul>
-
-                                <p><strong>Automatic vs. Requested Reviews:</strong></p>
-                                <ul>
-                                    <li><strong>Automatic:</strong> We may proactively review rates for long-term clients</li>
-                                    <li><strong>Requested:</strong> You can request a review at any time after 12 months</li>
-                                    <li><strong>Market-Driven:</strong> Reviews also consider current market rates</li>
-                                </ul>
-
-                                <p>We believe in rewarding responsible borrowing. If you've maintained good payment history, contact us to discuss potential rate reductions you may qualify for.</p>
+                                <p class="mt-4">Ask your consultant about these programs and which you might qualify for. Some programs can be combined for additional benefits.</p>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <!-- Contact Help Section -->
-                <div class="contact-help" id="contact-help" data-aos="fade-up" data-aos-delay="250">
-                    <h3>Need Help Understanding Rates?</h3>
-                    <p>Our rates specialists are ready to explain your options and help you choose the best rate structure.</p>
-
-                    <div class="contact-methods">
-                        <a href="tel:0639483064" class="contact-method">
-                            <i class="bi bi-telephone"></i>
-                            <div class="method-info">
-                                <h4>Rates Helpline</h4>
-                                <p>063 948 3064</p>
-                            </div>
-                        </a>
-
-                        <a href="https://wa.me/27639483064?text=Hello%20Lehumo%20La%20Edishela,%20I%20need%20help%20understanding%20interest%20rates" class="contact-method" target="_blank">
-                            <i class="bi bi-whatsapp"></i>
-                            <div class="method-info">
-                                <h4>WhatsApp Rates Support</h4>
-                                <p>063 948 3064</p>
-                            </div>
-                        </a>
-
-                        <a href="mailto:rates@lehumo.co.za" class="contact-method">
-                            <i class="bi bi-envelope"></i>
-                            <div class="method-info">
-                                <h4>Rates Email</h4>
-                                <p>rates@lehumo.co.za</p>
-                            </div>
-                        </a>
-                    </div>
-
-                    <p class="mt-4">Rates Support Hours: Monday to Friday 7:30am-7pm | Saturday 8am-2pm</p>
                 </div>
             </div>
         </section>
 
         <!-- CTA Section -->
         <section class="cta-section">
-            <div class="container" data-aos="fade-up">
-                <div class="row justify-content-center text-center">
-                    <div class="col-lg-8">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
                         <h2 class="mb-4">Ready to Get Your Personalized Rate?</h2>
-                        <p class="mb-5">Apply now for a no-obligation rate quote tailored to your specific situation and asset.</p>
-                        <div class="cta-buttons">
-                            <a href="tel:0639483064" class="btn btn-light btn-lg me-3 mb-3 px-4">
-                                <i class="bi bi-telephone me-2"></i> Call for Rate Quote
+                        <p class="lead mb-5">Our team will assess your specific situation and provide a competitive rate quote with no obligation.</p>
+                        <div class="d-flex flex-column flex-md-row justify-content-center gap-3">
+                            <a href="apply.html" class="btn btn-primary btn-lg px-4">
+                                <i class="bi bi-calculator me-2"></i>Get Rate Quote
                             </a>
-                            <a href="apply.html" class="btn btn-outline-light btn-lg mb-3 px-4">
-                                <i class="bi bi-pencil-square me-2"></i> Apply for Personalized Rate
+                            <a href="contact.html" class="btn btn-outline-light btn-lg px-4">
+                                <i class="bi bi-chat-dots me-2"></i>Speak to Consultant
                             </a>
                         </div>
-                        <p class="text-light mt-4 small">
-                            <i class="bi bi-info-circle me-1"></i> No impact on credit score for initial quote • Competitive rates • Transparent calculations
-                        </p>
+                        <p class="mt-4 small">All quotes include full APR breakdown and comparison with market rates</p>
                     </div>
                 </div>
             </div>
@@ -1631,77 +1420,74 @@
 
     </main>
 
-    <footer id="footer" class="footer position-relative dark-background">
+    <!-- Footer -->
+    <footer id="footer" class="footer">
         <div class="container footer-top">
             <div class="row gy-4">
                 <div class="col-lg-4 col-md-6 footer-about">
-                    <a href="index.html" class="d-flex align-items-center mb-3" style="text-decoration: none;">
-                        <div class="logo-container">
-                            <div class="logo-frame">
-                                <img src="assets/img/logo.png" alt="Lehumo La Edishela Logo" class="logo-image">
-                            </div>
-                            <h1 class="sitename">LEHUMO LA EDISHELA</h1>
-                        </div>
+                    <a href="index.html" class="logo d-flex align-items-center">
+                        <span class="sitename">Lehumo La Edishela</span>
                     </a>
-                    <div class="footer-contact">
-                        <p class="mb-3">Your trusted partner for asset-backed loans. Fast approvals, great rates, and FSCA registered for your peace of mind.</p>
-                        <p class="mb-2"><strong>Rates & Applications:</strong></p>
-                        <p class="mb-2"><i class="bi bi-telephone me-2"></i> 063 948 3064</p>
-                        <p class="mb-2"><i class="bi bi-whatsapp me-2"></i> 063 948 3064</p>
-                        <p class="mb-3"><i class="bi bi-envelope me-2"></i> rates@lehumo.co.za</p>
-                        <p><i class="bi bi-shield-check me-2"></i> FSCA Registered</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-2 col-md-3 footer-links">
-                    <h4 class="mb-3">Quick Links</h4>
-                    <ul>
-                        <li><i class="bi bi-chevron-right"></i> <a href="index.html">Home</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="about.html">About Us</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="contact.html">Contact Us</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="apply.html">Apply Now</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="faq-general.html">FAQ & Help</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-2 col-md-3 footer-links">
-                    <h4 class="mb-3">Rate Resources</h4>
-                    <ul>
-                        <li><i class="bi bi-chevron-right"></i> <a href="faq-interest-rates.html">Interest Rates FAQ</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="apply-requirements.html">Loan Requirements</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="apply-process.html">Application Process</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="faq-application.html">Application FAQ</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#contact-help">Rate Consultation</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-4 col-md-12">
-                    <h4 class="mb-3">Contact Details</h4>
-                    <div class="contact-info mb-3">
-                        <p><i class="bi bi-geo-alt me-2"></i> Sandton, Johannesburg</p>
-                        <p><i class="bi bi-clock me-2"></i> Mon-Fri: 7:30am-7pm | Sat: 8am-2pm</p>
-                        <p><i class="bi bi-building me-2"></i> Nationwide Rate Support</p>
+                    <div class="footer-contact pt-3">
+                        <p>28 Westend Office Park</p>
+                        <p>Johannesburg, South Africa</p>
+                        <p class="mt-3"><strong>Phone:</strong> <span>+27 86 100 0534</span></p>
+                        <p><strong>Email:</strong> <span>info@lehuloaedishela.co.za</span></p>
                     </div>
                     <div class="social-links d-flex mt-4">
-                        <a href="#" class="me-3"><i class="bi bi-linkedin"></i></a>
-                        <a href="#" class="me-3"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="me-3"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#"><i class="bi bi-twitter"></i></a>
+                        <a href="#"><i class="bi bi-facebook"></i></a>
                         <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 footer-links">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="apply.html">Apply Now</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-3 footer-links">
+                    <h4>Asset Loans</h4>
+                    <ul>
+                        <li><a href="vehicle-loans.html">Vehicle Loans</a></li>
+                        <li><a href="luxury-loans.html">Luxury Assets</a></li>
+                        <li><a href="propertyloans.html">Property Loans</a></li>
+                        <li><a href="equipmentfinance.html">Equipment Finance</a></li>
+                        <li><a href="artcollectibles.html">Art & Collectibles</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-12 footer-newsletter">
+                    <h4>Stay Informed</h4>
+                    <p>Subscribe to our newsletter for rate updates, special offers, and financial insights.</p>
+                    <form action="#" method="post">
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Your email address" required>
+                            <button class="btn btn-primary" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                    <div class="disclaimer mt-3">
+                        <p class="small"><strong>Disclaimer:</strong> All loans subject to credit approval. Interest rates may vary based on credit profile and market conditions.</p>
+                        <p class="small"><strong>FSP No:</strong> 12345/ABC</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="container copyright text-center mt-4 pt-4 border-top border-secondary">
-            <p class="mb-2">© 2023 Lehumo La Edishela Financial Services. All rights reserved.</p>
+        <div class="container copyright text-center mt-4">
+            <p>© <span>Copyright</span> <strong class="px-1 sitename">Lehumo La Edishela</strong> <span>All Rights Reserved</span></p>
             <div class="credits">
-                <a href="privacy.html" class="me-3">Privacy Policy</a> |
-                <a href="terms.html" class="mx-3">Terms of Service</a> |
-                <a href="complaints.html" class="ms-3">Complaints Procedure</a>
+                Designed with expertise in asset-backed financing
             </div>
         </div>
-    </footer>
-
+    </footer><!-- End Footer -->
     <!-- Scroll Top -->
     <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
@@ -1710,141 +1496,61 @@
 
     <!-- Vendor JS Files -->
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
     <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
     <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
 
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
 
-    <!-- Custom JS -->
+    <!-- FAQ Accordion Script -->
     <script>
-        // FAQ Toggle Functionality
-        document.querySelectorAll('.faq-question').forEach(question => {
-            question.addEventListener('click', function () {
-                const faqId = this.getAttribute('data-faq');
-                const answer = document.getElementById(`faq-answer-${faqId}`);
-                const icon = this.querySelector('.toggle-icon');
-
-                // Toggle active class on question
-                this.classList.toggle('active');
-
-                // Toggle active class on answer
-                answer.classList.toggle('active');
-
-                // Toggle icon
-                if (this.classList.contains('active')) {
-                    icon.textContent = '−';
-                } else {
-                    icon.textContent = '+';
-                }
-            });
-        });
-
-        // FAQ Search Functionality
-        document.getElementById('faqSearch')?.addEventListener('input', function () {
-            const searchTerm = this.value.toLowerCase();
-            const faqItems = document.querySelectorAll('.faq-item');
-
-            faqItems.forEach(item => {
-                const question = item.querySelector('.question-text').textContent.toLowerCase();
-                const answer = item.querySelector('.answer-content').textContent.toLowerCase();
-
-                if (question.includes(searchTerm) || answer.includes(searchTerm)) {
-                    item.style.display = 'block';
-
-                    // Highlight matching text
-                    if (searchTerm.length > 2) {
-                        highlightText(item, searchTerm);
-                    }
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-
-            // Show/hide category titles based on visible FAQs
-            document.querySelectorAll('.faq-category').forEach(category => {
-                const visibleItems = category.querySelectorAll('.faq-item[style="display: block"]');
-                if (visibleItems.length > 0) {
-                    category.style.display = 'block';
-                } else {
-                    category.style.display = 'none';
-                }
-            });
-        });
-
-        // Text highlighting function
-        function highlightText(element, searchTerm) {
-            const question = element.querySelector('.question-text');
-            const answer = element.querySelector('.answer-content');
-
-            // Remove previous highlights
-            question.innerHTML = question.textContent;
-            answer.innerHTML = answer.textContent;
-
-            // Highlight in question
-            if (question.textContent.toLowerCase().includes(searchTerm)) {
-                const regex = new RegExp(`(${searchTerm})`, 'gi');
-                question.innerHTML = question.textContent.replace(regex, '<mark class="bg-warning">$1</mark>');
-            }
-
-            // Highlight in answer
-            if (answer.textContent.toLowerCase().includes(searchTerm)) {
-                const regex = new RegExp(`(${searchTerm})`, 'gi');
-                answer.innerHTML = answer.textContent.replace(regex, '<mark class="bg-warning">$1</mark>');
-            }
-        }
-
-        // Open first FAQ by default
         document.addEventListener('DOMContentLoaded', function () {
-            const firstQuestion = document.querySelector('.faq-question');
-            if (firstQuestion) {
-                firstQuestion.click();
-            }
-        });
+            // FAQ Accordion Functionality
+            const faqQuestions = document.querySelectorAll('.faq-question');
 
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                if (this.getAttribute('href') === '#') return;
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function () {
+                    const faqId = this.getAttribute('data-faq');
+                    const answer = document.getElementById(`faq-answer-${faqId}`);
+                    const icon = this.querySelector('.toggle-icon');
 
-                e.preventDefault();
-
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 100,
-                        behavior: 'smooth'
+                    // Close all other FAQ answers
+                    document.querySelectorAll('.faq-answer.active').forEach(activeAnswer => {
+                        if (activeAnswer.id !== `faq-answer-${faqId}`) {
+                            activeAnswer.classList.remove('active');
+                            const activeQuestion = activeAnswer.previousElementSibling;
+                            activeQuestion.classList.remove('active');
+                            activeQuestion.querySelector('.toggle-icon').textContent = '+';
+                        }
                     });
-                }
-            });
-        });
 
-        // Header scroll effect
-        window.addEventListener('scroll', function () {
-            const header = document.querySelector('.header');
-            if (window.scrollY > 100) {
-                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
-            } else {
-                header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+                    // Toggle current FAQ
+                    this.classList.toggle('active');
+                    answer.classList.toggle('active');
+
+                    if (this.classList.contains('active')) {
+                        icon.textContent = '−';
+                    } else {
+                        icon.textContent = '+';
+                    }
+                });
+            });
+
+            // Open first FAQ by default
+            if (faqQuestions.length > 0) {
+                faqQuestions[0].click();
             }
-        });
 
-        // WhatsApp button interaction
-        const whatsappBtn = document.querySelector('.whatsapp-float');
-        if (whatsappBtn) {
-            whatsappBtn.addEventListener('click', function () {
-                console.log('WhatsApp button clicked from Interest Rates FAQ page');
+            // AOS Initialization
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true,
+                mirror: false
             });
-        }
+        });
     </script>
 
 </body>
-
 </html>

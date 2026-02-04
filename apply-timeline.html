@@ -4,9 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Contact Us | Lehumo La Edishela - Financial Service Provider</title>
-    <meta name="description" content="Contact Lehumo La Edishela for asset-backed financing. Get in touch for vehicle loans, luxury asset loans, bridging finance, and commercial finance solutions.">
-    <meta name="keywords" content="contact loans, loan support, financial advice, South Africa loans, loan application help">
+    <title>Application Timeline | Lehumo La Edishela - Financial Service Provider</title>
+    <meta name="description" content="See our typical application timeline. How long each step takes and when you can expect to receive your funds.">
+    <meta name="keywords" content="loan timeline, application timeline, approval timeline, funding timeline, South Africa loan timing">
 
     <!-- Favicons -->
     <link href="assets/img/favicon.png" rel="icon">
@@ -130,7 +130,7 @@
 
         /* Page Title */
         .page-title {
-            background: linear-gradient(rgba(26, 54, 93, 0.85), rgba(26, 54, 93, 0.9)), url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+            background: linear-gradient(rgba(26, 54, 93, 0.85), rgba(26, 54, 93, 0.9)), url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
             background-size: cover;
             background-position: center;
             color: white;
@@ -145,8 +145,8 @@
                 margin-bottom: 1rem;
             }
 
-        /* Contact Section */
-        .contact-section {
+        /* Timeline Section */
+        .timeline-section {
             padding: 80px 0;
         }
 
@@ -168,122 +168,153 @@
                 margin: 0 auto;
             }
 
-        /* Contact Cards */
-        .contact-card {
+        /* Timeline Visualization */
+        .timeline-visual {
+            position: relative;
+            padding: 60px 0;
+            margin: 3rem 0;
+        }
+
+            .timeline-visual:before {
+                content: '';
+                position: absolute;
+                left: 50%;
+                top: 0;
+                bottom: 0;
+                width: 4px;
+                background: var(--primary-blue);
+                transform: translateX(-50%);
+                z-index: 1;
+            }
+
+        .timeline-point {
+            position: relative;
+            margin-bottom: 80px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+            .timeline-point:nth-child(odd) {
+                justify-content: flex-start;
+                padding-right: 50%;
+            }
+
+            .timeline-point:nth-child(even) {
+                justify-content: flex-end;
+                padding-left: 50%;
+            }
+
+        .point-marker {
+            position: absolute;
+            left: 50%;
+            width: 24px;
+            height: 24px;
+            background: var(--primary-red);
+            border-radius: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            box-shadow: 0 0 0 6px white, 0 0 0 10px var(--primary-red);
+        }
+
+        .point-content {
+            width: 45%;
+            padding: 25px;
             background: white;
             border-radius: 12px;
-            padding: 2.5rem;
-            height: 100%;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
             border: 2px solid var(--border-color);
-            transition: all 0.3s ease;
-            text-align: center;
+            position: relative;
         }
 
-            .contact-card:hover {
-                transform: translateY(-5px);
-                box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
-                border-color: var(--accent-teal);
-            }
-
-            .contact-card i {
-                font-size: 2.5rem;
-                color: var(--accent-teal);
-                margin-bottom: 1.5rem;
-            }
-
-            .contact-card h3 {
-                color: var(--primary-blue);
-                font-size: 1.5rem;
-                margin-bottom: 1rem;
-                font-weight: 700;
-            }
-
-        /* Contact Form */
-        .contact-form-container {
-            background: var(--light-gray);
-            border-radius: 16px;
-            padding: 3rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        .timeline-point:nth-child(odd) .point-content {
+            margin-right: 30px;
         }
 
-        .form-title {
+        .timeline-point:nth-child(even) .point-content {
+            margin-left: 30px;
+        }
+
+        .point-time {
+            display: inline-block;
+            background: var(--primary-blue);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .point-title {
             color: var(--primary-blue);
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
+            font-size: 1.4rem;
+            margin-bottom: 10px;
             font-weight: 700;
         }
 
-        .form-control, .form-select {
-            padding: 0.875rem 1rem;
-            border: 2px solid var(--border-color);
-            border-radius: 6px;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-        }
-
-            .form-control:focus, .form-select:focus {
-                border-color: var(--accent-teal);
-                box-shadow: 0 0 0 0.25rem rgba(42, 157, 143, 0.25);
-            }
-
-        .btn-submit {
-            background: linear-gradient(135deg, var(--primary-red) 0%, #c53030 100%);
+        /* Timeline Summary */
+        .timeline-summary {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, #152642 100%);
+            border-radius: 16px;
+            padding: 3rem;
             color: white;
-            padding: 0.875rem 2rem;
-            border: none;
-            border-radius: 6px;
-            font-weight: 600;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            width: 100%;
-        }
-
-            .btn-submit:hover {
-                background: linear-gradient(135deg, #c53030 0%, #9b2c2c 100%);
-                transform: translateY(-2px);
-                box-shadow: 0 10px 20px rgba(230, 57, 70, 0.2);
-            }
-
-        /* Map Section */
-        .map-section {
             margin: 4rem 0;
         }
 
-        .map-container {
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            border: 2px solid var(--border-color);
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
         }
 
-        /* Feature Cards */
-        .feature-card {
-            border-radius: 12px;
+        .summary-item {
+            text-align: center;
             padding: 2rem;
-            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
             transition: all 0.3s ease;
-            border: 1px solid var(--border-color);
-            background: white;
         }
 
-            .feature-card:hover {
+            .summary-item:hover {
+                background: rgba(255, 255, 255, 0.2);
                 transform: translateY(-5px);
-                box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-                border-color: var(--primary-red);
             }
 
-        .feature-icon {
+        .summary-icon {
+            font-size: 2.5rem;
+            color: var(--accent-teal);
+            margin-bottom: 1rem;
+        }
+
+        .summary-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+
+        /* Process Steps */
+        .process-step {
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .step-number {
             width: 70px;
             height: 70px;
             background: linear-gradient(135deg, var(--primary-red) 0%, #c53030 100%);
+            color: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
+            font-weight: 800;
+            font-size: 1.75rem;
             margin: 0 auto 1.5rem;
-            color: white;
-            font-size: 1.8rem;
+            box-shadow: 0 10px 20px rgba(230, 57, 70, 0.2);
         }
 
         /* CTA Section */
@@ -327,6 +358,25 @@
 
         /* Responsive Styles */
         @media (max-width: 992px) {
+            .timeline-visual:before {
+                left: 30px;
+            }
+
+            .timeline-point {
+                justify-content: flex-start !important;
+                padding-right: 0 !important;
+                padding-left: 80px !important;
+            }
+
+            .point-marker {
+                left: 30px;
+            }
+
+            .point-content {
+                width: 100%;
+                margin: 0 !important;
+            }
+
             .page-title h1 {
                 font-size: 2.5rem;
             }
@@ -334,16 +384,16 @@
             .section-title h2 {
                 font-size: 2rem;
             }
-
-            .contact-form-container {
-                padding: 2rem;
-            }
         }
 
         @media (max-width: 768px) {
-            .contact-card {
+            .summary-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline-summary {
                 padding: 2rem;
-                margin-bottom: 1.5rem;
+                margin: 2rem 0;
             }
 
             .whatsapp-float {
@@ -369,16 +419,16 @@
                 padding: 120px 0 40px;
             }
 
-            .contact-section {
+            .timeline-section {
                 padding: 40px 0;
             }
 
-            .form-title {
-                font-size: 1.5rem;
+            .point-content {
+                padding: 1.5rem;
             }
         }
 
-        /* Animation */
+        /* Animation for timeline points */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -391,7 +441,7 @@
             }
         }
 
-        .contact-card {
+        .timeline-point {
             animation: fadeInUp 0.6s ease forwards;
         }
 
@@ -444,7 +494,7 @@
 <body>
 
     <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/27861000534?text=Hello%20Lehumo%20La%20Edishela,%20I%20would%20like%20to%20inquire%20about%20your%20loan%20services" class="whatsapp-float" target="_blank" aria-label="Chat with us on WhatsApp">
+    <a href="https://wa.me/27861000534?text=Hello%20Lehumo%20La%20Edishela,%20I%20have%20a%20question%20about%20the%20application%20timeline" class="whatsapp-float" target="_blank" aria-label="Chat with us on WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -506,10 +556,10 @@
                             <li><a href="apply-requirements.html">Requirements</a></li>
                             <li><a href="apply-documentation.html">Documentation</a></li>
                             <li><a href="apply-process.html">Process Steps</a></li>
-                            <li><a href="apply-timeline.html">Timeline</a></li>
+                            <li><a href="apply-timeline.html" class="active">Timeline</a></li>
                         </ul>
                     </li>
-                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
@@ -526,257 +576,258 @@
             <div class="container position-relative">
                 <div class="row">
                     <div class="col-lg-8 mx-auto text-center">
-                        <h1>Contact Us</h1>
-                        <p class="lead">Get in touch with our team for personalized assistance with your loan application or any questions you may have.</p>
-                        <p class="mb-0">We're here to help you achieve your financial goals.</p>
+                        <h1>Application Timeline</h1>
+                        <p class="lead">Your journey to financial support, step by step. See exactly what to expect and when.</p>
+                        <p class="mb-0">Most applications are completed within <strong>24-48 hours</strong> from start to funding.</p>
                     </div>
                 </div>
             </div>
         </section><!-- /Page Title -->
-        <!-- Contact Information -->
-        <section class="contact-section section">
+        <!-- Timeline Visualization -->
+        <section class="timeline-section section">
             <div class="container">
                 <div class="section-title" data-aos="fade-up">
-                    <h2>Get in Touch</h2>
-                    <div><span>Choose Your Preferred</span> <span class="description-title">Method of Contact</span></div>
+                    <h2>Your Application Journey</h2>
+                    <div><span>From Application to</span> <span class="description-title">Funding in 4 Steps</span></div>
                 </div>
 
-                <!-- Contact Info Cards -->
-                <div class="row g-4">
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                        <div class="contact-card">
-                            <i class="bi bi-telephone-fill"></i>
-                            <h3>Call Us</h3>
-                            <p class="mb-3">Speak directly with our loan specialists</p>
-                            <p class="mb-2"><strong>Phone:</strong> 0861 000 534</p>
-                            <p class="mb-2"><strong>Direct Line:</strong> +27 86 100 0534</p>
-                            <p class="mb-0"><strong>Hours:</strong> Mon-Fri 8AM-6PM, Sat 9AM-1PM</p>
+                <div class="timeline-visual" data-aos="fade-up" data-aos-delay="100">
+                    <!-- Step 1 -->
+                    <div class="timeline-point">
+                        <div class="point-marker"></div>
+                        <div class="point-content">
+                            <span class="point-time">Day 1 • 10-15 minutes</span>
+                            <h3 class="point-title">Initial Application</h3>
+                            <p>Complete our simple online application form with basic personal and asset information. No paperwork needed at this stage.</p>
+                            <div class="status-indicator mt-3">
+                                <span class="badge bg-success"><i class="bi bi-check-circle me-1"></i> Online submission</span>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                        <div class="contact-card">
-                            <i class="bi bi-envelope-fill"></i>
-                            <h3>Email Us</h3>
-                            <p class="mb-3">Send us your questions or documents</p>
-                            <p class="mb-2"><strong>General Inquiries:</strong><br>info@lehumo.co.za</p>
-                            <p class="mb-2"><strong>Application Support:</strong><br>apply@lehumo.co.za</p>
-                            <p class="mb-0"><strong>Response Time:</strong> Within 2 hours</p>
+                    <!-- Step 2 -->
+                    <div class="timeline-point">
+                        <div class="point-marker"></div>
+                        <div class="point-content">
+                            <span class="point-time">Within 2 hours</span>
+                            <h3 class="point-title">Preliminary Review</h3>
+                            <p>Our system automatically checks your eligibility and conducts initial assessment. You'll receive an immediate response.</p>
+                            <div class="status-indicator mt-3">
+                                <span class="badge bg-info"><i class="bi bi-lightning-charge me-1"></i> Instant automated check</span>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                        <div class="contact-card">
-                            <i class="fab fa-whatsapp"></i>
-                            <h3>WhatsApp</h3>
-                            <p class="mb-3">Chat with us for instant support</p>
-                            <p class="mb-2"><strong>Number:</strong> +27 86 100 0534</p>
-                            <p class="mb-2"><strong>Available:</strong> 7 days a week</p>
-                            <p class="mb-3"><strong>Features:</strong> Document sharing, quick responses</p>
-                            <a href="https://wa.me/27861000534" class="btn btn-primary mt-2" target="_blank">Start WhatsApp Chat</a>
+                    <!-- Step 3 -->
+                    <div class="timeline-point">
+                        <div class="point-marker"></div>
+                        <div class="point-content">
+                            <span class="point-time">2-4 hours</span>
+                            <h3 class="point-title">Document Upload & Verification</h3>
+                            <p>Upload required documents (ID, proof of ownership, asset valuation). Our team verifies authenticity and completeness.</p>
+                            <div class="status-indicator mt-3">
+                                <span class="badge bg-warning"><i class="bi bi-cloud-upload me-1"></i> Secure document upload</span>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Contact Form -->
-                <div class="row mt-5">
-                    <div class="col-lg-8 mx-auto">
-                        <div class="contact-form-container" data-aos="fade-up" data-aos-delay="100">
-                            <h3 class="form-title">Send Us a Message</h3>
-                            <p class="mb-4">Fill out the form below and we'll get back to you as soon as possible.</p>
+                    <!-- Step 4 -->
+                    <div class="timeline-point">
+                        <div class="point-marker"></div>
+                        <div class="point-content">
+                            <span class="point-time">4-8 hours</span>
+                            <h3 class="point-title">Comprehensive Assessment</h3>
+                            <p>Detailed review by our credit team including asset valuation and final approval decision.</p>
+                            <div class="status-indicator mt-3">
+                                <span class="badge bg-primary"><i class="bi bi-clipboard-data me-1"></i> Manual review by experts</span>
+                            </div>
+                        </div>
+                    </div>
 
-                            <form id="contactForm">
-                                <div class="row g-3">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="firstName" class="form-label">First Name *</label>
-                                            <input type="text" class="form-control" id="firstName" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="lastName" class="form-label">Last Name *</label>
-                                            <input type="text" class="form-control" id="lastName" required>
-                                        </div>
-                                    </div>
+                    <!-- Step 5 -->
+                    <div class="timeline-point">
+                        <div class="point-marker"></div>
+                        <div class="point-content">
+                            <span class="point-time">1-2 hours</span>
+                            <h3 class="point-title">Offer & Agreement</h3>
+                            <p>Receive your loan offer with all terms and conditions. Review and digitally sign the agreement.</p>
+                            <div class="status-indicator mt-3">
+                                <span class="badge bg-secondary"><i class="bi bi-file-earmark-text me-1"></i> Digital signing available</span>
+                            </div>
+                        </div>
+                    </div>
 
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="email" class="form-label">Email Address *</label>
-                                            <input type="email" class="form-control" id="email" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="phone" class="form-label">Phone Number *</label>
-                                            <input type="tel" class="form-control" id="phone" required>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-12">
-                                        <div class="form-group">
-                                            <label for="subject" class="form-label">Subject *</label>
-                                            <select class="form-select" id="subject" required>
-                                                <option value="">Select a topic</option>
-                                                <option value="loan-application">Loan Application Help</option>
-                                                <option value="eligibility">Eligibility Questions</option>
-                                                <option value="existing-loan">Existing Loan Inquiry</option>
-                                                <option value="documents">Document Submission</option>
-                                                <option value="general">General Information</option>
-                                                <option value="complaint">Complaint or Feedback</option>
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-12">
-                                        <div class="form-group">
-                                            <label for="message" class="form-label">Message *</label>
-                                            <textarea class="form-control" id="message" rows="5" required placeholder="Please provide details about your inquiry..."></textarea>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-12">
-                                        <div class="form-check mb-3">
-                                            <input class="form-check-input" type="checkbox" id="consent" required>
-                                            <label class="form-check-label" for="consent">
-                                                I agree to receive communications from Lehumo La Edishela regarding my inquiry.
-                                            </label>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-12">
-                                        <button type="submit" class="btn-submit">Send Message</button>
-                                    </div>
-
-                                    <div class="col-12 mt-3 text-center">
-                                        <p class="text-muted small">* Required fields. We respect your privacy and will not share your information.</p>
-                                    </div>
-                                </div>
-                            </form>
+                    <!-- Step 6 -->
+                    <div class="timeline-point">
+                        <div class="point-marker"></div>
+                        <div class="point-content">
+                            <span class="point-time">2-4 hours</span>
+                            <h3 class="point-title">Funds Disbursement</h3>
+                            <p>Once signed, funds are processed and transferred directly to your bank account. You'll receive confirmation.</p>
+                            <div class="status-indicator mt-3">
+                                <span class="badge bg-success"><i class="bi bi-cash-stack me-1"></i> Direct bank transfer</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Map Section -->
-        <section class="contact-section section bg-light">
+        <!-- Timeline Summary -->
+        <section class="timeline-summary">
             <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto text-center">
+                        <h2 class="mb-4">Fast, Transparent Process</h2>
+                        <p class="lead mb-5">Our timeline is designed to get you funds when you need them, with no unnecessary delays.</p>
+
+                        <div class="summary-grid">
+                            <div class="summary-item">
+                                <div class="summary-icon">
+                                    <i class="bi bi-clock-history"></i>
+                                </div>
+                                <div class="summary-number">24-48 Hours</div>
+                                <p>Total Processing Time</p>
+                            </div>
+
+                            <div class="summary-item">
+                                <div class="summary-icon">
+                                    <i class="bi bi-check-circle"></i>
+                                </div>
+                                <div class="summary-number">90%+</div>
+                                <p>Applications Approved</p>
+                            </div>
+
+                            <div class="summary-item">
+                                <div class="summary-icon">
+                                    <i class="bi bi-currency-exchange"></i>
+                                </div>
+                                <div class="summary-number">Same Day</div>
+                                <p>Funding Available</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Steps -->
+        <section class="process-section section">
+            <div class="container" data-aos="fade-up">
                 <div class="section-title" data-aos="fade-up">
-                    <h2>Our Location</h2>
-                    <div><span>Visit Our Office for</span> <span class="description-title">Face-to-Face Consultation</span></div>
+                    <h2>Our 4-Step Application Process</h2>
+                    <div><span>Get Your Cash in</span> <span class="description-title">4 Simple Steps</span></div>
                 </div>
 
                 <div class="row">
-                    <div class="col-lg-10 mx-auto">
-                        <div class="map-container" data-aos="fade-up" data-aos-delay="100">
-                            <!-- Google Maps Embed -->
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.193770789497!2d28.044083315029156!3d-26.19581996939362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950c1b6c5d2b0f%3A0x2c3e7b8f2c3e7b8f!2sSandton%2C%20Johannesburg%2C%20South%20Africa!5e0!3m2!1sen!2sza!4v1633024876787!5m2!1sen!2sza"
-                                    width="100%"
-                                    height="450"
-                                    style="border:0;"
-                                    allowfullscreen=""
-                                    loading="lazy"
-                                    title="Lehumo La Edishela Location Map">
-                            </iframe>
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="process-step">
+                            <div class="step-number">1</div>
+                            <h4 class="mb-3">Apply Online</h4>
+                            <p>Complete our simple application form with basic details about you and your asset.</p>
+                            <p class="text-primary small"><strong>Time: 10-15 minutes</strong></p>
                         </div>
+                    </div>
 
-                        <div class="row mt-4 g-4">
-                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
-                                <div class="feature-card">
-                                    <div class="feature-icon">
-                                        <i class="bi bi-geo-alt"></i>
-                                    </div>
-                                    <h4 class="mb-3">Office Address</h4>
-                                    <p class="mb-2"><strong>Head Office:</strong></p>
-                                    <p class="mb-2">Sandton City</p>
-                                    <p class="mb-4">Johannesburg, 2196, South Africa</p>
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="process-step">
+                            <div class="step-number">2</div>
+                            <h4 class="mb-3">Asset Valuation</h4>
+                            <p>Our experts assess your asset's current market value with a fair and transparent valuation.</p>
+                            <p class="text-primary small"><strong>Time: 2-4 hours</strong></p>
+                        </div>
+                    </div>
 
-                                    <h5 class="mt-4 mb-3">Parking Information</h5>
-                                    <p>Secure underground parking available. Please bring your parking ticket for validation at reception.</p>
-                                </div>
-                            </div>
-                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
-                                <div class="feature-card">
-                                    <div class="feature-icon">
-                                        <i class="bi bi-clock"></i>
-                                    </div>
-                                    <h4 class="mb-3">Office Hours</h4>
-                                    <p class="mb-2"><strong>Monday - Friday:</strong></p>
-                                    <p class="mb-2">8:00 AM - 6:00 PM</p>
-                                    <p class="mb-4">Last appointment at 5:00 PM</p>
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                        <div class="process-step">
+                            <div class="step-number">3</div>
+                            <h4 class="mb-3">Get Approved</h4>
+                            <p>Receive your loan offer with competitive rates and flexible repayment terms.</p>
+                            <p class="text-primary small"><strong>Time: 4-8 hours</strong></p>
+                        </div>
+                    </div>
 
-                                    <p class="mb-2"><strong>Saturday:</strong></p>
-                                    <p class="mb-2">9:00 AM - 1:00 PM</p>
-                                    <p class="mb-4">By appointment only</p>
-
-                                    <p class="mb-2"><strong>Sunday & Public Holidays:</strong></p>
-                                    <p>Closed</p>
-                                </div>
-                            </div>
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                        <div class="process-step">
+                            <div class="step-number">4</div>
+                            <h4 class="mb-3">Receive Funds</h4>
+                            <p>Money transferred directly to your bank account once all documents are signed.</p>
+                            <p class="text-primary small"><strong>Time: 2-4 hours</strong></p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- FAQ Section -->
-        <section class="contact-section section">
+        <!-- Tips Section -->
+        <section class="section bg-light">
             <div class="container">
-                <div class="section-title" data-aos="fade-up">
-                    <h2>Frequently Asked Questions</h2>
-                    <div><span>Quick Answers to</span> <span class="description-title">Common Questions</span></div>
-                </div>
+                <div class="row">
+                    <div class="col-lg-10 mx-auto">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body p-5">
+                                <div class="section-title text-start mb-4">
+                                    <h2 class="mb-3">Speed Up Your Application</h2>
+                                    <p class="text-muted">Follow these tips to ensure your application is processed as quickly as possible</p>
+                                </div>
 
-                <div class="accordion" id="contactFAQ">
-                    <div class="accordion-item" data-aos="fade-up" data-aos-delay="100">
-                        <h3 class="accordion-header">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-                                What information should I have ready when I call?
-                            </button>
-                        </h3>
-                        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#contactFAQ">
-                            <div class="accordion-body">
-                                For faster service, please have your ID number, current contact information, and details about the asset you want to use as security. If you're calling about an existing loan, have your loan account number available.
-                            </div>
-                        </div>
-                    </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="d-flex mb-4">
+                                            <div class="flex-shrink-0">
+                                                <div class="bg-primary rounded-circle p-2 text-white">
+                                                    <i class="bi bi-file-earmark-text fs-4"></i>
+                                                </div>
+                                            </div>
+                                            <div class="flex-grow-1 ms-3">
+                                                <h5>Have Documents Ready</h5>
+                                                <p class="text-muted mb-0">Prepare your ID, proof of ownership, and any relevant documentation before applying.</p>
+                                            </div>
+                                        </div>
+                                    </div>
 
-                    <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
-                        <h3 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-                                How long does it take to get a response to my email?
-                            </button>
-                        </h3>
-                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#contactFAQ">
-                            <div class="accordion-body">
-                                We respond to all emails within 2 business hours during office hours. Emails received after hours or on weekends will be responded to on the next business day.
-                            </div>
-                        </div>
-                    </div>
+                                    <div class="col-md-6">
+                                        <div class="d-flex mb-4">
+                                            <div class="flex-shrink-0">
+                                                <div class="bg-primary rounded-circle p-2 text-white">
+                                                    <i class="bi bi-clock fs-4"></i>
+                                                </div>
+                                            </div>
+                                            <div class="flex-grow-1 ms-3">
+                                                <h5>Apply Early</h5>
+                                                <p class="text-muted mb-0">Applications submitted before 2 PM are more likely to receive same-day review.</p>
+                                            </div>
+                                        </div>
+                                    </div>
 
-                    <div class="accordion-item" data-aos="fade-up" data-aos-delay="300">
-                        <h3 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
-                                Can I submit documents via WhatsApp?
-                            </button>
-                        </h3>
-                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#contactFAQ">
-                            <div class="accordion-body">
-                                Yes! You can securely send documents through WhatsApp. Our team can guide you on what documents are needed and help you submit them through our secure channels.
-                            </div>
-                        </div>
-                    </div>
+                                    <div class="col-md-6">
+                                        <div class="d-flex mb-4">
+                                            <div class="flex-shrink-0">
+                                                <div class="bg-primary rounded-circle p-2 text-white">
+                                                    <i class="bi bi-envelope fs-4"></i>
+                                                </div>
+                                            </div>
+                                            <div class="flex-grow-1 ms-3">
+                                                <h5>Check Your Email</h5>
+                                                <p class="text-muted mb-0">We send important updates via email. Check regularly to avoid delays.</p>
+                                            </div>
+                                        </div>
+                                    </div>
 
-                    <div class="accordion-item" data-aos="fade-up" data-aos-delay="400">
-                        <h3 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
-                                Do I need an appointment to visit your office?
-                            </button>
-                        </h3>
-                        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#contactFAQ">
-                            <div class="accordion-body">
-                                While appointments are recommended to ensure a specialist is available to assist you, we do accept walk-ins during business hours. However, appointment holders receive priority.
+                                    <div class="col-md-6">
+                                        <div class="d-flex mb-4">
+                                            <div class="flex-shrink-0">
+                                                <div class="bg-primary rounded-circle p-2 text-white">
+                                                    <i class="bi bi-chat-dots fs-4"></i>
+                                                </div>
+                                            </div>
+                                            <div class="flex-grow-1 ms-3">
+                                                <h5>Respond Promptly</h5>
+                                                <p class="text-muted mb-0">Quick responses to our queries help us process your application faster.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -789,8 +840,8 @@
             <div class="container" data-aos="fade-up">
                 <div class="row justify-content-center text-center">
                     <div class="col-lg-8">
-                        <h2 class="mb-4">Ready to Get Cash From Your Assets?</h2>
-                        <p class="mb-5">Talk to our team today and get a personalised solution that works for you</p>
+                        <h2 class="mb-4">Ready to Start Your Application?</h2>
+                        <p class="mb-5">Begin your journey to financial support today. With our transparent timeline, you'll know exactly what to expect every step of the way.</p>
                         <div class="cta-buttons">
                             <a href="tel:0861000534" class="btn btn-light btn-lg me-3 mb-3 px-4">
                                 <i class="bi bi-telephone me-2"></i> Call 0861 000 534
@@ -906,60 +957,6 @@
             once: true
         });
 
-        // Contact form submission
-        const contactForm = document.getElementById('contactForm');
-        if (contactForm) {
-            contactForm.addEventListener('submit', function (e) {
-                e.preventDefault();
-
-                // Get form data
-                const formData = {
-                    firstName: document.getElementById('firstName').value,
-                    lastName: document.getElementById('lastName').value,
-                    email: document.getElementById('email').value,
-                    phone: document.getElementById('phone').value,
-                    subject: document.getElementById('subject').value,
-                    message: document.getElementById('message').value
-                };
-
-                // Show success message
-                const submitBtn = contactForm.querySelector('.btn-submit');
-                const originalText = submitBtn.textContent;
-
-                submitBtn.textContent = 'Sending...';
-                submitBtn.disabled = true;
-
-                // Simulate API call
-                setTimeout(() => {
-                    // Create success alert
-                    const alertDiv = document.createElement('div');
-                    alertDiv.className = 'alert alert-success alert-dismissible fade show mt-3';
-                    alertDiv.innerHTML = `
-                            <i class="bi bi-check-circle me-2"></i>
-                            <strong>Thank you for your message!</strong> We've received your inquiry and will respond within 2 business hours.
-                            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                        `;
-
-                    contactForm.parentNode.insertBefore(alertDiv, contactForm.nextSibling);
-
-                    // Reset form
-                    contactForm.reset();
-                    submitBtn.textContent = originalText;
-                    submitBtn.disabled = false;
-
-                    // Scroll to success message
-                    alertDiv.scrollIntoView({ behavior: 'smooth' });
-
-                    // Auto-dismiss alert after 10 seconds
-                    setTimeout(() => {
-                        if (alertDiv.parentNode) {
-                            alertDiv.remove();
-                        }
-                    }, 10000);
-                }, 1500);
-            });
-        }
-
         // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -987,23 +984,6 @@
             } else {
                 header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
             }
-        });
-
-        // Auto-format phone number
-        document.getElementById('phone')?.addEventListener('input', function (e) {
-            let value = e.target.value.replace(/\D/g, '');
-            if (value.length > 0) {
-                if (value.length <= 2) {
-                    value = value;
-                } else if (value.length <= 5) {
-                    value = value.substring(0, 2) + ' ' + value.substring(2);
-                } else if (value.length <= 8) {
-                    value = value.substring(0, 2) + ' ' + value.substring(2, 5) + ' ' + value.substring(5);
-                } else {
-                    value = value.substring(0, 2) + ' ' + value.substring(2, 5) + ' ' + value.substring(5, 8) + ' ' + value.substring(8, 10);
-                }
-            }
-            e.target.value = value;
         });
     </script>
 

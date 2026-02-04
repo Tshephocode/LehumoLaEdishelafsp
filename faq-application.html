@@ -74,84 +74,21 @@
                 margin-top: 2px;
             }
 
-        /* Animated Logo Frame */
+        /* Logo Container */
         .logo-container {
             display: flex;
             align-items: center;
             justify-content: flex-start;
-            gap: 15px;
+            gap: 10px;
         }
-
-        .logo-frame {
-            width: 70px;
-            height: 70px;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--primary-blue), var(--accent-teal), var(--primary-red));
-            background-size: 400% 400%;
-            animation: gradientShift 8s ease infinite;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-        }
-
-            .logo-frame::before {
-                content: '';
-                position: absolute;
-                width: 64px;
-                height: 64px;
-                background: white;
-                border-radius: 50%;
-                z-index: 1;
-            }
 
         .logo-image {
-            width: 50px;
-            height: 50px;
+            width: 60px;
+            height: 60px;
             object-fit: contain;
             border-radius: 50%;
             position: relative;
             z-index: 2;
-            transition: transform 0.5s ease;
-        }
-
-        .logo-frame:hover .logo-image {
-            transform: scale(1.05);
-        }
-
-        @keyframes gradientShift {
-            0% {
-                background-position: 0% 50%;
-            }
-
-            50% {
-                background-position: 100% 50%;
-            }
-
-            100% {
-                background-position: 0% 50%;
-            }
-        }
-
-        /* Pulsing effect for attention */
-        @keyframes pulse {
-            0% {
-                box-shadow: 0 0 0 0 rgba(230, 57, 70, 0.4);
-            }
-
-            70% {
-                box-shadow: 0 0 0 10px rgba(230, 57, 70, 0);
-            }
-
-            100% {
-                box-shadow: 0 0 0 0 rgba(230, 57, 70, 0);
-            }
-        }
-
-        .logo-frame:hover {
-            animation: gradientShift 8s ease infinite, pulse 2s infinite;
         }
 
         /* Header Enhancements */
@@ -197,131 +134,90 @@
             background-size: cover;
             background-position: center;
             color: white;
-            padding: 120px 0 60px;
+            padding: 150px 0 60px;
             position: relative;
         }
 
             .page-title h1 {
                 color: white;
-                font-size: 3rem;
+                font-size: 3.5rem;
                 font-weight: 800;
                 margin-bottom: 1rem;
             }
 
-        /* FAQ Styles */
+        /* FAQ Section Styling */
         .faq-section {
             padding: 80px 0;
         }
 
-        .faq-category {
-            margin-bottom: 4rem;
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
         }
 
-        .category-title {
+            .section-title h2 {
+                color: var(--primary-blue);
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
+            }
+
+            .section-title p {
+                color: var(--text-color);
+                font-size: 1.1rem;
+                max-width: 700px;
+                margin: 0 auto;
+            }
+
+        /* FAQ Search Box */
+        .faq-search {
+            background: white;
+            border-radius: 12px;
+            padding: 2.5rem;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+            border: 2px solid var(--border-color);
+            margin-bottom: 3rem;
+        }
+
+        .search-title {
             color: var(--primary-blue);
-            font-size: 1.8rem;
-            margin-bottom: 2rem;
-            padding-bottom: 1rem;
-            border-bottom: 3px solid var(--primary-red);
+            font-size: 1.75rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .search-box {
             position: relative;
         }
 
-            .category-title:after {
-                content: '';
+            .search-box input {
+                width: 100%;
+                padding: 1rem 1rem 1rem 3rem;
+                border: 2px solid var(--border-color);
+                border-radius: 8px;
+                font-size: 1rem;
+                transition: all 0.3s ease;
+            }
+
+                .search-box input:focus {
+                    border-color: var(--primary-red);
+                    box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.1);
+                    outline: none;
+                }
+
+            .search-box i {
                 position: absolute;
-                bottom: -3px;
-                left: 0;
-                width: 100px;
-                height: 3px;
-                background: var(--accent-teal);
-            }
-
-        .faq-item {
-            margin-bottom: 1.5rem;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s ease;
-        }
-
-            .faq-item:hover {
-                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
-            }
-
-        .faq-question {
-            background: white;
-            padding: 1.5rem;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-left: 5px solid var(--primary-blue);
-            transition: all 0.3s ease;
-        }
-
-            .faq-question:hover {
-                background: rgba(26, 54, 93, 0.05);
-            }
-
-            .faq-question.active {
-                background: var(--primary-blue);
-                color: white;
-                border-left-color: var(--primary-red);
-            }
-
-        .question-text {
-            font-size: 1.1rem;
-            font-weight: 600;
-            flex: 1;
-            margin-right: 1rem;
-        }
-
-        .toggle-icon {
-            color: var(--primary-red);
-            font-size: 1.2rem;
-            transition: transform 0.3s ease;
-        }
-
-        .faq-question.active .toggle-icon {
-            color: white;
-            transform: rotate(45deg);
-        }
-
-        .faq-answer {
-            background: var(--light-gray);
-            padding: 0;
-            max-height: 0;
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-
-            .faq-answer.active {
-                padding: 1.5rem;
-                max-height: 1000px;
-            }
-
-            .faq-answer p:last-child {
-                margin-bottom: 0;
-            }
-
-        .answer-content {
-            color: var(--text-color);
-            line-height: 1.6;
-        }
-
-            .answer-content ul {
-                padding-left: 1.5rem;
-                margin: 1rem 0;
-            }
-
-            .answer-content li {
-                margin-bottom: 0.5rem;
+                left: 1rem;
+                top: 50%;
+                transform: translateY(-50%);
+                color: var(--primary-blue);
+                font-size: 1.2rem;
             }
 
         /* Process Timeline */
         .process-timeline {
             position: relative;
             padding: 2rem 0;
+            margin: 3rem 0;
         }
 
         .timeline-container {
@@ -379,6 +275,119 @@
             display: none;
         }
 
+        /* FAQ Categories */
+        .faq-category {
+            margin-bottom: 4rem;
+        }
+
+        .category-title {
+            color: var(--primary-blue);
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid var(--primary-red);
+            position: relative;
+        }
+
+            .category-title:after {
+                content: '';
+                position: absolute;
+                bottom: -3px;
+                left: 0;
+                width: 100px;
+                height: 3px;
+                background: var(--accent-teal);
+            }
+
+        /* FAQ Items */
+        .faq-item {
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+            .faq-item:hover {
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+                border-color: var(--primary-blue);
+            }
+
+        .faq-question {
+            background: white;
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-left: 5px solid var(--primary-blue);
+            transition: all 0.3s ease;
+        }
+
+            .faq-question:hover {
+                background: rgba(26, 54, 93, 0.03);
+            }
+
+            .faq-question.active {
+                background: var(--primary-blue);
+                color: white;
+                border-left-color: var(--primary-red);
+            }
+
+        .question-text {
+            font-size: 1.1rem;
+            font-weight: 600;
+            flex: 1;
+            margin-right: 1.5rem;
+        }
+
+        .toggle-icon {
+            color: var(--primary-red);
+            font-size: 1.3rem;
+            font-weight: 600;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-question.active .toggle-icon {
+            color: white;
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            background: var(--light-gray);
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+            .faq-answer.active {
+                padding: 1.5rem;
+                max-height: 1000px;
+            }
+
+            .faq-answer p:last-child {
+                margin-bottom: 0;
+            }
+
+        .answer-content {
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+            .answer-content ul {
+                padding-left: 1.5rem;
+                margin: 1rem 0;
+            }
+
+            .answer-content li {
+                margin-bottom: 0.5rem;
+            }
+
+            .answer-content strong {
+                color: var(--primary-blue);
+            }
+
         /* Document Checklist */
         .document-checklist {
             background: white;
@@ -386,7 +395,8 @@
             padding: 2rem;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
             border: 2px solid var(--border-color);
-            margin-top: 2rem;
+            margin-top: 1rem;
+            margin-bottom: 1.5rem;
         }
 
         .checklist-title {
@@ -398,7 +408,7 @@
 
         .checklist-item {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             padding: 1rem 0;
             border-bottom: 1px solid var(--border-color);
         }
@@ -411,52 +421,10 @@
             color: var(--accent-teal);
             margin-right: 1rem;
             font-size: 1.2rem;
+            margin-top: 0.2rem;
         }
 
-        /* Search Box */
-        .faq-search {
-            background: white;
-            border-radius: 12px;
-            padding: 2rem;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-            margin-bottom: 3rem;
-        }
-
-        .search-title {
-            color: var(--primary-blue);
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
-        }
-
-        .search-box {
-            position: relative;
-        }
-
-            .search-box input {
-                width: 100%;
-                padding: 1rem 1rem 1rem 3rem;
-                border: 2px solid var(--border-color);
-                border-radius: 8px;
-                font-size: 1rem;
-                transition: all 0.3s ease;
-            }
-
-                .search-box input:focus {
-                    border-color: var(--primary-red);
-                    box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.1);
-                    outline: none;
-                }
-
-            .search-box i {
-                position: absolute;
-                left: 1rem;
-                top: 50%;
-                transform: translateY(-50%);
-                color: var(--primary-blue);
-            }
-
-        /* Contact Help */
+        /* Contact Help Section */
         .contact-help {
             background: linear-gradient(135deg, var(--primary-blue) 0%, #152642 100%);
             border-radius: 16px;
@@ -488,15 +456,18 @@
             background: rgba(255, 255, 255, 0.1);
             border-radius: 10px;
             transition: all 0.3s ease;
+            text-decoration: none;
+            color: white;
         }
 
             .contact-method:hover {
                 background: rgba(255, 255, 255, 0.2);
                 transform: translateY(-3px);
+                color: white;
             }
 
             .contact-method i {
-                font-size: 1.5rem;
+                font-size: 1.8rem;
                 color: var(--accent-teal);
             }
 
@@ -552,21 +523,11 @@
                 transform: translateY(-2px);
             }
 
-        /* Logo Frame Mobile Adjustments */
+        /* Logo Mobile Adjustments */
         @media (max-width: 992px) {
-            .logo-frame {
-                width: 60px;
-                height: 60px;
-            }
-
-                .logo-frame::before {
-                    width: 54px;
-                    height: 54px;
-                }
-
             .logo-image {
-                width: 42px;
-                height: 42px;
+                width: 54px;
+                height: 54px;
             }
 
             .sitename {
@@ -575,6 +536,10 @@
 
             .page-title h1 {
                 font-size: 2.5rem;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
             }
 
             .btn-getstarted {
@@ -619,27 +584,13 @@
         }
 
         @media (max-width: 768px) {
-            .logo-frame {
+            .logo-image {
                 width: 50px;
                 height: 50px;
             }
 
-                .logo-frame::before {
-                    width: 44px;
-                    height: 44px;
-                }
-
-            .logo-image {
-                width: 35px;
-                height: 35px;
-            }
-
             .sitename {
                 font-size: 1.3rem;
-            }
-
-            .logo-container {
-                gap: 10px;
             }
 
             .page-title h1 {
@@ -647,11 +598,15 @@
             }
 
             .page-title {
-                padding: 100px 0 40px;
+                padding: 120px 0 40px;
             }
 
             .faq-section {
                 padding: 60px 0;
+            }
+
+            .faq-search {
+                padding: 2rem;
             }
 
             .contact-help {
@@ -673,22 +628,12 @@
 
         @media (max-width: 480px) {
             .logo-container {
-                gap: 8px;
+                gap: 5px;
             }
-
-            .logo-frame {
-                width: 45px;
-                height: 45px;
-            }
-
-                .logo-frame::before {
-                    width: 39px;
-                    height: 39px;
-                }
 
             .logo-image {
-                width: 32px;
-                height: 32px;
+                width: 45px;
+                height: 45px;
             }
 
             .sitename {
@@ -722,10 +667,7 @@
 
             <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
                 <div class="logo-container">
-                    <div class="logo-frame">
-                        <img src="assets/img/logo.png" alt="Lehumo La Edishela Logo" class="logo-image">
-                    </div>
-                    <h1 class="sitename">LEHUMO LA EDISHELA</h1>
+                    <img src="assets/img/logo.png" alt="Lehumo La Edishela Logo" class="logo-image">
                 </div>
             </a>
 
@@ -761,7 +703,7 @@
                             <li><a href="development-finance.html">Development Finance</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown">
+                    <li class="dropdown active">
                         <a href="#"><span>FAQ</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                         <ul>
                             <li><a href="faq-general.html">General Questions</a></li>
@@ -805,7 +747,7 @@
                 </nav>
             </div>
         </div><!-- End Page Title -->
-        <!-- Application Process Timeline -->
+        <!-- FAQ Section -->
         <section class="faq-section">
             <div class="container">
                 <div class="section-title text-center mb-5" data-aos="fade-up">
@@ -813,6 +755,7 @@
                     <p>Follow these steps to get your loan approved quickly and efficiently</p>
                 </div>
 
+                <!-- Application Process Timeline -->
                 <div class="process-timeline" data-aos="fade-up">
                     <div class="timeline-container">
                         <div class="timeline-phase">
@@ -868,7 +811,7 @@
                         <i class="bi bi-search"></i>
                         <input type="text" id="faqSearch" placeholder="Type your application question here...">
                     </div>
-                    <p class="text-muted mt-2 small">Can't find your answer? <a href="#contact-help">Contact our application team</a> for help.</p>
+                    <p class="text-muted mt-3">Can't find your answer? <a href="#contact-help">Contact our application team</a> for help.</p>
                 </div>
 
                 <!-- Documentation Questions -->
@@ -944,7 +887,7 @@
                         </div>
                         <div class="faq-answer" id="faq-answer-2">
                             <div class="answer-content">
-                                <p>Yes, you can start the application process even if you don't have all documents ready immediately. Here's how we can help:</p>
+                                <p><strong>Yes</strong>, you can start the application process even if you don't have all documents ready immediately. Here's how we can help:</p>
 
                                 <ul>
                                     <li><strong>Start with what you have:</strong> Begin the application with available documents</li>
@@ -1113,7 +1056,7 @@
                         </div>
                         <div class="faq-answer" id="faq-answer-6">
                             <div class="answer-content">
-                                <p>Yes, we believe in transparent communication throughout the application process. Here's how we keep you informed:</p>
+                                <p><strong>Yes</strong>, we believe in transparent communication throughout the application process. Here's how we keep you informed:</p>
 
                                 <p><strong>Communication Methods:</strong></p>
                                 <ul>
@@ -1406,9 +1349,7 @@
                 <div class="col-lg-4 col-md-6 footer-about">
                     <a href="index.html" class="d-flex align-items-center mb-3" style="text-decoration: none;">
                         <div class="logo-container">
-                            <div class="logo-frame">
-                                <img src="assets/img/logo.png" alt="Lehumo La Edishela Logo" class="logo-image">
-                            </div>
+                            <img src="assets/img/logo.png" alt="Lehumo La Edishela Logo" class="logo-image me-2">
                             <h1 class="sitename">LEHUMO LA EDISHELA</h1>
                         </div>
                     </a>
@@ -1462,7 +1403,7 @@
         </div>
 
         <div class="container copyright text-center mt-4 pt-4 border-top border-secondary">
-            <p class="mb-2">© 2023 Lehumo La Edishela Financial Services. All rights reserved.</p>
+            <p class="mb-2">© 2025 Lehumo La Edishela Financial Services. All rights reserved.</p>
             <div class="credits">
                 <a href="privacy.html" class="me-3">Privacy Policy</a> |
                 <a href="terms.html" class="mx-3">Terms of Service</a> |
@@ -1516,20 +1457,46 @@
 
         // FAQ Search Functionality
         document.getElementById('faqSearch')?.addEventListener('input', function () {
-            const searchTerm = this.value.toLowerCase();
+            const searchTerm = this.value.toLowerCase().trim();
             const faqItems = document.querySelectorAll('.faq-item');
 
-            faqItems.forEach(item => {
-                const question = item.querySelector('.question-text').textContent.toLowerCase();
-                const answer = item.querySelector('.answer-content').textContent.toLowerCase();
-
-                if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+            if (searchTerm.length === 0) {
+                // Show all items when search is empty
+                faqItems.forEach(item => {
                     item.style.display = 'block';
+                    // Remove highlights
+                    const question = item.querySelector('.question-text');
+                    const answer = item.querySelector('.answer-content');
+                    if (question) question.innerHTML = question.textContent;
+                    if (answer) answer.innerHTML = answer.textContent;
+                });
+
+                // Show all categories
+                document.querySelectorAll('.faq-category').forEach(category => {
+                    category.style.display = 'block';
+                });
+
+                return;
+            }
+
+            let hasVisibleItems = false;
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.question-text');
+                const answer = item.querySelector('.answer-content');
+
+                if (!question || !answer) return;
+
+                const questionText = question.textContent.toLowerCase();
+                const answerText = answer.textContent.toLowerCase();
+
+                if (questionText.includes(searchTerm) || answerText.includes(searchTerm)) {
+                    item.style.display = 'block';
+                    hasVisibleItems = true;
 
                     // Highlight matching text
-                    if (searchTerm.length > 2) {
-                        highlightText(item, searchTerm);
-                    }
+                    highlightText(question, searchTerm);
+                    highlightText(answer, searchTerm);
                 } else {
                     item.style.display = 'none';
                 }
@@ -1548,24 +1515,13 @@
 
         // Text highlighting function
         function highlightText(element, searchTerm) {
-            const question = element.querySelector('.question-text');
-            const answer = element.querySelector('.answer-content');
+            if (!element || searchTerm.length < 2) return;
 
-            // Remove previous highlights
-            question.innerHTML = question.textContent;
-            answer.innerHTML = answer.textContent;
+            const originalText = element.textContent;
+            const regex = new RegExp(`(${searchTerm})`, 'gi');
+            const highlightedText = originalText.replace(regex, '<mark class="bg-warning">$1</mark>');
 
-            // Highlight in question
-            if (question.textContent.toLowerCase().includes(searchTerm)) {
-                const regex = new RegExp(`(${searchTerm})`, 'gi');
-                question.innerHTML = question.textContent.replace(regex, '<mark class="bg-warning">$1</mark>');
-            }
-
-            // Highlight in answer
-            if (answer.textContent.toLowerCase().includes(searchTerm)) {
-                const regex = new RegExp(`(${searchTerm})`, 'gi');
-                answer.innerHTML = answer.textContent.replace(regex, '<mark class="bg-warning">$1</mark>');
-            }
+            element.innerHTML = highlightedText;
         }
 
         // Open first FAQ by default
@@ -1573,6 +1529,16 @@
             const firstQuestion = document.querySelector('.faq-question');
             if (firstQuestion) {
                 firstQuestion.click();
+            }
+
+            // Initialize AOS animations
+            if (typeof AOS !== 'undefined') {
+                AOS.init({
+                    duration: 800,
+                    easing: 'ease-in-out',
+                    once: true,
+                    mirror: false
+                });
             }
         });
 
@@ -1610,10 +1576,30 @@
         if (whatsappBtn) {
             whatsappBtn.addEventListener('click', function () {
                 console.log('WhatsApp button clicked from Application FAQ page');
+                // You can add analytics tracking here
+            });
+        }
+
+        // Scroll to top functionality
+        const scrollTop = document.getElementById('scroll-top');
+        if (scrollTop) {
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > 100) {
+                    scrollTop.style.display = 'flex';
+                } else {
+                    scrollTop.style.display = 'none';
+                }
+            });
+
+            scrollTop.addEventListener('click', function (e) {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
             });
         }
     </script>
 
 </body>
-
 </html>
