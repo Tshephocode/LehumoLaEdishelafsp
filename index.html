@@ -82,6 +82,7 @@
             gap: 0px;
         }
 
+
         .logo-image {
             width: 60px;
             height: 120px;
@@ -96,7 +97,6 @@
             background-color: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(10px);
             box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-            height: 80px;
         }
 
         .sitename {
@@ -129,227 +129,6 @@
                 color: white;
             }
 
-        /* Mobile Header Adjustments */
-        .header-container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            width: 100%;
-        }
-
-        /* Mobile Navigation Toggle */
-        .mobile-nav-toggle {
-            display: none;
-        }
-
-        /* ============================== */
-        /* MOBILE SIDE MENU - LAMNA STYLE */
-        /* ============================== */
-        .mobile-menu-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 9998;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-            .mobile-menu-overlay.active {
-                opacity: 1;
-            }
-
-        .mobile-side-menu {
-            position: fixed;
-            top: 0;
-            right: -100%;
-            width: 85%;
-            max-width: 400px;
-            height: 100%;
-            background: white;
-            z-index: 9999;
-            transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            overflow-y: auto;
-            box-shadow: -5px 0 25px rgba(0, 0, 0, 0.15);
-        }
-
-            .mobile-side-menu.active {
-                right: 0;
-            }
-
-        .mobile-side-header {
-            background: var(--primary-blue);
-            padding: 1.5rem;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .mobile-side-logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .mobile-side-logo-img {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-        }
-
-        .mobile-close-btn {
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
-            padding: 0.25rem;
-        }
-
-        .mobile-menu-content {
-            padding: 1.5rem 0;
-        }
-
-        .mobile-menu-item {
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .mobile-menu-link {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 1rem 1.5rem;
-            color: var(--primary-blue);
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-            .mobile-menu-link:hover,
-            .mobile-menu-link.active {
-                color: var(--primary-red);
-                background: rgba(230, 57, 70, 0.05);
-            }
-
-            .mobile-menu-link.has-submenu:after {
-                content: '\f078';
-                font-family: 'Font Awesome 6 Free';
-                font-weight: 900;
-                font-size: 0.8rem;
-                color: var(--text-color);
-                transition: transform 0.3s ease;
-            }
-
-            .mobile-menu-link.has-submenu.open:after {
-                transform: rotate(180deg);
-                color: var(--primary-red);
-            }
-
-        .mobile-submenu {
-            display: none;
-            background: var(--light-gray);
-            padding: 0;
-            animation: fadeIn 0.3s ease;
-        }
-
-            .mobile-submenu.active {
-                display: block;
-            }
-
-        .mobile-submenu-link {
-            display: block;
-            padding: 0.85rem 2.5rem;
-            color: var(--text-color);
-            text-decoration: none;
-            border-left: 3px solid transparent;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-            .mobile-submenu-link:hover,
-            .mobile-submenu-link.active {
-                background: white;
-                color: var(--primary-red);
-                border-left-color: var(--primary-red);
-                padding-left: 3rem;
-            }
-
-            .mobile-submenu-link:before {
-                content: '•';
-                position: absolute;
-                left: 1.75rem;
-                color: var(--primary-red);
-            }
-
-        .mobile-cta-section {
-            padding: 1.5rem;
-            background: linear-gradient(135deg, var(--primary-blue) 0%, #152642 100%);
-            color: white;
-            margin-top: 1rem;
-            border-radius: 8px;
-            text-align: center;
-        }
-
-        .mobile-phone-btn {
-            display: block;
-            background: var(--primary-red);
-            color: white;
-            text-decoration: none;
-            padding: 1rem;
-            border-radius: 6px;
-            font-weight: 600;
-            margin-top: 1rem;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-            .mobile-phone-btn:hover {
-                background: #c53030;
-                transform: translateY(-2px);
-            }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-10px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* MOBILE APPLY NOW BUTTON AT TOP */
-        .mobile-apply-top {
-            display: none;
-            position: fixed;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 1001;
-            background: linear-gradient(135deg, var(--primary-red) 0%, #c53030 100%);
-            color: white;
-            padding: 0.6rem 1.2rem;
-            border-radius: 50px;
-            font-weight: 600;
-            text-decoration: none;
-            box-shadow: 0 4px 15px rgba(230, 57, 70, 0.3);
-            transition: all 0.3s ease;
-            white-space: nowrap;
-        }
-
-            .mobile-apply-top:hover {
-                transform: translateX(-50%) translateY(-2px);
-                box-shadow: 0 6px 20px rgba(230, 57, 70, 0.4);
-                color: white;
-            }
-
         /* Hero Section */
         .hero-section {
             background: linear-gradient(rgba(26, 54, 93, 0.85), rgba(26, 54, 93, 0.9)), url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
@@ -360,10 +139,6 @@
             padding: 180px 0 100px;
             position: relative;
         }
-
-            .hero-section.mobile-adjusted {
-                padding-top: 200px;
-            }
 
         .hero-title {
             color: white;
@@ -605,43 +380,13 @@
             padding: 100px 0;
         }
 
-        /* =========================== */
-        /* RESPONSIVE DESIGN - MOBILE */
-        /* =========================== */
-        @media (max-width: 1199px) {
-            .navmenu {
-                display: none !important;
-            }
-
-            .btn-getstarted {
-                display: none !important;
-            }
-
-            .mobile-nav-toggle {
-                display: block !important;
-                font-size: 1.5rem;
-                color: var(--primary-blue);
-                cursor: pointer;
-                padding: 0.5rem;
-                z-index: 1002;
-                background: none;
-                border: none;
-            }
-
-            .mobile-apply-top {
-                display: block;
-            }
-
-            .mobile-menu-overlay {
-                display: block;
-            }
-
-            .hero-section {
-                padding-top: 200px;
-            }
-        }
-
+        /* Logo Frame Mobile Adjustments */
         @media (max-width: 992px) {
+            .logo-frame {
+                width: 54px;
+                height: 54px;
+            }
+
             .logo-image {
                 width: 54px;
                 height: 54px;
@@ -659,6 +404,11 @@
                 font-size: 1.1rem;
             }
 
+            .btn-getstarted {
+                padding: 0.6rem 1.2rem;
+                font-size: 0.9rem;
+            }
+
             .whatsapp-float {
                 width: 55px;
                 height: 55px;
@@ -670,19 +420,14 @@
             .quick-quote {
                 padding: 2rem;
             }
-
-            .header {
-                height: 70px;
-            }
-
-            .mobile-apply-top {
-                top: 15px;
-                padding: 0.5rem 1rem;
-                font-size: 0.9rem;
-            }
         }
 
         @media (max-width: 768px) {
+            .logo-frame {
+                width: 50px;
+                height: 50px;
+            }
+
             .logo-image {
                 width: 44px;
                 height: 44px;
@@ -690,6 +435,10 @@
 
             .sitename {
                 font-size: 1.3rem;
+            }
+
+            .logo-container {
+                gap: 2px;
             }
 
             .hero-title {
@@ -711,19 +460,18 @@
                 bottom: 20px;
                 right: 20px;
             }
-
-            .header {
-                height: 65px;
-            }
-
-            .mobile-apply-top {
-                top: 15px;
-                padding: 0.5rem 1rem;
-                font-size: 0.85rem;
-            }
         }
 
         @media (max-width: 480px) {
+            .logo-container {
+                gap: 8px;
+            }
+
+            .logo-frame {
+                width: 45px;
+                height: 45px;
+            }
+
             .logo-image {
                 width: 32px;
                 height: 32px;
@@ -740,28 +488,6 @@
             .form-title {
                 font-size: 1.5rem;
             }
-
-            .header {
-                height: 60px;
-            }
-
-            .mobile-side-menu {
-                width: 90%;
-            }
-
-            .mobile-apply-top {
-                top: 12px;
-                padding: 0.4rem 0.8rem;
-                font-size: 0.8rem;
-                box-shadow: 0 3px 10px rgba(230, 57, 70, 0.3);
-            }
-        }
-
-        @media (max-width: 360px) {
-            .mobile-apply-top {
-                font-size: 0.75rem;
-                padding: 0.35rem 0.7rem;
-            }
         }
     </style>
 </head>
@@ -773,141 +499,6 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- Mobile Apply Now Button at Top -->
-    <a href="apply.html" class="mobile-apply-top" id="mobile-apply-top">
-        <i class="bi bi-arrow-right-circle me-1"></i>APPLY NOW
-    </a>
-
-    <!-- Mobile Menu Overlay -->
-    <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
-
-    <!-- Mobile Side Menu -->
-    <div class="mobile-side-menu" id="mobile-side-menu">
-        <div class="mobile-side-header">
-            <div class="mobile-side-logo">
-                <img src="assets/img/logo.png" alt="Lehumo La Edishela" class="mobile-side-logo-img">
-                <h3 style="margin: 0; color: white;">Menu</h3>
-            </div>
-            <button class="mobile-close-btn" id="mobile-close-btn">
-                <i class="bi bi-x-lg"></i>
-            </button>
-        </div>
-
-        <div class="mobile-menu-content">
-            <!-- Mobile Apply Now Button -->
-            <div style="padding: 1.5rem;">
-                <a href="apply.html" class="btn-primary w-100 text-center" style="display: block; text-decoration: none;">
-                    <i class="bi bi-arrow-right-circle me-2"></i>APPLY NOW
-                </a>
-            </div>
-
-            <!-- Main Navigation Items -->
-            <div class="mobile-menu-item">
-                <a href="index.html" class="mobile-menu-link active">
-                    <span>Home</span>
-                    <i class="bi bi-chevron-right"></i>
-                </a>
-            </div>
-
-            <div class="mobile-menu-item">
-                <a href="about.html" class="mobile-menu-link">
-                    <span>About Us</span>
-                    <i class="bi bi-chevron-right"></i>
-                </a>
-            </div>
-
-            <!-- Asset Loans Dropdown -->
-            <div class="mobile-menu-item">
-                <a href="#" class="mobile-menu-link has-submenu" data-submenu="asset-loans">
-                    <span>Asset Loans</span>
-                    <i class="bi bi-chevron-down"></i>
-                </a>
-                <div class="mobile-submenu" id="asset-loans">
-                    <a href="vehicle-loans.html" class="mobile-submenu-link">Vehicle Loans</a>
-                    <a href="luxury-loans.html" class="mobile-submenu-link">Luxury Assets</a>
-                    <a href="propertyloans.html" class="mobile-submenu-link">Property Loans</a>
-                    <a href="equipmentfinance.html" class="mobile-submenu-link">Equipment Finance</a>
-                    <a href="artcollectibles.html" class="mobile-submenu-link">Art & Collectibles</a>
-                </div>
-            </div>
-
-            <!-- Commercial Fleet Dropdown -->
-            <div class="mobile-menu-item">
-                <a href="#" class="mobile-menu-link has-submenu" data-submenu="commercial-fleet">
-                    <span>Commercial Fleet</span>
-                    <i class="bi bi-chevron-down"></i>
-                </a>
-                <div class="mobile-submenu" id="commercial-fleet">
-                    <a href="fleetfinancing.html" class="mobile-submenu-link">Fleet Financing</a>
-                    <a href="vehiclesourcing.html" class="mobile-submenu-link">Vehicle Sourcing</a>
-                    <a href="truckloans.html" class="mobile-submenu-link">Truck & Trailer Loans</a>
-                    <a href="maintenance.html" class="mobile-submenu-link">Maintenance Packages</a>
-                </div>
-            </div>
-
-            <!-- Bridging Finance Dropdown -->
-            <div class="mobile-menu-item">
-                <a href="#" class="mobile-menu-link has-submenu" data-submenu="bridging-finance">
-                    <span>Bridging Finance</span>
-                    <i class="bi bi-chevron-down"></i>
-                </a>
-                <div class="mobile-submenu" id="bridging-finance">
-                    <a href="property-bridging.html" class="mobile-submenu-link">Property Bridging</a>
-                    <a href="auction-finance.html" class="mobile-submenu-link">Auction Finance</a>
-                    <a href="renovation-loans.html" class="mobile-submenu-link">Renovation Finance</a>
-                    <a href="development-finance.html" class="mobile-submenu-link">Development Finance</a>
-                </div>
-            </div>
-
-            <!-- FAQ Dropdown -->
-            <div class="mobile-menu-item">
-                <a href="#" class="mobile-menu-link has-submenu" data-submenu="faq">
-                    <span>FAQ</span>
-                    <i class="bi bi-chevron-down"></i>
-                </a>
-                <div class="mobile-submenu" id="faq">
-                    <a href="faq-general.html" class="mobile-submenu-link">General Questions</a>
-                    <a href="faq-application.html" class="mobile-submenu-link">Application Process</a>
-                    <a href="faq-interest-rates.html" class="mobile-submenu-link">Interest & Rates</a>
-                    <a href="faq-asset-requirements.html" class="mobile-submenu-link">Asset Requirements</a>
-                </div>
-            </div>
-
-            <!-- How To Apply Dropdown -->
-            <div class="mobile-menu-item">
-                <a href="#" class="mobile-menu-link has-submenu" data-submenu="how-to-apply">
-                    <span>How To Apply</span>
-                    <i class="bi bi-chevron-down"></i>
-                </a>
-                <div class="mobile-submenu" id="how-to-apply">
-                    <a href="apply-requirements.html" class="mobile-submenu-link">Requirements</a>
-                    <a href="apply-documentation.html" class="mobile-submenu-link">Documentation</a>
-                    <a href="apply-process.html" class="mobile-submenu-link">Process Steps</a>
-                    <a href="apply-timeline.html" class="mobile-submenu-link">Timeline</a>
-                </div>
-            </div>
-
-            <div class="mobile-menu-item">
-                <a href="contact.html" class="mobile-menu-link">
-                    <span>Contact</span>
-                    <i class="bi bi-chevron-right"></i>
-                </a>
-            </div>
-
-            <!-- Contact CTA Section -->
-            <div class="mobile-cta-section">
-                <h4 style="margin-bottom: 0.5rem;">Need Help?</h4>
-                <p style="margin-bottom: 1rem; opacity: 0.9;">Talk to our team now</p>
-                <a href="tel:0861000534" class="mobile-phone-btn">
-                    <i class="bi bi-telephone me-2"></i>CALL 0861 000 534
-                </a>
-                <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
-                    <i class="bi bi-clock me-1"></i> Mon-Fri: 8am-6pm
-                </p>
-            </div>
-        </div>
-    </div>
-
     <header id="header" class="header d-flex align-items-center fixed-top">
         <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
@@ -918,11 +509,6 @@
                     </div>
                 </div>
             </a>
-
-            <!-- Mobile Menu Toggle -->
-            <button class="mobile-nav-toggle" id="mobile-nav-toggle">
-                <i class="bi bi-list"></i>
-            </button>
 
             <nav id="navmenu" class="navmenu">
                 <ul>
@@ -976,6 +562,7 @@
                     </li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
 
             <a class="btn-getstarted" href="apply.html">Apply Now</a>
@@ -1557,130 +1144,6 @@
             }, 2000);
         });
 
-        // ============================================
-        // MOBILE SIDE MENU FUNCTIONALITY - LAMNA STYLE
-        // ============================================
-        const mobileMenuToggle = document.getElementById('mobile-nav-toggle');
-        const mobileCloseBtn = document.getElementById('mobile-close-btn');
-        const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
-        const mobileSideMenu = document.getElementById('mobile-side-menu');
-        let isMobileMenuOpen = false;
-
-        // Open mobile menu
-        mobileMenuToggle.addEventListener('click', function () {
-            openMobileMenu();
-        });
-
-        // Close mobile menu with close button
-        mobileCloseBtn.addEventListener('click', function () {
-            closeMobileMenu();
-        });
-
-        // Close mobile menu with overlay click
-        mobileMenuOverlay.addEventListener('click', function () {
-            closeMobileMenu();
-        });
-
-        // Close mobile menu with escape key
-        document.addEventListener('keydown', function (e) {
-            if (e.key === 'Escape' && isMobileMenuOpen) {
-                closeMobileMenu();
-            }
-        });
-
-        // Submenu functionality
-        document.querySelectorAll('.mobile-menu-link.has-submenu').forEach(link => {
-            link.addEventListener('click', function (e) {
-                e.preventDefault();
-                e.stopPropagation();
-
-                const submenuId = this.getAttribute('data-submenu');
-                const submenu = document.getElementById(submenuId);
-                const chevronIcon = this.querySelector('.bi-chevron-down');
-
-                // Close all other submenus
-                document.querySelectorAll('.mobile-submenu').forEach(otherSubmenu => {
-                    if (otherSubmenu.id !== submenuId) {
-                        otherSubmenu.classList.remove('active');
-                        otherSubmenu.previousElementSibling.classList.remove('open');
-                    }
-                });
-
-                // Toggle current submenu
-                if (submenu.classList.contains('active')) {
-                    submenu.classList.remove('active');
-                    this.classList.remove('open');
-                } else {
-                    submenu.classList.add('active');
-                    this.classList.add('open');
-                }
-            });
-        });
-
-        // Close submenus when clicking direct links
-        document.querySelectorAll('.mobile-menu-link:not(.has-submenu), .mobile-submenu-link').forEach(link => {
-            link.addEventListener('click', function () {
-                // Close the mobile menu when clicking a direct link
-                if (!this.classList.contains('has-submenu')) {
-                    closeMobileMenu();
-                }
-            });
-        });
-
-        // Functions to open/close mobile menu
-        function openMobileMenu() {
-            isMobileMenuOpen = true;
-            mobileSideMenu.classList.add('active');
-            mobileMenuOverlay.classList.add('active');
-            document.body.style.overflow = 'hidden';
-            document.documentElement.style.overflow = 'hidden';
-        }
-
-        function closeMobileMenu() {
-            isMobileMenuOpen = false;
-            mobileSideMenu.classList.remove('active');
-            mobileMenuOverlay.classList.remove('active');
-            document.body.style.overflow = '';
-            document.documentElement.style.overflow = '';
-
-            // Close all submenus
-            document.querySelectorAll('.mobile-submenu').forEach(submenu => {
-                submenu.classList.remove('active');
-            });
-
-            // Remove open class from all menu links
-            document.querySelectorAll('.mobile-menu-link').forEach(link => {
-                link.classList.remove('open');
-            });
-        }
-
-        // Mobile Apply Now button visibility on scroll
-        const mobileApplyTop = document.getElementById('mobile-apply-top');
-        let lastScrollTop = 0;
-
-        window.addEventListener('scroll', function () {
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-            if (scrollTop > lastScrollTop && scrollTop > 100) {
-                // Scrolling down
-                mobileApplyTop.style.opacity = '0.9';
-                mobileApplyTop.style.transform = 'translateX(-50%) scale(0.95)';
-            } else {
-                // Scrolling up
-                mobileApplyTop.style.opacity = '1';
-                mobileApplyTop.style.transform = 'translateX(-50%) scale(1)';
-            }
-
-            // Show/hide based on scroll position
-            if (scrollTop > 50) {
-                mobileApplyTop.style.display = 'block';
-            } else {
-                mobileApplyTop.style.display = 'block'; // Always show on mobile
-            }
-
-            lastScrollTop = scrollTop;
-        });
-
         // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -1734,14 +1197,6 @@
                 }
             }
             e.target.value = value;
-        });
-
-        // AOS Initialization
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true,
-            mirror: false
         });
     </script>
 
