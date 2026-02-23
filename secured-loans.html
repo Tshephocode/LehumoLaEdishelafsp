@@ -4,9 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Truck & Trailer Loans | Lehumo La Edishela - Commercial Fleet Financing</title>
-    <meta name="description" content="Flexible financing solutions for heavy-duty trucks, trailers, and commercial transport equipment. Competitive rates and customized repayment terms. FSCA registered and NCR approved.">
-    <meta name="keywords" content="truck loans, trailer financing, commercial vehicle loans, heavy equipment financing, South Africa truck finance">
+    <title>Secured Loans | Lehumo La Edishela - Asset-Backed Financing</title>
+    <meta name="description" content="Get cash against your assets with our secured loans. Use vehicles, property, luxury items, or equipment as collateral. Competitive rates, fast approvals, FSCA registered.">
+    <meta name="keywords" content="secured loans, asset-backed loans, collateral loans, vehicle loans, property loans, luxury asset loans, South Africa">
 
     <!-- Favicons -->
     <link href="assets/img/favicon.png" rel="icon">
@@ -40,9 +40,8 @@
             --dark-gray: #212529;
             --text-color: #333333;
             --border-color: #E0E0E0;
-            --fleet-blue: #1E4A6B;
-            --fleet-orange: #F39C12;
-            --truck-brown: #8B5A2B;
+            --secured-green: #27AE60;
+            --secured-gold: #F39C12;
         }
 
         /* WhatsApp Button */
@@ -359,7 +358,7 @@
 
         /* Page Title */
         .page-title {
-            background: linear-gradient(rgba(26, 54, 93, 0.85), rgba(26, 54, 93, 0.9)), url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+            background: linear-gradient(rgba(26, 54, 93, 0.85), rgba(26, 54, 93, 0.9)), url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
             background-size: cover;
             background-position: center;
             color: white;
@@ -406,54 +405,118 @@
                 transform: translateY(-2px);
             }
 
+        /* Loan Badge */
+        .loan-badge {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(39, 174, 96, 0.15);
+            color: var(--secured-green);
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+            font-weight: 600;
+            margin: 0.5rem 0;
+            border: 1px solid rgba(39, 174, 96, 0.3);
+        }
+
+            .loan-badge i {
+                margin-right: 0.5rem;
+            }
+
         /* Loan Cards */
         .loan-card {
             background: white;
-            border-radius: 12px;
+            border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
             transition: all 0.3s ease;
             height: 100%;
             border: 1px solid var(--border-color);
             margin-bottom: 2rem;
+            position: relative;
         }
 
             .loan-card:hover {
-                transform: translateY(-5px);
-                box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-                border-color: var(--primary-red);
+                transform: translateY(-10px);
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+                border-color: var(--secured-green);
             }
+
+        .loan-badge-popular {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--secured-green);
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            z-index: 2;
+            box-shadow: 0 4px 10px rgba(39, 174, 96, 0.3);
+        }
 
         .loan-image {
             height: 200px;
             overflow: hidden;
+            position: relative;
         }
 
             .loan-image img {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
-                transition: transform 0.3s ease;
+                transition: transform 0.5s ease;
             }
 
         .loan-card:hover .loan-image img {
-            transform: scale(1.05);
+            transform: scale(1.1);
         }
 
         .loan-content {
             padding: 2rem;
         }
 
-        .loan-badge {
-            display: inline-block;
-            background: var(--primary-red);
+        .loan-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--secured-green) 0%, var(--primary-blue) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
             color: white;
-            padding: 0.25rem 0.75rem;
-            border-radius: 4px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            box-shadow: 0 8px 15px rgba(39, 174, 96, 0.2);
         }
+
+        .loan-title {
+            color: var(--primary-blue);
+            font-weight: 700;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--secured-green);
+            padding-left: 1rem;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+        }
+
+            .feature-list li {
+                padding: 0.5rem 0;
+                border-bottom: 1px dashed var(--border-color);
+                display: flex;
+                align-items: center;
+            }
+
+                .feature-list li i {
+                    color: var(--secured-green);
+                    margin-right: 0.75rem;
+                    font-size: 1.1rem;
+                }
 
         /* Feature Cards */
         .feature-card {
@@ -495,7 +558,7 @@
         .step-number {
             width: 50px;
             height: 50px;
-            background: linear-gradient(135deg, var(--fleet-orange) 0%, #e67e22 100%);
+            background: linear-gradient(135deg, var(--secured-green) 0%, #1e8449 100%);
             color: white;
             border-radius: 50%;
             display: flex;
@@ -504,7 +567,134 @@
             font-weight: 700;
             font-size: 1.2rem;
             margin: 0 auto 1rem;
-            box-shadow: 0 5px 15px rgba(243, 156, 18, 0.3);
+            box-shadow: 0 5px 15px rgba(39, 174, 96, 0.3);
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            margin: 3rem 0;
+            border: 1px solid var(--border-color);
+        }
+
+        .table-header {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secured-green) 100%);
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        .table-row {
+            display: flex;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+            .table-row:last-child {
+                border-bottom: none;
+            }
+
+        .table-cell {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            align-items: center;
+        }
+
+            .table-cell:first-child {
+                flex: 0 0 250px;
+                font-weight: 600;
+                background: rgba(26, 54, 93, 0.05);
+            }
+
+        .check-mark {
+            color: var(--secured-green);
+            font-size: 1.5rem;
+            margin-right: 10px;
+        }
+
+        .cross-mark {
+            color: var(--primary-red);
+            font-size: 1.5rem;
+            margin-right: 10px;
+        }
+
+        /* Documents Section */
+        .documents-section {
+            background: var(--light-gray);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+            border: 1px solid var(--border-color);
+        }
+
+        .document-item {
+            display: flex;
+            align-items: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+            .document-item:last-child {
+                border-bottom: none;
+            }
+
+        .document-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--secured-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1.5rem;
+            flex-shrink: 0;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        /* Asset Types Grid */
+        .asset-types {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .asset-item {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+            .asset-item:hover {
+                border-color: var(--secured-green);
+                transform: translateY(-5px);
+                box-shadow: 0 10px 20px rgba(39, 174, 96, 0.1);
+            }
+
+        .asset-icon {
+            font-size: 2rem;
+            color: var(--secured-green);
+            margin-bottom: 1rem;
+        }
+
+        .asset-item h5 {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+            color: var(--primary-blue);
+        }
+
+        .asset-item p {
+            font-size: 0.85rem;
+            color: #666;
         }
 
         /* Calculator Section */
@@ -518,159 +708,37 @@
         }
 
         .calculator-result {
-            background: var(--light-gray);
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secured-green) 100%);
             border-radius: 8px;
             padding: 1.5rem;
             margin-top: 1.5rem;
-            border-left: 4px solid var(--fleet-orange);
+            color: white;
             display: none;
         }
 
-        /* Truck Badge */
-        .truck-badge {
-            display: inline-flex;
-            align-items: center;
-            background: rgba(243, 156, 18, 0.15);
-            color: var(--fleet-orange);
-            padding: 0.5rem 1rem;
-            border-radius: 30px;
-            font-weight: 600;
-            margin: 0.5rem 0;
-            border: 1px solid rgba(243, 156, 18, 0.3);
-        }
-
-            .truck-badge i {
-                margin-right: 0.5rem;
-            }
-
-        /* Vehicle Types */
-        .vehicle-types {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin: 2rem 0;
-        }
-
-        .type-item {
-            background: white;
-            border-radius: 8px;
-            padding: 1.5rem;
-            text-align: center;
-            border: 1px solid var(--border-color);
-            transition: all 0.3s ease;
-        }
-
-            .type-item:hover {
-                border-color: var(--fleet-orange);
-                transform: translateY(-3px);
-                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-            }
-
-        .type-icon {
-            font-size: 2rem;
-            color: var(--fleet-blue);
-            margin-bottom: 0.5rem;
-        }
-
-        .type-item h6 {
-            font-weight: 600;
-            margin-bottom: 0.25rem;
-            color: var(--fleet-blue);
-        }
-
-        .type-item p {
-            font-size: 0.85rem;
-            color: #666;
-        }
-
-        /* Page Indicator */
-        .page-indicator {
-            display: flex;
-            justify-content: center;
-            margin: 2rem 0 3rem;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .indicator-item {
-            padding: 0.75rem 1.5rem;
-            background: white;
-            border-radius: 30px;
-            font-weight: 600;
-            text-decoration: none;
-            color: var(--text-color);
-            border: 2px solid var(--border-color);
-            transition: all 0.3s ease;
-        }
-
-            .indicator-item:hover, .indicator-item.active {
-                background: var(--fleet-blue);
-                color: white;
-                border-color: var(--fleet-blue);
-            }
-
-        /* CTA Banner */
-        .cta-banner {
-            background: linear-gradient(135deg, var(--fleet-blue) 0%, var(--primary-blue) 100%);
-            border-radius: 16px;
-            padding: 3rem;
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secured-green) 100%);
             color: white;
+            padding: 100px 0;
             text-align: center;
-            position: relative;
-            overflow: hidden;
-            margin-top: 3rem;
-            border: 1px solid var(--fleet-orange);
-        }
-
-        .cta-content h3 {
-            color: white;
-            font-size: 2rem;
-            margin-bottom: 1rem;
+            border-top: 1px solid var(--secured-green);
         }
 
         .btn-outline-light {
             color: white;
             border-color: white;
+            padding: 0.875rem 2rem;
+            font-weight: 600;
+            border-radius: 6px;
+            transition: all 0.3s ease;
         }
 
             .btn-outline-light:hover {
                 background-color: white;
-                color: var(--fleet-blue);
-            }
-
-        /* Requirements Grid */
-        .requirements-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-
-        .requirement-item {
-            background: white;
-            border-radius: 8px;
-            padding: 1.5rem;
-            border-left: 4px solid var(--fleet-orange);
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-        }
-
-        /* Interest Rate Slider */
-        .slider-container {
-            margin: 1rem 0;
-        }
-
-        .slider-label {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 0.5rem;
-        }
-
-        .form-range::-webkit-slider-thumb {
-            background-color: var(--fleet-orange);
-        }
-
-            .form-range::-webkit-slider-thumb:active {
-                background-color: #e67e22;
+                color: var(--primary-blue);
+                border-color: white;
+                transform: translateY(-2px);
             }
 
         /* ============================================= */
@@ -747,8 +815,17 @@
                 margin-bottom: 1.5rem;
             }
 
-            .vehicle-types {
+            .asset-types {
                 grid-template-columns: repeat(2, 1fr);
+            }
+
+            .table-row {
+                flex-direction: column;
+            }
+
+            .table-cell:first-child {
+                flex: 1;
+                border-bottom: 1px solid var(--border-color);
             }
         }
 
@@ -770,12 +847,8 @@
                 padding: 120px 0 60px;
             }
 
-            .cta-banner {
-                padding: 2rem;
-            }
-
-            .cta-content h3 {
-                font-size: 1.75rem;
+            .cta-section {
+                padding: 60px 0;
             }
 
             .whatsapp-float {
@@ -794,7 +867,7 @@
                 right: 15px;
             }
 
-            .vehicle-types {
+            .asset-types {
                 grid-template-columns: 1fr;
             }
         }
@@ -833,18 +906,18 @@
                 right: 10px;
             }
 
-            .requirements-grid {
-                grid-template-columns: 1fr;
+            .loan-content {
+                padding: 1.5rem;
             }
 
-            .page-indicator {
+            .document-item {
                 flex-direction: column;
-                align-items: center;
+                text-align: center;
             }
 
-            .indicator-item {
-                width: 100%;
-                text-align: center;
+            .document-icon {
+                margin-right: 0;
+                margin-bottom: 0.5rem;
             }
         }
 
@@ -868,10 +941,10 @@
     </style>
 </head>
 
-<body class="truck-loans-page">
+<body class="secured-loans-page">
 
     <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/27722927336?text=Hello%20Lehumo%20La%20Edishela,%20I%20would%20like%20to%20inquire%20about%20Truck%20%26%20Trailer%20Loans" class="whatsapp-float" target="_blank" aria-label="Chat with us on WhatsApp">
+    <a href="https://wa.me/27722927336?text=Hello%20Lehumo%20La%20Edishela,%20I%20would%20like%20to%20inquire%20about%20secured%20loans" class="whatsapp-float" target="_blank" aria-label="Chat with us on WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -896,13 +969,14 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
 
-                <!-- Asset Loans Dropdown -->
+                <!-- Asset Loans Dropdown (Secured Loans) - Active -->
                 <li>
                     <button class="mobile-dropdown-toggle" data-target="asset-dropdown">
                         <span>Asset Loans</span>
                         <i class="bi bi-chevron-down"></i>
                     </button>
                     <ul class="mobile-dropdown-menu" id="asset-dropdown">
+                        <li><a href="secured-loans.html" class="active">Secured Loans</a></li>
                         <li><a href="vehicle-loans.html">Vehicle Loans</a></li>
                         <li><a href="luxury-loans.html">Luxury Assets</a></li>
                         <li><a href="property-loans.html">Property Loans</a></li>
@@ -910,6 +984,9 @@
                         <li><a href="art-collectibles.html">Art & Collectibles</a></li>
                     </ul>
                 </li>
+
+                <!-- Unsecured Loans -->
+                <li><a href="unsecured-loans.html">Unsecured Loans</a></li>
 
                 <!-- Insurance Services -->
                 <li>
@@ -934,7 +1011,7 @@
                     </button>
                     <ul class="mobile-dropdown-menu" id="fleet-dropdown">
                         <li><a href="vehicle-sourcing.html">Vehicle Sourcing</a></li>
-                        <li><a href="truck-loans.html" class="active">Truck & Trailer Loans</a></li>
+                        <li><a href="truck-trailer-loans.html">Truck & Trailer Loans</a></li>
                         <li><a href="maintenance-packages.html">Maintenance Packages</a></li>
                         <li><a href="fleet-financing.html">Fleet Financing</a></li>
                     </ul>
@@ -994,10 +1071,11 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
 
-                    <!-- Asset Loans Dropdown -->
+                    <!-- Asset Loans Dropdown (Secured Loans) - Active -->
                     <li class="dropdown">
-                        <a href="#"><span>Asset Loans</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <a href="#" class="active"><span>Asset Loans</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                         <ul>
+                            <li><a href="secured-loans.html" class="active">Secured Loans</a></li>
                             <li><a href="vehicle-loans.html">Vehicle Loans</a></li>
                             <li><a href="luxury-loans.html">Luxury Assets</a></li>
                             <li><a href="property-loans.html">Property Loans</a></li>
@@ -1005,6 +1083,9 @@
                             <li><a href="art-collectibles.html">Art & Collectibles</a></li>
                         </ul>
                     </li>
+
+                    <!-- Unsecured Loans -->
+                    <li><a href="unsecured-loans.html">Unsecured Loans</a></li>
 
                     <!-- Insurance Dropdown -->
                     <li class="dropdown">
@@ -1018,12 +1099,12 @@
                         </ul>
                     </li>
 
-                    <!-- Commercial Fleet Dropdown - Active -->
+                    <!-- Commercial Fleet Dropdown -->
                     <li class="dropdown">
-                        <a href="#" class="active"><span>Commercial Fleet</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <a href="#"><span>Commercial Fleet</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                         <ul>
                             <li><a href="vehicle-sourcing.html">Vehicle Sourcing</a></li>
-                            <li><a href="truck-trailer-loans.html" class="active">Truck & Trailer Loans</a></li>
+                            <li><a href="truck-trailer-loans.html">Truck & Trailer Loans</a></li>
                             <li><a href="maintenance-packages.html">Maintenance Packages</a></li>
                             <li><a href="fleet-financing.html">Fleet Financing</a></li>
                         </ul>
@@ -1066,108 +1147,127 @@
         <!-- Page Title -->
         <div class="page-title dark-background" data-aos="fade">
             <div class="container position-relative">
-                <h1>Truck & Trailer Loans</h1>
-                <p>Flexible financing solutions for heavy-duty trucks, trailers, and commercial transport equipment. Grow your fleet with competitive rates and customized repayment terms.</p>
+                <div class="loan-badge">
+                    <i class="bi bi-shield-check"></i>
+                    <span>FSCA Registered • NCR Approved • Asset-Backed Loans</span>
+                </div>
+                <h1 class="mt-3">Secured Loans</h1>
+                <p>Get cash against your valuable assets. Use your vehicles, property, luxury items, or equipment as collateral for competitive rates and flexible terms.</p>
                 <nav class="breadcrumbs">
                     <ol>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="#">Commercial Fleet</a></li>
-                        <li class="current">Truck & Trailer Loans</li>
+                        <li><a href="#">Asset Loans</a></li>
+                        <li class="current">Secured Loans</li>
                     </ol>
                 </nav>
             </div>
         </div><!-- End Page Title -->
-        <!-- Page Indicator -->
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-            <div class="page-indicator">
-                <a href="vehicle-sourcing.html" class="indicator-item">Vehicle Sourcing</a>
-                <a href="truck-trailer-loans.html" class="indicator-item active">Truck & Trailer Loans</a>
-                <a href="maintenance-packages.html" class="indicator-item">Maintenance Packages</a>
-                <a href="fleet-financing.html" class="indicator-item">Fleet Financing</a>
+        <!-- Hero Banner -->
+        <section class="section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6" data-aos="fade-right">
+                        <h2 class="mb-4" style="color: var(--primary-blue);">What Are Secured Loans?</h2>
+                        <p class="lead mb-4">A secured loan is a loan backed by an asset you own – your vehicle, property, luxury items, or equipment. This collateral gives you access to:</p>
+                        <ul class="list-unstyled">
+                            <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Lower interest rates</strong> than unsecured loans</li>
+                            <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Higher loan amounts</strong> based on your asset's value</li>
+                            <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Flexible repayment terms</strong> from 3 to 60 months</li>
+                            <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Keep using your asset</strong> while repaying the loan</li>
+                            <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i> <strong>Build or rebuild credit</strong> with regular payments</li>
+                        </ul>
+                        <a href="apply.html" class="btn btn-primary btn-lg mt-3">Apply for Secured Loan</a>
+                    </div>
+                    <div class="col-lg-6" data-aos="fade-left">
+                        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Secured Loans" class="img-fluid rounded-4 shadow">
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <!-- Truck & Trailer Loans Section -->
-        <section id="truck-trailer-loans" class="truck-trailer-loans section">
+        <!-- Asset Types -->
+        <section class="section bg-light">
+            <div class="container">
+                <div class="section-title" data-aos="fade-up">
+                    <h2>Types of Assets We Accept</h2>
+                    <p>Use your valuable assets as collateral for a secured loan</p>
+                </div>
 
-            <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-                <div class="row mb-5">
-                    <div class="col-lg-8 mx-auto text-center">
-                        <div class="truck-badge">
-                            <i class="bi bi-truck"></i>
-                            <span>FSCA Registered • NCR Approved • Transport Specialists</span>
+                <div class="asset-types">
+                    <div class="asset-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="asset-icon">
+                            <i class="bi bi-car-front"></i>
                         </div>
-                        <h2 class="mt-3">Finance Your Transport Equipment</h2>
-                        <p class="mb-4">Our truck and trailer loans are designed to help transport businesses acquire the equipment they need without straining their cash flow. Whether you're expanding your fleet or replacing aging vehicles, we offer flexible financing options with competitive interest rates.</p>
+                        <h5>Vehicles</h5>
+                        <p class="small mb-0">Cars, bakkies, trucks, motorcycles</p>
                     </div>
-                </div>
-
-                <!-- Vehicle Types -->
-                <div class="row mb-5">
-                    <div class="col-lg-12">
-                        <h4 class="mb-4 text-center">Types of Equipment We Finance</h4>
-                        <div class="vehicle-types">
-                            <div class="type-item" data-aos="fade-up" data-aos-delay="200">
-                                <div class="type-icon">
-                                    <i class="bi bi-truck-front"></i>
-                                </div>
-                                <h6>Articulated Trucks</h6>
-                                <p class="small mb-0">Heavy haulage and long-distance transport</p>
-                            </div>
-                            <div class="type-item" data-aos="fade-up" data-aos-delay="250">
-                                <div class="type-icon">
-                                    <i class="bi bi-truck"></i>
-                                </div>
-                                <h6>Rigid Trucks</h6>
-                                <p class="small mb-0">Distribution and regional transport</p>
-                            </div>
-                            <div class="type-item" data-aos="fade-up" data-aos-delay="300">
-                                <div class="type-icon">
-                                    <i class="bi bi-box"></i>
-                                </div>
-                                <h6>Trailers</h6>
-                                <p class="small mb-0">Flatbeds, reefers, tankers, tippers</p>
-                            </div>
-                            <div class="type-item" data-aos="fade-up" data-aos-delay="350">
-                                <div class="type-icon">
-                                    <i class="bi bi-truck-flatbed"></i>
-                                </div>
-                                <h6>Specialized Vehicles</h6>
-                                <p class="small mb-0">Cranes, concrete mixers, waste trucks</p>
-                            </div>
+                    <div class="asset-item" data-aos="fade-up" data-aos-delay="150">
+                        <div class="asset-icon">
+                            <i class="bi bi-house"></i>
                         </div>
+                        <h5>Property</h5>
+                        <p class="small mb-0">Residential, commercial, land</p>
+                    </div>
+                    <div class="asset-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="asset-icon">
+                            <i class="bi bi-gem"></i>
+                        </div>
+                        <h5>Luxury Assets</h5>
+                        <p class="small mb-0">Watches, jewelry, handbags</p>
+                    </div>
+                    <div class="asset-item" data-aos="fade-up" data-aos-delay="250">
+                        <div class="asset-icon">
+                            <i class="bi bi-tools"></i>
+                        </div>
+                        <h5>Equipment</h5>
+                        <p class="small mb-0">Machinery, tools, equipment</p>
+                    </div>
+                    <div class="asset-item" data-aos="fade-up" data-aos-delay="300">
+                        <div class="asset-icon">
+                            <i class="bi bi-palette"></i>
+                        </div>
+                        <h5>Art & Collectibles</h5>
+                        <p class="small mb-0">Paintings, antiques, collectibles</p>
+                    </div>
+                    <div class="asset-item" data-aos="fade-up" data-aos-delay="350">
+                        <div class="asset-icon">
+                            <i class="bi bi-coin"></i>
+                        </div>
+                        <h5>Investments</h5>
+                        <p class="small mb-0">Shares, unit trusts, endowments</p>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- Loan Products -->
-                <div class="row mb-5">
-                    <div class="col-lg-12">
-                        <h3 class="mb-4" style="color: var(--fleet-blue);">Our Loan Products</h3>
-                        <p class="mb-4">We understand the unique challenges of the transport industry and structure our loans to accommodate seasonal fluctuations and business growth cycles.</p>
-                    </div>
+        <!-- Loan Products -->
+        <section class="section">
+            <div class="container">
+                <div class="section-title" data-aos="fade-up">
+                    <h2>Our Secured Loan Products</h2>
+                    <p>Choose the right secured loan for your needs</p>
                 </div>
 
-                <div class="row g-4 mb-5">
+                <div class="row g-4">
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
                         <div class="loan-card">
+                            <div class="loan-badge-popular">Most Popular</div>
                             <div class="loan-image">
-                                <img src="https://images.unsplash.com/photo-1566404204075-71c57fe8d2e3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="New Truck Finance" loading="lazy">
+                                <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Vehicle Secured Loans">
                             </div>
                             <div class="loan-content">
-                                <span class="loan-badge">New Equipment</span>
-                                <h4>New Truck Finance</h4>
-                                <p>Finance for brand new trucks with manufacturer warranties and the latest fuel-efficient technology.</p>
-                                <ul class="list-unstyled mb-3">
-                                    <li><i class="bi bi-check-circle text-success me-2"></i> Up to 100% financing</li>
-                                    <li><i class="bi bi-check-circle text-success me-2"></i> Fixed interest rates</li>
-                                    <li><i class="bi bi-check-circle text-success me-2"></i> Terms: 24-60 months</li>
-                                    <li><i class="bi bi-check-circle text-success me-2"></i> Deposit from 10%</li>
-                                </ul>
-                                <div class="mb-3">
-                                    <strong>Loan Amount:</strong> R200,000 - R10,000,000
+                                <div class="loan-icon">
+                                    <i class="bi bi-car-front"></i>
                                 </div>
-                                <a href="apply.html" class="btn btn-primary w-100">Apply Now</a>
+                                <h3 class="loan-title">Vehicle Secured Loan</h3>
+                                <p>Use your car, bakkie, or truck as collateral. Keep driving your vehicle while accessing cash.</p>
+                                <ul class="feature-list">
+                                    <li><i class="bi bi-check-circle-fill"></i> Up to 80% of vehicle value</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> From R50,000 to R5,000,000</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Keep using your vehicle</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Terms: 3-60 months</li>
+                                </ul>
+                                <a href="vehicle-loans.html" class="btn btn-primary w-100">Learn More</a>
                             </div>
                         </div>
                     </div>
@@ -1175,22 +1275,21 @@
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
                         <div class="loan-card">
                             <div class="loan-image">
-                                <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Used Equipment Loans" loading="lazy">
+                                <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Property Secured Loans">
                             </div>
                             <div class="loan-content">
-                                <span class="loan-badge">Pre-Owned</span>
-                                <h4>Used Equipment Loans</h4>
-                                <p>Finance for quality pre-owned trucks and trailers that have been thoroughly inspected.</p>
-                                <ul class="list-unstyled mb-3">
-                                    <li><i class="bi bi-check-circle text-success me-2"></i> Age limit: Up to 8 years</li>
-                                    <li><i class="bi bi-check-circle text-success me-2"></i> Vehicle inspection required</li>
-                                    <li><i class="bi bi-check-circle text-success me-2"></i> Terms: 12-48 months</li>
-                                    <li><i class="bi bi-check-circle text-success me-2"></i> Deposit from 20%</li>
-                                </ul>
-                                <div class="mb-3">
-                                    <strong>Loan Amount:</strong> R100,000 - R5,000,000
+                                <div class="loan-icon">
+                                    <i class="bi bi-house"></i>
                                 </div>
-                                <a href="apply.html" class="btn btn-primary w-100">Apply Now</a>
+                                <h3 class="loan-title">Property Secured Loan</h3>
+                                <p>Use your residential or commercial property as collateral. Access larger loan amounts with longer terms.</p>
+                                <ul class="feature-list">
+                                    <li><i class="bi bi-check-circle-fill"></i> Up to 70% of property value</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> From R200,000 to R20,000,000</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Continue living in your home</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Terms: 12-120 months</li>
+                                </ul>
+                                <a href="property-loans.html" class="btn btn-primary w-100">Learn More</a>
                             </div>
                         </div>
                     </div>
@@ -1198,114 +1297,293 @@
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
                         <div class="loan-card">
                             <div class="loan-image">
-                                <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Trailer Financing" loading="lazy">
+                                <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Luxury Asset Secured Loans">
                             </div>
                             <div class="loan-content">
-                                <span class="loan-badge">Specialized</span>
-                                <h4>Trailer Financing</h4>
-                                <p>Specialized financing for various trailer types including flatbeds, reefers, tankers, and more.</p>
-                                <ul class="list-unstyled mb-3">
-                                    <li><i class="bi bi-check-circle text-success me-2"></i> All trailer types considered</li>
-                                    <li><i class="bi bi-check-circle text-success me-2"></i> Up to 90% financing</li>
-                                    <li><i class="bi bi-check-circle text-success me-2"></i> Terms: 12-60 months</li>
-                                    <li><i class="bi bi-check-circle text-success me-2"></i> Customizable repayment</li>
+                                <div class="loan-icon">
+                                    <i class="bi bi-gem"></i>
+                                </div>
+                                <h3 class="loan-title">Luxury Asset Loan</h3>
+                                <p>Use your luxury watches, jewelry, or high-value items as collateral. Expert valuation included.</p>
+                                <ul class="feature-list">
+                                    <li><i class="bi bi-check-circle-fill"></i> Up to 70% of item value</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> From R20,000 to R2,000,000</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Secure storage available</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Terms: 3-24 months</li>
                                 </ul>
-                                <div class="mb-3">
-                                    <strong>Loan Amount:</strong> R50,000 - R2,000,000
-                                </div>
-                                <a href="apply.html" class="btn btn-primary w-100">Apply Now</a>
+                                <a href="luxury-loans.html" class="btn btn-primary w-100">Learn More</a>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- Loan Benefits -->
-                <div class="row mb-5">
-                    <div class="col-lg-12">
-                        <h4 class="mb-3">Loan Benefits</h4>
-                        <div class="requirements-grid">
-                            <div class="requirement-item" data-aos="fade-up" data-aos-delay="200">
-                                <h5><i class="bi bi-check-circle-fill text-success me-2"></i> Flexible Financing</h5>
-                                <p class="mb-0">Financing for both new and used trucks & trailers with customizable terms.</p>
+        <!-- Benefits Section -->
+        <section class="section bg-light">
+            <div class="container">
+                <div class="section-title" data-aos="fade-up">
+                    <h2>Benefits of Secured Loans</h2>
+                    <p>Why choose a secured loan with Lehumo La Edishela</p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="bi bi-cash-stack"></i>
                             </div>
-                            <div class="requirement-item" data-aos="fade-up" data-aos-delay="250">
-                                <h5><i class="bi bi-check-circle-fill text-success me-2"></i> Competitive Rates</h5>
-                                <p class="mb-0">Competitive interest rates based on prime lending rates with transparent fees.</p>
+                            <h4>Higher Loan Amounts</h4>
+                            <p>Borrow more by using your asset as security. Loan amounts based on asset value, not just income.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="150">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="bi bi-percent"></i>
                             </div>
-                            <div class="requirement-item" data-aos="fade-up" data-aos-delay="300">
-                                <h5><i class="bi bi-check-circle-fill text-success me-2"></i> Quick Approval</h5>
-                                <p class="mb-0">Quick approval process with decisions within 24-48 hours for qualified applicants.</p>
+                            <h4>Competitive Rates</h4>
+                            <p>Enjoy lower interest rates compared to unsecured loans. The security reduces our risk, which benefits you.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="bi bi-clock-history"></i>
                             </div>
-                            <div class="requirement-item" data-aos="fade-up" data-aos-delay="350">
-                                <h5><i class="bi bi-check-circle-fill text-success me-2"></i> Flexible Repayment</h5>
-                                <p class="mb-0">Flexible repayment options including seasonal payment structures for transport businesses.</p>
+                            <h4>Flexible Terms</h4>
+                            <p>Choose repayment terms that suit your budget, from short-term options to longer repayment periods.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="250">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="bi bi-car-front"></i>
+                            </div>
+                            <h4>Keep Using Your Asset</h4>
+                            <p>In most cases, you can continue using your vehicle or asset while repaying the loan.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="bi bi-graph-up-arrow"></i>
+                            </div>
+                            <h4>Improve Your Credit</h4>
+                            <p>Regular, on-time payments can help build or rebuild your credit history.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="350">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="bi bi-shield-check"></i>
+                            </div>
+                            <h4>FSCA Registered</h4>
+                            <p>We're fully regulated by the Financial Sector Conduct Authority, ensuring professional service.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comparison Table -->
+        <section class="section">
+            <div class="container">
+                <div class="section-title" data-aos="fade-up">
+                    <h2>Secured vs Unsecured Loans</h2>
+                    <p>Understand the differences to make an informed choice</p>
+                </div>
+
+                <div class="comparison-table" data-aos="fade-up">
+                    <div class="table-header">Secured vs Unsecured Loan Comparison</div>
+
+                    <div class="table-row">
+                        <div class="table-cell">Feature</div>
+                        <div class="table-cell"><strong>Secured Loan</strong></div>
+                        <div class="table-cell"><strong>Unsecured Loan</strong></div>
+                    </div>
+
+                    <div class="table-row">
+                        <div class="table-cell">Collateral Required</div>
+                        <div class="table-cell"><i class="bi bi-check-circle check-mark"></i> Yes (asset as security)</div>
+                        <div class="table-cell"><i class="bi bi-x-circle cross-mark"></i> No</div>
+                    </div>
+
+                    <div class="table-row">
+                        <div class="table-cell">Interest Rates</div>
+                        <div class="table-cell">Lower (from 12% p.a.)</div>
+                        <div class="table-cell">Higher (from 18% p.a.)</div>
+                    </div>
+
+                    <div class="table-row">
+                        <div class="table-cell">Loan Amounts</div>
+                        <div class="table-cell">Up to R20,000,000</div>
+                        <div class="table-cell">Up to R300,000</div>
+                    </div>
+
+                    <div class="table-row">
+                        <div class="table-cell">Repayment Terms</div>
+                        <div class="table-cell">3-120 months</div>
+                        <div class="table-cell">6-60 months</div>
+                    </div>
+
+                    <div class="table-row">
+                        <div class="table-cell">Approval Based On</div>
+                        <div class="table-cell">Asset value + credit profile</div>
+                        <div class="table-cell">Credit profile + income</div>
+                    </div>
+
+                    <div class="table-row">
+                        <div class="table-cell">Risk to Borrower</div>
+                        <div class="table-cell">Asset may be repossessed if default</div>
+                        <div class="table-cell">Legal action, credit damage</div>
+                    </div>
+
+                    <div class="table-row">
+                        <div class="table-cell">Best For</div>
+                        <div class="table-cell">Large expenses, asset owners</div>
+                        <div class="table-cell">Smaller expenses, no collateral</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works -->
+        <section class="section bg-light">
+            <div class="container">
+                <div class="section-title" data-aos="fade-up">
+                    <h2>How Secured Loans Work</h2>
+                    <p>Simple 4-step process to get your secured loan</p>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="process-step">
+                            <div class="step-number">1</div>
+                            <h4>Apply Online</h4>
+                            <p>Complete our simple application form with details about you and your asset.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="process-step">
+                            <div class="step-number">2</div>
+                            <h4>Asset Valuation</h4>
+                            <p>We assess your asset's value through our expert valuation process.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                        <div class="process-step">
+                            <div class="step-number">3</div>
+                            <h4>Receive Offer</h4>
+                            <p>Get a loan offer with competitive rates and terms based on your asset.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                        <div class="process-step">
+                            <div class="step-number">4</div>
+                            <h4>Get Funded</h4>
+                            <p>Accept the offer and receive funds in your account, often the same day.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Documents Required -->
+        <section class="section">
+            <div class="container">
+                <div class="section-title" data-aos="fade-up">
+                    <h2>Documents Required</h2>
+                    <p>What you'll need to apply for a secured loan</p>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="documents-section" data-aos="fade-up">
+                            <div class="document-item">
+                                <div class="document-icon">
+                                    <i class="bi bi-person-badge"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mb-1">South African ID</h5>
+                                    <p class="mb-0">Valid ID book or smart card</p>
+                                </div>
+                            </div>
+
+                            <div class="document-item">
+                                <div class="document-icon">
+                                    <i class="bi bi-house"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mb-1">Proof of Residence</h5>
+                                    <p class="mb-0">Utility bill or bank statement (not older than 3 months)</p>
+                                </div>
+                            </div>
+
+                            <div class="document-item">
+                                <div class="document-icon">
+                                    <i class="bi bi-cash-stack"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mb-1">Proof of Income</h5>
+                                    <p class="mb-0">Recent payslips or bank statements</p>
+                                </div>
+                            </div>
+
+                            <div class="document-item">
+                                <div class="document-icon">
+                                    <i class="bi bi-file-text"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mb-1">Asset Documentation</h5>
+                                    <p class="mb-0">Registration papers, title deed, or proof of ownership</p>
+                                </div>
+                            </div>
+
+                            <div class="document-item">
+                                <div class="document-icon">
+                                    <i class="bi bi-bank"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mb-1">Bank Statements</h5>
+                                    <p class="mb-0">Last 3 months bank statements</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- How It Works -->
-                <div class="row mb-5">
-                    <div class="col-lg-12">
-                        <h3 class="mb-4 text-center" style="color: var(--fleet-blue);">Simple 5-Step Loan Process</h3>
-                        <div class="row">
-                            <div class="col-lg-2 col-md-4" data-aos="fade-up" data-aos-delay="200">
-                                <div class="process-step">
-                                    <div class="step-number">1</div>
-                                    <h4>Application</h4>
-                                    <p>Complete our simple online application or visit our office.</p>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-2 col-md-4" data-aos="fade-up" data-aos-delay="250">
-                                <div class="process-step">
-                                    <div class="step-number">2</div>
-                                    <h4>Documentation</h4>
-                                    <p>Submit required documents (ID, proof of income, business registration).</p>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-2 col-md-4" data-aos="fade-up" data-aos-delay="300">
-                                <div class="process-step">
-                                    <div class="step-number">3</div>
-                                    <h4>Approval</h4>
-                                    <p>Receive loan approval within 24-48 hours for qualified applicants.</p>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-2 col-md-4" data-aos="fade-up" data-aos-delay="350">
-                                <div class="process-step">
-                                    <div class="step-number">4</div>
-                                    <h4>Vehicle Selection</h4>
-                                    <p>Choose your truck/trailer from our network or your preferred supplier.</p>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-2 col-md-4" data-aos="fade-up" data-aos-delay="400">
-                                <div class="process-step">
-                                    <div class="step-number">5</div>
-                                    <h4>Disbursement</h4>
-                                    <p>Funds are disbursed directly to the supplier and you take delivery.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <!-- Loan Calculator -->
+        <section class="section bg-light">
+            <div class="container">
+                <div class="section-title" data-aos="fade-up">
+                    <h2>Secured Loan Calculator</h2>
+                    <p>Estimate your monthly repayments</p>
                 </div>
 
-                <!-- Loan Calculator -->
-                <div class="row mb-5">
-                    <div class="col-lg-12">
-                        <div class="calculator-section" data-aos="fade-up" data-aos-delay="200">
-                            <h3 class="mb-4" style="color: var(--fleet-blue);">Loan Repayment Calculator</h3>
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="calculator-section" data-aos="fade-up">
+                            <h3 class="mb-4" style="color: var(--primary-blue);">Loan Repayment Calculator</h3>
 
                             <form id="loanCalculator">
                                 <div class="row g-3 mb-4">
-                                    <div class="col-md-4">
+                                    <div class="col-md-6">
                                         <label for="loanAmount" class="form-label">Loan Amount (ZAR)</label>
-                                        <input type="number" id="loanAmount" class="form-control" min="100000" max="5000000" value="800000">
+                                        <input type="number" id="loanAmount" class="form-control" min="50000" max="5000000" value="200000">
                                     </div>
 
-                                    <div class="col-md-4">
+                                    <div class="col-md-6">
                                         <label for="loanTerm" class="form-label">Loan Term (Months)</label>
                                         <select id="loanTerm" class="form-select">
                                             <option value="12">12 Months</option>
@@ -1313,156 +1591,141 @@
                                             <option value="36" selected>36 Months</option>
                                             <option value="48">48 Months</option>
                                             <option value="60">60 Months</option>
-                                            <option value="72">72 Months</option>
                                         </select>
-                                    </div>
-
-                                    <div class="col-md-4">
-                                        <label for="interestRate" class="form-label">Interest Rate (%)</label>
-                                        <div class="slider-container">
-                                            <div class="slider-label">
-                                                <span>Prime + 2%</span>
-                                                <span id="interestRateValue">11.75%</span>
-                                            </div>
-                                            <input type="range" class="form-range" min="8" max="18" step="0.25" value="11.75" id="interestRate">
-                                        </div>
                                     </div>
                                 </div>
 
                                 <div class="row g-3 mb-4">
                                     <div class="col-md-6">
-                                        <label for="depositAmount" class="form-label">Deposit Amount (ZAR)</label>
-                                        <input type="number" id="depositAmount" class="form-control" min="0" max="5000000" value="160000">
+                                        <label for="interestRate" class="form-label">Interest Rate (%)</label>
+                                        <input type="number" id="interestRate" class="form-control" min="8" max="25" step="0.1" value="15.0">
                                     </div>
 
                                     <div class="col-md-6">
-                                        <label for="balloonPayment" class="form-label">Balloon Payment (%)</label>
-                                        <select id="balloonPayment" class="form-select">
-                                            <option value="0" selected>No Balloon Payment</option>
-                                            <option value="10">10% Balloon</option>
-                                            <option value="15">15% Balloon</option>
-                                            <option value="20">20% Balloon</option>
-                                            <option value="25">25% Balloon</option>
-                                        </select>
+                                        <label for="assetValue" class="form-label">Asset Value (ZAR)</label>
+                                        <input type="number" id="assetValue" class="form-control" min="50000" max="20000000" value="300000">
                                     </div>
                                 </div>
 
-                                <button type="button" class="btn btn-primary" id="calculateLoanBtn">Calculate Monthly Repayment</button>
+                                <button type="button" class="btn btn-primary" id="calculateBtn">Calculate Monthly Payment</button>
 
-                                <div class="calculator-result" id="loanResult">
-                                    <h4>Loan Repayment Summary</h4>
+                                <div class="calculator-result" id="calculatorResult">
+                                    <h4 class="mb-3">Loan Summary</h4>
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <p>Loan Amount: <strong id="summaryLoanAmount" class="float-end">ZAR 0</strong></p>
+                                            <p>Monthly Payment: <strong id="monthlyPayment" class="float-end">R0</strong></p>
                                         </div>
                                         <div class="col-md-6">
-                                            <p>Deposit: <strong id="summaryDeposit" class="float-end">ZAR 0</strong></p>
+                                            <p>Total Interest: <strong id="totalInterest" class="float-end">R0</strong></p>
                                         </div>
                                         <div class="col-md-6">
-                                            <p>Amount Financed: <strong id="summaryFinanced" class="float-end">ZAR 0</strong></p>
+                                            <p>Total Repayment: <strong id="totalRepayment" class="float-end">R0</strong></p>
                                         </div>
                                         <div class="col-md-6">
-                                            <p>Interest Rate: <strong id="summaryInterest" class="float-end">0%</strong></p>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <p>Loan Term: <strong id="summaryTerm" class="float-end">0 months</strong></p>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <p>Monthly Repayment: <strong id="summaryMonthly" class="float-end text-primary">ZAR 0</strong></p>
-                                        </div>
-                                    </div>
-                                    <div class="row mt-2">
-                                        <div class="col-md-6">
-                                            <p>Total Interest: <strong id="summaryTotalInterest" class="float-end">ZAR 0</strong></p>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <p>Total Repayment: <strong id="summaryTotal" class="float-end">ZAR 0</strong></p>
+                                            <p>LTV Ratio: <strong id="ltvRatio" class="float-end">0%</strong></p>
                                         </div>
                                     </div>
                                     <div class="mt-3">
-                                        <p class="mb-0 text-muted"><small><i class="bi bi-info-circle me-1"></i> This is an estimate. Contact us for a formal quotation.</small></p>
+                                        <p class="mb-0 small"><i class="bi bi-info-circle me-1"></i> This is an estimate. Actual rates depend on asset value and credit profile.</p>
                                     </div>
                                 </div>
                             </form>
                         </div>
                     </div>
                 </div>
-
-                <!-- Requirements -->
-                <div class="row mb-5">
-                    <div class="col-lg-12">
-                        <h3 class="mb-4" style="color: var(--fleet-blue);">Loan Requirements</h3>
-                        <div class="row g-4">
-                            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                                <div class="feature-card">
-                                    <div class="feature-icon">
-                                        <i class="bi bi-person-badge"></i>
-                                    </div>
-                                    <h4>Personal Requirements</h4>
-                                    <ul class="list-unstyled mb-0">
-                                        <li><i class="bi bi-check me-2 text-success"></i> South African ID</li>
-                                        <li><i class="bi bi-check me-2 text-success"></i> Proof of residence</li>
-                                        <li><i class="bi bi-check me-2 text-success"></i> Good credit record</li>
-                                        <li><i class="bi bi-check me-2 text-success"></i> Minimum age: 21 years</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="250">
-                                <div class="feature-card">
-                                    <div class="feature-icon">
-                                        <i class="bi bi-building"></i>
-                                    </div>
-                                    <h4>Business Requirements</h4>
-                                    <ul class="list-unstyled mb-0">
-                                        <li><i class="bi bi-check me-2 text-success"></i> Business registration documents</li>
-                                        <li><i class="bi bi-check me-2 text-success"></i> 6 months bank statements</li>
-                                        <li><i class="bi bi-check me-2 text-success"></i> Financial statements (if available)</li>
-                                        <li><i class="bi bi-check me-2 text-success"></i> Proof of business address</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                                <div class="feature-card">
-                                    <div class="feature-icon">
-                                        <i class="bi bi-cash-stack"></i>
-                                    </div>
-                                    <h4>Financial Requirements</h4>
-                                    <ul class="list-unstyled mb-0">
-                                        <li><i class="bi bi-check me-2 text-success"></i> Minimum turnover: R50,000/month</li>
-                                        <li><i class="bi bi-check me-2 text-success"></i> Proof of income/contracts</li>
-                                        <li><i class="bi bi-check me-2 text-success"></i> Deposit (10-30%)</li>
-                                        <li><i class="bi bi-check me-2 text-success"></i> Affordability assessment</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- CTA Section -->
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="cta-banner" data-aos="zoom-in" data-aos-delay="200">
-                            <div class="cta-content">
-                                <h3>Ready to Finance Your Transport Equipment?</h3>
-                                <p class="mb-4">Apply for a truck or trailer loan today and take your transport business to the next level with reliable financing.</p>
-                                <div class="cta-buttons">
-                                    <a href="apply.html" class="btn btn-primary me-3">Apply for Loan</a>
-                                    <a href="maintenance-packages.html" class="btn btn-outline-light">Explore Maintenance Packages</a>
-                                </div>
-                                <p class="mt-3 small">
-                                    <i class="bi bi-info-circle me-1"></i> FSCA Registered | NCR Approved | Transport Specialists
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
+        </section>
 
-        </section><!-- /Truck & Trailer Loans Section -->
+        <!-- FAQ Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-title" data-aos="fade-up">
+                    <h2>Frequently Asked Questions</h2>
+                    <p>Common questions about secured loans</p>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="accordion" id="securedLoanFAQ">
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                        What happens if I can't repay my secured loan?
+                                    </button>
+                                </h3>
+                                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#securedLoanFAQ">
+                                    <div class="accordion-body">
+                                        If you have difficulty repaying, contact us immediately. We'll work with you to find a solution, such as restructuring your loan. If you default, we may need to repossess the asset as per our agreement.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                        Can I still use my vehicle while it's securing a loan?
+                                    </button>
+                                </h3>
+                                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#securedLoanFAQ">
+                                    <div class="accordion-body">
+                                        Yes, in most cases you can continue using your vehicle normally. You'll need to maintain comprehensive insurance and keep the vehicle in good condition.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                        How much can I borrow against my asset?
+                                    </button>
+                                </h3>
+                                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#securedLoanFAQ">
+                                    <div class="accordion-body">
+                                        Typically, you can borrow up to 80% of your vehicle's value, 70% of property value, and 60-70% of luxury items. The exact amount depends on the asset's condition and marketability.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                        What documents do I need for a secured loan?
+                                    </button>
+                                </h3>
+                                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#securedLoanFAQ">
+                                    <div class="accordion-body">
+                                        You'll need your ID, proof of residence, proof of income, and documentation proving ownership of the asset (registration papers, title deed, etc.).
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container" data-aos="fade-up">
+                <div class="row justify-content-center text-center">
+                    <div class="col-lg-8">
+                        <h2 class="mb-4">Ready to Unlock the Value in Your Assets?</h2>
+                        <p class="mb-5">Apply for a secured loan today and get the cash you need with competitive rates and flexible terms.</p>
+                        <div class="cta-buttons">
+                            <a href="apply.html" class="btn btn-light btn-lg me-3 mb-3 px-4">
+                                <i class="bi bi-pencil-square me-2"></i> Apply Now
+                            </a>
+                            <a href="contact.html" class="btn btn-outline-light btn-lg mb-3 px-4">
+                                <i class="bi bi-chat-dots me-2"></i> Speak to a Specialist
+                            </a>
+                        </div>
+                        <p class="text-light mt-4 small">
+                            <i class="bi bi-info-circle me-1"></i> FSCA Registered • NCR Approved • Fast Approvals
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     </main>
 
@@ -1491,17 +1754,18 @@
                         <li class="mb-2"><a href="about.html">About Us</a></li>
                         <li class="mb-2"><a href="contact.html">Contact Us</a></li>
                         <li class="mb-2"><a href="apply.html">Apply Now</a></li>
-                        <li class="mb-2"><a href="faq.html">FAQ</a></li>
+                        <li class="mb-2"><a href="faq-general.html">FAQ</a></li>
                     </ul>
                 </div>
 
                 <div class="col-lg-3 col-md-3 footer-links">
-                    <h4 class="mb-3">Commercial Fleet</h4>
+                    <h4 class="mb-3">Loan Products</h4>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><a href="vehicle-sourcing.html">Vehicle Sourcing</a></li>
-                        <li class="mb-2"><a href="truck-trailer-loans.html" class="active">Truck & Trailer Loans</a></li>
-                        <li class="mb-2"><a href="maintenance-packages.html">Maintenance Packages</a></li>
-                        <li class="mb-2"><a href="fleet-financing.html">Fleet Financing</a></li>
+                        <li class="mb-2"><a href="secured-loans.html" class="active">Secured Loans</a></li>
+                        <li class="mb-2"><a href="unsecured-loans.html">Unsecured Loans</a></li>
+                        <li class="mb-2"><a href="vehicle-loans.html">Vehicle Loans</a></li>
+                        <li class="mb-2"><a href="property-loans.html">Property Loans</a></li>
+                        <li class="mb-2"><a href="bridging-finance.html">Bridging Finance</a></li>
                     </ul>
                 </div>
 
@@ -1643,77 +1907,36 @@
             }
         });
 
-        // Interest rate slider
-        document.getElementById('interestRate')?.addEventListener('input', function () {
-            updateInterestRateDisplay();
-        });
-
-        function updateInterestRateDisplay() {
-            const interestRate = document.getElementById('interestRate').value;
-            document.getElementById('interestRateValue').textContent = interestRate + '%';
-        }
-
-        // Loan calculator function
-        function calculateLoanRepayment() {
-            // Get form values
+        // Loan Calculator
+        document.getElementById('calculateBtn')?.addEventListener('click', function () {
             const loanAmount = parseFloat(document.getElementById('loanAmount').value) || 0;
             const loanTerm = parseInt(document.getElementById('loanTerm').value) || 0;
-            const interestRate = parseFloat(document.getElementById('interestRate').value) / 100 / 12; // Monthly rate
-            const depositAmount = parseFloat(document.getElementById('depositAmount').value) || 0;
-            const balloonPercentage = parseInt(document.getElementById('balloonPayment').value) / 100;
+            const interestRate = parseFloat(document.getElementById('interestRate').value) / 100 / 12;
+            const assetValue = parseFloat(document.getElementById('assetValue').value) || 0;
 
-            // Validate inputs
-            if (loanAmount <= 0 || loanTerm <= 0) {
-                alert('Please enter valid numbers for loan amount and term');
+            if (loanAmount <= 0 || loanTerm <= 0 || assetValue <= 0) {
+                alert('Please enter valid numbers');
                 return;
             }
 
-            // Calculate amount financed
-            const amountFinanced = loanAmount - depositAmount;
-
-            // Calculate balloon payment amount
-            const balloonAmount = amountFinanced * balloonPercentage;
-            const amountToFinance = amountFinanced - balloonAmount;
-
-            // Calculate monthly payment (standard loan formula)
-            let monthlyPayment = 0;
-            let totalInterest = 0;
-            let totalRepayment = 0;
-
-            if (interestRate > 0) {
-                monthlyPayment = (amountToFinance * interestRate * Math.pow(1 + interestRate, loanTerm)) /
-                    (Math.pow(1 + interestRate, loanTerm) - 1);
-                totalRepayment = (monthlyPayment * loanTerm) + balloonAmount;
-                totalInterest = totalRepayment - amountFinanced;
-            } else {
-                monthlyPayment = amountToFinance / loanTerm;
-                totalRepayment = (monthlyPayment * loanTerm) + balloonAmount;
-                totalInterest = 0;
-            }
+            // Calculate monthly payment
+            const monthlyPayment = loanAmount * interestRate * Math.pow(1 + interestRate, loanTerm) / (Math.pow(1 + interestRate, loanTerm) - 1);
+            const totalRepayment = monthlyPayment * loanTerm;
+            const totalInterest = totalRepayment - loanAmount;
+            const ltvRatio = (loanAmount / assetValue) * 100;
 
             // Format currency
             const formatCurrency = (amount) => {
-                return 'ZAR ' + amount.toLocaleString('en-ZA', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+                return 'R' + amount.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
             };
 
-            // Display results
-            document.getElementById('summaryLoanAmount').textContent = formatCurrency(loanAmount);
-            document.getElementById('summaryDeposit').textContent = formatCurrency(depositAmount);
-            document.getElementById('summaryFinanced').textContent = formatCurrency(amountFinanced);
-            document.getElementById('summaryInterest').textContent = (interestRate * 12 * 100).toFixed(2) + '%';
-            document.getElementById('summaryTerm').textContent = loanTerm + ' months';
-            document.getElementById('summaryMonthly').textContent = formatCurrency(monthlyPayment);
-            document.getElementById('summaryTotalInterest').textContent = formatCurrency(totalInterest);
-            document.getElementById('summaryTotal').textContent = formatCurrency(totalRepayment);
-            document.getElementById('loanResult').style.display = 'block';
-        }
+            document.getElementById('monthlyPayment').textContent = formatCurrency(monthlyPayment);
+            document.getElementById('totalInterest').textContent = formatCurrency(totalInterest);
+            document.getElementById('totalRepayment').textContent = formatCurrency(totalRepayment);
+            document.getElementById('ltvRatio').textContent = ltvRatio.toFixed(1) + '%';
 
-        // Set up event listener for calculate button
-        document.getElementById('calculateLoanBtn')?.addEventListener('click', calculateLoanRepayment);
-
-        // Calculate on page load
-        updateInterestRateDisplay();
-        calculateLoanRepayment();
+            document.getElementById('calculatorResult').style.display = 'block';
+        });
     </script>
 
 </body>

@@ -4,9 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Terms of Service | Lehumo La Edishela - Financial Service Provider</title>
-    <meta name="description" content="Read our terms of service governing the use of our website and financial services. Understand your rights and obligations when using our services.">
-    <meta name="keywords" content="terms of service, terms and conditions, legal agreement, financial services terms, South Africa">
+    <title>Complaints Procedure | Lehumo La Edishela - Financial Service Provider</title>
+    <meta name="description" content="Learn how to lodge a complaint with Lehumo La Edishela. Our transparent complaints procedure ensures your concerns are addressed fairly and promptly.">
+    <meta name="keywords" content="complaints procedure, complaint handling, dispute resolution, financial ombudsman, South Africa">
 
     <!-- Favicons -->
     <link href="assets/img/favicon.png" rel="icon">
@@ -40,8 +40,8 @@
             --dark-gray: #212529;
             --text-color: #333333;
             --border-color: #E0E0E0;
-            --legal-purple: #6C3483;
-            --legal-orange: #F39C12;
+            --complaint-purple: #6C3483;
+            --complaint-orange: #F39C12;
         }
 
         /* WhatsApp Button */
@@ -405,12 +405,12 @@
                 transform: translateY(-2px);
             }
 
-        /* Legal Badge */
-        .legal-badge {
+        /* Complaint Badge */
+        .complaint-badge {
             display: inline-flex;
             align-items: center;
             background: rgba(243, 156, 18, 0.15);
-            color: var(--legal-orange);
+            color: var(--complaint-orange);
             padding: 0.5rem 1rem;
             border-radius: 30px;
             font-weight: 600;
@@ -418,16 +418,16 @@
             border: 1px solid rgba(243, 156, 18, 0.3);
         }
 
-            .legal-badge i {
+            .complaint-badge i {
                 margin-right: 0.5rem;
             }
 
-        /* Legal Content */
-        .legal-section {
+        /* Complaint Content */
+        .complaint-section {
             padding: 80px 0;
         }
 
-        .legal-container {
+        .complaint-container {
             background: white;
             border-radius: 12px;
             padding: 3rem;
@@ -435,57 +435,57 @@
             border: 1px solid var(--border-color);
         }
 
-        .legal-header {
+        .complaint-header {
             text-align: center;
             margin-bottom: 3rem;
             padding-bottom: 2rem;
             border-bottom: 3px solid var(--primary-red);
         }
 
-            .legal-header h2 {
+            .complaint-header h2 {
                 color: var(--primary-blue);
                 font-size: 2.5rem;
                 margin-bottom: 1rem;
             }
 
-        .legal-subheader {
+        .complaint-subheader {
             color: var(--primary-blue);
             font-size: 1.5rem;
             margin: 2rem 0 1rem;
             font-weight: 600;
         }
 
-        .legal-text {
+        .complaint-text {
             color: var(--text-color);
             line-height: 1.8;
             margin-bottom: 1.5rem;
         }
 
-        .legal-list {
+        .complaint-list {
             margin-bottom: 1.5rem;
             padding-left: 2rem;
         }
 
-            .legal-list li {
+            .complaint-list li {
                 margin-bottom: 0.75rem;
                 line-height: 1.6;
             }
 
-        .legal-highlight {
+        .complaint-highlight {
             background: var(--light-gray);
             padding: 1.5rem;
             border-radius: 8px;
-            border-left: 4px solid var(--legal-orange);
+            border-left: 4px solid var(--complaint-orange);
             margin: 2rem 0;
         }
 
-        .legal-table {
+        .complaint-table {
             width: 100%;
             border-collapse: collapse;
             margin: 2rem 0;
         }
 
-            .legal-table th {
+            .complaint-table th {
                 background-color: var(--primary-blue);
                 color: white;
                 font-weight: 600;
@@ -494,19 +494,96 @@
                 border: 1px solid var(--border-color);
             }
 
-            .legal-table td {
+            .complaint-table td {
                 padding: 1rem;
                 border: 1px solid var(--border-color);
                 vertical-align: top;
             }
 
-            .legal-table tr:nth-child(even) {
+            .complaint-table tr:nth-child(even) {
                 background-color: var(--light-gray);
+            }
+
+        /* Process Steps */
+        .process-timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .timeline-container {
+            position: relative;
+        }
+
+        .timeline-phase {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+            .timeline-phase:last-child {
+                margin-bottom: 0;
+            }
+
+        .phase-marker {
+            width: 40px;
+            height: 40px;
+            background: var(--complaint-orange);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            flex-shrink: 0;
+            margin-right: 1.5rem;
+            position: relative;
+            z-index: 2;
+            font-size: 0.9rem;
+        }
+
+        .phase-content {
+            flex: 1;
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            border: 1px solid var(--border-color);
+        }
+
+        .phase-line {
+            position: absolute;
+            left: 19px;
+            top: 40px;
+            bottom: -2rem;
+            width: 2px;
+            background: var(--complaint-orange);
+            z-index: 1;
+        }
+
+        .timeline-phase:last-child .phase-line {
+            display: none;
+        }
+
+        /* Contact Card */
+        .contact-card {
+            background: linear-gradient(135deg, var(--complaint-purple) 0%, var(--primary-blue) 100%);
+            border-radius: 12px;
+            padding: 2rem;
+            color: white;
+            text-align: center;
+            border: 1px solid var(--complaint-orange);
+        }
+
+            .contact-card i {
+                font-size: 2.5rem;
+                color: var(--complaint-orange);
+                margin-bottom: 1rem;
             }
 
         /* CTA Section */
         .cta-section {
-            background: linear-gradient(135deg, var(--legal-purple) 0%, var(--primary-blue) 100%);
+            background: linear-gradient(135deg, var(--complaint-purple) 0%, var(--primary-blue) 100%);
             color: white;
             padding: 100px 0;
             text-align: center;
@@ -598,12 +675,29 @@
                 padding: 140px 0 80px;
             }
 
-            .legal-header h2 {
+            .complaint-header h2 {
                 font-size: 2rem;
             }
 
-            .legal-container {
+            .complaint-container {
                 padding: 2rem;
+            }
+
+            .timeline-phase {
+                flex-direction: column;
+            }
+
+            .phase-marker {
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+
+            .phase-line {
+                left: 19px;
+                top: 40px;
+                bottom: -2rem;
+                height: 2px;
+                width: auto;
             }
         }
 
@@ -625,19 +719,19 @@
                 padding: 120px 0 60px;
             }
 
-            .legal-section {
+            .complaint-section {
                 padding: 60px 0;
             }
 
-            .legal-container {
+            .complaint-container {
                 padding: 1.5rem;
             }
 
-            .legal-header h2 {
+            .complaint-header h2 {
                 font-size: 1.75rem;
             }
 
-            .legal-subheader {
+            .complaint-subheader {
                 font-size: 1.3rem;
             }
 
@@ -657,12 +751,12 @@
                 right: 15px;
             }
 
-            .legal-table {
+            .complaint-table {
                 font-size: 0.9rem;
             }
 
-                .legal-table th,
-                .legal-table td {
+                .complaint-table th,
+                .complaint-table td {
                     padding: 0.75rem;
                 }
         }
@@ -701,11 +795,11 @@
                 right: 10px;
             }
 
-            .legal-container {
+            .complaint-container {
                 padding: 1.25rem;
             }
 
-            .legal-table {
+            .complaint-table {
                 display: block;
                 overflow-x: auto;
             }
@@ -731,10 +825,10 @@
     </style>
 </head>
 
-<body class="terms-page">
+<body class="complaints-page">
 
     <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/27722927336?text=Hello%20Lehumo%20La%20Edishela,%20I%20have%20a%20question%20about%20your%20terms%20of%20service" class="whatsapp-float" target="_blank" aria-label="Chat with us on WhatsApp">
+    <a href="https://wa.me/27722927336?text=Hello%20Lehumo%20La%20Edishela,%20I%20would%20like%20to%20lodge%20a%20complaint" class="whatsapp-float" target="_blank" aria-label="Chat with us on WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -929,239 +1023,301 @@
         <!-- Page Title -->
         <div class="page-title dark-background" data-aos="fade">
             <div class="container position-relative">
-                <div class="legal-badge">
-                    <i class="bi bi-file-text"></i>
-                    <span>FSCA Registered • NCR Approved • Legal Agreement</span>
+                <div class="complaint-badge">
+                    <i class="bi bi-chat-left-text"></i>
+                    <span>FSCA Registered • NCR Approved • Fair Resolution</span>
                 </div>
-                <h1 class="mt-3">Terms of Service</h1>
-                <p>Please read these terms carefully before using our website or services. By using our services, you agree to be bound by these terms.</p>
+                <h1 class="mt-3">Complaints Procedure</h1>
+                <p>Learn how to lodge a complaint with us. We are committed to resolving your concerns fairly, promptly, and transparently.</p>
                 <nav class="breadcrumbs">
                     <ol>
                         <li><a href="index.html">Home</a></li>
-                        <li class="current">Terms of Service</li>
+                        <li class="current">Complaints Procedure</li>
                     </ol>
                 </nav>
             </div>
         </div><!-- End Page Title -->
-        <!-- Terms Content -->
-        <section class="legal-section">
+        <!-- Complaint Content -->
+        <section class="complaint-section">
             <div class="container">
-                <div class="legal-container" data-aos="fade-up">
-                    <div class="legal-header">
-                        <h2>Terms of Service</h2>
+                <div class="complaint-container" data-aos="fade-up">
+                    <div class="complaint-header">
+                        <h2>Complaints Procedure</h2>
                         <p>Last Updated: February 2025</p>
                     </div>
 
-                    <div class="legal-text">
-                        <p>Welcome to Lehumo La Edishela Financial Services. These Terms of Service ("Terms") govern your use of our website, products, and services. By accessing or using our services, you agree to be bound by these Terms. If you do not agree to these Terms, please do not use our services.</p>
+                    <div class="complaint-text">
+                        <p>At Lehumo La Edishela, we are committed to providing excellent service to all our clients. However, we understand that sometimes things may not go as expected. If you are dissatisfied with any aspect of our service, we encourage you to let us know so we can address your concerns promptly and fairly.</p>
                     </div>
 
-                    <div class="legal-highlight">
-                        <h4 class="mb-3"><i class="bi bi-info-circle me-2" style="color: var(--legal-orange);"></i>Important Notice</h4>
-                        <p class="mb-0">These Terms constitute a legally binding agreement between you and Lehumo La Edishela Financial Services. We recommend that you read them carefully and retain a copy for your records.</p>
+                    <div class="complaint-highlight">
+                        <h4 class="mb-3"><i class="bi bi-megaphone me-2" style="color: var(--complaint-orange);"></i>Our Commitment</h4>
+                        <p class="mb-0">We take all complaints seriously and are committed to resolving them in a fair, transparent, and timely manner. Your feedback helps us improve our services.</p>
                     </div>
 
-                    <h3 class="legal-subheader">1. Definitions</h3>
-                    <div class="legal-text">
-                        <p>In these Terms, unless the context indicates otherwise:</p>
-                        <ul class="legal-list">
-                            <li><strong>"We", "us", "our"</strong> means Lehumo La Edishela Financial Services, its directors, employees, and authorized representatives.</li>
-                            <li><strong>"You", "your"</strong> means the user of our website or services, including any person applying for or obtaining financial products from us.</li>
-                            <li><strong>"Services"</strong> means all financial products and services offered by us, including loans, insurance, and related advisory services.</li>
-                            <li><strong>"Website"</strong> means our website at www.lehumolaedishela.co.za and all associated pages.</li>
-                            <li><strong>"Loan Agreement"</strong> means the specific contract governing any loan provided to you, which will incorporate these Terms by reference.</li>
+                    <h3 class="complaint-subheader">What Is a Complaint?</h3>
+                    <div class="complaint-text">
+                        <p>A complaint is an expression of dissatisfaction about our products, services, or conduct. This may include, but is not limited to:</p>
+                        <ul class="complaint-list">
+                            <li>Service delivery issues</li>
+                            <li>Billing or fee disputes</li>
+                            <li>Loan agreement concerns</li>
+                            <li>Staff conduct</li>
+                            <li>Communication problems</li>
+                            <li>Processing delays</li>
+                            <li>Any other aspect of our service</li>
                         </ul>
                     </div>
 
-                    <h3 class="legal-subheader">2. Acceptance of Terms</h3>
-                    <div class="legal-text">
-                        <p>By using our website or services, you represent and warrant that:</p>
-                        <ul class="legal-list">
-                            <li>You are at least 18 years of age and have the legal capacity to enter into binding contracts.</li>
-                            <li>You are a resident of South Africa or authorized to use our services in South Africa.</li>
-                            <li>All information you provide to us is true, accurate, current, and complete.</li>
-                            <li>You will maintain and update your information to keep it accurate.</li>
-                            <li>Your use of our services complies with all applicable laws and regulations.</li>
+                    <h3 class="complaint-subheader">How to Lodge a Complaint</h3>
+                    <div class="complaint-text">
+                        <p>You can lodge a complaint through any of the following channels:</p>
+                        <table class="complaint-table">
+                            <thead>
+                                <tr>
+                                    <th>Method</th>
+                                    <th>Details</th>
+                                    <th>Response Time</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Phone</strong></td>
+                                    <td>Call our Complaints Line: 072 292 7336<br>Mon-Fri: 8am-5pm, Sat: 9am-12pm</td>
+                                    <td>Immediate acknowledgment</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Email</strong></td>
+                                    <td>Send details to: complaints@edi-h.co.za</td>
+                                    <td>Within 24 hours</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>WhatsApp</strong></td>
+                                    <td>Message us on WhatsApp: 072 292 7336</td>
+                                    <td>Within 4 hours</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Letter</strong></td>
+                                    <td>Write to: Complaints Department, Lehumo La Edishela, Johannesburg, South Africa</td>
+                                    <td>Within 3 business days of receipt</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>In Person</strong></td>
+                                    <td>Visit our office (by appointment)</td>
+                                    <td>During meeting</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3 class="complaint-subheader">Information to Include</h3>
+                    <div class="complaint-text">
+                        <p>To help us resolve your complaint quickly, please include:</p>
+                        <ul class="complaint-list">
+                            <li>Your full name and contact details</li>
+                            <li>Your account or loan reference number (if applicable)</li>
+                            <li>Clear description of the issue</li>
+                            <li>Any relevant dates</li>
+                            <li>What you would like us to do to resolve the issue</li>
+                            <li>Copies of any supporting documents</li>
                         </ul>
                     </div>
 
-                    <h3 class="legal-subheader">3. Our Services</h3>
-                    <div class="legal-text">
-                        <p>We offer a range of financial services, including but not limited to:</p>
-                        <ul class="legal-list">
-                            <li><strong>Asset-Backed Loans:</strong> Secured loans using vehicles, luxury items, property, or equipment as collateral.</li>
-                            <li><strong>Bridging Finance:</strong> Short-term financing for property purchases, auctions, and development projects.</li>
-                            <li><strong>Commercial Fleet Financing:</strong> Financing solutions for business vehicle fleets.</li>
-                            <li><strong>Insurance Products:</strong> Business, asset, vehicle, property, and life insurance.</li>
-                        </ul>
-                        <p class="mt-3">All financial products are subject to separate agreements, credit approvals, and specific terms that will be provided to you before you commit to any product.</p>
+                    <h3 class="complaint-subheader">Our Complaint Handling Process</h3>
+                    <div class="process-timeline">
+                        <div class="timeline-container">
+                            <div class="timeline-phase">
+                                <div class="phase-marker">1</div>
+                                <div class="phase-content">
+                                    <h4>Acknowledgment</h4>
+                                    <p>We will acknowledge receipt of your complaint within 24 hours. You will receive a reference number and the name of the person handling your complaint.</p>
+                                </div>
+                                <div class="phase-line"></div>
+                            </div>
+
+                            <div class="timeline-phase">
+                                <div class="phase-marker">2</div>
+                                <div class="phase-content">
+                                    <h4>Investigation</h4>
+                                    <p>We will investigate your complaint thoroughly. This may involve reviewing records, speaking with staff, and gathering relevant information. We may contact you for additional details.</p>
+                                </div>
+                                <div class="phase-line"></div>
+                            </div>
+
+                            <div class="timeline-phase">
+                                <div class="phase-marker">3</div>
+                                <div class="phase-content">
+                                    <h4>Resolution Proposal</h4>
+                                    <p>We will propose a resolution within 15 business days. If we need more time, we will keep you informed of our progress and provide a revised timeline.</p>
+                                </div>
+                                <div class="phase-line"></div>
+                            </div>
+
+                            <div class="timeline-phase">
+                                <div class="phase-marker">4</div>
+                                <div class="phase-content">
+                                    <h4>Implementation</h4>
+                                    <p>If you accept our proposed resolution, we will implement it promptly. We will confirm in writing when the matter has been resolved.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <h3 class="legal-subheader">4. Loan Applications and Approvals</h3>
-                    <div class="legal-text">
-                        <p>When you apply for a loan through our website or services:</p>
-                        <ul class="legal-list">
-                            <li>Your application is an offer to enter into a loan agreement with us.</li>
-                            <li>We may accept or reject your application at our discretion, subject to applicable laws.</li>
-                            <li>All loans are subject to credit approval, affordability assessment, and satisfactory asset valuation.</li>
-                            <li>We may verify your information through credit bureaus, public records, and other sources.</li>
-                            <li>Approval timelines are estimates and not guaranteed.</li>
-                        </ul>
+                    <h3 class="complaint-subheader">Complaint Escalation</h3>
+                    <div class="complaint-text">
+                        <p>If you are not satisfied with our proposed resolution, or if we have not resolved your complaint within the agreed timeframe, you may escalate your complaint:</p>
+                        <ol class="complaint-list">
+                            <li><strong>Internal Escalation:</strong> Request that your complaint be reviewed by a senior manager.</li>
+                            <li><strong>External Escalation:</strong> If still unsatisfied, you may refer your complaint to an external dispute resolution body.</li>
+                        </ol>
                     </div>
 
-                    <h3 class="legal-subheader">5. Interest Rates and Fees</h3>
-                    <div class="legal-text">
-                        <p>Interest rates and fees for our products are governed by the following principles:</p>
-                        <ul class="legal-list">
-                            <li>Rates and fees will be clearly disclosed in your loan agreement before you sign.</li>
-                            <li>Interest rates may be fixed or variable, as specified in your agreement.</li>
-                            <li>Variable rates will move with the prime lending rate as determined by the South African Reserve Bank.</li>
-                            <li>All fees are charged in accordance with the National Credit Act and other applicable regulations.</li>
-                            <li>We will provide you with a pre-agreement statement and quotation before you commit to any loan.</li>
-                        </ul>
+                    <h3 class="complaint-subheader">External Dispute Resolution Bodies</h3>
+                    <div class="complaint-text">
+                        <p>Depending on the nature of your complaint, you may refer it to:</p>
+                        <table class="complaint-table">
+                            <thead>
+                                <tr>
+                                    <th>Body</th>
+                                    <th>Jurisdiction</th>
+                                    <th>Contact Details</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>National Credit Regulator (NCR)</strong></td>
+                                    <td>Credit-related complaints</td>
+                                    <td>Tel: 0860 627 627<br>Email: complaints@ncr.org.za<br>Web: www.ncr.org.za</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Financial Sector Conduct Authority (FSCA)</strong></td>
+                                    <td>Financial services complaints</td>
+                                    <td>Tel: 0800 203 722<br>Email: info@fsca.co.za<br>Web: www.fsca.co.za</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Ombudsman for Banking Services</strong></td>
+                                    <td>Banking-related complaints</td>
+                                    <td>Tel: 0860 800 900<br>Email: info@obssa.co.za<br>Web: www.obssa.co.za</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>FAIS Ombud</strong></td>
+                                    <td>Financial advice complaints</td>
+                                    <td>Tel: 012 762 5000<br>Email: info@faisombud.co.za<br>Web: www.faisombud.co.za</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
 
-                    <h3 class="legal-subheader">6. Repayment Obligations</h3>
-                    <div class="legal-text">
-                        <p>By accepting a loan from us, you agree to:</p>
-                        <ul class="legal-list">
-                            <li>Repay the loan amount plus all interest and fees in accordance with the agreed repayment schedule.</li>
-                            <li>Make payments on or before the due dates specified in your loan agreement.</li>
-                            <li>Notify us immediately if you anticipate any difficulty in making payments.</li>
-                            <li>Pay all costs associated with collecting overdue amounts, including legal fees on an attorney and own client scale.</li>
-                            <li>Defaulting on your loan may result in legal action and negative credit bureau reporting.</li>
-                        </ul>
+                    <h3 class="complaint-subheader">Our Contact Details</h3>
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="contact-card">
+                                <i class="bi bi-headset"></i>
+                                <h4 class="mb-3">Complaints Department</h4>
+                                <p class="mb-2"><strong>Phone:</strong> 072 292 7336</p>
+                                <p class="mb-2"><strong>Email:</strong> complaints@edi-h.co.za</p>
+                                <p class="mb-2"><strong>WhatsApp:</strong> 072 292 7336</p>
+                                <p class="mb-0"><strong>Hours:</strong> Mon-Fri 8am-5pm, Sat 9am-12pm</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="contact-card">
+                                <i class="bi bi-person-badge"></i>
+                                <h4 class="mb-3">Complaints Officer</h4>
+                                <p class="mb-2"><strong>Name:</strong> [Complaints Officer Name]</p>
+                                <p class="mb-2"><strong>Direct Line:</strong> 072 292 7336</p>
+                                <p class="mb-2"><strong>Email:</strong> complaints@edi-h.co.za</p>
+                                <p class="mb-0"><strong>Response Time:</strong> Within 24 hours</p>
+                            </div>
+                        </div>
                     </div>
 
-                    <h3 class="legal-subheader">7. Early Settlement</h3>
-                    <div class="legal-text">
-                        <p>You have the right to settle your loan early. Early settlement will be calculated as follows:</p>
-                        <ul class="legal-list">
-                            <li>Fixed-rate loans: Settlement amount calculated using the Rule of 78 method as prescribed by the National Credit Act.</li>
-                            <li>Variable-rate loans: Outstanding balance plus interest accrued to settlement date.</li>
-                            <li>Early termination fees may apply as disclosed in your loan agreement.</li>
-                            <li>We will provide you with a settlement quote upon request.</li>
-                        </ul>
-                    </div>
-
-                    <h3 class="legal-subheader">8. Default and Collections</h3>
-                    <div class="legal-text">
-                        <p>If you default on your loan obligations:</p>
-                        <ul class="legal-list">
-                            <li>We may charge default interest and penalties as specified in your agreement.</li>
-                            <li>We may report your default to credit bureaus, which may affect your credit score.</li>
-                            <li>We may appoint collection agents or take legal action to recover the debt.</li>
-                            <li>We may exercise our rights over any collateral securing the loan.</li>
-                            <li>You will be responsible for all costs incurred in collecting the debt.</li>
-                        </ul>
-                    </div>
-
-                    <h3 class="legal-subheader">9. Collateral and Security</h3>
-                    <div class="legal-text">
-                        <p>For secured loans:</p>
-                        <ul class="legal-list">
-                            <li>You grant us a security interest in the asset provided as collateral.</li>
-                            <li>You must maintain the asset in good condition and keep it insured as required.</li>
-                            <li>You may not sell, transfer, or dispose of the asset without our written consent.</li>
-                            <li>If you default, we may take possession of and sell the collateral to recover the debt.</li>
-                            <li>Any surplus from the sale of collateral will be returned to you after deducting all amounts owed.</li>
-                        </ul>
-                    </div>
-
-                    <h3 class="legal-subheader">10. Website Use</h3>
-                    <div class="legal-text">
-                        <p>When using our website, you agree to:</p>
-                        <ul class="legal-list">
-                            <li>Use the website only for lawful purposes and in accordance with these Terms.</li>
-                            <li>Not attempt to gain unauthorized access to any part of the website.</li>
-                            <li>Not introduce viruses, trojans, worms, or other harmful material.</li>
-                            <li>Not use the website in any way that could damage, disable, or impair it.</li>
-                            <li>Not scrape, copy, or reproduce any content without our written permission.</li>
-                        </ul>
-                    </div>
-
-                    <h3 class="legal-subheader">11. Intellectual Property</h3>
-                    <div class="legal-text">
-                        <p>All content on our website, including text, graphics, logos, images, and software, is our property or the property of our licensors and is protected by South African and international copyright laws. You may not reproduce, distribute, or create derivative works without our express written consent.</p>
-                    </div>
-
-                    <h3 class="legal-subheader">12. Limitation of Liability</h3>
-                    <div class="legal-text">
-                        <p>To the maximum extent permitted by law:</p>
-                        <ul class="legal-list">
-                            <li>We provide our services "as is" without any warranties, express or implied.</li>
-                            <li>We are not liable for any indirect, incidental, or consequential damages arising from your use of our services.</li>
-                            <li>Our total liability to you for any claim shall not exceed the amount you paid us for the specific service giving rise to the claim.</li>
-                            <li>We are not responsible for any delays or failures caused by factors beyond our reasonable control.</li>
-                        </ul>
-                    </div>
-
-                    <h3 class="legal-subheader">13. Indemnification</h3>
-                    <div class="legal-text">
-                        <p>You agree to indemnify and hold us harmless from any claims, losses, damages, liabilities, including legal fees, arising out of:</p>
-                        <ul class="legal-list">
-                            <li>Your use of our services in violation of these Terms.</li>
-                            <li>Any breach of your representations and warranties.</li>
-                            <li>Your violation of any applicable law or regulation.</li>
-                            <li>Any dispute between you and any third party.</li>
-                        </ul>
-                    </div>
-
-                    <h3 class="legal-subheader">14. Termination</h3>
-                    <div class="legal-text">
-                        <p>We may terminate or suspend your access to our services immediately, without prior notice, for:</p>
-                        <ul class="legal-list">
-                            <li>Breach of these Terms.</li>
-                            <li>Fraudulent or illegal activities.</li>
-                            <li>Non-payment of amounts due.</li>
-                            <li>At our discretion, with reasonable notice where possible.</li>
+                    <div class="complaint-highlight mt-4">
+                        <h4 class="mb-3"><i class="bi bi-check-circle me-2" style="color: var(--complaint-orange);"></i>Our Promise to You</h4>
+                        <ul class="complaint-list mb-0">
+                            <li>We will treat you with respect and courtesy throughout the process.</li>
+                            <li>We will investigate your complaint thoroughly and impartially.</li>
+                            <li>We will keep you informed of progress.</li>
+                            <li>We will provide clear reasons for our decisions.</li>
+                            <li>We will implement fair resolutions promptly.</li>
+                            <li>Your complaint will not affect your ongoing relationship with us.</li>
                         </ul>
                     </div>
 
-                    <h3 class="legal-subheader">15. Governing Law</h3>
-                    <div class="legal-text">
-                        <p>These Terms are governed by the laws of the Republic of South Africa. Any dispute arising from these Terms shall be subject to the exclusive jurisdiction of the courts of South Africa.</p>
+                    <div class="complaint-highlight mt-4" style="background-color: rgba(230, 57, 70, 0.1); border-left-color: var(--primary-red);">
+                        <h4 class="mb-3"><i class="bi bi-exclamation-triangle me-2" style="color: var(--primary-red);"></i>Important Note</h4>
+                        <p class="mb-0">Making a complaint does not affect your legal rights. You have the right to pursue any legal remedies available to you under South African law. We encourage you to contact us first so we have the opportunity to address your concerns.</p>
                     </div>
+                </div>
+            </div>
+        </section>
 
-                    <h3 class="legal-subheader">16. Dispute Resolution</h3>
-                    <div class="legal-text">
-                        <p>If a dispute arises:</p>
-                        <ul class="legal-list">
-                            <li>We encourage you to contact us first to seek a resolution.</li>
-                            <li>If we cannot resolve the dispute informally, you may use our complaints procedure.</li>
-                            <li>You may also refer disputes to the National Credit Regulator or the Financial Sector Conduct Authority.</li>
-                            <li>As a last resort, disputes may be submitted to the appropriate court with jurisdiction.</li>
-                        </ul>
-                    </div>
+        <!-- Complaint Form Section -->
+        <section class="complaint-section bg-light">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="complaint-container" data-aos="fade-up">
+                            <h3 class="complaint-subheader text-center">Submit a Complaint</h3>
+                            <p class="text-center mb-4">Complete the form below and we will acknowledge your complaint within 24 hours.</p>
 
-                    <h3 class="legal-subheader">17. Changes to Terms</h3>
-                    <div class="legal-text">
-                        <p>We may modify these Terms at any time. Changes will be effective immediately upon posting on our website. Your continued use of our services after changes constitutes acceptance of the modified Terms. We will notify you of material changes via email or prominent notice on our website.</p>
-                    </div>
+                            <form id="complaintForm">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="fullName" class="form-label">Full Name *</label>
+                                            <input type="text" class="form-control" id="fullName" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="accountNumber" class="form-label">Account/Loan Reference (if applicable)</label>
+                                            <input type="text" class="form-control" id="accountNumber">
+                                        </div>
+                                    </div>
 
-                    <h3 class="legal-subheader">18. Severability</h3>
-                    <div class="legal-text">
-                        <p>If any provision of these Terms is held to be invalid or unenforceable, the remaining provisions shall remain in full force and effect.</p>
-                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="email" class="form-label">Email Address *</label>
+                                            <input type="email" class="form-control" id="email" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="phone" class="form-label">Phone Number *</label>
+                                            <input type="tel" class="form-control" id="phone" placeholder="072 292 7336" required>
+                                        </div>
+                                    </div>
 
-                    <h3 class="legal-subheader">19. Entire Agreement</h3>
-                    <div class="legal-text">
-                        <p>These Terms, together with any loan agreements and other documents incorporated by reference, constitute the entire agreement between you and us regarding your use of our services.</p>
-                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <label for="complaintSubject" class="form-label">Subject *</label>
+                                            <input type="text" class="form-control" id="complaintSubject" required placeholder="Brief summary of your complaint">
+                                        </div>
+                                    </div>
 
-                    <h3 class="legal-subheader">20. Contact Information</h3>
-                    <div class="legal-text">
-                        <p>If you have any questions about these Terms, please contact us:</p>
-                        <ul class="legal-list">
-                            <li><strong>Email:</strong> legal@edi-h.co.za</li>
-                            <li><strong>Phone:</strong> 072 292 7336</li>
-                            <li><strong>Mail:</strong> Lehumo La Edishela Financial Services, Johannesburg, South Africa</li>
-                        </ul>
-                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <label for="complaintDetails" class="form-label">Complaint Details *</label>
+                                            <textarea class="form-control" id="complaintDetails" rows="6" required placeholder="Please provide full details of your complaint, including dates, relevant information, and what you would like us to do to resolve it."></textarea>
+                                        </div>
+                                    </div>
 
-                    <div class="legal-highlight mt-4">
-                        <h4 class="mb-3"><i class="bi bi-shield-check me-2" style="color: var(--legal-orange);"></i>Acknowledgment</h4>
-                        <p class="mb-0">By using our services, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service.</p>
+                                    <div class="col-12">
+                                        <div class="form-check mb-3">
+                                            <input class="form-check-input" type="checkbox" id="consent" required>
+                                            <label class="form-check-label" for="consent">
+                                                I confirm that the information provided is true and accurate. I authorize Lehumo La Edishela to use this information to investigate my complaint.
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-primary w-100 py-3">Submit Complaint</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1172,18 +1328,18 @@
             <div class="container" data-aos="fade-up">
                 <div class="row justify-content-center text-center">
                     <div class="col-lg-8">
-                        <h2 class="mb-4">Questions About Our Terms?</h2>
-                        <p class="mb-5">Contact our legal department for clarification on any of our terms and conditions</p>
+                        <h2 class="mb-4">Need Help Resolving an Issue?</h2>
+                        <p class="mb-5">Contact our complaints team for assistance</p>
                         <div class="cta-buttons">
                             <a href="tel:0722927336" class="btn btn-light btn-lg me-3 mb-3 px-4">
-                                <i class="bi bi-telephone me-2"></i> Call Legal Department
+                                <i class="bi bi-telephone me-2"></i> Call Complaints Line
                             </a>
-                            <a href="contact.html" class="btn btn-outline-light btn-lg mb-3 px-4">
-                                <i class="bi bi-envelope me-2"></i> Email Legal Questions
+                            <a href="mailto:complaints@edi-h.co.za" class="btn btn-outline-light btn-lg mb-3 px-4">
+                                <i class="bi bi-envelope me-2"></i> Email Complaints
                             </a>
                         </div>
                         <p class="text-light mt-4 small">
-                            <i class="bi bi-info-circle me-1"></i> FSCA Registered • NCR Approved • Legal Compliance
+                            <i class="bi bi-info-circle me-1"></i> FSCA Registered • NCR Approved • Fair Resolution Guaranteed
                         </p>
                     </div>
                 </div>
@@ -1225,8 +1381,8 @@
                     <h4 class="mb-3">Legal</h4>
                     <ul class="list-unstyled">
                         <li class="mb-2"><a href="privacy.html">Privacy Policy</a></li>
-                        <li class="mb-2"><a href="terms.html" class="active">Terms of Service</a></li>
-                        <li class="mb-2"><a href="complaints.html">Complaints Procedure</a></li>
+                        <li class="mb-2"><a href="terms.html">Terms of Service</a></li>
+                        <li class="mb-2"><a href="complaints.html" class="active">Complaints Procedure</a></li>
                     </ul>
                 </div>
 
@@ -1366,6 +1522,90 @@
                 header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
                 header.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
             }
+        });
+
+        // Complaint form submission
+        document.getElementById('complaintForm')?.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Get form data
+            const formData = {
+                fullName: document.getElementById('fullName').value,
+                accountNumber: document.getElementById('accountNumber').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                subject: document.getElementById('complaintSubject').value,
+                details: document.getElementById('complaintDetails').value
+            };
+
+            // Simple validation
+            if (!formData.fullName || !formData.email || !formData.phone || !formData.subject || !formData.details) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(formData.email)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+
+            const phoneRegex = /^[0-9\s\+\-\(\)]{10,}$/;
+            if (!phoneRegex.test(formData.phone.replace(/\s/g, ''))) {
+                alert('Please enter a valid phone number.');
+                return;
+            }
+
+            // Show success message
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+
+            submitBtn.textContent = 'Submitting...';
+            submitBtn.disabled = true;
+
+            // Simulate API call
+            setTimeout(() => {
+                // Create success alert
+                const alertDiv = document.createElement('div');
+                alertDiv.className = 'alert alert-success alert-dismissible fade show mt-3';
+                alertDiv.innerHTML = `
+                        <i class="bi bi-check-circle me-2"></i>
+                        <strong>Complaint submitted successfully!</strong> We have received your complaint and will acknowledge it within 24 hours. Your reference number will be sent to your email.
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    `;
+
+                this.parentNode.insertBefore(alertDiv, this.nextSibling);
+
+                // Reset form
+                this.reset();
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+
+                // Scroll to success message
+                alertDiv.scrollIntoView({ behavior: 'smooth' });
+
+                // Auto-dismiss alert after 10 seconds
+                setTimeout(() => {
+                    if (alertDiv.parentNode) {
+                        alertDiv.remove();
+                    }
+                }, 10000);
+            }, 1500);
+        });
+
+        // Auto-format phone number
+        document.getElementById('phone')?.addEventListener('input', function (e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length > 0) {
+                if (value.length <= 3) {
+                    value = value;
+                } else if (value.length <= 6) {
+                    value = value.substring(0, 3) + ' ' + value.substring(3);
+                } else {
+                    value = value.substring(0, 3) + ' ' + value.substring(3, 6) + ' ' + value.substring(6, 10);
+                }
+            }
+            e.target.value = value;
         });
     </script>
 
