@@ -2,337 +2,1373 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Privacy - Tour Bootstrap Template</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Privacy Policy | Lehumo La Edishela - Financial Service Provider</title>
+    <meta name="description" content="Read our privacy policy to understand how we collect, use, and protect your personal information in compliance with POPIA.">
+    <meta name="keywords" content="privacy policy, data protection, POPIA, information security, South Africa privacy law">
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Font Awesome for WhatsApp Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Tour
-  * Template URL: https://bootstrapmade.com/tour-bootstrap-travel-website-template/
-  * Updated: Jul 01 2025 with Bootstrap v5.3.7
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <!-- Template Custom CSS -->
+    <style>
+        :root {
+            --primary-blue: #1A365D;
+            --primary-red: #E63946;
+            --accent-teal: #2A9D8F;
+            --light-gray: #F8F9FA;
+            --dark-gray: #212529;
+            --text-color: #333333;
+            --border-color: #E0E0E0;
+            --legal-purple: #6C3483;
+            --legal-orange: #F39C12;
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 90px;
+            right: 30px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+            .whatsapp-float:hover {
+                background-color: #128C7E;
+                color: white;
+                transform: scale(1.1);
+                box-shadow: 0 6px 25px rgba(37, 211, 102, 0.4);
+            }
+
+            .whatsapp-float i {
+                margin-top: 2px;
+            }
+
+        /* Mobile Apply Now Button */
+        .mobile-apply-float {
+            position: fixed;
+            width: auto;
+            height: 50px;
+            bottom: 20px;
+            right: 20px;
+            left: 20px;
+            background-color: var(--primary-red);
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 600;
+            box-shadow: 0 4px 20px rgba(230, 57, 70, 0.3);
+            z-index: 1000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            padding: 0 20px;
+            letter-spacing: 0.5px;
+        }
+
+            .mobile-apply-float:hover {
+                background-color: #c53030;
+                color: white;
+                transform: translateY(-2px);
+                box-shadow: 0 6px 25px rgba(230, 57, 70, 0.4);
+            }
+
+            .mobile-apply-float i {
+                margin-right: 8px;
+            }
+
+        /* ============================================= */
+        /* ENHANCED LOGO STYLING - LARGER & SEPARATE */
+        /* ============================================= */
+
+        /* Header structure */
+        .header {
+            background-color: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            height: 100px;
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            height: 100%;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        /* Logo positioned absolutely to separate from navigation */
+        .logo-wrapper {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Larger logo image */
+        .logo-image {
+            width: 85px;
+            height: 85px;
+            object-fit: contain;
+            border-radius: 100%;
+            display: block;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border: 2px solid white;
+        }
+
+        /* Navigation container - shifted right to make space for logo */
+        .navmenu {
+            margin-left: 120px;
+            width: 100%;
+        }
+
+            .navmenu ul {
+                display: flex;
+                align-items: center;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            .navmenu li {
+                position: relative;
+                margin: 0 12px;
+            }
+
+            .navmenu a {
+                font-weight: 500;
+                font-size: 0.95rem;
+                color: var(--text-color);
+                text-decoration: none;
+                padding: 8px 0;
+                transition: color 0.3s ease;
+            }
+
+                .navmenu a:hover,
+                .navmenu a.active {
+                    color: var(--primary-red);
+                }
+
+        .btn-getstarted {
+            background: linear-gradient(135deg, var(--primary-red) 0%, #c53030 100%);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            font-size: 0.95rem;
+            letter-spacing: 0.3px;
+            white-space: nowrap;
+            margin-left: 20px;
+        }
+
+            .btn-getstarted:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 10px 20px rgba(230, 57, 70, 0.2);
+                color: white;
+            }
+
+        /* Mobile Menu Toggle Button */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+            cursor: pointer;
+            padding: 0.5rem;
+            margin-left: auto;
+            z-index: 20;
+        }
+
+        /* Mobile Menu Styles */
+        .mobile-menu-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 9998;
+        }
+
+        .mobile-menu-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 300px;
+            background-color: white;
+            z-index: 9999;
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+            overflow-y: auto;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+            .mobile-menu-container.active {
+                transform: translateX(0);
+            }
+
+        .mobile-menu-header {
+            padding: 1.5rem;
+            background-color: var(--primary-blue);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+            .mobile-menu-header h3 {
+                margin: 0;
+                font-size: 1.2rem;
+            }
+
+        .mobile-menu-close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0;
+        }
+
+        .mobile-menu-nav {
+            padding: 1rem 0;
+        }
+
+            .mobile-menu-nav ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            .mobile-menu-nav li {
+                border-bottom: 1px solid var(--border-color);
+            }
+
+            .mobile-menu-nav a {
+                display: block;
+                padding: 1rem 1.5rem;
+                color: var(--text-color);
+                text-decoration: none;
+                font-weight: 500;
+                transition: all 0.3s ease;
+            }
+
+                .mobile-menu-nav a:hover {
+                    background-color: #f8f9fa;
+                    color: var(--primary-red);
+                }
+
+                .mobile-menu-nav a.active {
+                    color: var(--primary-red);
+                    background-color: #fff5f5;
+                }
+
+        /* Mobile Dropdown Toggle */
+        .mobile-dropdown-toggle {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 1rem 1.5rem;
+            color: var(--text-color);
+            font-weight: 500;
+            text-align: left;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+            .mobile-dropdown-toggle i {
+                transition: transform 0.3s ease;
+            }
+
+            .mobile-dropdown-toggle.active i {
+                transform: rotate(180deg);
+            }
+
+        .mobile-dropdown-menu {
+            display: none;
+            background-color: #f8f9fa;
+        }
+
+            .mobile-dropdown-menu.active {
+                display: block;
+            }
+
+            .mobile-dropdown-menu li {
+                border-bottom: none;
+                border-top: 1px solid #e9ecef;
+            }
+
+            .mobile-dropdown-menu a {
+                padding: 0.8rem 1.5rem 0.8rem 2.5rem;
+                font-size: 0.9rem;
+                color: #666;
+            }
+
+        /* Page Title */
+        .page-title {
+            background: linear-gradient(rgba(26, 54, 93, 0.85), rgba(26, 54, 93, 0.9)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 180px 0 100px;
+            position: relative;
+        }
+
+            .page-title h1 {
+                color: white;
+                font-size: 3rem;
+                font-weight: 800;
+                margin-bottom: 1rem;
+            }
+
+        .btn-primary {
+            background-color: var(--primary-red);
+            border-color: var(--primary-red);
+            padding: 0.875rem 2rem;
+            font-weight: 600;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+            .btn-primary:hover {
+                background-color: #c53030;
+                border-color: #c53030;
+                transform: translateY(-2px);
+                box-shadow: 0 10px 20px rgba(230, 57, 70, 0.2);
+            }
+
+        .btn-outline-primary {
+            color: var(--primary-red);
+            border-color: var(--primary-red);
+            padding: 0.875rem 2rem;
+            font-weight: 600;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+            .btn-outline-primary:hover {
+                background-color: var(--primary-red);
+                color: white;
+                border-color: var(--primary-red);
+                transform: translateY(-2px);
+            }
+
+        /* Legal Badge */
+        .legal-badge {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(243, 156, 18, 0.15);
+            color: var(--legal-orange);
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+            font-weight: 600;
+            margin: 0.5rem 0;
+            border: 1px solid rgba(243, 156, 18, 0.3);
+        }
+
+            .legal-badge i {
+                margin-right: 0.5rem;
+            }
+
+        /* Legal Content */
+        .legal-section {
+            padding: 80px 0;
+        }
+
+        .legal-container {
+            background: white;
+            border-radius: 12px;
+            padding: 3rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--border-color);
+        }
+
+        .legal-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 3px solid var(--primary-red);
+        }
+
+            .legal-header h2 {
+                color: var(--primary-blue);
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
+            }
+
+        .legal-subheader {
+            color: var(--primary-blue);
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem;
+            font-weight: 600;
+        }
+
+        .legal-text {
+            color: var(--text-color);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .legal-list {
+            margin-bottom: 1.5rem;
+            padding-left: 2rem;
+        }
+
+            .legal-list li {
+                margin-bottom: 0.75rem;
+                line-height: 1.6;
+            }
+
+        .legal-highlight {
+            background: var(--light-gray);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--legal-orange);
+            margin: 2rem 0;
+        }
+
+        .legal-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+        }
+
+            .legal-table th {
+                background-color: var(--primary-blue);
+                color: white;
+                font-weight: 600;
+                text-align: left;
+                padding: 1rem;
+                border: 1px solid var(--border-color);
+            }
+
+            .legal-table td {
+                padding: 1rem;
+                border: 1px solid var(--border-color);
+                vertical-align: top;
+            }
+
+            .legal-table tr:nth-child(even) {
+                background-color: var(--light-gray);
+            }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--legal-purple) 0%, var(--primary-blue) 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .btn-outline-light {
+            color: white;
+            border-color: white;
+            padding: 0.875rem 2rem;
+            font-weight: 600;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+            .btn-outline-light:hover {
+                background-color: white;
+                color: var(--primary-blue);
+                border-color: white;
+                transform: translateY(-2px);
+            }
+
+        /* ============================================= */
+        /* MOBILE RESPONSIVE STYLES */
+        /* ============================================= */
+
+        @media (max-width: 1200px) {
+            .navmenu {
+                margin-left: 100px;
+            }
+
+                .navmenu li {
+                    margin: 0 8px;
+                }
+        }
+
+        @media (max-width: 992px) {
+            /* Reset header for mobile */
+            .header {
+                height: 80px;
+                padding: 5px 0;
+            }
+
+            .header-container {
+                position: relative;
+                padding: 0 15px;
+            }
+
+            /* Logo styling for mobile */
+            .logo-wrapper {
+                position: static;
+                transform: none;
+                margin-right: auto;
+            }
+
+            .logo-image {
+                width: 60px;
+                height: 60px;
+            }
+
+            /* Hide desktop navigation on mobile */
+            .navmenu, .btn-getstarted {
+                display: none !important;
+            }
+
+            /* Show mobile menu toggle */
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            /* Show mobile apply button */
+            .mobile-apply-float {
+                display: flex;
+            }
+
+            /* WhatsApp button adjustment */
+            .whatsapp-float {
+                bottom: 90px;
+                width: 55px;
+                height: 55px;
+                font-size: 26px;
+                right: 25px;
+            }
+
+            .page-title h1 {
+                font-size: 2.5rem;
+            }
+
+            .page-title {
+                padding: 140px 0 80px;
+            }
+
+            .legal-header h2 {
+                font-size: 2rem;
+            }
+
+            .legal-container {
+                padding: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                height: 70px;
+            }
+
+            .logo-image {
+                width: 55px;
+                height: 55px;
+            }
+
+            .page-title h1 {
+                font-size: 2rem;
+            }
+
+            .page-title {
+                padding: 120px 0 60px;
+            }
+
+            .legal-section {
+                padding: 60px 0;
+            }
+
+            .legal-container {
+                padding: 1.5rem;
+            }
+
+            .legal-header h2 {
+                font-size: 1.75rem;
+            }
+
+            .legal-subheader {
+                font-size: 1.3rem;
+            }
+
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 24px;
+                bottom: 85px;
+                right: 20px;
+            }
+
+            .mobile-apply-float {
+                height: 45px;
+                font-size: 15px;
+                bottom: 15px;
+                left: 15px;
+                right: 15px;
+            }
+
+            .legal-table {
+                font-size: 0.9rem;
+            }
+
+                .legal-table th,
+                .legal-table td {
+                    padding: 0.75rem;
+                }
+        }
+
+        @media (max-width: 480px) {
+            .header {
+                height: 65px;
+            }
+
+            .logo-image {
+                width: 50px;
+                height: 50px;
+            }
+
+            .page-title h1 {
+                font-size: 1.75rem;
+            }
+
+            .mobile-menu-container {
+                width: 280px;
+            }
+
+            .whatsapp-float {
+                width: 48px;
+                height: 48px;
+                font-size: 22px;
+                bottom: 80px;
+                right: 15px;
+            }
+
+            .mobile-apply-float {
+                height: 40px;
+                font-size: 14px;
+                bottom: 10px;
+                left: 10px;
+                right: 10px;
+            }
+
+            .legal-container {
+                padding: 1.25rem;
+            }
+
+            .legal-table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+
+        /* Desktop specific */
+        @media (min-width: 993px) {
+            .mobile-menu-toggle,
+            .mobile-apply-float,
+            .mobile-menu-overlay,
+            .mobile-menu-container {
+                display: none !important;
+            }
+
+            .whatsapp-float {
+                bottom: 30px;
+                right: 30px;
+                width: 60px;
+                height: 60px;
+                font-size: 30px;
+            }
+        }
+    </style>
 </head>
 
 <body class="privacy-page">
 
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/27722927336?text=Hello%20Lehumo%20La%20Edishela,%20I%20have%20a%20question%20about%20your%20privacy%20policy" class="whatsapp-float" target="_blank" aria-label="Chat with us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.webp" alt=""> -->
-        <h1 class="sitename">Tour</h1>
-      </a>
+    <!-- Mobile Apply Now Button -->
+    <a href="apply.html" class="mobile-apply-float">
+        <i class="bi bi-pencil-square"></i> APPLY NOW
+    </a>
 
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="destinations.html">Destinations</a></li>
-          <li><a href="tours.html">Tours</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li class="dropdown"><a href="#"><span>More Pages</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+    <!-- Mobile Menu Container -->
+    <div class="mobile-menu-container" id="mobileMenuContainer">
+        <div class="mobile-menu-header">
+            <h3>Menu</h3>
+            <button class="mobile-menu-close" id="mobileMenuClose">
+                <i class="bi bi-x-lg"></i>
+            </button>
+        </div>
+        <nav class="mobile-menu-nav">
             <ul>
-              <li><a href="destination-details.html">Destination Details</a></li>
-              <li><a href="tour-details.html">Tour Details</a></li>
-              <li><a href="booking.html">Booking</a></li>
-              <li><a href="testimonials">Testimonials</a></li>
-              <li><a href="faq.html">Frequently Asked Questions</a></li>
-              <li><a href="blog-details.html">Blog Details</a></li>
-              <li><a href="terms.html">Terms</a></li>
-              <li><a href="privacy.html" class="active">Privacy</a></li>
-              <li><a href="404.html">404</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+
+                <!-- Asset Loans Dropdown -->
+                <li>
+                    <button class="mobile-dropdown-toggle" data-target="asset-dropdown">
+                        <span>Asset Loans</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+                    <ul class="mobile-dropdown-menu" id="asset-dropdown">
+                        <li><a href="vehicle-loans.html">Vehicle Loans</a></li>
+                        <li><a href="luxury-loans.html">Luxury Assets</a></li>
+                        <li><a href="property-loans.html">Property Loans</a></li>
+                        <li><a href="equipment-finance.html">Equipment Finance</a></li>
+                        <li><a href="art-collectibles.html">Art & Collectibles</a></li>
+                    </ul>
+                </li>
+
+                <!-- Insurance Services -->
+                <li>
+                    <button class="mobile-dropdown-toggle" data-target="insurance-dropdown">
+                        <span>Insurance</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+                    <ul class="mobile-dropdown-menu" id="insurance-dropdown">
+                        <li><a href="business-insurance.html">Business Insurance</a></li>
+                        <li><a href="asset-insurance.html">Asset Insurance</a></li>
+                        <li><a href="vehicle-insurance.html">Vehicle Insurance</a></li>
+                        <li><a href="property-insurance.html">Property Insurance</a></li>
+                        <li><a href="life-insurance.html">Life Insurance</a></li>
+                    </ul>
+                </li>
+
+                <!-- Commercial Fleet Dropdown -->
+                <li>
+                    <button class="mobile-dropdown-toggle" data-target="fleet-dropdown">
+                        <span>Commercial Fleet</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+                    <ul class="mobile-dropdown-menu" id="fleet-dropdown">
+                        <li><a href="vehicle-sourcing.html">Vehicle Sourcing</a></li>
+                        <li><a href="truck-trailer-loans.html">Truck & Trailer Loans</a></li>
+                        <li><a href="maintenance-packages.html">Maintenance Packages</a></li>
+                        <li><a href="fleet-financing.html">Fleet Financing</a></li>
+                    </ul>
+                </li>
+
+                <!-- Bridging Finance Dropdown -->
+                <li>
+                    <button class="mobile-dropdown-toggle" data-target="bridging-dropdown">
+                        <span>Bridging Finance</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+                    <ul class="mobile-dropdown-menu" id="bridging-dropdown">
+                        <li><a href="property-bridging.html">Property Bridging</a></li>
+                        <li><a href="auction-finance.html">Auction Finance</a></li>
+                        <li><a href="renovation-loans.html">Renovation Finance</a></li>
+                        <li><a href="development-finance.html">Development Finance</a></li>
+                    </ul>
+                </li>
+
+                <!-- FAQ Dropdown with How To Apply inside -->
+                <li>
+                    <button class="mobile-dropdown-toggle" data-target="faq-dropdown">
+                        <span>FAQ</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+                    <ul class="mobile-dropdown-menu" id="faq-dropdown">
+                        <li><a href="apply-requirements.html">How To Apply</a></li>
+                        <li><a href="faq-general.html">General Questions</a></li>
+                        <li><a href="faq-application.html">Application Process</a></li>
+                        <li><a href="faq-interest-rates.html">Interest & Rates</a></li>
+                        <li><a href="faq-asset-requirements.html">Asset Requirements</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="contact.html">Contact</a></li>
             </ul>
-          </li>
-          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-
-      <a class="btn-getstarted" href="destiantios.html">Get Started</a>
-
-    </div>
-  </header>
-
-  <main class="main">
-
-    <!-- Page Title -->
-    <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/travel/showcase-8.webp);">
-      <div class="container position-relative">
-        <h1>Privacy</h1>
-        <p>Esse dolorum voluptatum ullam est sint nemo et est ipsa porro placeat quibusdam quia assumenda numquam molestias.</p>
-        <nav class="breadcrumbs">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Privacy</li>
-          </ol>
         </nav>
-      </div>
-    </div><!-- End Page Title -->
-
-    <!-- Privacy Section -->
-    <section id="privacy" class="privacy section">
-
-      <div class="container" data-aos="fade-up">
-        <!-- Header -->
-        <div class="privacy-header" data-aos="fade-up">
-          <div class="header-content">
-            <div class="last-updated">Effective Date: February 27, 2025</div>
-            <h1>Privacy Policy</h1>
-            <p class="intro-text">This Privacy Policy describes how we collect, use, process, and disclose your information, including personal information, in conjunction with your access to and use of our services.</p>
-          </div>
-        </div>
-
-        <!-- Main Content -->
-        <div class="privacy-content" data-aos="fade-up">
-          <!-- Introduction -->
-          <div class="content-section">
-            <h2>1. Introduction</h2>
-            <p>When you use our services, you're trusting us with your information. We understand this is a big responsibility and work hard to protect your information and put you in control.</p>
-            <p>This Privacy Policy is meant to help you understand what information we collect, why we collect it, and how you can update, manage, export, and delete your information.</p>
-          </div>
-
-          <!-- Information Collection -->
-          <div class="content-section">
-            <h2>2. Information We Collect</h2>
-            <p>We collect information to provide better services to our users. The types of information we collect include:</p>
-
-            <h3>2.1 Information You Provide</h3>
-            <p>When you create an account or use our services, you provide us with personal information that includes:</p>
-            <ul>
-              <li>Your name and contact information</li>
-              <li>Account credentials</li>
-              <li>Payment information when required</li>
-              <li>Communication preferences</li>
-            </ul>
-
-            <h3>2.2 Automatic Information</h3>
-            <p>We automatically collect and store certain information when you use our services:</p>
-            <ul>
-              <li>Device information and identifiers</li>
-              <li>Log information and usage statistics</li>
-              <li>Location information when enabled</li>
-              <li>Browser type and settings</li>
-            </ul>
-          </div>
-
-          <!-- Use of Information -->
-          <div class="content-section">
-            <h2>3. How We Use Your Information</h2>
-            <p>We use the information we collect to provide, maintain, and improve our services. Specifically, we use your information to:</p>
-            <ul>
-              <li>Provide and personalize our services</li>
-              <li>Process transactions and send related information</li>
-              <li>Send notifications and updates about our services</li>
-              <li>Maintain security and verify identity</li>
-              <li>Analyze and improve our services</li>
-            </ul>
-          </div>
-
-          <!-- Information Sharing -->
-          <div class="content-section">
-            <h2>4. Information Sharing and Disclosure</h2>
-            <p>We do not share personal information with companies, organizations, or individuals outside of our company except in the following cases:</p>
-
-            <h3>4.1 With Your Consent</h3>
-            <p>We will share personal information with companies, organizations, or individuals outside of our company when we have your consent to do so.</p>
-
-            <h3>4.2 For Legal Reasons</h3>
-            <p>We will share personal information if we have a good-faith belief that access, use, preservation, or disclosure of the information is reasonably necessary to:</p>
-            <ul>
-              <li>Meet any applicable law, regulation, legal process, or enforceable governmental request</li>
-              <li>Enforce applicable Terms of Service</li>
-              <li>Detect, prevent, or otherwise address fraud, security, or technical issues</li>
-              <li>Protect against harm to the rights, property, or safety of our users</li>
-            </ul>
-          </div>
-
-          <!-- Data Security -->
-          <div class="content-section">
-            <h2>5. Data Security</h2>
-            <p>We work hard to protect our users from unauthorized access to or unauthorized alteration, disclosure, or destruction of information we hold. In particular:</p>
-            <ul>
-              <li>We encrypt our services using SSL</li>
-              <li>We review our information collection, storage, and processing practices</li>
-              <li>We restrict access to personal information to employees who need that information</li>
-            </ul>
-          </div>
-
-          <!-- Your Rights -->
-          <div class="content-section">
-            <h2>6. Your Rights and Choices</h2>
-            <p>You have certain rights regarding your personal information, including:</p>
-            <ul>
-              <li>The right to access your personal information</li>
-              <li>The right to correct inaccurate information</li>
-              <li>The right to request deletion of your information</li>
-              <li>The right to restrict or object to our processing of your information</li>
-            </ul>
-          </div>
-
-          <!-- Policy Updates -->
-          <div class="content-section">
-            <h2>7. Changes to This Policy</h2>
-            <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the effective date at the top.</p>
-            <p>Your continued use of our services after any changes to this Privacy Policy constitutes your acceptance of such changes.</p>
-          </div>
-        </div>
-
-        <!-- Contact Section -->
-        <div class="privacy-contact" data-aos="fade-up">
-          <h2>Contact Us</h2>
-          <p>If you have any questions about this Privacy Policy or our practices, please contact us:</p>
-          <div class="contact-details">
-            <p><strong>Email:</strong> privacy@example.com</p>
-            <p><strong>Address:</strong> 123 Privacy Street, Security City, 12345</p>
-          </div>
-        </div>
-
-      </div>
-
-    </section><!-- /Privacy Section -->
-
-  </main>
-
-  <footer id="footer" class="footer position-relative dark-background">
-
-    <div class="footer-newsletter">
-      <div class="container">
-        <div class="row justify-content-center text-center">
-          <div class="col-lg-6">
-            <h4>Join Our Newsletter</h4>
-            <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
-            <form action="forms/newsletter.php" method="post" class="php-email-form">
-              <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Your subscription request has been sent. Thank you!</div>
-            </form>
-          </div>
-        </div>
-      </div>
     </div>
 
-    <div class="container footer-top">
-      <div class="row gy-4">
-        <div class="col-lg-4 col-md-6 footer-about">
-          <a href="index.html" class="d-flex align-items-center">
-            <span class="sitename">Tour</span>
-          </a>
-          <div class="footer-contact pt-3">
-            <p>A108 Adam Street</p>
-            <p>New York, NY 535022</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-            <p><strong>Email:</strong> <span>info@example.com</span></p>
-          </div>
+    <header id="header" class="header d-flex align-items-center fixed-top">
+        <div class="header-container container-fluid container-xl">
+            <!-- Logo wrapper - absolutely positioned for desktop, normal for mobile -->
+            <div class="logo-wrapper">
+                <a href="index.html" class="logo-link">
+                    <img src="assets/img/logo.png" alt="Lehumo La Edishela Logo" class="logo-image">
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <i class="bi bi-list"></i>
+            </button>
+
+            <!-- Desktop Navigation (Hidden on Mobile) -->
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+
+                    <!-- Asset Loans Dropdown -->
+                    <li class="dropdown">
+                        <a href="#"><span>Asset Loans</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="vehicle-loans.html">Vehicle Loans</a></li>
+                            <li><a href="luxury-loans.html">Luxury Assets</a></li>
+                            <li><a href="property-loans.html">Property Loans</a></li>
+                            <li><a href="equipment-finance.html">Equipment Finance</a></li>
+                            <li><a href="art-collectibles.html">Art & Collectibles</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Insurance Dropdown -->
+                    <li class="dropdown">
+                        <a href="#"><span>Insurance</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="business-insurance.html">Business Insurance</a></li>
+                            <li><a href="asset-insurance.html">Asset Insurance</a></li>
+                            <li><a href="vehicle-insurance.html">Vehicle Insurance</a></li>
+                            <li><a href="property-insurance.html">Property Insurance</a></li>
+                            <li><a href="life-insurance.html">Life Insurance</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Commercial Fleet Dropdown -->
+                    <li class="dropdown">
+                        <a href="#"><span>Commercial Fleet</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="vehicle-sourcing.html">Vehicle Sourcing</a></li>
+                            <li><a href="truck-trailer-loans.html">Truck & Trailer Loans</a></li>
+                            <li><a href="maintenance-packages.html">Maintenance Packages</a></li>
+                            <li><a href="fleet-financing.html">Fleet Financing</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Bridging Finance Dropdown -->
+                    <li class="dropdown">
+                        <a href="#"><span>Bridging Finance</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="property-bridging.html">Property Bridging</a></li>
+                            <li><a href="auction-finance.html">Auction Finance</a></li>
+                            <li><a href="renovation-loans.html">Renovation Finance</a></li>
+                            <li><a href="development-finance.html">Development Finance</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- FAQ Dropdown with How To Apply inside -->
+                    <li class="dropdown">
+                        <a href="#"><span>FAQ</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="apply-requirements.html">How To Apply</a></li>
+                            <li><a href="faq-general.html">General Questions</a></li>
+                            <li><a href="faq-application.html">Application Process</a></li>
+                            <li><a href="faq-interest-rates.html">Interest & Rates</a></li>
+                            <li><a href="faq-asset-requirements.html">Asset Requirements</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <a class="btn-getstarted" href="apply.html">Apply Now</a>
+
+        </div>
+    </header>
+
+    <main class="main">
+
+        <!-- Page Title -->
+        <div class="page-title dark-background" data-aos="fade">
+            <div class="container position-relative">
+                <div class="legal-badge">
+                    <i class="bi bi-shield-lock"></i>
+                    <span>FSCA Registered • NCR Approved • POPIA Compliant</span>
+                </div>
+                <h1 class="mt-3">Privacy Policy</h1>
+                <p>Learn how we collect, use, and protect your personal information in compliance with the Protection of Personal Information Act (POPIA).</p>
+                <nav class="breadcrumbs">
+                    <ol>
+                        <li><a href="index.html">Home</a></li>
+                        <li class="current">Privacy Policy</li>
+                    </ol>
+                </nav>
+            </div>
+        </div><!-- End Page Title -->
+        <!-- Privacy Content -->
+        <section class="legal-section">
+            <div class="container">
+                <div class="legal-container" data-aos="fade-up">
+                    <div class="legal-header">
+                        <h2>Privacy Policy</h2>
+                        <p>Last Updated: February 2025</p>
+                    </div>
+
+                    <div class="legal-text">
+                        <p>Lehumo La Edishela Financial Services ("we", "us", "our") is committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.</p>
+                        <p>We comply with the Protection of Personal Information Act (POPIA) of South Africa and all applicable data protection laws.</p>
+                    </div>
+
+                    <div class="legal-highlight">
+                        <h4 class="mb-3"><i class="bi bi-info-circle me-2" style="color: var(--legal-orange);"></i>Quick Summary</h4>
+                        <p class="mb-0">We collect your personal information only to provide you with financial services, process applications, and comply with legal requirements. We never sell your data to third parties. You have the right to access, correct, or delete your information at any time.</p>
+                    </div>
+
+                    <h3 class="legal-subheader">1. Information We Collect</h3>
+                    <div class="legal-text">
+                        <p>We may collect the following types of information:</p>
+                        <table class="legal-table">
+                            <thead>
+                                <tr>
+                                    <th>Category</th>
+                                    <th>Examples</th>
+                                    <th>Purpose</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Personal Identifiers</strong></td>
+                                    <td>Full name, ID number, date of birth, passport details</td>
+                                    <td>Identity verification, legal compliance</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Contact Information</strong></td>
+                                    <td>Email address, phone number, residential address</td>
+                                    <td>Communication, application processing</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Financial Information</strong></td>
+                                    <td>Bank account details, income statements, credit history</td>
+                                    <td>Affordability assessment, loan processing</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Asset Information</strong></td>
+                                    <td>Vehicle details, property documents, valuations</td>
+                                    <td>Collateral assessment, loan security</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Technical Data</strong></td>
+                                    <td>IP address, browser type, device information</td>
+                                    <td>Website optimization, security monitoring</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3 class="legal-subheader">2. How We Collect Information</h3>
+                    <div class="legal-text">
+                        <p>We collect information through:</p>
+                        <ul class="legal-list">
+                            <li><strong>Direct Interactions:</strong> When you complete applications, contact us, or use our services</li>
+                            <li><strong>Automated Technologies:</strong> Cookies, log files, and similar tracking technologies on our website</li>
+                            <li><strong>Third Parties:</strong> Credit bureaus, public records, and references you provide</li>
+                            <li><strong>Communication:</strong> Phone calls, emails, WhatsApp messages, and in-person meetings</li>
+                        </ul>
+                    </div>
+
+                    <h3 class="legal-subheader">3. How We Use Your Information</h3>
+                    <div class="legal-text">
+                        <p>We use your information for the following purposes:</p>
+                        <ul class="legal-list">
+                            <li><strong>Loan Processing:</strong> Evaluate applications, verify identity, assess affordability</li>
+                            <li><strong>Service Delivery:</strong> Provide loans, manage accounts, process payments</li>
+                            <li><strong>Communication:</strong> Respond to inquiries, provide updates, send important notices</li>
+                            <li><strong>Legal Compliance:</strong> Comply with FSCA, NCR, and other regulatory requirements</li>
+                            <li><strong>Risk Management:</strong> Assess creditworthiness, prevent fraud, manage security</li>
+                            <li><strong>Improvement:</strong> Analyze and improve our services and website</li>
+                        </ul>
+                    </div>
+
+                    <h3 class="legal-subheader">4. Legal Basis for Processing</h3>
+                    <div class="legal-text">
+                        <p>We process your information based on the following legal grounds:</p>
+                        <ul class="legal-list">
+                            <li><strong>Consent:</strong> When you provide explicit consent (e.g., marketing communications)</li>
+                            <li><strong>Contract:</strong> To perform our contractual obligations to you</li>
+                            <li><strong>Legal Obligation:</strong> To comply with applicable laws and regulations</li>
+                            <li><strong>Legitimate Interest:</strong> For our legitimate business interests (e.g., fraud prevention)</li>
+                        </ul>
+                    </div>
+
+                    <h3 class="legal-subheader">5. Information Sharing and Disclosure</h3>
+                    <div class="legal-text">
+                        <p>We may share your information with:</p>
+                        <ul class="legal-list">
+                            <li><strong>Service Providers:</strong> IT providers, payment processors, valuation experts</li>
+                            <li><strong>Credit Bureaus:</strong> For credit checks and reporting (with your consent)</li>
+                            <li><strong>Regulators:</strong> FSCA, NCR, and other authorities as required by law</li>
+                            <li><strong>Professional Advisors:</strong> Lawyers, auditors, insurers for risk management</li>
+                            <li><strong>Business Partners:</strong> With your consent, for related services</li>
+                        </ul>
+                        <p class="mt-3"><strong>We NEVER sell your personal information to third parties for marketing purposes.</strong></p>
+                    </div>
+
+                    <h3 class="legal-subheader">6. Data Security</h3>
+                    <div class="legal-text">
+                        <p>We implement appropriate technical and organizational measures to protect your information, including:</p>
+                        <ul class="legal-list">
+                            <li>Encryption of sensitive data in transit and at rest</li>
+                            <li>Secure servers and firewalls</li>
+                            <li>Access controls and authentication procedures</li>
+                            <li>Regular security assessments and monitoring</li>
+                            <li>Staff training on data protection</li>
+                        </ul>
+                    </div>
+
+                    <h3 class="legal-subheader">7. Data Retention</h3>
+                    <div class="legal-text">
+                        <p>We retain your information for as long as necessary to fulfill the purposes outlined in this policy, unless a longer retention period is required or permitted by law. Generally:</p>
+                        <ul class="legal-list">
+                            <li><strong>Loan applications:</strong> 5 years after application (for declined applications)</li>
+                            <li><strong>Active loans:</strong> 5 years after loan closure</li>
+                            <li><strong>Legal/regulatory requirements:</strong> Up to 10 years as required by law</li>
+                        </ul>
+                    </div>
+
+                    <h3 class="legal-subheader">8. Your Rights Under POPIA</h3>
+                    <div class="legal-text">
+                        <p>Under POPIA, you have the following rights:</p>
+                        <table class="legal-table">
+                            <thead>
+                                <tr>
+                                    <th>Right</th>
+                                    <th>Description</th>
+                                    <th>How to Exercise</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Right to Access</strong></td>
+                                    <td>Request a copy of your personal information we hold</td>
+                                    <td>Submit a written request to our Information Officer</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Right to Correction</strong></td>
+                                    <td>Request correction of inaccurate or incomplete information</td>
+                                    <td>Contact us with the corrected information</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Right to Deletion</strong></td>
+                                    <td>Request deletion of your information (subject to legal obligations)</td>
+                                    <td>Submit a written request</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Right to Object</strong></td>
+                                    <td>Object to processing for direct marketing purposes</td>
+                                    <td>Opt-out via marketing communications</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Right to Complain</strong></td>
+                                    <td>Lodge a complaint with the Information Regulator</td>
+                                    <td>Contact the Information Regulator of South Africa</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3 class="legal-subheader">9. Cookies and Tracking Technologies</h3>
+                    <div class="legal-text">
+                        <p>Our website uses cookies to enhance your browsing experience. Cookies are small text files stored on your device. We use:</p>
+                        <ul class="legal-list">
+                            <li><strong>Essential Cookies:</strong> Required for website functionality</li>
+                            <li><strong>Analytics Cookies:</strong> To understand how visitors use our site</li>
+                            <li><strong>Preference Cookies:</strong> To remember your settings</li>
+                        </ul>
+                        <p>You can control cookies through your browser settings. However, disabling cookies may affect website functionality.</p>
+                    </div>
+
+                    <h3 class="legal-subheader">10. Third-Party Links</h3>
+                    <div class="legal-text">
+                        <p>Our website may contain links to third-party websites. We are not responsible for the privacy practices or content of these websites. We encourage you to review their privacy policies.</p>
+                    </div>
+
+                    <h3 class="legal-subheader">11. Children's Privacy</h3>
+                    <div class="legal-text">
+                        <p>Our services are not directed to individuals under 18 years of age. We do not knowingly collect personal information from minors. If you become aware that a child has provided us with information, please contact us.</p>
+                    </div>
+
+                    <h3 class="legal-subheader">12. Information Officer</h3>
+                    <div class="legal-text">
+                        <p>We have appointed an Information Officer responsible for overseeing privacy compliance:</p>
+                        <p>
+                            <strong>Information Officer:</strong> [Name]<br>
+                            <strong>Email:</strong> privacy@edi-h.co.za<br>
+                            <strong>Phone:</strong> 072 292 7336
+                        </p>
+                    </div>
+
+                    <h3 class="legal-subheader">13. Changes to This Policy</h3>
+                    <div class="legal-text">
+                        <p>We may update this Privacy Policy from time to time. We will notify you of any material changes by posting the updated policy on our website with a revised effective date. Your continued use of our services after changes constitutes acceptance of the updated policy.</p>
+                    </div>
+
+                    <h3 class="legal-subheader">14. Contact Us</h3>
+                    <div class="legal-text">
+                        <p>If you have questions or concerns about this Privacy Policy or our data practices, please contact us:</p>
+                        <ul class="legal-list">
+                            <li><strong>Email:</strong> privacy@edi-h.co.za</li>
+                            <li><strong>Phone:</strong> 072 292 7336</li>
+                            <li><strong>Mail:</strong> Lehumo La Edishela Financial Services, Johannesburg, South Africa</li>
+                        </ul>
+                    </div>
+
+                    <div class="legal-highlight mt-4">
+                        <h4 class="mb-3"><i class="bi bi-shield-check me-2" style="color: var(--legal-orange);"></i>Our Commitment</h4>
+                        <p class="mb-0">We are committed to protecting your privacy and handling your personal information with the utmost care and respect. Your trust is important to us, and we strive to be transparent about our data practices.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container" data-aos="fade-up">
+                <div class="row justify-content-center text-center">
+                    <div class="col-lg-8">
+                        <h2 class="mb-4">Have Privacy Questions?</h2>
+                        <p class="mb-5">Contact our Information Officer for any privacy-related inquiries</p>
+                        <div class="cta-buttons">
+                            <a href="tel:0722927336" class="btn btn-light btn-lg me-3 mb-3 px-4">
+                                <i class="bi bi-telephone me-2"></i> Call Privacy Officer
+                            </a>
+                            <a href="contact.html" class="btn btn-outline-light btn-lg mb-3 px-4">
+                                <i class="bi bi-envelope me-2"></i> Email Privacy Questions
+                            </a>
+                        </div>
+                        <p class="text-light mt-4 small">
+                            <i class="bi bi-info-circle me-1"></i> FSCA Registered • NCR Approved • POPIA Compliant
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="footer" class="footer position-relative dark-background">
+        <div class="container footer-top">
+            <div class="row gy-4">
+                <div class="col-lg-4 col-md-6 footer-about">
+                    <a href="index.html" class="d-flex align-items-center mb-3" style="text-decoration: none;">
+                        <img src="assets/img/logo.png" alt="Lehumo La Edishela Logo" class="logo-image me-3">
+                        <span class="sitename">LEHUMO LA EDISHELA</span>
+                    </a>
+                    <div class="footer-contact">
+                        <p class="mb-3">Your trusted partner for financial services and insurance. FSCA registered and NCR approved for your peace of mind.</p>
+                        <p class="mb-2"><strong>Contact Us:</strong></p>
+                        <p class="mb-2"><i class="bi bi-telephone me-2"></i> 072 292 7336</p>
+                        <p class="mb-2"><i class="bi bi-envelope me-2"></i> info@edi-h.co.za</p>
+                        <p class="mb-2"><i class="bi bi-whatsapp me-2"></i> 072 292 7336</p>
+                        <p><i class="bi bi-shield-check me-2"></i> FSCA Registered | NCR Approved</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 footer-links">
+                    <h4 class="mb-3">Quick Links</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html">Home</a></li>
+                        <li class="mb-2"><a href="about.html">About Us</a></li>
+                        <li class="mb-2"><a href="contact.html">Contact Us</a></li>
+                        <li class="mb-2"><a href="apply.html">Apply Now</a></li>
+                        <li class="mb-2"><a href="faq-general.html">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-3 footer-links">
+                    <h4 class="mb-3">Legal</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="privacy.html" class="active">Privacy Policy</a></li>
+                        <li class="mb-2"><a href="terms.html">Terms of Service</a></li>
+                        <li class="mb-2"><a href="complaints.html">Complaints Procedure</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-12">
+                    <h4 class="mb-3">Contact Details</h4>
+                    <div class="contact-info mb-3">
+                        <p class="mb-2"><i class="bi bi-geo-alt me-2"></i> Johannesburg, South Africa</p>
+                        <p class="mb-2"><i class="bi bi-clock me-2"></i> Mon-Fri: 8am-5pm</p>
+                        <p class="mb-2"><i class="bi bi-clock me-2"></i> Sat: 9am-12pm</p>
+                        <p class="mb-2"><i class="bi bi-building me-2"></i> Nationwide Service</p>
+                    </div>
+                    <div class="social-links d-flex mt-4">
+                        <a href="#" class="me-3"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="me-3"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="me-3"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Useful Links</h4>
-          <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
-          </ul>
+        <div class="container copyright text-center mt-4 pt-4 border-top border-secondary">
+            <p class="mb-2">© 2025 Lehumo La Edishela Financial Services. All rights reserved.</p>
+            <div class="credits small">
+                <a href="privacy.html" class="me-3">Privacy Policy</a> |
+                <a href="terms.html" class="mx-3">Terms of Service</a> |
+                <a href="complaints.html" class="ms-3">Complaints Procedure</a>
+            </div>
         </div>
+    </footer>
 
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Our Services</h4>
-          <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Design</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Development</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Product Management</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
-          </ul>
-        </div>
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-        <div class="col-lg-4 col-md-12">
-          <h4>Follow Us</h4>
-          <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
-          <div class="social-links d-flex">
-            <a href=""><i class="bi bi-twitter-x"></i></a>
-            <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
-            <a href=""><i class="bi bi-linkedin"></i></a>
-          </div>
-        </div>
+    <!-- Preloader -->
+    <div id="preloader"></div>
 
-      </div>
-    </div>
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
 
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">MyWebsite</strong> <span>All Rights Reserved</span></p>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
-    </div>
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
 
-  </footer>
+    <!-- Custom JS -->
+    <script>
+        // Mobile Menu Functionality
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const mobileMenuClose = document.getElementById('mobileMenuClose');
+        const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+        const mobileMenuContainer = document.getElementById('mobileMenuContainer');
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+        function openMobileMenu() {
+            mobileMenuOverlay.style.display = 'block';
+            mobileMenuContainer.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
+        function closeMobileMenu() {
+            mobileMenuOverlay.style.display = 'none';
+            mobileMenuContainer.classList.remove('active');
+            document.body.style.overflow = 'auto';
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+            const dropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
+            dropdownToggles.forEach(toggle => {
+                toggle.classList.remove('active');
+            });
 
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+            const dropdownMenus = document.querySelectorAll('.mobile-dropdown-menu');
+            dropdownMenus.forEach(menu => {
+                menu.classList.remove('active');
+            });
+        }
+
+        if (mobileMenuToggle) {
+            mobileMenuToggle.addEventListener('click', openMobileMenu);
+        }
+
+        if (mobileMenuClose) {
+            mobileMenuClose.addEventListener('click', closeMobileMenu);
+        }
+
+        if (mobileMenuOverlay) {
+            mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+        }
+
+        // Mobile Dropdown Toggle
+        document.addEventListener('click', function (e) {
+            if (e.target.closest('.mobile-dropdown-toggle')) {
+                const toggle = e.target.closest('.mobile-dropdown-toggle');
+                const targetId = toggle.getAttribute('data-target');
+                const targetMenu = document.getElementById(targetId);
+
+                toggle.classList.toggle('active');
+                targetMenu.classList.toggle('active');
+
+                document.querySelectorAll('.mobile-dropdown-toggle').forEach(otherToggle => {
+                    if (otherToggle !== toggle) {
+                        otherToggle.classList.remove('active');
+                    }
+                });
+
+                document.querySelectorAll('.mobile-dropdown-menu').forEach(otherMenu => {
+                    if (otherMenu !== targetMenu) {
+                        otherMenu.classList.remove('active');
+                    }
+                });
+            }
+        });
+
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        // Close mobile menu when clicking menu links
+        document.querySelectorAll('.mobile-menu-nav a').forEach(link => {
+            link.addEventListener('click', function () {
+                if (window.innerWidth <= 992) {
+                    closeMobileMenu();
+                }
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.15)';
+                header.style.backgroundColor = 'rgba(255, 255, 255, 1)';
+            } else {
+                header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+                header.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
+            }
+        });
+    </script>
 
 </body>
 

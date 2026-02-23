@@ -4,9 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Contact Us | Lehumo La Edishela - Financial Service Provider</title>
-    <meta name="description" content="Contact Lehumo La Edishela for asset-backed financing. Get in touch for vehicle loans, luxury asset loans, bridging finance, and insurance solutions.">
-    <meta name="keywords" content="contact loans, loan support, financial advice, South Africa loans, loan application help">
+    <title>Vehicle Insurance | Lehumo La Edishela - Protect Your Vehicle</title>
+    <meta name="description" content="Comprehensive vehicle insurance for cars, bakkies, trucks, and motorcycles. Comprehensive, third-party, and specialized coverage. FSCA registered and NCR approved.">
+    <meta name="keywords" content="vehicle insurance, car insurance, bakkie insurance, truck insurance, motorcycle insurance, South Africa">
 
     <!-- Favicons -->
     <link href="assets/img/favicon.png" rel="icon">
@@ -40,8 +40,8 @@
             --dark-gray: #212529;
             --text-color: #333333;
             --border-color: #E0E0E0;
-            --contact-purple: #6C3483;
-            --contact-orange: #F39C12;
+            --insurance-gold: #D4AF37;
+            --insurance-blue: #1E3A5F;
         }
 
         /* WhatsApp Button */
@@ -358,7 +358,7 @@
 
         /* Page Title */
         .page-title {
-            background: linear-gradient(rgba(26, 54, 93, 0.85), rgba(26, 54, 93, 0.9)), url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+            background: linear-gradient(rgba(26, 54, 93, 0.85), rgba(26, 54, 93, 0.9)), url('https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
             background-size: cover;
             background-position: center;
             color: white;
@@ -405,135 +405,110 @@
                 transform: translateY(-2px);
             }
 
-        /* Contact Section */
-        .contact-section {
-            padding: 80px 0;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-            .section-title h2 {
-                color: var(--primary-blue);
-                font-size: 2.5rem;
-                margin-bottom: 1rem;
-            }
-
-            .section-title p {
-                color: var(--text-color);
-                font-size: 1.1rem;
-                max-width: 700px;
-                margin: 0 auto;
-            }
-
-        /* Contact Cards */
-        .contact-card {
+        /* Insurance Cards - Unique Design */
+        .insurance-card {
             background: white;
-            border-radius: 12px;
-            padding: 2.5rem;
-            height: 100%;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            border: 2px solid var(--border-color);
-            transition: all 0.3s ease;
-            text-align: center;
-        }
-
-            .contact-card:hover {
-                transform: translateY(-5px);
-                box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
-                border-color: var(--contact-orange);
-            }
-
-            .contact-card i {
-                font-size: 2.5rem;
-                color: var(--contact-orange);
-                margin-bottom: 1.5rem;
-            }
-
-            .contact-card h3 {
-                color: var(--primary-blue);
-                font-size: 1.5rem;
-                margin-bottom: 1rem;
-                font-weight: 700;
-            }
-
-        /* Contact Badge */
-        .contact-badge {
-            display: inline-flex;
-            align-items: center;
-            background: rgba(243, 156, 18, 0.15);
-            color: var(--contact-orange);
-            padding: 0.5rem 1rem;
-            border-radius: 30px;
-            font-weight: 600;
-            margin: 0.5rem 0;
-            border: 1px solid rgba(243, 156, 18, 0.3);
-        }
-
-            .contact-badge i {
-                margin-right: 0.5rem;
-            }
-
-        /* Contact Form */
-        .contact-form-container {
-            background: var(--light-gray);
             border-radius: 16px;
-            padding: 3rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            border: 1px solid var(--border-color);
-        }
-
-        .form-title {
-            color: var(--primary-blue);
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-            font-weight: 700;
-        }
-
-        .form-control, .form-select {
-            padding: 0.875rem 1rem;
-            border: 2px solid var(--border-color);
-            border-radius: 6px;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-        }
-
-            .form-control:focus, .form-select:focus {
-                border-color: var(--contact-orange);
-                box-shadow: 0 0 0 0.25rem rgba(243, 156, 18, 0.25);
-            }
-
-        .btn-submit {
-            background: linear-gradient(135deg, var(--primary-red) 0%, #c53030 100%);
-            color: white;
-            padding: 0.875rem 2rem;
-            border: none;
-            border-radius: 6px;
-            font-weight: 600;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            width: 100%;
-        }
-
-            .btn-submit:hover {
-                background: linear-gradient(135deg, #c53030 0%, #9b2c2c 100%);
-                transform: translateY(-2px);
-                box-shadow: 0 10px 20px rgba(230, 57, 70, 0.2);
-            }
-
-        /* Map Section */
-        .map-section {
-            margin: 4rem 0;
-        }
-
-        .map-container {
-            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            border: 2px solid var(--border-color);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            height: 100%;
+            border: 1px solid var(--border-color);
+            margin-bottom: 2rem;
+            position: relative;
         }
+
+            .insurance-card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+                border-color: var(--insurance-gold);
+            }
+
+        .insurance-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--insurance-gold);
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            z-index: 2;
+            box-shadow: 0 4px 10px rgba(212, 175, 55, 0.3);
+        }
+
+        .insurance-image {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+            .insurance-image img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.5s ease;
+            }
+
+        .insurance-card:hover .insurance-image img {
+            transform: scale(1.1);
+        }
+
+        .insurance-image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, transparent 50%, rgba(26, 54, 93, 0.7) 100%);
+        }
+
+        .insurance-content {
+            padding: 2rem;
+        }
+
+        .insurance-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--insurance-blue) 0%, var(--primary-blue) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: white;
+            font-size: 1.8rem;
+            box-shadow: 0 8px 15px rgba(26, 54, 93, 0.2);
+        }
+
+        .insurance-title {
+            color: var(--insurance-blue);
+            font-weight: 700;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--insurance-gold);
+            padding-left: 1rem;
+        }
+
+        .coverage-list {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+        }
+
+            .coverage-list li {
+                padding: 0.5rem 0;
+                border-bottom: 1px dashed var(--border-color);
+                display: flex;
+                align-items: center;
+            }
+
+                .coverage-list li i {
+                    color: var(--insurance-gold);
+                    margin-right: 0.75rem;
+                    font-size: 1.1rem;
+                }
 
         /* Feature Cards */
         .feature-card {
@@ -543,6 +518,7 @@
             transition: all 0.3s ease;
             border: 1px solid var(--border-color);
             background: white;
+            text-align: center;
         }
 
             .feature-card:hover {
@@ -564,53 +540,136 @@
             font-size: 1.8rem;
         }
 
-        /* FAQ Accordion */
-        .accordion-item {
-            border: 1px solid var(--border-color);
-            margin-bottom: 1rem;
-            border-radius: 8px !important;
-            overflow: hidden;
-        }
-
-        .accordion-button {
-            background-color: white;
-            color: var(--primary-blue);
-            font-weight: 600;
-            padding: 1.2rem;
-        }
-
-            .accordion-button:not(.collapsed) {
-                background-color: var(--contact-purple);
-                color: white;
-            }
-
-            .accordion-button:focus {
-                box-shadow: none;
-                border-color: var(--contact-orange);
-            }
-
-        /* CTA Section */
-        .cta-section {
-            background: linear-gradient(135deg, var(--contact-purple) 0%, var(--primary-blue) 100%);
-            color: white;
-            padding: 100px 0;
+        /* Process Steps */
+        .process-step {
             text-align: center;
+            padding: 1.5rem;
+            position: relative;
         }
 
-        .btn-outline-light {
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--insurance-gold) 0%, #b8960f 100%);
             color: white;
-            border-color: white;
-            padding: 0.875rem 2rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin: 0 auto 1rem;
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        /* Documents Section */
+        .documents-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            border: 1px solid var(--border-color);
+        }
+
+        .document-item {
+            display: flex;
+            align-items: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+            .document-item:last-child {
+                border-bottom: none;
+            }
+
+        .document-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--insurance-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1.5rem;
+            flex-shrink: 0;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        /* CTA Banner */
+        .cta-banner {
+            background: linear-gradient(135deg, var(--insurance-blue) 0%, var(--primary-blue) 100%);
+            border-radius: 16px;
+            padding: 3rem;
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            margin-top: 3rem;
+            border: 1px solid var(--insurance-gold);
+        }
+
+        .cta-content h3 {
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Insurance Badge */
+        .insurance-badge-small {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(212, 175, 55, 0.15);
+            color: var(--insurance-gold);
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
             font-weight: 600;
-            border-radius: 6px;
+            margin: 0.5rem 0;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+            .insurance-badge-small i {
+                margin-right: 0.5rem;
+            }
+
+        /* Vehicle Types Grid */
+        .vehicle-types {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .vehicle-type {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            border: 1px solid var(--border-color);
             transition: all 0.3s ease;
         }
 
-            .btn-outline-light:hover {
-                background-color: white;
-                color: var(--primary-blue);
-                border-color: white;
-                transform: translateY(-2px);
+            .vehicle-type:hover {
+                border-color: var(--insurance-gold);
+                transform: translateY(-5px);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            }
+
+            .vehicle-type i {
+                font-size: 2.5rem;
+                color: var(--insurance-gold);
+                margin-bottom: 0.5rem;
+            }
+
+            .vehicle-type h5 {
+                font-size: 1rem;
+                font-weight: 600;
+                margin-bottom: 0.25rem;
+            }
+
+            .vehicle-type p {
+                font-size: 0.8rem;
+                color: #666;
             }
 
         /* ============================================= */
@@ -683,12 +742,8 @@
                 padding: 140px 0 80px;
             }
 
-            .section-title h2 {
-                font-size: 2rem;
-            }
-
-            .contact-form-container {
-                padding: 2rem;
+            .insurance-card {
+                margin-bottom: 1.5rem;
             }
         }
 
@@ -710,9 +765,12 @@
                 padding: 120px 0 60px;
             }
 
-            .contact-card {
+            .cta-banner {
                 padding: 2rem;
-                margin-bottom: 1.5rem;
+            }
+
+            .cta-content h3 {
+                font-size: 1.75rem;
             }
 
             .whatsapp-float {
@@ -729,6 +787,10 @@
                 bottom: 15px;
                 left: 15px;
                 right: 15px;
+            }
+
+            .vehicle-types {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
 
@@ -766,16 +828,18 @@
                 right: 10px;
             }
 
-            .contact-section {
-                padding: 60px 0;
+            .document-item {
+                flex-direction: column;
+                text-align: center;
             }
 
-            .contact-form-container {
-                padding: 1.5rem;
+            .document-icon {
+                margin-right: 0;
+                margin-bottom: 0.5rem;
             }
 
-            .form-title {
-                font-size: 1.5rem;
+            .vehicle-types {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -799,10 +863,10 @@
     </style>
 </head>
 
-<body class="contact-page">
+<body class="vehicle-insurance-page">
 
     <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/27722927336?text=Hello%20Lehumo%20La%20Edishela,%20I%20would%20like%20to%20inquire%20about%20your%20services" class="whatsapp-float" target="_blank" aria-label="Chat with us on WhatsApp">
+    <a href="https://wa.me/27722927336?text=Hello%20Lehumo%20La%20Edishela,%20I%20would%20like%20to%20inquire%20about%20vehicle%20insurance" class="whatsapp-float" target="_blank" aria-label="Chat with us on WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -851,7 +915,7 @@
                     <ul class="mobile-dropdown-menu" id="insurance-dropdown">
                         <li><a href="business-insurance.html">Business Insurance</a></li>
                         <li><a href="asset-insurance.html">Asset Insurance</a></li>
-                        <li><a href="vehicle-insurance.html">Vehicle Insurance</a></li>
+                        <li><a href="vehicle-insurance.html" class="active">Vehicle Insurance</a></li>
                         <li><a href="property-insurance.html">Property Insurance</a></li>
                         <li><a href="life-insurance.html">Life Insurance</a></li>
                     </ul>
@@ -864,10 +928,10 @@
                         <i class="bi bi-chevron-down"></i>
                     </button>
                     <ul class="mobile-dropdown-menu" id="fleet-dropdown">
-                        <li><a href="vehicle-sourcing.html">Vehicle Sourcing</a></li>
-                        <li><a href="truck-trailer-loans.html">Truck & Trailer Loans</a></li>
-                        <li><a href="maintenance-packages.html">Maintenance Packages</a></li>
                         <li><a href="fleet-financing.html">Fleet Financing</a></li>
+                        <li><a href="vehicle-sourcing.html">Vehicle Sourcing</a></li>
+                        <li><a href="truck-loans.html">Truck & Trailer Loans</a></li>
+                        <li><a href="maintenance-packages.html">Maintenance Packages</a></li>
                     </ul>
                 </li>
 
@@ -900,7 +964,7 @@
                     </ul>
                 </li>
 
-                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </div>
@@ -937,13 +1001,13 @@
                         </ul>
                     </li>
 
-                    <!-- Insurance Dropdown -->
+                    <!-- Insurance Dropdown - Active -->
                     <li class="dropdown">
-                        <a href="#"><span>Insurance</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <a href="#" class="active"><span>Insurance</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                         <ul>
                             <li><a href="business-insurance.html">Business Insurance</a></li>
                             <li><a href="asset-insurance.html">Asset Insurance</a></li>
-                            <li><a href="vehicle-insurance.html">Vehicle Insurance</a></li>
+                            <li><a href="vehicle-insurance.html" class="active">Vehicle Insurance</a></li>
                             <li><a href="property-insurance.html">Property Insurance</a></li>
                             <li><a href="life-insurance.html">Life Insurance</a></li>
                         </ul>
@@ -953,10 +1017,10 @@
                     <li class="dropdown">
                         <a href="#"><span>Commercial Fleet</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                         <ul>
-                            <li><a href="vehicle-sourcing.html">Vehicle Sourcing</a></li>
-                            <li><a href="truck-trailer-loans.html">Truck & Trailer Loans</a></li>
-                            <li><a href="maintenance-packages.html">Maintenance Packages</a></li>
                             <li><a href="fleet-financing.html">Fleet Financing</a></li>
+                            <li><a href="vehicle-sourcing.html">Vehicle Sourcing</a></li>
+                            <li><a href="truck-loans.html">Truck & Trailer Loans</a></li>
+                            <li><a href="maintenance-packages.html">Maintenance Packages</a></li>
                         </ul>
                     </li>
 
@@ -983,7 +1047,7 @@
                         </ul>
                     </li>
 
-                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
 
@@ -997,300 +1061,419 @@
         <!-- Page Title -->
         <div class="page-title dark-background" data-aos="fade">
             <div class="container position-relative">
-                <div class="contact-badge">
-                    <i class="bi bi-headset"></i>
-                    <span>FSCA Registered • NCR Approved • We're Here to Help</span>
-                </div>
-                <h1 class="mt-3">Contact Us</h1>
-                <p>Get in touch with our team for personalized assistance with your loan application, insurance needs, or any questions you may have.</p>
+                <h1>Vehicle Insurance</h1>
+                <p>Comprehensive coverage for your vehicle - whether it's a car, bakkie, truck, or motorcycle. Protect your investment with our tailored insurance solutions.</p>
                 <nav class="breadcrumbs">
                     <ol>
                         <li><a href="index.html">Home</a></li>
-                        <li class="current">Contact</li>
+                        <li><a href="#">Insurance</a></li>
+                        <li class="current">Vehicle Insurance</li>
                     </ol>
                 </nav>
             </div>
         </div><!-- End Page Title -->
-        <!-- Contact Information -->
-        <section class="contact-section section">
-            <div class="container">
-                <div class="section-title" data-aos="fade-up">
-                    <h2>Get in Touch</h2>
-                    <p>Choose your preferred method of contact and we'll respond promptly</p>
-                </div>
+        <!-- Vehicle Insurance Section -->
+        <section id="vehicle-insurance" class="vehicle-insurance section">
 
-                <!-- Contact Info Cards -->
-                <div class="row g-4">
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                        <div class="contact-card">
-                            <i class="bi bi-telephone-fill"></i>
-                            <h3>Call Us</h3>
-                            <p class="mb-3">Speak directly with our specialists</p>
-                            <p class="mb-2"><strong>Main Line:</strong> 072 292 7336</p>
-                            <p class="mb-2"><strong>WhatsApp:</strong> 072 292 7336</p>
-                            <p class="mb-0"><strong>Hours:</strong> Mon-Fri 8am-5pm, Sat 9am-12pm</p>
-                            <a href="tel:0722927336" class="btn btn-primary mt-3">Call Now</a>
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="row mb-5">
+                    <div class="col-lg-8 mx-auto text-center">
+                        <div class="insurance-badge-small">
+                            <i class="bi bi-shield-check"></i>
+                            <span>Protecting South African Drivers Since 2015</span>
+                        </div>
+                        <h2 class="mt-3">Drive with Confidence</h2>
+                        <p class="mb-4">Whether you drive a family car, commercial vehicle, or luxury automobile, our vehicle insurance solutions provide the protection you need on the road.</p>
+                        <div class="d-flex justify-content-center gap-3 flex-wrap">
+                            <span class="badge bg-primary px-3 py-2">FSCA Registered</span>
+                            <span class="badge bg-secondary px-3 py-2">NCR Approved</span>
+                            <span class="badge bg-success px-3 py-2">24/7 Claims Support</span>
                         </div>
                     </div>
+                </div>
 
+                <!-- Vehicle Types -->
+                <div class="row mb-5">
+                    <div class="col-lg-12">
+                        <h4 class="mb-4 text-center">Vehicles We Insure</h4>
+                        <div class="vehicle-types">
+                            <div class="vehicle-type" data-aos="fade-up" data-aos-delay="100">
+                                <i class="bi bi-car-front"></i>
+                                <h5>Cars</h5>
+                                <p>Sedans, hatchbacks, SUVs</p>
+                            </div>
+                            <div class="vehicle-type" data-aos="fade-up" data-aos-delay="150">
+                                <i class="bi bi-truck"></i>
+                                <h5>Bakkies</h5>
+                                <p>LDVs, double cabs</p>
+                            </div>
+                            <div class="vehicle-type" data-aos="fade-up" data-aos-delay="200">
+                                <i class="bi bi-truck"></i>
+                                <h5>Trucks</h5>
+                                <p>Heavy commercial</p>
+                            </div>
+                            <div class="vehicle-type" data-aos="fade-up" data-aos-delay="250">
+                                <i class="bi bi-bicycle"></i>
+                                <h5>Motorcycles</h5>
+                                <p>Bikes, scooters</p>
+                            </div>
+                            <div class="vehicle-type" data-aos="fade-up" data-aos-delay="300">
+                                <i class="bi bi-bus-front"></i>
+                                <h5>Minibuses</h5>
+                                <p>Passenger vehicles</p>
+                            </div>
+                            <div class="vehicle-type" data-aos="fade-up" data-aos-delay="350">
+                                <i class="bi bi-car-front"></i>
+                                <h5>Classic Cars</h5>
+                                <p>Vintage, collectible</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Insurance Products -->
+                <div class="row mb-5">
+                    <div class="col-lg-12">
+                        <h3 class="mb-4" style="color: var(--insurance-blue);">Vehicle Insurance Solutions</h3>
+                        <p class="mb-4">Choose from our range of vehicle insurance products designed to match your needs and budget.</p>
+                    </div>
+                </div>
+
+                <div class="row g-4 mb-5">
+                    <!-- Comprehensive Cover Card -->
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                        <div class="contact-card">
-                            <i class="bi bi-envelope-fill"></i>
-                            <h3>Email Us</h3>
-                            <p class="mb-3">Send us your questions or documents</p>
-                            <p class="mb-2"><strong>General Inquiries:</strong> info@edi-h.co.za</p>
-                            <p class="mb-2"><strong>Applications:</strong> apply@edi-h.co.za</p>
-                            <p class="mb-0"><strong>Response Time:</strong> Within 2 hours</p>
-                            <a href="mailto:info@edi-h.co.za" class="btn btn-primary mt-3">Email Us</a>
+                        <div class="insurance-card">
+                            <span class="insurance-badge">Full Cover</span>
+                            <div class="insurance-image">
+                                <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Comprehensive Vehicle Insurance">
+                                <div class="insurance-image-overlay"></div>
+                            </div>
+                            <div class="insurance-content">
+                                <div class="insurance-icon">
+                                    <i class="bi bi-shield-check"></i>
+                                </div>
+                                <h3 class="insurance-title">Comprehensive Cover</h3>
+                                <p>Our most complete coverage protecting your vehicle against accidents, theft, fire, and damage - whether you're at fault or not.</p>
+                                <ul class="coverage-list">
+                                    <li><i class="bi bi-check-circle-fill"></i> Accidental damage</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Theft and hijacking</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Fire and natural disasters</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Windscreen and glass</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Third-party liability</li>
+                                </ul>
+                                <a href="apply.html" class="btn btn-primary w-100">Get a Quote</a>
+                            </div>
                         </div>
                     </div>
 
+                    <!-- Third-Party Cover Card -->
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                        <div class="contact-card">
-                            <i class="fab fa-whatsapp"></i>
-                            <h3>WhatsApp</h3>
-                            <p class="mb-3">Chat with us for instant support</p>
-                            <p class="mb-2"><strong>Number:</strong> 072 292 7336</p>
-                            <p class="mb-2"><strong>Available:</strong> 7 days a week</p>
-                            <p class="mb-3"><strong>Features:</strong> Document sharing, quick responses</p>
-                            <a href="https://wa.me/27722927336" class="btn btn-primary mt-3" target="_blank">Start WhatsApp Chat</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Contact Form -->
-                <div class="row mt-5">
-                    <div class="col-lg-10 mx-auto">
-                        <div class="contact-form-container" data-aos="fade-up" data-aos-delay="100">
-                            <h3 class="form-title">Send Us a Message</h3>
-                            <p class="mb-4">Fill out the form below and we'll get back to you as soon as possible.</p>
-
-                            <form id="contactForm">
-                                <div class="row g-3">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="firstName" class="form-label">First Name *</label>
-                                            <input type="text" class="form-control" id="firstName" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="lastName" class="form-label">Last Name *</label>
-                                            <input type="text" class="form-control" id="lastName" required>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="email" class="form-label">Email Address *</label>
-                                            <input type="email" class="form-control" id="email" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="phone" class="form-label">Phone Number *</label>
-                                            <input type="tel" class="form-control" id="phone" placeholder="072 292 7336" required>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-12">
-                                        <div class="form-group">
-                                            <label for="subject" class="form-label">Subject *</label>
-                                            <select class="form-select" id="subject" required>
-                                                <option value="">Select a topic</option>
-                                                <option value="loan-application">Loan Application Help</option>
-                                                <option value="insurance">Insurance Inquiry</option>
-                                                <option value="eligibility">Eligibility Questions</option>
-                                                <option value="existing-loan">Existing Loan Inquiry</option>
-                                                <option value="documents">Document Submission</option>
-                                                <option value="general">General Information</option>
-                                                <option value="complaint">Complaint or Feedback</option>
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-12">
-                                        <div class="form-group">
-                                            <label for="message" class="form-label">Message *</label>
-                                            <textarea class="form-control" id="message" rows="5" required placeholder="Please provide details about your inquiry..."></textarea>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-12">
-                                        <div class="form-check mb-3">
-                                            <input class="form-check-input" type="checkbox" id="consent" required>
-                                            <label class="form-check-label" for="consent">
-                                                I agree to receive communications from Lehumo La Edishela regarding my inquiry.
-                                            </label>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-12">
-                                        <button type="submit" class="btn-submit">Send Message</button>
-                                    </div>
-
-                                    <div class="col-12 mt-3 text-center">
-                                        <p class="text-muted small">* Required fields. We respect your privacy and will not share your information.</p>
-                                    </div>
+                        <div class="insurance-card">
+                            <span class="insurance-badge">Budget Friendly</span>
+                            <div class="insurance-image">
+                                <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Third-Party Vehicle Insurance">
+                                <div class="insurance-image-overlay"></div>
+                            </div>
+                            <div class="insurance-content">
+                                <div class="insurance-icon">
+                                    <i class="bi bi-shield"></i>
                                 </div>
-                            </form>
+                                <h3 class="insurance-title">Third-Party Only</h3>
+                                <p>Essential cover that protects you against claims from other parties for damage or injury caused by your vehicle.</p>
+                                <ul class="coverage-list">
+                                    <li><i class="bi bi-check-circle-fill"></i> Third-party liability</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Legal costs covered</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Passenger liability</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Affordable premiums</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Optional extras available</li>
+                                </ul>
+                                <a href="apply.html" class="btn btn-primary w-100">Get a Quote</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Third-Party Fire & Theft Card -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                        <div class="insurance-card">
+                            <span class="insurance-badge">Popular Choice</span>
+                            <div class="insurance-image">
+                                <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Third-Party Fire and Theft Insurance">
+                                <div class="insurance-image-overlay"></div>
+                            </div>
+                            <div class="insurance-content">
+                                <div class="insurance-icon">
+                                    <i class="bi bi-shield-lock"></i>
+                                </div>
+                                <h3 class="insurance-title">Third-Party Fire & Theft</h3>
+                                <p>The perfect balance of affordability and protection, covering third-party claims plus theft and fire damage to your vehicle.</p>
+                                <ul class="coverage-list">
+                                    <li><i class="bi bi-check-circle-fill"></i> Third-party liability</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Theft of your vehicle</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Fire damage</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Attempted theft</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Legal assistance</li>
+                                </ul>
+                                <a href="apply.html" class="btn btn-primary w-100">Get a Quote</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- Map Section -->
-        <section class="contact-section section bg-light">
-            <div class="container">
-                <div class="section-title" data-aos="fade-up">
-                    <h2>Our Location</h2>
-                    <p>Visit our office for face-to-face consultations</p>
+                <!-- Specialized Cover -->
+                <div class="row mb-5">
+                    <div class="col-lg-12">
+                        <h3 class="mb-4" style="color: var(--insurance-blue);">Specialized Vehicle Cover</h3>
+                    </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-lg-10 mx-auto">
-                        <div class="map-container" data-aos="fade-up" data-aos-delay="100">
-                            <!-- Google Maps Embed -->
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.193770789497!2d28.044083315029156!3d-26.19581996939362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950c1b6c5d2b0f%3A0x2c3e7b8f2c3e7b8f!2sSandton%2C%20Johannesburg%2C%20South%20Africa!5e0!3m2!1sen!2sza!4v1633024876787!5m2!1sen!2sza"
-                                    width="100%"
-                                    height="450"
-                                    style="border:0;"
-                                    allowfullscreen=""
-                                    loading="lazy"
-                                    title="Lehumo La Edishela Location Map">
-                            </iframe>
+                <div class="row g-4 mb-5">
+                    <!-- Commercial Vehicle Card -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="insurance-card">
+                            <span class="insurance-badge">Business</span>
+                            <div class="insurance-image">
+                                <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Commercial Vehicle Insurance">
+                                <div class="insurance-image-overlay"></div>
+                            </div>
+                            <div class="insurance-content">
+                                <div class="insurance-icon">
+                                    <i class="bi bi-truck"></i>
+                                </div>
+                                <h3 class="insurance-title">Commercial Vehicles</h3>
+                                <p>Specialized coverage for trucks, delivery vehicles, and commercial fleets including goods-in-transit protection.</p>
+                                <ul class="coverage-list">
+                                    <li><i class="bi bi-check-circle-fill"></i> Goods-in-transit</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Fleet discounts</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Business interruption</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Hire vehicle cover</li>
+                                </ul>
+                                <a href="apply.html" class="btn btn-primary w-100">Get a Quote</a>
+                            </div>
                         </div>
+                    </div>
 
-                        <div class="row mt-4 g-4">
-                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <!-- Motorcycle Card -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                        <div class="insurance-card">
+                            <span class="insurance-badge">Two-Wheeler</span>
+                            <div class="insurance-image">
+                                <img src="https://images.unsplash.com/photo-1558980664-10dbd0b9b0c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Motorcycle Insurance">
+                                <div class="insurance-image-overlay"></div>
+                            </div>
+                            <div class="insurance-content">
+                                <div class="insurance-icon">
+                                    <i class="bi bi-bicycle"></i>
+                                </div>
+                                <h3 class="insurance-title">Motorcycle Cover</h3>
+                                <p>Specialized insurance for bikes, scooters, and motorcycles with coverage for riders and accessories.</p>
+                                <ul class="coverage-list">
+                                    <li><i class="bi bi-check-circle-fill"></i> Comprehensive options</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Helmet & gear cover</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Track day options</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Accessories included</li>
+                                </ul>
+                                <a href="apply.html" class="btn btn-primary w-100">Get a Quote</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Classic Car Card -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                        <div class="insurance-card">
+                            <span class="insurance-badge">Vintage</span>
+                            <div class="insurance-image">
+                                <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Classic Car Insurance">
+                                <div class="insurance-image-overlay"></div>
+                            </div>
+                            <div class="insurance-content">
+                                <div class="insurance-icon">
+                                    <i class="bi bi-clock-history"></i>
+                                </div>
+                                <h3 class="insurance-title">Classic & Vintage</h3>
+                                <p>Specialized coverage for classic, vintage, and collectible vehicles with agreed value protection.</p>
+                                <ul class="coverage-list">
+                                    <li><i class="bi bi-check-circle-fill"></i> Agreed value cover</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Limited mileage options</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Specialist repairers</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Club member discounts</li>
+                                </ul>
+                                <a href="apply.html" class="btn btn-primary w-100">Get a Quote</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Why Choose Us -->
+                <div class="row mb-5">
+                    <div class="col-lg-12">
+                        <h3 class="mb-4 text-center" style="color: var(--insurance-blue);">Why Choose Our Vehicle Insurance</h3>
+                        <div class="row g-4">
+                            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
                                 <div class="feature-card">
                                     <div class="feature-icon">
-                                        <i class="bi bi-geo-alt"></i>
+                                        <i class="bi bi-shield-check"></i>
                                     </div>
-                                    <h4 class="mb-3">Office Address</h4>
-                                    <p class="mb-2"><strong>Head Office:</strong></p>
-                                    <p class="mb-2">Johannesburg, South Africa</p>
-                                    <p class="mb-4">(Exact address provided upon appointment)</p>
-
-                                    <h5 class="mt-4 mb-3">Directions</h5>
-                                    <p>We're centrally located in Johannesburg with easy access to major highways. Secure parking available for clients with appointments.</p>
+                                    <h4>FSCA Registered</h4>
+                                    <p>Fully regulated by the Financial Sector Conduct Authority for your protection.</p>
                                 </div>
                             </div>
-                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+
+                            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="250">
                                 <div class="feature-card">
                                     <div class="feature-icon">
-                                        <i class="bi bi-clock"></i>
+                                        <i class="bi bi-building"></i>
                                     </div>
-                                    <h4 class="mb-3">Office Hours</h4>
-                                    <p class="mb-2"><strong>Monday - Friday:</strong></p>
-                                    <p class="mb-2">8:00 AM - 5:00 PM</p>
-                                    <p class="mb-4">Last appointment at 4:00 PM</p>
+                                    <h4>NCR Approved</h4>
+                                    <p>Registered with the National Credit Regulator, ensuring fair treatment.</p>
+                                </div>
+                            </div>
 
-                                    <p class="mb-2"><strong>Saturday:</strong></p>
-                                    <p class="mb-2">9:00 AM - 12:00 PM</p>
-                                    <p class="mb-4">By appointment only</p>
+                            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                                <div class="feature-card">
+                                    <div class="feature-icon">
+                                        <i class="bi bi-clock-history"></i>
+                                    </div>
+                                    <h4>24/7 Claims</h4>
+                                    <p>Round-the-clock claims support when you need it most.</p>
+                                </div>
+                            </div>
 
-                                    <p class="mb-2"><strong>Sunday & Public Holidays:</strong></p>
-                                    <p>Closed</p>
+                            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="350">
+                                <div class="feature-card">
+                                    <div class="feature-icon">
+                                        <i class="bi bi-wrench"></i>
+                                    </div>
+                                    <h4>Accredited Repairers</h4>
+                                    <p>Network of approved repair shops for quality repairs.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- FAQ Section -->
-        <section class="contact-section section">
-            <div class="container">
-                <div class="section-title" data-aos="fade-up">
-                    <h2>Frequently Asked Questions</h2>
-                    <p>Quick answers to common questions</p>
+                <!-- Documents Required -->
+                <div class="row mb-5">
+                    <div class="col-lg-12">
+                        <h3 class="mb-4" style="color: var(--insurance-blue);">Information Required for a Quote</h3>
+                        <p class="mb-4">To provide you with an accurate vehicle insurance quote, we'll need the following information:</p>
+                    </div>
                 </div>
 
+                <div class="documents-section" data-aos="fade-up" data-aos-delay="200">
+                    <div class="document-item">
+                        <div class="document-icon">
+                            <i class="bi bi-file-earmark-text"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">Vehicle Details</h5>
+                            <p class="mb-0">Make, model, year, license plate, and vehicle value.</p>
+                        </div>
+                    </div>
+
+                    <div class="document-item">
+                        <div class="document-icon">
+                            <i class="bi bi-person-badge"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">Driver Information</h5>
+                            <p class="mb-0">Driver's license details and driving history of all regular drivers.</p>
+                        </div>
+                    </div>
+
+                    <div class="document-item">
+                        <div class="document-icon">
+                            <i class="bi bi-house"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">Vehicle Storage</h5>
+                            <p class="mb-0">Where the vehicle is parked overnight (garage, driveway, street).</p>
+                        </div>
+                    </div>
+
+                    <div class="document-item">
+                        <div class="document-icon">
+                            <i class="bi bi-graph-up"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">Annual Mileage</h5>
+                            <p class="mb-0">Estimated kilometers driven per year.</p>
+                        </div>
+                    </div>
+
+                    <div class="document-item">
+                        <div class="document-icon">
+                            <i class="bi bi-shield"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">Claims History</h5>
+                            <p class="mb-0">Details of any previous insurance claims (if applicable).</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Process Steps -->
+                <div class="row mb-5">
+                    <div class="col-lg-12">
+                        <h3 class="mb-4 text-center" style="color: var(--insurance-blue);">How to Get Covered</h3>
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                                <div class="process-step">
+                                    <div class="step-number">1</div>
+                                    <h4>Vehicle Details</h4>
+                                    <p>Provide your vehicle information and coverage preferences.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                                <div class="process-step">
+                                    <div class="step-number">2</div>
+                                    <h4>Risk Assessment</h4>
+                                    <p>We evaluate your vehicle and driver profile.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                                <div class="process-step">
+                                    <div class="step-number">3</div>
+                                    <h4>Custom Quote</h4>
+                                    <p>Receive a tailored insurance proposal with transparent pricing.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                                <div class="process-step">
+                                    <div class="step-number">4</div>
+                                    <h4>Coverage Active</h4>
+                                    <p>Once accepted, your policy is activated immediately.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA Section -->
                 <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <div class="accordion" id="contactFAQ" data-aos="fade-up">
-                            <div class="accordion-item">
-                                <h3 class="accordion-header">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-                                        What information should I have ready when I call?
-                                    </button>
-                                </h3>
-                                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#contactFAQ">
-                                    <div class="accordion-body">
-                                        For faster service, please have your ID number, current contact information, and details about the asset you want to use as security. If you're calling about an existing loan, have your loan account number available.
-                                    </div>
+                    <div class="col-lg-12">
+                        <div class="cta-banner" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="cta-content">
+                                <h3>Ready to Protect Your Vehicle?</h3>
+                                <p class="mb-4">Contact our vehicle insurance specialists for a free consultation and custom quote.</p>
+                                <div class="cta-buttons">
+                                    <a href="apply.html" class="btn btn-primary me-3">Get a Quote</a>
+                                    <a href="tel:0722927336" class="btn btn-outline-primary">Call 072 292 7336</a>
                                 </div>
-                            </div>
-
-                            <div class="accordion-item">
-                                <h3 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-                                        How long does it take to get a response to my email?
-                                    </button>
-                                </h3>
-                                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#contactFAQ">
-                                    <div class="accordion-body">
-                                        We respond to all emails within 2 business hours during office hours. Emails received after hours or on weekends will be responded to on the next business day.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item">
-                                <h3 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
-                                        Can I submit documents via WhatsApp?
-                                    </button>
-                                </h3>
-                                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#contactFAQ">
-                                    <div class="accordion-body">
-                                        Yes! You can securely send documents through WhatsApp. Our team can guide you on what documents are needed and help you submit them through our secure channels.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item">
-                                <h3 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
-                                        Do I need an appointment to visit your office?
-                                    </button>
-                                </h3>
-                                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#contactFAQ">
-                                    <div class="accordion-body">
-                                        While appointments are recommended to ensure a specialist is available to assist you, we do accept walk-ins during business hours. However, appointment holders receive priority. Please call ahead to schedule an appointment.
-                                    </div>
-                                </div>
+                                <p class="mt-3 small">
+                                    <i class="bi bi-info-circle me-1"></i> FSCA Registered | NCR Approved | 24/7 Claims Support
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- CTA Section -->
-        <section class="cta-section">
-            <div class="container" data-aos="fade-up">
-                <div class="row justify-content-center text-center">
-                    <div class="col-lg-8">
-                        <h2 class="mb-4">Ready to Get Started?</h2>
-                        <p class="mb-5">Apply now and get a decision on your loan within hours. Fast, simple, and secure financing using your assets.</p>
-                        <div class="cta-buttons">
-                            <a href="tel:0722927336" class="btn btn-light btn-lg me-3 mb-3 px-4">
-                                <i class="bi bi-telephone me-2"></i> Call 072 292 7336
-                            </a>
-                            <a href="apply.html" class="btn btn-outline-light btn-lg mb-3 px-4">
-                                <i class="bi bi-pencil-square me-2"></i> Apply Online Now
-                            </a>
-                        </div>
-                        <p class="text-light mt-4 small">
-                            <i class="bi bi-info-circle me-1"></i> FSCA Registered • NCR Approved Financial Services Provider
-                        </p>
-                    </div>
-                </div>
             </div>
-        </section>
+
+        </section><!-- /Vehicle Insurance Section -->
 
     </main>
 
@@ -1319,7 +1502,7 @@
                         <li class="mb-2"><a href="about.html">About Us</a></li>
                         <li class="mb-2"><a href="contact.html">Contact Us</a></li>
                         <li class="mb-2"><a href="apply.html">Apply Now</a></li>
-                        <li class="mb-2"><a href="faq-general.html">FAQ</a></li>
+                        <li class="mb-2"><a href="faq.html">FAQ</a></li>
                     </ul>
                 </div>
 
@@ -1471,90 +1654,6 @@
                 header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
                 header.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
             }
-        });
-
-        // Contact form submission
-        document.getElementById('contactForm')?.addEventListener('submit', function (e) {
-            e.preventDefault();
-
-            // Get form data
-            const formData = {
-                firstName: document.getElementById('firstName').value,
-                lastName: document.getElementById('lastName').value,
-                email: document.getElementById('email').value,
-                phone: document.getElementById('phone').value,
-                subject: document.getElementById('subject').value,
-                message: document.getElementById('message').value
-            };
-
-            // Simple validation
-            if (!formData.firstName || !formData.lastName || !formData.email || !formData.phone || !formData.subject || !formData.message) {
-                alert('Please fill in all required fields.');
-                return;
-            }
-
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(formData.email)) {
-                alert('Please enter a valid email address.');
-                return;
-            }
-
-            const phoneRegex = /^[0-9\s\+\-\(\)]{10,}$/;
-            if (!phoneRegex.test(formData.phone.replace(/\s/g, ''))) {
-                alert('Please enter a valid phone number.');
-                return;
-            }
-
-            // Show success message
-            const submitBtn = this.querySelector('.btn-submit');
-            const originalText = submitBtn.textContent;
-
-            submitBtn.textContent = 'Sending...';
-            submitBtn.disabled = true;
-
-            // Simulate API call
-            setTimeout(() => {
-                // Create success alert
-                const alertDiv = document.createElement('div');
-                alertDiv.className = 'alert alert-success alert-dismissible fade show mt-3';
-                alertDiv.innerHTML = `
-                        <i class="bi bi-check-circle me-2"></i>
-                        <strong>Thank you for your message!</strong> We've received your inquiry and will respond within 2 business hours.
-                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                    `;
-
-                this.parentNode.insertBefore(alertDiv, this.nextSibling);
-
-                // Reset form
-                this.reset();
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
-
-                // Scroll to success message
-                alertDiv.scrollIntoView({ behavior: 'smooth' });
-
-                // Auto-dismiss alert after 10 seconds
-                setTimeout(() => {
-                    if (alertDiv.parentNode) {
-                        alertDiv.remove();
-                    }
-                }, 10000);
-            }, 1500);
-        });
-
-        // Auto-format phone number
-        document.getElementById('phone')?.addEventListener('input', function (e) {
-            let value = e.target.value.replace(/\D/g, '');
-            if (value.length > 0) {
-                if (value.length <= 3) {
-                    value = value;
-                } else if (value.length <= 6) {
-                    value = value.substring(0, 3) + ' ' + value.substring(3);
-                } else {
-                    value = value.substring(0, 3) + ' ' + value.substring(3, 6) + ' ' + value.substring(6, 10);
-                }
-            }
-            e.target.value = value;
         });
     </script>
 

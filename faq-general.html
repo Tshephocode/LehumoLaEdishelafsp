@@ -40,6 +40,8 @@
             --dark-gray: #212529;
             --text-color: #333333;
             --border-color: #E0E0E0;
+            --faq-purple: #6C3483;
+            --faq-orange: #F39C12;
         }
 
         /* WhatsApp Button */
@@ -47,7 +49,7 @@
             position: fixed;
             width: 60px;
             height: 60px;
-            bottom: 30px;
+            bottom: 90px;
             right: 30px;
             background-color: #25d366;
             color: #FFF;
@@ -74,40 +76,121 @@
                 margin-top: 2px;
             }
 
-        /* Logo Container */
-        .logo-container {
-            display: flex;
+        /* Mobile Apply Now Button */
+        .mobile-apply-float {
+            position: fixed;
+            width: auto;
+            height: 50px;
+            bottom: 20px;
+            right: 20px;
+            left: 20px;
+            background-color: var(--primary-red);
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 600;
+            box-shadow: 0 4px 20px rgba(230, 57, 70, 0.3);
+            z-index: 1000;
+            display: none;
             align-items: center;
-            justify-content: flex-start;
-            gap: 10px;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            padding: 0 20px;
+            letter-spacing: 0.5px;
         }
 
-        .logo-image {
-            width: 60px;
-            height: 60px;
-            object-fit: contain;
-            border-radius: 50%;
-            position: relative;
-            z-index: 2;
-        }
+            .mobile-apply-float:hover {
+                background-color: #c53030;
+                color: white;
+                transform: translateY(-2px);
+                box-shadow: 0 6px 25px rgba(230, 57, 70, 0.4);
+            }
 
-        /* Header Enhancements */
+            .mobile-apply-float i {
+                margin-right: 8px;
+            }
+
+        /* ============================================= */
+        /* ENHANCED LOGO STYLING - LARGER & SEPARATE */
+        /* ============================================= */
+
+        /* Header structure */
         .header {
             background-color: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(10px);
             box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            height: 100px;
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
         }
 
-        .sitename {
-            color: var(--primary-blue);
-            font-weight: 800;
-            font-size: 1.8rem;
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            height: 100%;
+            padding: 0 20px;
+            position: relative;
         }
 
-        .navmenu a {
-            font-weight: 500;
-            font-size: 0.95rem;
+        /* Logo positioned absolutely to separate from navigation */
+        .logo-wrapper {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+            display: flex;
+            align-items: center;
         }
+
+        /* Larger logo image */
+        .logo-image {
+            width: 85px;
+            height: 85px;
+            object-fit: contain;
+            border-radius: 100%;
+            display: block;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border: 2px solid white;
+        }
+
+        /* Navigation container - shifted right to make space for logo */
+        .navmenu {
+            margin-left: 120px;
+            width: 100%;
+        }
+
+            .navmenu ul {
+                display: flex;
+                align-items: center;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            .navmenu li {
+                position: relative;
+                margin: 0 12px;
+            }
+
+            .navmenu a {
+                font-weight: 500;
+                font-size: 0.95rem;
+                color: var(--text-color);
+                text-decoration: none;
+                padding: 8px 0;
+                transition: color 0.3s ease;
+            }
+
+                .navmenu a:hover,
+                .navmenu a.active {
+                    color: var(--primary-red);
+                }
 
         .btn-getstarted {
             background: linear-gradient(135deg, var(--primary-red) 0%, #c53030 100%);
@@ -120,6 +203,8 @@
             border: none;
             font-size: 0.95rem;
             letter-spacing: 0.3px;
+            white-space: nowrap;
+            margin-left: 20px;
         }
 
             .btn-getstarted:hover {
@@ -128,21 +213,196 @@
                 color: white;
             }
 
+        /* Mobile Menu Toggle Button */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+            cursor: pointer;
+            padding: 0.5rem;
+            margin-left: auto;
+            z-index: 20;
+        }
+
+        /* Mobile Menu Styles */
+        .mobile-menu-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 9998;
+        }
+
+        .mobile-menu-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 300px;
+            background-color: white;
+            z-index: 9999;
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+            overflow-y: auto;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+            .mobile-menu-container.active {
+                transform: translateX(0);
+            }
+
+        .mobile-menu-header {
+            padding: 1.5rem;
+            background-color: var(--primary-blue);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+            .mobile-menu-header h3 {
+                margin: 0;
+                font-size: 1.2rem;
+            }
+
+        .mobile-menu-close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0;
+        }
+
+        .mobile-menu-nav {
+            padding: 1rem 0;
+        }
+
+            .mobile-menu-nav ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            .mobile-menu-nav li {
+                border-bottom: 1px solid var(--border-color);
+            }
+
+            .mobile-menu-nav a {
+                display: block;
+                padding: 1rem 1.5rem;
+                color: var(--text-color);
+                text-decoration: none;
+                font-weight: 500;
+                transition: all 0.3s ease;
+            }
+
+                .mobile-menu-nav a:hover {
+                    background-color: #f8f9fa;
+                    color: var(--primary-red);
+                }
+
+                .mobile-menu-nav a.active {
+                    color: var(--primary-red);
+                    background-color: #fff5f5;
+                }
+
+        /* Mobile Dropdown Toggle */
+        .mobile-dropdown-toggle {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 1rem 1.5rem;
+            color: var(--text-color);
+            font-weight: 500;
+            text-align: left;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+            .mobile-dropdown-toggle i {
+                transition: transform 0.3s ease;
+            }
+
+            .mobile-dropdown-toggle.active i {
+                transform: rotate(180deg);
+            }
+
+        .mobile-dropdown-menu {
+            display: none;
+            background-color: #f8f9fa;
+        }
+
+            .mobile-dropdown-menu.active {
+                display: block;
+            }
+
+            .mobile-dropdown-menu li {
+                border-bottom: none;
+                border-top: 1px solid #e9ecef;
+            }
+
+            .mobile-dropdown-menu a {
+                padding: 0.8rem 1.5rem 0.8rem 2.5rem;
+                font-size: 0.9rem;
+                color: #666;
+            }
+
         /* Page Title */
         .page-title {
             background: linear-gradient(rgba(26, 54, 93, 0.85), rgba(26, 54, 93, 0.9)), url('https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
             background-size: cover;
             background-position: center;
             color: white;
-            padding: 150px 0 60px;
+            padding: 180px 0 100px;
             position: relative;
         }
 
             .page-title h1 {
                 color: white;
-                font-size: 3.5rem;
+                font-size: 3rem;
                 font-weight: 800;
                 margin-bottom: 1rem;
+            }
+
+        .btn-primary {
+            background-color: var(--primary-red);
+            border-color: var(--primary-red);
+            padding: 0.875rem 2rem;
+            font-weight: 600;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+            .btn-primary:hover {
+                background-color: #c53030;
+                border-color: #c53030;
+                transform: translateY(-2px);
+                box-shadow: 0 10px 20px rgba(230, 57, 70, 0.2);
+            }
+
+        .btn-outline-primary {
+            color: var(--primary-red);
+            border-color: var(--primary-red);
+            padding: 0.875rem 2rem;
+            font-weight: 600;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+            .btn-outline-primary:hover {
+                background-color: var(--primary-red);
+                color: white;
+                border-color: var(--primary-red);
+                transform: translateY(-2px);
             }
 
         /* FAQ Section Styling */
@@ -199,8 +459,8 @@
             }
 
                 .search-box input:focus {
-                    border-color: var(--primary-red);
-                    box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.1);
+                    border-color: var(--faq-orange);
+                    box-shadow: 0 0 0 3px rgba(243, 156, 18, 0.1);
                     outline: none;
                 }
 
@@ -234,7 +494,7 @@
                 left: 0;
                 width: 100px;
                 height: 3px;
-                background: var(--accent-teal);
+                background: var(--faq-orange);
             }
 
         /* FAQ Items */
@@ -248,7 +508,7 @@
 
             .faq-item:hover {
                 box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-                border-color: var(--primary-blue);
+                border-color: var(--faq-purple);
             }
 
         .faq-question {
@@ -267,9 +527,9 @@
             }
 
             .faq-question.active {
-                background: var(--primary-blue);
+                background: var(--faq-purple);
                 color: white;
-                border-left-color: var(--primary-red);
+                border-left-color: var(--faq-orange);
             }
 
         .question-text {
@@ -280,7 +540,7 @@
         }
 
         .toggle-icon {
-            color: var(--primary-red);
+            color: var(--faq-orange);
             font-size: 1.3rem;
             font-weight: 600;
             transition: transform 0.3s ease;
@@ -326,14 +586,32 @@
                 color: var(--primary-blue);
             }
 
+        /* FAQ Badge */
+        .faq-badge {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(243, 156, 18, 0.15);
+            color: var(--faq-orange);
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+            font-weight: 600;
+            margin: 0.5rem 0;
+            border: 1px solid rgba(243, 156, 18, 0.3);
+        }
+
+            .faq-badge i {
+                margin-right: 0.5rem;
+            }
+
         /* Contact Help Section */
         .contact-help {
-            background: linear-gradient(135deg, var(--primary-blue) 0%, #152642 100%);
+            background: linear-gradient(135deg, var(--faq-purple) 0%, var(--primary-blue) 100%);
             border-radius: 16px;
             padding: 3rem;
             color: white;
             margin-top: 4rem;
             text-align: center;
+            border: 1px solid var(--faq-orange);
         }
 
             .contact-help h3 {
@@ -370,7 +648,7 @@
 
             .contact-method i {
                 font-size: 1.8rem;
-                color: var(--accent-teal);
+                color: var(--faq-orange);
             }
 
         .method-info h4 {
@@ -387,27 +665,11 @@
 
         /* CTA Section */
         .cta-section {
-            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-teal) 100%);
+            background: linear-gradient(135deg, var(--faq-purple) 0%, var(--primary-blue) 100%);
             color: white;
             padding: 100px 0;
             text-align: center;
         }
-
-        .btn-primary {
-            background-color: var(--primary-red);
-            border-color: var(--primary-red);
-            padding: 0.875rem 2rem;
-            font-weight: 600;
-            border-radius: 6px;
-            transition: all 0.3s ease;
-        }
-
-            .btn-primary:hover {
-                background-color: #c53030;
-                border-color: #c53030;
-                transform: translateY(-2px);
-                box-shadow: 0 10px 20px rgba(230, 57, 70, 0.2);
-            }
 
         .btn-outline-light {
             color: white;
@@ -425,28 +687,78 @@
                 transform: translateY(-2px);
             }
 
-        /* Logo Mobile Adjustments */
-        @media (max-width: 992px) {
-            .logo-image {
-                width: 54px;
-                height: 54px;
+        /* ============================================= */
+        /* MOBILE RESPONSIVE STYLES */
+        /* ============================================= */
+
+        @media (max-width: 1200px) {
+            .navmenu {
+                margin-left: 100px;
             }
 
-            .sitename {
-                font-size: 1.5rem;
+                .navmenu li {
+                    margin: 0 8px;
+                }
+        }
+
+        @media (max-width: 992px) {
+            /* Reset header for mobile */
+            .header {
+                height: 80px;
+                padding: 5px 0;
+            }
+
+            .header-container {
+                position: relative;
+                padding: 0 15px;
+            }
+
+            /* Logo styling for mobile */
+            .logo-wrapper {
+                position: static;
+                transform: none;
+                margin-right: auto;
+            }
+
+            .logo-image {
+                width: 60px;
+                height: 60px;
+            }
+
+            /* Hide desktop navigation on mobile */
+            .navmenu, .btn-getstarted {
+                display: none !important;
+            }
+
+            /* Show mobile menu toggle */
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            /* Show mobile apply button */
+            .mobile-apply-float {
+                display: flex;
+            }
+
+            /* WhatsApp button adjustment */
+            .whatsapp-float {
+                bottom: 90px;
+                width: 55px;
+                height: 55px;
+                font-size: 26px;
+                right: 25px;
             }
 
             .page-title h1 {
                 font-size: 2.5rem;
             }
 
-            .section-title h2 {
-                font-size: 2rem;
+            .page-title {
+                padding: 140px 0 80px;
             }
 
-            .btn-getstarted {
-                padding: 0.6rem 1.2rem;
-                font-size: 0.9rem;
+            .section-title h2 {
+                font-size: 2rem;
             }
 
             .contact-methods {
@@ -458,24 +770,16 @@
                 width: 100%;
                 max-width: 300px;
             }
-
-            .whatsapp-float {
-                width: 55px;
-                height: 55px;
-                font-size: 26px;
-                bottom: 25px;
-                right: 25px;
-            }
         }
 
         @media (max-width: 768px) {
-            .logo-image {
-                width: 50px;
-                height: 50px;
+            .header {
+                height: 70px;
             }
 
-            .sitename {
-                font-size: 1.3rem;
+            .logo-image {
+                width: 55px;
+                height: 55px;
             }
 
             .page-title h1 {
@@ -483,7 +787,7 @@
             }
 
             .page-title {
-                padding: 120px 0 40px;
+                padding: 120px 0 60px;
             }
 
             .faq-section {
@@ -506,23 +810,51 @@
                 width: 50px;
                 height: 50px;
                 font-size: 24px;
-                bottom: 20px;
+                bottom: 85px;
                 right: 20px;
+            }
+
+            .mobile-apply-float {
+                height: 45px;
+                font-size: 15px;
+                bottom: 15px;
+                left: 15px;
+                right: 15px;
             }
         }
 
         @media (max-width: 480px) {
-            .logo-container {
-                gap: 5px;
+            .header {
+                height: 65px;
             }
 
             .logo-image {
-                width: 45px;
-                height: 45px;
+                width: 50px;
+                height: 50px;
             }
 
-            .sitename {
-                font-size: 1.1rem;
+            .page-title h1 {
+                font-size: 1.75rem;
+            }
+
+            .mobile-menu-container {
+                width: 280px;
+            }
+
+            .whatsapp-float {
+                width: 48px;
+                height: 48px;
+                font-size: 22px;
+                bottom: 80px;
+                right: 15px;
+            }
+
+            .mobile-apply-float {
+                height: 40px;
+                font-size: 14px;
+                bottom: 10px;
+                left: 10px;
+                right: 10px;
             }
 
             .faq-question {
@@ -533,48 +865,189 @@
                 padding: 1.25rem;
             }
         }
+
+        /* Desktop specific */
+        @media (min-width: 993px) {
+            .mobile-menu-toggle,
+            .mobile-apply-float,
+            .mobile-menu-overlay,
+            .mobile-menu-container {
+                display: none !important;
+            }
+
+            .whatsapp-float {
+                bottom: 30px;
+                right: 30px;
+                width: 60px;
+                height: 60px;
+                font-size: 30px;
+            }
+        }
     </style>
 </head>
 
 <body class="faq-page">
 
     <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/27639483064?text=Hello%20Lehumo%20La%20Edishela,%20I%20have%20a%20question%20about%20your%20services" class="whatsapp-float" target="_blank" aria-label="Chat with us on WhatsApp">
+    <a href="https://wa.me/27722927336?text=Hello%20Lehumo%20La%20Edishela,%20I%20have%20a%20question%20about%20your%20services" class="whatsapp-float" target="_blank" aria-label="Chat with us on WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
+    <!-- Mobile Apply Now Button -->
+    <a href="apply.html" class="mobile-apply-float">
+        <i class="bi bi-pencil-square"></i> APPLY NOW
+    </a>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+    <!-- Mobile Menu Container -->
+    <div class="mobile-menu-container" id="mobileMenuContainer">
+        <div class="mobile-menu-header">
+            <h3>Menu</h3>
+            <button class="mobile-menu-close" id="mobileMenuClose">
+                <i class="bi bi-x-lg"></i>
+            </button>
+        </div>
+        <nav class="mobile-menu-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+
+                <!-- Asset Loans Dropdown -->
+                <li>
+                    <button class="mobile-dropdown-toggle" data-target="asset-dropdown">
+                        <span>Asset Loans</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+                    <ul class="mobile-dropdown-menu" id="asset-dropdown">
+                        <li><a href="vehicle-loans.html">Vehicle Loans</a></li>
+                        <li><a href="luxury-loans.html">Luxury Assets</a></li>
+                        <li><a href="property-loans.html">Property Loans</a></li>
+                        <li><a href="equipment-finance.html">Equipment Finance</a></li>
+                        <li><a href="art-collectibles.html">Art & Collectibles</a></li>
+                    </ul>
+                </li>
+
+                <!-- Insurance Services -->
+                <li>
+                    <button class="mobile-dropdown-toggle" data-target="insurance-dropdown">
+                        <span>Insurance</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+                    <ul class="mobile-dropdown-menu" id="insurance-dropdown">
+                        <li><a href="business-insurance.html">Business Insurance</a></li>
+                        <li><a href="asset-insurance.html">Asset Insurance</a></li>
+                        <li><a href="vehicle-insurance.html">Vehicle Insurance</a></li>
+                        <li><a href="property-insurance.html">Property Insurance</a></li>
+                        <li><a href="life-insurance.html">Life Insurance</a></li>
+                    </ul>
+                </li>
+
+                <!-- Commercial Fleet Dropdown -->
+                <li>
+                    <button class="mobile-dropdown-toggle" data-target="fleet-dropdown">
+                        <span>Commercial Fleet</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+                    <ul class="mobile-dropdown-menu" id="fleet-dropdown">
+                        <li><a href="vehicle-sourcing.html">Vehicle Sourcing</a></li>
+                        <li><a href="truck-trailer-loans.html">Truck & Trailer Loans</a></li>
+                        <li><a href="maintenance-packages.html">Maintenance Packages</a></li>
+                        <li><a href="fleet-financing.html">Fleet Financing</a></li>
+                    </ul>
+                </li>
+
+                <!-- Bridging Finance Dropdown -->
+                <li>
+                    <button class="mobile-dropdown-toggle" data-target="bridging-dropdown">
+                        <span>Bridging Finance</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+                    <ul class="mobile-dropdown-menu" id="bridging-dropdown">
+                        <li><a href="property-bridging.html">Property Bridging</a></li>
+                        <li><a href="auction-finance.html">Auction Finance</a></li>
+                        <li><a href="renovation-loans.html">Renovation Finance</a></li>
+                        <li><a href="development-finance.html">Development Finance</a></li>
+                    </ul>
+                </li>
+
+                <!-- FAQ Dropdown with How To Apply inside - Active -->
+                <li>
+                    <button class="mobile-dropdown-toggle" data-target="faq-dropdown">
+                        <span>FAQ</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+                    <ul class="mobile-dropdown-menu" id="faq-dropdown">
+                        <li><a href="apply-requirements.html">How To Apply</a></li>
+                        <li><a href="faq-general.html" class="active">General Questions</a></li>
+                        <li><a href="faq-application.html">Application Process</a></li>
+                        <li><a href="faq-interest-rates.html">Interest & Rates</a></li>
+                        <li><a href="faq-asset-requirements.html">Asset Requirements</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
     <header id="header" class="header d-flex align-items-center fixed-top">
-        <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-
-            <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-                <div class="logo-container">
+        <div class="header-container container-fluid container-xl">
+            <!-- Logo wrapper - absolutely positioned for desktop, normal for mobile -->
+            <div class="logo-wrapper">
+                <a href="index.html" class="logo-link">
                     <img src="assets/img/logo.png" alt="Lehumo La Edishela Logo" class="logo-image">
-                </div>
-            </a>
+                </a>
+            </div>
 
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <i class="bi bi-list"></i>
+            </button>
+
+            <!-- Desktop Navigation (Hidden on Mobile) -->
             <nav id="navmenu" class="navmenu">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
+
+                    <!-- Asset Loans Dropdown -->
                     <li class="dropdown">
                         <a href="#"><span>Asset Loans</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                         <ul>
                             <li><a href="vehicle-loans.html">Vehicle Loans</a></li>
                             <li><a href="luxury-loans.html">Luxury Assets</a></li>
-                            <li><a href="propertyloans.html">Property Loans</a></li>
-                            <li><a href="equipmentfinance.html">Equipment Finance</a></li>
-                            <li><a href="artcollectibles.html">Art & Collectibles</a></li>
+                            <li><a href="property-loans.html">Property Loans</a></li>
+                            <li><a href="equipment-finance.html">Equipment Finance</a></li>
+                            <li><a href="art-collectibles.html">Art & Collectibles</a></li>
                         </ul>
                     </li>
+
+                    <!-- Insurance Dropdown -->
+                    <li class="dropdown">
+                        <a href="#"><span>Insurance</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="business-insurance.html">Business Insurance</a></li>
+                            <li><a href="asset-insurance.html">Asset Insurance</a></li>
+                            <li><a href="vehicle-insurance.html">Vehicle Insurance</a></li>
+                            <li><a href="property-insurance.html">Property Insurance</a></li>
+                            <li><a href="life-insurance.html">Life Insurance</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Commercial Fleet Dropdown -->
                     <li class="dropdown">
                         <a href="#"><span>Commercial Fleet</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                         <ul>
-                            <li><a href="fleetfinancing.html">Fleet Financing</a></li>
-                            <li><a href="vehiclesourcing.html">Vehicle Sourcing</a></li>
-                            <li><a href="truckloans.html">Truck & Trailer Loans</a></li>
-                            <li><a href="maintenance.html">Maintenance Packages</a></li>
+                            <li><a href="vehicle-sourcing.html">Vehicle Sourcing</a></li>
+                            <li><a href="truck-trailer-loans.html">Truck & Trailer Loans</a></li>
+                            <li><a href="maintenance-packages.html">Maintenance Packages</a></li>
+                            <li><a href="fleet-financing.html">Fleet Financing</a></li>
                         </ul>
                     </li>
+
+                    <!-- Bridging Finance Dropdown -->
                     <li class="dropdown">
                         <a href="#"><span>Bridging Finance</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                         <ul>
@@ -584,27 +1057,21 @@
                             <li><a href="development-finance.html">Development Finance</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown active">
-                        <a href="#"><span>FAQ</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+
+                    <!-- FAQ Dropdown with How To Apply inside - Active -->
+                    <li class="dropdown">
+                        <a href="#" class="active"><span>FAQ</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                         <ul>
+                            <li><a href="apply-requirements.html">How To Apply</a></li>
                             <li><a href="faq-general.html" class="active">General Questions</a></li>
                             <li><a href="faq-application.html">Application Process</a></li>
                             <li><a href="faq-interest-rates.html">Interest & Rates</a></li>
                             <li><a href="faq-asset-requirements.html">Asset Requirements</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown">
-                        <a href="#"><span>How To Apply</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                        <ul>
-                            <li><a href="apply-requirements.html">Requirements</a></li>
-                            <li><a href="apply-documentation.html">Documentation</a></li>
-                            <li><a href="apply-process.html">Process Steps</a></li>
-                            <li><a href="apply-timeline.html">Timeline</a></li>
-                        </ul>
-                    </li>
+
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
-                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
 
             <a class="btn-getstarted" href="apply.html">Apply Now</a>
@@ -617,12 +1084,16 @@
         <!-- Page Title -->
         <div class="page-title dark-background" data-aos="fade">
             <div class="container position-relative">
-                <h1>Frequently Asked Questions</h1>
+                <div class="faq-badge">
+                    <i class="bi bi-question-circle"></i>
+                    <span>FSCA Registered • NCR Approved • Help Center</span>
+                </div>
+                <h1 class="mt-3">Frequently Asked Questions</h1>
                 <p>Find answers to common questions about our asset-backed loans, bridging finance, and lending process. Get all your questions answered here.</p>
                 <nav class="breadcrumbs">
                     <ol>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="#">FAQ</a></li>
                         <li class="current">General Questions</li>
                     </ol>
                 </nav>
@@ -657,15 +1128,16 @@
                         </div>
                         <div class="faq-answer" id="faq-answer-1">
                             <div class="answer-content">
-                                <p><strong>Lehumo La Edishela</strong> is a registered financial services provider specializing in asset-backed loans and bridging finance. We offer:</p>
+                                <p><strong>Lehumo La Edishela</strong> is a registered financial services provider specializing in asset-backed loans, bridging finance, and insurance solutions. We offer:</p>
                                 <ul>
                                     <li><strong>Asset-backed loans</strong> using vehicles, luxury items, property, and equipment as security</li>
-                                    <li><strong>Bridging finance</strong> for property purchases, renovations, and developments</li>
+                                    <li><strong>Bridging finance</strong> for property purchases, auctions, renovations, and developments</li>
                                     <li><strong>Commercial fleet financing</strong> for businesses</li>
+                                    <li><strong>Insurance services</strong> including business, asset, vehicle, property, and life insurance</li>
                                     <li><strong>Fast approval loans</strong> with same-day decisions in many cases</li>
                                     <li><strong>Flexible repayment terms</strong> tailored to your needs</li>
                                 </ul>
-                                <p>We're FSCA registered and have helped thousands of clients access quick funding using their assets as security.</p>
+                                <p>We're FSCA registered and NCR approved, serving clients nationwide across South Africa.</p>
                             </div>
                         </div>
                     </div>
@@ -677,7 +1149,7 @@
                         </div>
                         <div class="faq-answer" id="faq-answer-2">
                             <div class="answer-content">
-                                <p><strong>Yes</strong>, Lehumo La Edishela is fully registered with the Financial Sector Conduct Authority (FSCA). We operate in compliance with all South African financial regulations and consumer protection laws.</p>
+                                <p><strong>Yes</strong>, Lehumo La Edishela is fully registered with the Financial Sector Conduct Authority (FSCA) and approved by the National Credit Regulator (NCR). We operate in compliance with all South African financial regulations and consumer protection laws.</p>
                                 <p>Our registration ensures:</p>
                                 <ul>
                                     <li>Transparent pricing with no hidden fees</li>
@@ -706,6 +1178,7 @@
                                     <li><strong>Personal service:</strong> Direct access to decision-makers</li>
                                     <li><strong>Specialized expertise:</strong> Deep understanding of asset valuation</li>
                                     <li><strong>Innovative solutions:</strong> Tailored financing for unique situations</li>
+                                    <li><strong>Credit-friendly:</strong> We work with various credit profiles</li>
                                 </ul>
                                 <p>While banks often decline applications based on credit scores or strict criteria, we look at the intrinsic value of your assets and your ability to repay the loan.</p>
                             </div>
@@ -719,7 +1192,7 @@
                         </div>
                         <div class="faq-answer" id="faq-answer-4">
                             <div class="answer-content">
-                                <p>We provide services nationwide across South Africa. Our main office is in Sandton, Johannesburg, but we serve clients in:</p>
+                                <p>We provide services nationwide across South Africa. Our main office is in Johannesburg, but we serve clients in:</p>
                                 <ul>
                                     <li><strong>Gauteng:</strong> Johannesburg, Pretoria, Midrand, Centurion</li>
                                     <li><strong>Western Cape:</strong> Cape Town, Stellenbosch, Paarl</li>
@@ -727,9 +1200,33 @@
                                     <li><strong>Eastern Cape:</strong> Port Elizabeth, East London</li>
                                     <li><strong>Free State:</strong> Bloemfontein</li>
                                     <li><strong>Mpumalanga:</strong> Nelspruit, Middelburg</li>
+                                    <li><strong>North West:</strong> Rustenburg, Klerksdorp</li>
+                                    <li><strong>Limpopo:</strong> Polokwane</li>
+                                    <li><strong>Northern Cape:</strong> Kimberley</li>
                                     <li><strong>All other provinces</strong> and major cities</li>
                                 </ul>
-                                <p>We conduct remote valuations where possible and can arrange for asset collection/assessment anywhere in the country. Most of our application process can be completed online or over the phone.</p>
+                                <p>We conduct remote valuations where possible and can arrange for asset assessment anywhere in the country. Most of our application process can be completed online or over the phone.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" data-faq="5">
+                            <span class="question-text">How quickly can I get funds after applying?</span>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div class="faq-answer" id="faq-answer-5">
+                            <div class="answer-content">
+                                <p>The timeline from application to funding typically follows this schedule:</p>
+                                <ul>
+                                    <li><strong>Initial application:</strong> 10-15 minutes</li>
+                                    <li><strong>Preliminary approval:</strong> 1-4 hours</li>
+                                    <li><strong>Asset valuation:</strong> 24-48 hours</li>
+                                    <li><strong>Final approval:</strong> Within 24 hours of valuation</li>
+                                    <li><strong>Funding:</strong> Same day or next business day</li>
+                                </ul>
+                                <p><strong>Expedited options:</strong> For urgent needs, we offer same-day approvals when all documentation is complete and asset assessment can be done quickly. Contact us directly for expedited processing.</p>
+                                <p>Most clients receive funds within 2-3 business days from initial application.</p>
                             </div>
                         </div>
                     </div>
@@ -740,16 +1237,16 @@
                     <h3 class="category-title">Asset-Backed Loan Questions</h3>
 
                     <div class="faq-item">
-                        <div class="faq-question" data-faq="5">
+                        <div class="faq-question" data-faq="6">
                             <span class="question-text">What types of assets can I use as security for a loan?</span>
                             <span class="toggle-icon">+</span>
                         </div>
-                        <div class="faq-answer" id="faq-answer-5">
+                        <div class="faq-answer" id="faq-answer-6">
                             <div class="answer-content">
                                 <p>We accept a wide range of valuable assets as security for loans:</p>
                                 <ul>
                                     <li><strong>Vehicles:</strong> Cars, trucks, bakkies, motorcycles, caravans, boats</li>
-                                    <li><strong>Luxury items:</strong> Watches, jewelry, diamonds, luxury handbags</li>
+                                    <li><strong>Luxury items:</strong> Watches, jewelry, diamonds, luxury handbags, designer items</li>
                                     <li><strong>Property:</strong> Residential, commercial, industrial, land</li>
                                     <li><strong>Equipment:</strong> Farming, construction, manufacturing, medical equipment</li>
                                     <li><strong>Collectibles:</strong> Art, antiques, rare coins, stamps, memorabilia</li>
@@ -762,11 +1259,11 @@
                     </div>
 
                     <div class="faq-item">
-                        <div class="faq-question" data-faq="6">
+                        <div class="faq-question" data-faq="7">
                             <span class="question-text">Can I still use my vehicle while it's securing a loan?</span>
                             <span class="toggle-icon">+</span>
                         </div>
-                        <div class="faq-answer" id="faq-answer-6">
+                        <div class="faq-answer" id="faq-answer-7">
                             <div class="answer-content">
                                 <p><strong>Yes</strong>, in most cases you can continue using your vehicle while it secures your loan. We have two options:</p>
                                 <ul>
@@ -786,15 +1283,15 @@
                     </div>
 
                     <div class="faq-item">
-                        <div class="faq-question" data-faq="7">
+                        <div class="faq-question" data-faq="8">
                             <span class="question-text">How do you determine the value of my asset?</span>
                             <span class="toggle-icon">+</span>
                         </div>
-                        <div class="faq-answer" id="faq-answer-7">
+                        <div class="faq-answer" id="faq-answer-8">
                             <div class="answer-content">
                                 <p>We use professional valuation methods tailored to each asset type:</p>
                                 <ul>
-                                    <li><strong>Vehicles:</strong> Based on make, model, year, condition, mileage, service history, market demand, and current market prices for similar assets</li>
+                                    <li><strong>Vehicles:</strong> Based on make, model, year, condition, mileage, service history, market demand, and current market prices</li>
                                     <li><strong>Luxury items:</strong> Expert appraisal by specialists, considering brand, model, age, condition, rarity, and current market values</li>
                                     <li><strong>Property:</strong> Market valuation considering location, size, condition, comparable sales, and market trends</li>
                                     <li><strong>Equipment:</strong> Replacement value, age, condition, maintenance records, and market demand</li>
@@ -813,11 +1310,11 @@
                     </div>
 
                     <div class="faq-item">
-                        <div class="faq-question" data-faq="8">
+                        <div class="faq-question" data-faq="9">
                             <span class="question-text">What percentage of my asset's value can I borrow?</span>
                             <span class="toggle-icon">+</span>
                         </div>
-                        <div class="faq-answer" id="faq-answer-8">
+                        <div class="faq-answer" id="faq-answer-9">
                             <div class="answer-content">
                                 <p>Loan-to-value ratios vary by asset type, but generally:</p>
                                 <ul>
@@ -844,28 +1341,6 @@
                 <!-- Application & Process Questions -->
                 <div class="faq-category" data-aos="fade-up" data-aos-delay="250">
                     <h3 class="category-title">Application & Process Questions</h3>
-
-                    <div class="faq-item">
-                        <div class="faq-question" data-faq="9">
-                            <span class="question-text">How long does the application process take?</span>
-                            <span class="toggle-icon">+</span>
-                        </div>
-                        <div class="faq-answer" id="faq-answer-9">
-                            <div class="answer-content">
-                                <p>Our process is designed for speed:</p>
-                                <ul>
-                                    <li><strong>Initial inquiry:</strong> 5-10 minutes online or by phone</li>
-                                    <li><strong>Preliminary approval:</strong> 1-4 hours in most cases</li>
-                                    <li><strong>Asset valuation:</strong> 24-48 hours (can be same-day for urgent cases)</li>
-                                    <li><strong>Final approval:</strong> Within 24 hours of valuation</li>
-                                    <li><strong>Funding:</strong> Same day or next business day after approval</li>
-                                </ul>
-                                <p><strong>Urgent applications:</strong> We offer expedited processing for urgent needs. With all documents ready and quick asset assessment, we can sometimes complete the entire process in under 24 hours.</p>
-                                <p><strong>Standard timeline:</strong> Most clients receive funds within 2-3 business days from initial application.</p>
-                                <p>The speed depends on how quickly you can provide required documents and arrange asset assessment.</p>
-                            </div>
-                        </div>
-                    </div>
 
                     <div class="faq-item">
                         <div class="faq-question" data-faq="10">
@@ -962,40 +1437,180 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" data-faq="13">
+                            <span class="question-text">Is there an application fee?</span>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div class="faq-answer" id="faq-answer-13">
+                            <div class="answer-content">
+                                <p><strong>No</strong>, we do not charge any application fees. There are no upfront costs to apply for a loan with us.</p>
+                                <p><strong>Fees that may apply:</strong></p>
+                                <ul>
+                                    <li>Valuation fees (only if external experts are required)</li>
+                                    <li>Administration fees (included in loan agreement, not upfront)</li>
+                                    <li>Interest charges as per loan terms</li>
+                                    <li>Early settlement fees (if applicable, clearly disclosed)</li>
+                                </ul>
+                                <p>All fees are fully disclosed in your loan agreement before you sign. We believe in complete transparency with no hidden charges.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bridging Finance Questions -->
+                <div class="faq-category" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="category-title">Bridging Finance Questions</h3>
+
+                    <div class="faq-item">
+                        <div class="faq-question" data-faq="14">
+                            <span class="question-text">What is bridging finance and when would I need it?</span>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div class="faq-answer" id="faq-answer-14">
+                            <div class="answer-content">
+                                <p><strong>Bridging finance</strong> is short-term funding designed to "bridge" a gap between an immediate financial need and a future source of funds.</p>
+                                <p><strong>Common scenarios for bridging finance:</strong></p>
+                                <ul>
+                                    <li><strong>Auction purchases:</strong> When you need immediate funds to secure a property at auction</li>
+                                    <li><strong>Property chain breaks:</strong> When you need to buy a new property before selling your current one</li>
+                                    <li><strong>Renovations:</strong> To fund renovations before selling or refinancing a property</li>
+                                    <li><strong>Development projects:</strong> Short-term funding for construction or conversion</li>
+                                    <li><strong>Business opportunities:</strong> Time-sensitive deals requiring quick capital</li>
+                                    <li><strong>Inheritance or estate matters:</strong> Accessing funds before probate is complete</li>
+                                </ul>
+                                <p>Bridging loans typically have terms of 3-24 months and are repaid when your longer-term funding becomes available or the asset is sold.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" data-faq="15">
+                            <span class="question-text">How is bridging finance different from a regular loan?</span>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div class="faq-answer" id="faq-answer-15">
+                            <div class="answer-content">
+                                <p>Bridging finance differs from regular loans in several key ways:</p>
+                                <table class="table table-bordered mt-3">
+                                    <thead>
+                                        <tr>
+                                            <th>Feature</th>
+                                            <th>Bridging Finance</th>
+                                            <th>Regular Loan</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Term</strong></td>
+                                            <td>Short-term (3-24 months)</td>
+                                            <td>Longer-term (12-120 months)</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Approval Speed</strong></td>
+                                            <td>Very fast (24-72 hours)</td>
+                                            <td>Slower (weeks)</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Purpose</strong></td>
+                                            <td>Bridge a gap, time-sensitive opportunities</td>
+                                            <td>General financing needs</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Repayment</strong></td>
+                                            <td>Often from sale of asset or refinancing</td>
+                                            <td>Regular installments</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Interest</strong></td>
+                                            <td>Monthly or at end of term</td>
+                                            <td>Monthly in arrears</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p class="mt-3">Bridging finance is ideal for short-term needs where speed is critical and you have a clear exit strategy.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Insurance Questions -->
+                <div class="faq-category" data-aos="fade-up" data-aos-delay="350">
+                    <h3 class="category-title">Insurance Questions</h3>
+
+                    <div class="faq-item">
+                        <div class="faq-question" data-faq="16">
+                            <span class="question-text">What types of insurance do you offer?</span>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div class="faq-answer" id="faq-answer-16">
+                            <div class="answer-content">
+                                <p>We offer comprehensive insurance solutions including:</p>
+                                <ul>
+                                    <li><strong>Business Insurance:</strong> Public liability, business property, business interruption, professional indemnity</li>
+                                    <li><strong>Asset Insurance:</strong> Coverage for vehicles, property, equipment, and valuable items</li>
+                                    <li><strong>Vehicle Insurance:</strong> Comprehensive, third-party, and specialized cover for commercial fleets</li>
+                                    <li><strong>Property Insurance:</strong> Buildings, contents, landlord cover, and commercial property</li>
+                                    <li><strong>Life Insurance:</strong> Term life, whole life, funeral cover, disability, and critical illness</li>
+                                </ul>
+                                <p>All our insurance products are underwritten by reputable insurers and designed to provide comprehensive protection for your needs.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" data-faq="17">
+                            <span class="question-text">Is insurance required for asset-backed loans?</span>
+                            <span class="toggle-icon">+</span>
+                        </div>
+                        <div class="faq-answer" id="faq-answer-17">
+                            <div class="answer-content">
+                                <p>For most asset-backed loans, we require insurance to protect both you and us against loss or damage to the asset:</p>
+                                <ul>
+                                    <li><strong>Vehicles:</strong> Comprehensive insurance is required with us noted as interested party</li>
+                                    <li><strong>Property:</strong> Building insurance is required</li>
+                                    <li><strong>Luxury items:</strong> May require specialized insurance for high-value items</li>
+                                    <li><strong>Equipment:</strong> Insurance against theft and damage is typically required</li>
+                                </ul>
+                                <p>If you don't have existing insurance, we can assist you in obtaining appropriate cover through our insurance partners at competitive rates.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Contact Help Section -->
-                <div class="contact-help" id="contact-help" data-aos="fade-up" data-aos-delay="300">
+                <div class="contact-help" id="contact-help" data-aos="fade-up" data-aos-delay="400">
                     <h3>Still Have Questions?</h3>
                     <p>Our friendly team is ready to help you with any questions about our services or the application process.</p>
 
                     <div class="contact-methods">
-                        <a href="tel:0639483064" class="contact-method">
+                        <a href="tel:0722927336" class="contact-method">
                             <i class="bi bi-telephone"></i>
                             <div class="method-info">
                                 <h4>Call Us</h4>
-                                <p>063 948 3064</p>
+                                <p>072 292 7336</p>
                             </div>
                         </a>
 
-                        <a href="https://wa.me/27639483064?text=Hello%20Lehumo%20La%20Edishela,%20I%20have%20a%20question" class="contact-method" target="_blank">
+                        <a href="https://wa.me/27722927336?text=Hello%20Lehumo%20La%20Edishela,%20I%20have%20a%20question" class="contact-method" target="_blank">
                             <i class="bi bi-whatsapp"></i>
                             <div class="method-info">
                                 <h4>WhatsApp</h4>
-                                <p>063 948 3064</p>
+                                <p>072 292 7336</p>
                             </div>
                         </a>
 
-                        <a href="mailto:info@lehumo.co.za" class="contact-method">
+                        <a href="mailto:info@edi-h.co.za" class="contact-method">
                             <i class="bi bi-envelope"></i>
                             <div class="method-info">
                                 <h4>Email Us</h4>
-                                <p>info@lehumo.co.za</p>
+                                <p>info@edi-h.co.za</p>
                             </div>
                         </a>
                     </div>
 
-                    <p class="mt-4">Office Hours: Monday to Friday 8am-6pm | Saturday 9am-1pm</p>
+                    <p class="mt-4">Office Hours: Monday to Friday 8am-5pm | Saturday 9am-12pm</p>
                 </div>
             </div>
         </section>
@@ -1008,8 +1623,8 @@
                         <h2 class="mb-4">Ready to Get Started?</h2>
                         <p class="mb-5">Apply now and get a decision on your loan within hours. Fast, simple, and secure financing using your assets.</p>
                         <div class="cta-buttons">
-                            <a href="tel:0639483064" class="btn btn-light btn-lg me-3 mb-3 px-4">
-                                <i class="bi bi-telephone me-2"></i> Call 063 948 3064
+                            <a href="tel:0722927336" class="btn btn-light btn-lg me-3 mb-3 px-4">
+                                <i class="bi bi-telephone me-2"></i> Call 072 292 7336
                             </a>
                             <a href="apply.html" class="btn btn-outline-light btn-lg mb-3 px-4">
                                 <i class="bi bi-pencil-square me-2"></i> Apply Online Now
@@ -1030,49 +1645,47 @@
             <div class="row gy-4">
                 <div class="col-lg-4 col-md-6 footer-about">
                     <a href="index.html" class="d-flex align-items-center mb-3" style="text-decoration: none;">
-                        <div class="logo-container">
-                            <img src="assets/img/logo.png" alt="Lehumo La Edishela Logo" class="logo-image me-2">
-                            <h1 class="sitename">LEHUMO LA EDISHELA</h1>
-                        </div>
+                        <img src="assets/img/logo.png" alt="Lehumo La Edishela Logo" class="logo-image me-3">
+                        <span class="sitename">LEHUMO LA EDISHELA</span>
                     </a>
                     <div class="footer-contact">
-                        <p class="mb-3">Your trusted partner for asset-backed loans. Fast approvals, great rates, and FSCA registered for your peace of mind.</p>
-                        <p class="mb-2"><strong>Need to talk to us?</strong></p>
-                        <p class="mb-2"><i class="bi bi-telephone me-2"></i> 063 948 3064</p>
-                        <p class="mb-2"><i class="bi bi-whatsapp me-2"></i> 063 948 3064</p>
-                        <p class="mb-3"><i class="bi bi-envelope me-2"></i> info@lehumo.co.za</p>
-                        <p><i class="bi bi-shield-check me-2"></i> FSCA Registered</p>
+                        <p class="mb-3">Your trusted partner for financial services and insurance. FSCA registered and NCR approved for your peace of mind.</p>
+                        <p class="mb-2"><strong>Contact Us:</strong></p>
+                        <p class="mb-2"><i class="bi bi-telephone me-2"></i> 072 292 7336</p>
+                        <p class="mb-2"><i class="bi bi-envelope me-2"></i> info@edi-h.co.za</p>
+                        <p class="mb-2"><i class="bi bi-whatsapp me-2"></i> 072 292 7336</p>
+                        <p><i class="bi bi-shield-check me-2"></i> FSCA Registered | NCR Approved</p>
                     </div>
                 </div>
 
                 <div class="col-lg-2 col-md-3 footer-links">
                     <h4 class="mb-3">Quick Links</h4>
-                    <ul>
-                        <li><i class="bi bi-chevron-right"></i> <a href="index.html">Home</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="about.html">About Us</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="contact.html">Contact Us</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="apply.html">Apply Now</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="faq-general.html">FAQ & Help</a></li>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html">Home</a></li>
+                        <li class="mb-2"><a href="about.html">About Us</a></li>
+                        <li class="mb-2"><a href="contact.html">Contact Us</a></li>
+                        <li class="mb-2"><a href="apply.html">Apply Now</a></li>
+                        <li class="mb-2"><a href="faq-general.html">FAQ</a></li>
                     </ul>
                 </div>
 
-                <div class="col-lg-2 col-md-3 footer-links">
+                <div class="col-lg-3 col-md-3 footer-links">
                     <h4 class="mb-3">FAQ Sections</h4>
-                    <ul>
-                        <li><i class="bi bi-chevron-right"></i> <a href="faq-general.html">General Questions</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="faq-application.html">Application Process</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="faq-interest-rates.html">Interest & Rates</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="faq-asset-requirements.html">Asset Requirements</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="faq.html">All FAQ Topics</a></li>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="faq-general.html" class="active">General Questions</a></li>
+                        <li class="mb-2"><a href="faq-application.html">Application Process</a></li>
+                        <li class="mb-2"><a href="faq-interest-rates.html">Interest & Rates</a></li>
+                        <li class="mb-2"><a href="faq-asset-requirements.html">Asset Requirements</a></li>
                     </ul>
                 </div>
 
-                <div class="col-lg-4 col-md-12">
+                <div class="col-lg-3 col-md-12">
                     <h4 class="mb-3">Contact Details</h4>
                     <div class="contact-info mb-3">
-                        <p><i class="bi bi-geo-alt me-2"></i> Sandton, Johannesburg</p>
-                        <p><i class="bi bi-clock me-2"></i> Mon-Fri: 8am-6pm | Sat: 9am-1pm</p>
-                        <p><i class="bi bi-building me-2"></i> Nationwide Service</p>
+                        <p class="mb-2"><i class="bi bi-geo-alt me-2"></i> Johannesburg, South Africa</p>
+                        <p class="mb-2"><i class="bi bi-clock me-2"></i> Mon-Fri: 8am-5pm</p>
+                        <p class="mb-2"><i class="bi bi-clock me-2"></i> Sat: 9am-12pm</p>
+                        <p class="mb-2"><i class="bi bi-building me-2"></i> Nationwide Service</p>
                     </div>
                     <div class="social-links d-flex mt-4">
                         <a href="#" class="me-3"><i class="bi bi-linkedin"></i></a>
@@ -1086,7 +1699,7 @@
 
         <div class="container copyright text-center mt-4 pt-4 border-top border-secondary">
             <p class="mb-2">© 2025 Lehumo La Edishela Financial Services. All rights reserved.</p>
-            <div class="credits">
+            <div class="credits small">
                 <a href="privacy.html" class="me-3">Privacy Policy</a> |
                 <a href="terms.html" class="mx-3">Terms of Service</a> |
                 <a href="complaints.html" class="ms-3">Complaints Procedure</a>
@@ -1102,12 +1715,9 @@
 
     <!-- Vendor JS Files -->
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
     <script src="assets/vendor/aos/aos.js"></script>
     <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
     <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
 
     <!-- Main JS File -->
@@ -1115,6 +1725,98 @@
 
     <!-- Custom JS -->
     <script>
+        // Mobile Menu Functionality
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const mobileMenuClose = document.getElementById('mobileMenuClose');
+        const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+        const mobileMenuContainer = document.getElementById('mobileMenuContainer');
+
+        function openMobileMenu() {
+            mobileMenuOverlay.style.display = 'block';
+            mobileMenuContainer.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMobileMenu() {
+            mobileMenuOverlay.style.display = 'none';
+            mobileMenuContainer.classList.remove('active');
+            document.body.style.overflow = 'auto';
+
+            const dropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
+            dropdownToggles.forEach(toggle => {
+                toggle.classList.remove('active');
+            });
+
+            const dropdownMenus = document.querySelectorAll('.mobile-dropdown-menu');
+            dropdownMenus.forEach(menu => {
+                menu.classList.remove('active');
+            });
+        }
+
+        if (mobileMenuToggle) {
+            mobileMenuToggle.addEventListener('click', openMobileMenu);
+        }
+
+        if (mobileMenuClose) {
+            mobileMenuClose.addEventListener('click', closeMobileMenu);
+        }
+
+        if (mobileMenuOverlay) {
+            mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+        }
+
+        // Mobile Dropdown Toggle
+        document.addEventListener('click', function (e) {
+            if (e.target.closest('.mobile-dropdown-toggle')) {
+                const toggle = e.target.closest('.mobile-dropdown-toggle');
+                const targetId = toggle.getAttribute('data-target');
+                const targetMenu = document.getElementById(targetId);
+
+                toggle.classList.toggle('active');
+                targetMenu.classList.toggle('active');
+
+                document.querySelectorAll('.mobile-dropdown-toggle').forEach(otherToggle => {
+                    if (otherToggle !== toggle) {
+                        otherToggle.classList.remove('active');
+                    }
+                });
+
+                document.querySelectorAll('.mobile-dropdown-menu').forEach(otherMenu => {
+                    if (otherMenu !== targetMenu) {
+                        otherMenu.classList.remove('active');
+                    }
+                });
+            }
+        });
+
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        // Close mobile menu when clicking menu links
+        document.querySelectorAll('.mobile-menu-nav a').forEach(link => {
+            link.addEventListener('click', function () {
+                if (window.innerWidth <= 992) {
+                    closeMobileMenu();
+                }
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.15)';
+                header.style.backgroundColor = 'rgba(255, 255, 255, 1)';
+            } else {
+                header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+                header.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
+            }
+        });
+
         // FAQ Toggle Functionality
         document.querySelectorAll('.faq-question').forEach(question => {
             question.addEventListener('click', function () {
@@ -1134,19 +1836,6 @@
                 } else {
                     icon.textContent = '+';
                 }
-
-                // Close other FAQs if needed
-                // document.querySelectorAll('.faq-question').forEach(otherQuestion => {
-                //     if (otherQuestion !== this && otherQuestion.classList.contains('active')) {
-                //         const otherFaqId = otherQuestion.getAttribute('data-faq');
-                //         const otherAnswer = document.getElementById(`faq-answer-${otherFaqId}`);
-                //         const otherIcon = otherQuestion.querySelector('.toggle-icon');
-
-                //         otherQuestion.classList.remove('active');
-                //         otherAnswer.classList.remove('active');
-                //         otherIcon.textContent = '+';
-                //     }
-                // });
             });
         });
 
@@ -1163,7 +1852,7 @@
                     const question = item.querySelector('.question-text');
                     const answer = item.querySelector('.answer-content');
                     if (question) question.innerHTML = question.textContent;
-                    if (answer) answer.innerHTML = answer.textContent;
+                    if (answer) answer.innerHTML = answer.innerHTML.replace(/<mark class="bg-warning">(.*?)<\/mark>/gi, '$1');
                 });
 
                 // Show all categories
@@ -1225,16 +1914,6 @@
             if (firstQuestion) {
                 firstQuestion.click();
             }
-
-            // Initialize AOS animations
-            if (typeof AOS !== 'undefined') {
-                AOS.init({
-                    duration: 800,
-                    easing: 'ease-in-out',
-                    once: true,
-                    mirror: false
-                });
-            }
         });
 
         // Smooth scrolling for anchor links
@@ -1255,25 +1934,6 @@
                 }
             });
         });
-
-        // Header scroll effect
-        window.addEventListener('scroll', function () {
-            const header = document.querySelector('.header');
-            if (window.scrollY > 100) {
-                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
-            } else {
-                header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
-            }
-        });
-
-        // WhatsApp button interaction
-        const whatsappBtn = document.querySelector('.whatsapp-float');
-        if (whatsappBtn) {
-            whatsappBtn.addEventListener('click', function () {
-                console.log('WhatsApp button clicked from FAQ page');
-                // You can add analytics tracking here
-            });
-        }
 
         // Scroll to top functionality
         const scrollTop = document.getElementById('scroll-top');

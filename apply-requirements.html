@@ -40,6 +40,8 @@
             --dark-gray: #212529;
             --text-color: #333333;
             --border-color: #E0E0E0;
+            --apply-purple: #6C3483;
+            --apply-orange: #F39C12;
         }
 
         /* WhatsApp Button */
@@ -47,7 +49,7 @@
             position: fixed;
             width: 60px;
             height: 60px;
-            bottom: 30px;
+            bottom: 90px;
             right: 30px;
             background-color: #25d366;
             color: #FFF;
@@ -74,40 +76,121 @@
                 margin-top: 2px;
             }
 
-        /* Logo Container */
-        .logo-container {
-            display: flex;
+        /* Mobile Apply Now Button */
+        .mobile-apply-float {
+            position: fixed;
+            width: auto;
+            height: 50px;
+            bottom: 20px;
+            right: 20px;
+            left: 20px;
+            background-color: var(--primary-red);
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 600;
+            box-shadow: 0 4px 20px rgba(230, 57, 70, 0.3);
+            z-index: 1000;
+            display: none;
             align-items: center;
-            justify-content: flex-start;
-            gap: 10px;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            padding: 0 20px;
+            letter-spacing: 0.5px;
         }
 
-        .logo-image {
-            width: 60px;
-            height: 60px;
-            object-fit: contain;
-            border-radius: 50%;
-            position: relative;
-            z-index: 2;
-        }
+            .mobile-apply-float:hover {
+                background-color: #c53030;
+                color: white;
+                transform: translateY(-2px);
+                box-shadow: 0 6px 25px rgba(230, 57, 70, 0.4);
+            }
 
-        /* Header Enhancements */
+            .mobile-apply-float i {
+                margin-right: 8px;
+            }
+
+        /* ============================================= */
+        /* ENHANCED LOGO STYLING - LARGER & SEPARATE */
+        /* ============================================= */
+
+        /* Header structure */
         .header {
             background-color: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(10px);
             box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            height: 100px;
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
         }
 
-        .sitename {
-            color: var(--primary-blue);
-            font-weight: 800;
-            font-size: 1.8rem;
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            height: 100%;
+            padding: 0 20px;
+            position: relative;
         }
 
-        .navmenu a {
-            font-weight: 500;
-            font-size: 0.95rem;
+        /* Logo positioned absolutely to separate from navigation */
+        .logo-wrapper {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+            display: flex;
+            align-items: center;
         }
+
+        /* Larger logo image */
+        .logo-image {
+            width: 85px;
+            height: 85px;
+            object-fit: contain;
+            border-radius: 100%;
+            display: block;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border: 2px solid white;
+        }
+
+        /* Navigation container - shifted right to make space for logo */
+        .navmenu {
+            margin-left: 120px;
+            width: 100%;
+        }
+
+            .navmenu ul {
+                display: flex;
+                align-items: center;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            .navmenu li {
+                position: relative;
+                margin: 0 12px;
+            }
+
+            .navmenu a {
+                font-weight: 500;
+                font-size: 0.95rem;
+                color: var(--text-color);
+                text-decoration: none;
+                padding: 8px 0;
+                transition: color 0.3s ease;
+            }
+
+                .navmenu a:hover,
+                .navmenu a.active {
+                    color: var(--primary-red);
+                }
 
         .btn-getstarted {
             background: linear-gradient(135deg, var(--primary-red) 0%, #c53030 100%);
@@ -120,6 +203,8 @@
             border: none;
             font-size: 0.95rem;
             letter-spacing: 0.3px;
+            white-space: nowrap;
+            margin-left: 20px;
         }
 
             .btn-getstarted:hover {
@@ -128,21 +213,222 @@
                 color: white;
             }
 
+        /* Mobile Menu Toggle Button */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+            cursor: pointer;
+            padding: 0.5rem;
+            margin-left: auto;
+            z-index: 20;
+        }
+
+        /* Mobile Menu Styles */
+        .mobile-menu-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 9998;
+        }
+
+        .mobile-menu-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 300px;
+            background-color: white;
+            z-index: 9999;
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+            overflow-y: auto;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+            .mobile-menu-container.active {
+                transform: translateX(0);
+            }
+
+        .mobile-menu-header {
+            padding: 1.5rem;
+            background-color: var(--primary-blue);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+            .mobile-menu-header h3 {
+                margin: 0;
+                font-size: 1.2rem;
+            }
+
+        .mobile-menu-close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0;
+        }
+
+        .mobile-menu-nav {
+            padding: 1rem 0;
+        }
+
+            .mobile-menu-nav ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            .mobile-menu-nav li {
+                border-bottom: 1px solid var(--border-color);
+            }
+
+            .mobile-menu-nav a {
+                display: block;
+                padding: 1rem 1.5rem;
+                color: var(--text-color);
+                text-decoration: none;
+                font-weight: 500;
+                transition: all 0.3s ease;
+            }
+
+                .mobile-menu-nav a:hover {
+                    background-color: #f8f9fa;
+                    color: var(--primary-red);
+                }
+
+                .mobile-menu-nav a.active {
+                    color: var(--primary-red);
+                    background-color: #fff5f5;
+                }
+
+        /* Mobile Dropdown Toggle */
+        .mobile-dropdown-toggle {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 1rem 1.5rem;
+            color: var(--text-color);
+            font-weight: 500;
+            text-align: left;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+            .mobile-dropdown-toggle i {
+                transition: transform 0.3s ease;
+            }
+
+            .mobile-dropdown-toggle.active i {
+                transform: rotate(180deg);
+            }
+
+        .mobile-dropdown-menu {
+            display: none;
+            background-color: #f8f9fa;
+        }
+
+            .mobile-dropdown-menu.active {
+                display: block;
+            }
+
+            .mobile-dropdown-menu li {
+                border-bottom: none;
+                border-top: 1px solid #e9ecef;
+            }
+
+            .mobile-dropdown-menu a {
+                padding: 0.8rem 1.5rem 0.8rem 2.5rem;
+                font-size: 0.9rem;
+                color: #666;
+            }
+
         /* Page Title */
         .page-title {
             background: linear-gradient(rgba(26, 54, 93, 0.85), rgba(26, 54, 93, 0.9)), url('https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
             background-size: cover;
             background-position: center;
             color: white;
-            padding: 150px 0 60px;
+            padding: 180px 0 100px;
             position: relative;
         }
 
             .page-title h1 {
                 color: white;
-                font-size: 3.5rem;
+                font-size: 3rem;
                 font-weight: 800;
                 margin-bottom: 1rem;
+            }
+
+        .btn-primary {
+            background-color: var(--primary-red);
+            border-color: var(--primary-red);
+            padding: 0.875rem 2rem;
+            font-weight: 600;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+            .btn-primary:hover {
+                background-color: #c53030;
+                border-color: #c53030;
+                transform: translateY(-2px);
+                box-shadow: 0 10px 20px rgba(230, 57, 70, 0.2);
+            }
+
+        .btn-outline-primary {
+            color: var(--primary-red);
+            border-color: var(--primary-red);
+            padding: 0.875rem 2rem;
+            font-weight: 600;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+            .btn-outline-primary:hover {
+                background-color: var(--primary-red);
+                color: white;
+                border-color: var(--primary-red);
+                transform: translateY(-2px);
+            }
+
+        /* Page Indicator */
+        .page-indicator {
+            display: flex;
+            justify-content: center;
+            margin: 2rem 0 3rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .indicator-item {
+            padding: 0.75rem 1.5rem;
+            background: white;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            color: var(--text-color);
+            border: 2px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+            .indicator-item:hover, .indicator-item.active {
+                background: var(--apply-purple);
+                color: white;
+                border-color: var(--apply-purple);
             }
 
         /* Requirements Section */
@@ -281,11 +567,12 @@
 
         /* Quick Apply Form */
         .quick-apply {
-            background: linear-gradient(135deg, var(--primary-blue) 0%, #152642 100%);
+            background: linear-gradient(135deg, var(--apply-purple) 0%, var(--primary-blue) 100%);
             border-radius: 16px;
             padding: 3rem;
             color: white;
             margin-top: 4rem;
+            border: 1px solid var(--apply-orange);
         }
 
             .quick-apply h3 {
@@ -323,7 +610,7 @@
                 .form-group input:focus,
                 .form-group select:focus {
                     outline: none;
-                    border-color: var(--accent-teal);
+                    border-color: var(--apply-orange);
                 }
 
         /* Eligibility Checker */
@@ -332,6 +619,7 @@
             border-radius: 12px;
             padding: 2rem;
             margin: 2rem 0;
+            border: 1px solid var(--border-color);
         }
 
         .checker-title {
@@ -362,12 +650,13 @@
 
         /* Contact Help Section */
         .contact-help {
-            background: linear-gradient(135deg, var(--primary-blue) 0%, #152642 100%);
+            background: linear-gradient(135deg, var(--apply-purple) 0%, var(--primary-blue) 100%);
             border-radius: 16px;
             padding: 3rem;
             color: white;
             margin-top: 4rem;
             text-align: center;
+            border: 1px solid var(--apply-orange);
         }
 
             .contact-help h3 {
@@ -404,7 +693,7 @@
 
             .contact-method i {
                 font-size: 1.8rem;
-                color: var(--accent-teal);
+                color: var(--apply-orange);
             }
 
         .method-info h4 {
@@ -421,27 +710,11 @@
 
         /* CTA Section */
         .cta-section {
-            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-teal) 100%);
+            background: linear-gradient(135deg, var(--apply-purple) 0%, var(--primary-blue) 100%);
             color: white;
             padding: 100px 0;
             text-align: center;
         }
-
-        .btn-primary {
-            background-color: var(--primary-red);
-            border-color: var(--primary-red);
-            padding: 0.875rem 2rem;
-            font-weight: 600;
-            border-radius: 6px;
-            transition: all 0.3s ease;
-        }
-
-            .btn-primary:hover {
-                background-color: #c53030;
-                border-color: #c53030;
-                transform: translateY(-2px);
-                box-shadow: 0 10px 20px rgba(230, 57, 70, 0.2);
-            }
 
         .btn-outline-light {
             color: white;
@@ -459,19 +732,91 @@
                 transform: translateY(-2px);
             }
 
-        /* Logo Mobile Adjustments */
-        @media (max-width: 992px) {
-            .logo-image {
-                width: 54px;
-                height: 54px;
+        /* Apply Badge */
+        .apply-badge {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(243, 156, 18, 0.15);
+            color: var(--apply-orange);
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+            font-weight: 600;
+            margin: 0.5rem 0;
+            border: 1px solid rgba(243, 156, 18, 0.3);
+        }
+
+            .apply-badge i {
+                margin-right: 0.5rem;
             }
 
-            .sitename {
-                font-size: 1.5rem;
+        /* ============================================= */
+        /* MOBILE RESPONSIVE STYLES */
+        /* ============================================= */
+
+        @media (max-width: 1200px) {
+            .navmenu {
+                margin-left: 100px;
+            }
+
+                .navmenu li {
+                    margin: 0 8px;
+                }
+        }
+
+        @media (max-width: 992px) {
+            /* Reset header for mobile */
+            .header {
+                height: 80px;
+                padding: 5px 0;
+            }
+
+            .header-container {
+                position: relative;
+                padding: 0 15px;
+            }
+
+            /* Logo styling for mobile */
+            .logo-wrapper {
+                position: static;
+                transform: none;
+                margin-right: auto;
+            }
+
+            .logo-image {
+                width: 60px;
+                height: 60px;
+            }
+
+            /* Hide desktop navigation on mobile */
+            .navmenu, .btn-getstarted {
+                display: none !important;
+            }
+
+            /* Show mobile menu toggle */
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            /* Show mobile apply button */
+            .mobile-apply-float {
+                display: flex;
+            }
+
+            /* WhatsApp button adjustment */
+            .whatsapp-float {
+                bottom: 90px;
+                width: 55px;
+                height: 55px;
+                font-size: 26px;
+                right: 25px;
             }
 
             .page-title h1 {
                 font-size: 2.5rem;
+            }
+
+            .page-title {
+                padding: 140px 0 80px;
             }
 
             .section-title h2 {
@@ -480,11 +825,6 @@
 
             .requirements-header h2 {
                 font-size: 2rem;
-            }
-
-            .btn-getstarted {
-                padding: 0.6rem 1.2rem;
-                font-size: 0.9rem;
             }
 
             .requirements-box {
@@ -500,24 +840,16 @@
                 width: 100%;
                 max-width: 300px;
             }
-
-            .whatsapp-float {
-                width: 55px;
-                height: 55px;
-                font-size: 26px;
-                bottom: 25px;
-                right: 25px;
-            }
         }
 
         @media (max-width: 768px) {
-            .logo-image {
-                width: 50px;
-                height: 50px;
+            .header {
+                height: 70px;
             }
 
-            .sitename {
-                font-size: 1.3rem;
+            .logo-image {
+                width: 55px;
+                height: 55px;
             }
 
             .page-title h1 {
@@ -525,7 +857,7 @@
             }
 
             .page-title {
-                padding: 120px 0 40px;
+                padding: 120px 0 60px;
             }
 
             .requirements-section {
@@ -552,23 +884,61 @@
                 width: 50px;
                 height: 50px;
                 font-size: 24px;
-                bottom: 20px;
+                bottom: 85px;
                 right: 20px;
+            }
+
+            .mobile-apply-float {
+                height: 45px;
+                font-size: 15px;
+                bottom: 15px;
+                left: 15px;
+                right: 15px;
+            }
+
+            .page-indicator {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .indicator-item {
+                width: 100%;
+                text-align: center;
             }
         }
 
         @media (max-width: 480px) {
-            .logo-container {
-                gap: 5px;
+            .header {
+                height: 65px;
             }
 
             .logo-image {
-                width: 45px;
-                height: 45px;
+                width: 50px;
+                height: 50px;
             }
 
-            .sitename {
-                font-size: 1.1rem;
+            .page-title h1 {
+                font-size: 1.75rem;
+            }
+
+            .mobile-menu-container {
+                width: 280px;
+            }
+
+            .whatsapp-float {
+                width: 48px;
+                height: 48px;
+                font-size: 22px;
+                bottom: 80px;
+                right: 15px;
+            }
+
+            .mobile-apply-float {
+                height: 40px;
+                font-size: 14px;
+                bottom: 10px;
+                left: 10px;
+                right: 10px;
             }
 
             .requirements-box {
@@ -587,48 +957,189 @@
                 padding: 1.5rem;
             }
         }
+
+        /* Desktop specific */
+        @media (min-width: 993px) {
+            .mobile-menu-toggle,
+            .mobile-apply-float,
+            .mobile-menu-overlay,
+            .mobile-menu-container {
+                display: none !important;
+            }
+
+            .whatsapp-float {
+                bottom: 30px;
+                right: 30px;
+                width: 60px;
+                height: 60px;
+                font-size: 30px;
+            }
+        }
     </style>
 </head>
 
 <body class="apply-requirements-page">
 
     <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/27639483064?text=Hello%20Lehumo%20La%20Edishela,%20I%20have%20questions%20about%20loan%20requirements" class="whatsapp-float" target="_blank" aria-label="Chat with us on WhatsApp">
+    <a href="https://wa.me/27722927336?text=Hello%20Lehumo%20La%20Edishela,%20I%20have%20questions%20about%20loan%20requirements" class="whatsapp-float" target="_blank" aria-label="Chat with us on WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
+    <!-- Mobile Apply Now Button -->
+    <a href="apply.html" class="mobile-apply-float">
+        <i class="bi bi-pencil-square"></i> APPLY NOW
+    </a>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+    <!-- Mobile Menu Container -->
+    <div class="mobile-menu-container" id="mobileMenuContainer">
+        <div class="mobile-menu-header">
+            <h3>Menu</h3>
+            <button class="mobile-menu-close" id="mobileMenuClose">
+                <i class="bi bi-x-lg"></i>
+            </button>
+        </div>
+        <nav class="mobile-menu-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+
+                <!-- Asset Loans Dropdown -->
+                <li>
+                    <button class="mobile-dropdown-toggle" data-target="asset-dropdown">
+                        <span>Asset Loans</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+                    <ul class="mobile-dropdown-menu" id="asset-dropdown">
+                        <li><a href="vehicle-loans.html">Vehicle Loans</a></li>
+                        <li><a href="luxury-loans.html">Luxury Assets</a></li>
+                        <li><a href="property-loans.html">Property Loans</a></li>
+                        <li><a href="equipment-finance.html">Equipment Finance</a></li>
+                        <li><a href="art-collectibles.html">Art & Collectibles</a></li>
+                    </ul>
+                </li>
+
+                <!-- Insurance Services -->
+                <li>
+                    <button class="mobile-dropdown-toggle" data-target="insurance-dropdown">
+                        <span>Insurance</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+                    <ul class="mobile-dropdown-menu" id="insurance-dropdown">
+                        <li><a href="business-insurance.html">Business Insurance</a></li>
+                        <li><a href="asset-insurance.html">Asset Insurance</a></li>
+                        <li><a href="vehicle-insurance.html">Vehicle Insurance</a></li>
+                        <li><a href="property-insurance.html">Property Insurance</a></li>
+                        <li><a href="life-insurance.html">Life Insurance</a></li>
+                    </ul>
+                </li>
+
+                <!-- Commercial Fleet Dropdown -->
+                <li>
+                    <button class="mobile-dropdown-toggle" data-target="fleet-dropdown">
+                        <span>Commercial Fleet</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+                    <ul class="mobile-dropdown-menu" id="fleet-dropdown">
+                        <li><a href="vehicle-sourcing.html">Vehicle Sourcing</a></li>
+                        <li><a href="truck-trailer-loans.html">Truck & Trailer Loans</a></li>
+                        <li><a href="maintenance-packages.html">Maintenance Packages</a></li>
+                        <li><a href="fleet-financing.html">Fleet Financing</a></li>
+                    </ul>
+                </li>
+
+                <!-- Bridging Finance Dropdown -->
+                <li>
+                    <button class="mobile-dropdown-toggle" data-target="bridging-dropdown">
+                        <span>Bridging Finance</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+                    <ul class="mobile-dropdown-menu" id="bridging-dropdown">
+                        <li><a href="property-bridging.html">Property Bridging</a></li>
+                        <li><a href="auction-finance.html">Auction Finance</a></li>
+                        <li><a href="renovation-loans.html">Renovation Finance</a></li>
+                        <li><a href="development-finance.html">Development Finance</a></li>
+                    </ul>
+                </li>
+
+                <!-- FAQ Dropdown with How To Apply inside -->
+                <li>
+                    <button class="mobile-dropdown-toggle" data-target="faq-dropdown">
+                        <span>FAQ</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+                    <ul class="mobile-dropdown-menu" id="faq-dropdown">
+                        <li><a href="apply-requirements.html" class="active">How To Apply</a></li>
+                        <li><a href="faq-general.html">General Questions</a></li>
+                        <li><a href="faq-application.html">Application Process</a></li>
+                        <li><a href="faq-interest-rates.html">Interest & Rates</a></li>
+                        <li><a href="faq-asset-requirements.html">Asset Requirements</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
     <header id="header" class="header d-flex align-items-center fixed-top">
-        <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-
-            <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-                <div class="logo-container">
+        <div class="header-container container-fluid container-xl">
+            <!-- Logo wrapper - absolutely positioned for desktop, normal for mobile -->
+            <div class="logo-wrapper">
+                <a href="index.html" class="logo-link">
                     <img src="assets/img/logo.png" alt="Lehumo La Edishela Logo" class="logo-image">
-                </div>
-            </a>
+                </a>
+            </div>
 
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <i class="bi bi-list"></i>
+            </button>
+
+            <!-- Desktop Navigation (Hidden on Mobile) -->
             <nav id="navmenu" class="navmenu">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
+
+                    <!-- Asset Loans Dropdown -->
                     <li class="dropdown">
                         <a href="#"><span>Asset Loans</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                         <ul>
                             <li><a href="vehicle-loans.html">Vehicle Loans</a></li>
                             <li><a href="luxury-loans.html">Luxury Assets</a></li>
-                            <li><a href="propertyloans.html">Property Loans</a></li>
-                            <li><a href="equipmentfinance.html">Equipment Finance</a></li>
-                            <li><a href="artcollectibles.html">Art & Collectibles</a></li>
+                            <li><a href="property-loans.html">Property Loans</a></li>
+                            <li><a href="equipment-finance.html">Equipment Finance</a></li>
+                            <li><a href="art-collectibles.html">Art & Collectibles</a></li>
                         </ul>
                     </li>
+
+                    <!-- Insurance Dropdown -->
+                    <li class="dropdown">
+                        <a href="#"><span>Insurance</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="business-insurance.html">Business Insurance</a></li>
+                            <li><a href="asset-insurance.html">Asset Insurance</a></li>
+                            <li><a href="vehicle-insurance.html">Vehicle Insurance</a></li>
+                            <li><a href="property-insurance.html">Property Insurance</a></li>
+                            <li><a href="life-insurance.html">Life Insurance</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Commercial Fleet Dropdown -->
                     <li class="dropdown">
                         <a href="#"><span>Commercial Fleet</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                         <ul>
-                            <li><a href="fleetfinancing.html">Fleet Financing</a></li>
-                            <li><a href="vehiclesourcing.html">Vehicle Sourcing</a></li>
-                            <li><a href="truckloans.html">Truck & Trailer Loans</a></li>
-                            <li><a href="maintenance.html">Maintenance Packages</a></li>
+                            <li><a href="vehicle-sourcing.html">Vehicle Sourcing</a></li>
+                            <li><a href="truck-trailer-loans.html">Truck & Trailer Loans</a></li>
+                            <li><a href="maintenance-packages.html">Maintenance Packages</a></li>
+                            <li><a href="fleet-financing.html">Fleet Financing</a></li>
                         </ul>
                     </li>
+
+                    <!-- Bridging Finance Dropdown -->
                     <li class="dropdown">
                         <a href="#"><span>Bridging Finance</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                         <ul>
@@ -638,27 +1149,21 @@
                             <li><a href="development-finance.html">Development Finance</a></li>
                         </ul>
                     </li>
+
+                    <!-- FAQ Dropdown with How To Apply inside - Active -->
                     <li class="dropdown">
-                        <a href="#"><span>FAQ</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <a href="#" class="active"><span>FAQ</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                         <ul>
+                            <li><a href="apply-requirements.html" class="active">How To Apply</a></li>
                             <li><a href="faq-general.html">General Questions</a></li>
                             <li><a href="faq-application.html">Application Process</a></li>
                             <li><a href="faq-interest-rates.html">Interest & Rates</a></li>
                             <li><a href="faq-asset-requirements.html">Asset Requirements</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown active">
-                        <a href="#"><span>How To Apply</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                        <ul>
-                            <li><a href="apply-requirements.html" class="active">Requirements</a></li>
-                            <li><a href="apply-documentation.html">Documentation</a></li>
-                            <li><a href="apply-process.html">Process Steps</a></li>
-                            <li><a href="apply-timeline.html">Timeline</a></li>
-                        </ul>
-                    </li>
+
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
-                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
 
             <a class="btn-getstarted" href="apply.html">Apply Now</a>
@@ -671,17 +1176,31 @@
         <!-- Page Title -->
         <div class="page-title dark-background" data-aos="fade">
             <div class="container position-relative">
-                <h1>Loan Requirements</h1>
+                <div class="apply-badge">
+                    <i class="bi bi-file-check"></i>
+                    <span>FSCA Registered • NCR Approved • Clear Guidelines</span>
+                </div>
+                <h1 class="mt-3">Loan Requirements</h1>
                 <p>Check what you need to qualify for an asset-backed loan with Lehumo La Edishela. Our requirements are clear and straightforward.</p>
                 <nav class="breadcrumbs">
                     <ol>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="#">How To Apply</a></li>
-                        <li class="current">Requirements</li>
+                        <li><a href="#">FAQ</a></li>
+                        <li class="current">How To Apply - Requirements</li>
                     </ol>
                 </nav>
             </div>
         </div><!-- End Page Title -->
+        <!-- Page Indicator -->
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+            <div class="page-indicator">
+                <a href="apply-requirements.html" class="indicator-item active">Requirements</a>
+                <a href="apply-documentation.html" class="indicator-item">Documentation</a>
+                <a href="apply-process.html" class="indicator-item">Process Steps</a>
+                <a href="apply-timeline.html" class="indicator-item">Timeline</a>
+            </div>
+        </div>
+
         <!-- Requirements Section -->
         <section class="requirements-section">
             <div class="container" data-aos="fade-up">
@@ -942,7 +1461,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="phone">Phone Number</label>
-                                    <input type="tel" id="phone" placeholder="071 234 5678" required>
+                                    <input type="tel" id="phone" placeholder="072 292 7336" required>
                                 </div>
                             </div>
                         </div>
@@ -964,7 +1483,7 @@
                             </select>
                         </div>
 
-                        <button type="submit" class="btn btn-primary w-100 py-3" style="font-size: 1.1rem; font-weight: 600;">
+                        <button type="submit" class="btn btn-primary w-100 py-3">
                             <i class="bi bi-check-circle me-2"></i>CHECK MY ELIGIBILITY NOW
                         </button>
 
@@ -980,32 +1499,32 @@
                     <p>Our application specialists can explain requirements and help you determine if you qualify.</p>
 
                     <div class="contact-methods">
-                        <a href="tel:0639483064" class="contact-method">
+                        <a href="tel:0722927336" class="contact-method">
                             <i class="bi bi-telephone"></i>
                             <div class="method-info">
                                 <h4>Requirements Helpline</h4>
-                                <p>063 948 3064</p>
+                                <p>072 292 7336</p>
                             </div>
                         </a>
 
-                        <a href="https://wa.me/27639483064?text=Hello%20Lehumo%20La%20Edishela,%20I%20need%20help%20understanding%20loan%20requirements" class="contact-method" target="_blank">
+                        <a href="https://wa.me/27722927336?text=Hello%20Lehumo%20La%20Edishela,%20I%20need%20help%20understanding%20loan%20requirements" class="contact-method" target="_blank">
                             <i class="bi bi-whatsapp"></i>
                             <div class="method-info">
-                                <h4>WhatsApp Requirements Help</h4>
-                                <p>063 948 3064</p>
+                                <h4>WhatsApp Help</h4>
+                                <p>072 292 7336</p>
                             </div>
                         </a>
 
-                        <a href="mailto:requirements@lehumo.co.za" class="contact-method">
+                        <a href="mailto:info@edi-h.co.za" class="contact-method">
                             <i class="bi bi-envelope"></i>
                             <div class="method-info">
-                                <h4>Email Requirements Questions</h4>
-                                <p>requirements@lehumo.co.za</p>
+                                <h4>Email Questions</h4>
+                                <p>info@edi-h.co.za</p>
                             </div>
                         </a>
                     </div>
 
-                    <p class="mt-4">Application Support Hours: Monday to Friday 7:30am-7pm | Saturday 8am-2pm</p>
+                    <p class="mt-4">Application Support Hours: Monday to Friday 8am-5pm | Saturday 9am-12pm</p>
                 </div>
             </div>
         </section>
@@ -1018,8 +1537,8 @@
                         <h2 class="mb-4">Start Your Application Today</h2>
                         <p class="mb-5">Don't let uncertainty hold you back. Our team will help you understand exactly what you need.</p>
                         <div class="cta-buttons">
-                            <a href="tel:0639483064" class="btn btn-light btn-lg me-3 mb-3 px-4">
-                                <i class="bi bi-telephone me-2"></i> Call for Requirements Help
+                            <a href="tel:0722927336" class="btn btn-light btn-lg me-3 mb-3 px-4">
+                                <i class="bi bi-telephone me-2"></i> Call for Help
                             </a>
                             <a href="apply.html" class="btn btn-outline-light btn-lg mb-3 px-4">
                                 <i class="bi bi-pencil-square me-2"></i> Start Application
@@ -1040,49 +1559,47 @@
             <div class="row gy-4">
                 <div class="col-lg-4 col-md-6 footer-about">
                     <a href="index.html" class="d-flex align-items-center mb-3" style="text-decoration: none;">
-                        <div class="logo-container">
-                            <img src="assets/img/logo.png" alt="Lehumo La Edishela Logo" class="logo-image me-2">
-                            <h1 class="sitename">LEHUMO LA EDISHELA</h1>
-                        </div>
+                        <img src="assets/img/logo.png" alt="Lehumo La Edishela Logo" class="logo-image me-3">
+                        <span class="sitename">LEHUMO LA EDISHELA</span>
                     </a>
                     <div class="footer-contact">
-                        <p class="mb-3">Your trusted partner for asset-backed loans. Fast approvals, great rates, and FSCA registered for your peace of mind.</p>
-                        <p class="mb-2"><strong>Application Requirements Support:</strong></p>
-                        <p class="mb-2"><i class="bi bi-telephone me-2"></i> 063 948 3064</p>
-                        <p class="mb-2"><i class="bi bi-whatsapp me-2"></i> 063 948 3064</p>
-                        <p class="mb-3"><i class="bi bi-envelope me-2"></i> requirements@lehumo.co.za</p>
-                        <p><i class="bi bi-shield-check me-2"></i> FSCA Registered • NCA Compliant</p>
+                        <p class="mb-3">Your trusted partner for financial services and insurance. FSCA registered and NCR approved for your peace of mind.</p>
+                        <p class="mb-2"><strong>Contact Us:</strong></p>
+                        <p class="mb-2"><i class="bi bi-telephone me-2"></i> 072 292 7336</p>
+                        <p class="mb-2"><i class="bi bi-envelope me-2"></i> info@edi-h.co.za</p>
+                        <p class="mb-2"><i class="bi bi-whatsapp me-2"></i> 072 292 7336</p>
+                        <p><i class="bi bi-shield-check me-2"></i> FSCA Registered | NCR Approved</p>
                     </div>
                 </div>
 
                 <div class="col-lg-2 col-md-3 footer-links">
                     <h4 class="mb-3">Quick Links</h4>
-                    <ul>
-                        <li><i class="bi bi-chevron-right"></i> <a href="index.html">Home</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="about.html">About Us</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="contact.html">Contact Us</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="apply.html">Apply Now</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="faq-general.html">FAQ & Help</a></li>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html">Home</a></li>
+                        <li class="mb-2"><a href="about.html">About Us</a></li>
+                        <li class="mb-2"><a href="contact.html">Contact Us</a></li>
+                        <li class="mb-2"><a href="apply.html">Apply Now</a></li>
+                        <li class="mb-2"><a href="faq.html">FAQ</a></li>
                     </ul>
                 </div>
 
-                <div class="col-lg-2 col-md-3 footer-links">
-                    <h4 class="mb-3">Application Resources</h4>
-                    <ul>
-                        <li><i class="bi bi-chevron-right"></i> <a href="apply-requirements.html" class="active">Requirements</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="apply-documentation.html">Documentation</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="apply-process.html">Process Steps</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="apply-timeline.html">Timeline</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#contact-help">Requirements Help</a></li>
+                <div class="col-lg-3 col-md-3 footer-links">
+                    <h4 class="mb-3">How To Apply</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="apply-requirements.html" class="active">Requirements</a></li>
+                        <li class="mb-2"><a href="apply-documentation.html">Documentation</a></li>
+                        <li class="mb-2"><a href="apply-process.html">Process Steps</a></li>
+                        <li class="mb-2"><a href="apply-timeline.html">Timeline</a></li>
                     </ul>
                 </div>
 
-                <div class="col-lg-4 col-md-12">
+                <div class="col-lg-3 col-md-12">
                     <h4 class="mb-3">Contact Details</h4>
                     <div class="contact-info mb-3">
-                        <p><i class="bi bi-geo-alt me-2"></i> Sandton, Johannesburg</p>
-                        <p><i class="bi bi-clock me-2"></i> Mon-Fri: 7:30am-7pm | Sat: 8am-2pm</p>
-                        <p><i class="bi bi-building me-2"></i> Nationwide Application Support</p>
+                        <p class="mb-2"><i class="bi bi-geo-alt me-2"></i> Johannesburg, South Africa</p>
+                        <p class="mb-2"><i class="bi bi-clock me-2"></i> Mon-Fri: 8am-5pm</p>
+                        <p class="mb-2"><i class="bi bi-clock me-2"></i> Sat: 9am-12pm</p>
+                        <p class="mb-2"><i class="bi bi-building me-2"></i> Nationwide Service</p>
                     </div>
                     <div class="social-links d-flex mt-4">
                         <a href="#" class="me-3"><i class="bi bi-linkedin"></i></a>
@@ -1096,7 +1613,7 @@
 
         <div class="container copyright text-center mt-4 pt-4 border-top border-secondary">
             <p class="mb-2">© 2025 Lehumo La Edishela Financial Services. All rights reserved.</p>
-            <div class="credits">
+            <div class="credits small">
                 <a href="privacy.html" class="me-3">Privacy Policy</a> |
                 <a href="terms.html" class="mx-3">Terms of Service</a> |
                 <a href="complaints.html" class="ms-3">Complaints Procedure</a>
@@ -1112,12 +1629,9 @@
 
     <!-- Vendor JS Files -->
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
     <script src="assets/vendor/aos/aos.js"></script>
     <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
     <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
 
     <!-- Main JS File -->
@@ -1125,6 +1639,98 @@
 
     <!-- Custom JS -->
     <script>
+        // Mobile Menu Functionality
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const mobileMenuClose = document.getElementById('mobileMenuClose');
+        const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+        const mobileMenuContainer = document.getElementById('mobileMenuContainer');
+
+        function openMobileMenu() {
+            mobileMenuOverlay.style.display = 'block';
+            mobileMenuContainer.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMobileMenu() {
+            mobileMenuOverlay.style.display = 'none';
+            mobileMenuContainer.classList.remove('active');
+            document.body.style.overflow = 'auto';
+
+            const dropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
+            dropdownToggles.forEach(toggle => {
+                toggle.classList.remove('active');
+            });
+
+            const dropdownMenus = document.querySelectorAll('.mobile-dropdown-menu');
+            dropdownMenus.forEach(menu => {
+                menu.classList.remove('active');
+            });
+        }
+
+        if (mobileMenuToggle) {
+            mobileMenuToggle.addEventListener('click', openMobileMenu);
+        }
+
+        if (mobileMenuClose) {
+            mobileMenuClose.addEventListener('click', closeMobileMenu);
+        }
+
+        if (mobileMenuOverlay) {
+            mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+        }
+
+        // Mobile Dropdown Toggle
+        document.addEventListener('click', function (e) {
+            if (e.target.closest('.mobile-dropdown-toggle')) {
+                const toggle = e.target.closest('.mobile-dropdown-toggle');
+                const targetId = toggle.getAttribute('data-target');
+                const targetMenu = document.getElementById(targetId);
+
+                toggle.classList.toggle('active');
+                targetMenu.classList.toggle('active');
+
+                document.querySelectorAll('.mobile-dropdown-toggle').forEach(otherToggle => {
+                    if (otherToggle !== toggle) {
+                        otherToggle.classList.remove('active');
+                    }
+                });
+
+                document.querySelectorAll('.mobile-dropdown-menu').forEach(otherMenu => {
+                    if (otherMenu !== targetMenu) {
+                        otherMenu.classList.remove('active');
+                    }
+                });
+            }
+        });
+
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        // Close mobile menu when clicking menu links
+        document.querySelectorAll('.mobile-menu-nav a').forEach(link => {
+            link.addEventListener('click', function () {
+                if (window.innerWidth <= 992) {
+                    closeMobileMenu();
+                }
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.15)';
+                header.style.backgroundColor = 'rgba(255, 255, 255, 1)';
+            } else {
+                header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+                header.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
+            }
+        });
+
         // Eligibility Checker
         let eligibilityAnswers = {};
 
@@ -1137,7 +1743,7 @@
             const resultDiv = document.getElementById('eligibilityResult');
 
             if (Object.keys(eligibilityAnswers).length < 3) {
-                return; // Not all questions answered
+                return;
             }
 
             let allYes = true;
@@ -1167,7 +1773,7 @@
                         <p class="mb-2">${message}</p>
                         ${allYes ?
                     '<a href="apply.html" class="btn btn-success btn-sm mt-2">Start Your Application</a>' :
-                    '<a href="#contact-help" class="btn btn-primary btn-sm mt-2">Get Requirements Help</a>'
+                    '<a href="#contact-help" class="btn btn-primary btn-sm mt-2">Get Help</a>'
                 }
                     </div>
                 `;
@@ -1185,82 +1791,29 @@
             submitBtn.disabled = true;
 
             setTimeout(() => {
-                alert('Thank you for your interest! One of our loan specialists will contact you within 30 minutes to discuss your eligibility and requirements. We\'ll call you on the number provided.');
+                alert('Thank you for your interest! One of our loan specialists will contact you within 30 minutes to discuss your eligibility and requirements.');
                 this.reset();
                 submitBtn.innerHTML = originalText;
                 submitBtn.disabled = false;
             }, 2000);
         });
 
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                if (this.getAttribute('href') === '#') return;
-
-                e.preventDefault();
-
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 100,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-        // Header scroll effect
-        window.addEventListener('scroll', function () {
-            const header = document.querySelector('.header');
-            if (window.scrollY > 100) {
-                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
-            } else {
-                header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
-            }
-        });
-
-        // WhatsApp button interaction
-        const whatsappBtn = document.querySelector('.whatsapp-float');
-        if (whatsappBtn) {
-            whatsappBtn.addEventListener('click', function () {
-                console.log('WhatsApp button clicked from Requirements page');
-            });
-        }
-
-        // Initialize AOS animations
-        document.addEventListener('DOMContentLoaded', function () {
-            if (typeof AOS !== 'undefined') {
-                AOS.init({
-                    duration: 800,
-                    easing: 'ease-in-out',
-                    once: true,
-                    mirror: false
-                });
-            }
-        });
-
-        // Scroll to top functionality
-        const scrollTop = document.getElementById('scroll-top');
-        if (scrollTop) {
-            window.addEventListener('scroll', function () {
-                if (window.scrollY > 100) {
-                    scrollTop.style.display = 'flex';
+        // Auto-format phone number
+        document.getElementById('phone')?.addEventListener('input', function (e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length > 0) {
+                if (value.length <= 3) {
+                    value = value;
+                } else if (value.length <= 6) {
+                    value = value.substring(0, 3) + ' ' + value.substring(3);
                 } else {
-                    scrollTop.style.display = 'none';
+                    value = value.substring(0, 3) + ' ' + value.substring(3, 6) + ' ' + value.substring(6, 10);
                 }
-            });
-
-            scrollTop.addEventListener('click', function (e) {
-                e.preventDefault();
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            });
-        }
+            }
+            e.target.value = value;
+        });
     </script>
 
 </body>
+
 </html>

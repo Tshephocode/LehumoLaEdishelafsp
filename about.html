@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>About Us | Lehumo La Edishela - Your Trusted Financial Partner</title>
-    <meta name="description" content="Learn about Lehumo La Edishela's commitment to providing fast, secure asset-backed loans. FSCA registered with over R2 billion in approved loans.">
-    <meta name="keywords" content="about Lehumo La Edishela, financial services company, asset-backed lending, FSCA registered, South Africa loans">
+    <meta name="description" content="Learn about Lehumo La Edishela, a registered financial services provider offering secured and unsecured loans, bridging finance, and insurance. FSCA registered and NCR approved.">
+    <meta name="keywords" content="about Lehumo La Edishela, financial services company, FSCA registered, NCR approved, South Africa">
 
     <!-- Favicons -->
     <link href="assets/img/favicon.png" rel="icon">
@@ -42,7 +42,7 @@
             --border-color: #E0E0E0;
         }
 
-        /* WhatsApp Button - Hidden on Mobile */
+        /* WhatsApp Button */
         .whatsapp-float {
             position: fixed;
             width: 60px;
@@ -74,7 +74,7 @@
                 margin-top: 2px;
             }
 
-        /* Mobile Apply Now Button - Replaces WhatsApp */
+        /* Mobile Apply Now Button */
         .mobile-apply-float {
             position: fixed;
             width: auto;
@@ -110,40 +110,85 @@
                 margin-right: 8px;
             }
 
-        /* Logo Container - Same as index.html */
-        .logo-container {
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            gap: 0px;
-        }
+        /* ============================================= */
+        /* ENHANCED LOGO STYLING - LARGER & SEPARATE */
+        /* ============================================= */
 
-        .logo-image {
-            width: 60px;
-            height: 120px;
-            object-fit: contain;
-            border-radius: 100%;
-            position: relative;
-            z-index: 2;
-        }
-
-        /* Header Enhancements */
+        /* Header structure */
         .header {
             background-color: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(10px);
             box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            height: 100px;
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
         }
 
-        .sitename {
-            color: var(--primary-blue);
-            font-weight: 800;
-            font-size: 1.8rem;
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            height: 100%;
+            padding: 0 20px;
+            position: relative;
         }
 
-        .navmenu a {
-            font-weight: 500;
-            font-size: 0.95rem;
+        /* Logo positioned absolutely to separate from navigation */
+        .logo-wrapper {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+            display: flex;
+            align-items: center;
         }
+
+        /* Larger logo image */
+        .logo-image {
+            width: 85px;
+            height: 85px;
+            object-fit: contain;
+            border-radius: 100%;
+            display: block;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border: 2px solid white;
+        }
+
+        /* Navigation container - shifted right to make space for logo */
+        .navmenu {
+            margin-left: 120px;
+            width: 100%;
+        }
+
+            .navmenu ul {
+                display: flex;
+                align-items: center;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            .navmenu li {
+                position: relative;
+                margin: 0 12px;
+            }
+
+            .navmenu a {
+                font-weight: 500;
+                font-size: 0.95rem;
+                color: var(--text-color);
+                text-decoration: none;
+                padding: 8px 0;
+                transition: color 0.3s ease;
+            }
+
+                .navmenu a:hover,
+                .navmenu a.active {
+                    color: var(--primary-red);
+                }
 
         .btn-getstarted {
             background: linear-gradient(135deg, var(--primary-red) 0%, #c53030 100%);
@@ -156,6 +201,8 @@
             border: none;
             font-size: 0.95rem;
             letter-spacing: 0.3px;
+            white-space: nowrap;
+            margin-left: 20px;
         }
 
             .btn-getstarted:hover {
@@ -173,7 +220,8 @@
             color: var(--primary-blue);
             cursor: pointer;
             padding: 0.5rem;
-            margin-left: 1rem;
+            margin-left: auto;
+            z-index: 20;
         }
 
         /* Mobile Menu Styles */
@@ -262,35 +310,6 @@
                     background-color: #fff5f5;
                 }
 
-            .mobile-menu-nav .dropdown-toggle {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-            }
-
-            .mobile-menu-nav .dropdown-menu {
-                padding: 0;
-                background-color: #f8f9fa;
-                border: none;
-                border-radius: 0;
-            }
-
-                .mobile-menu-nav .dropdown-menu li {
-                    border-bottom: none;
-                    border-top: 1px solid #e9ecef;
-                }
-
-                .mobile-menu-nav .dropdown-menu a {
-                    padding: 0.8rem 1.5rem 0.8rem 2.5rem;
-                    font-size: 0.9rem;
-                    color: #666;
-                }
-
-                    .mobile-menu-nav .dropdown-menu a:hover {
-                        background-color: #e9ecef;
-                        color: var(--primary-red);
-                    }
-
         /* Mobile Dropdown Toggle */
         .mobile-dropdown-toggle {
             display: flex;
@@ -324,36 +343,15 @@
                 display: block;
             }
 
-        .btn-primary {
-            background-color: var(--primary-red);
-            border-color: var(--primary-red);
-            padding: 0.875rem 2rem;
-            font-weight: 600;
-            border-radius: 6px;
-            transition: all 0.3s ease;
-        }
-
-            .btn-primary:hover {
-                background-color: #c53030;
-                border-color: #c53030;
-                transform: translateY(-2px);
-                box-shadow: 0 10px 20px rgba(230, 57, 70, 0.2);
+            .mobile-dropdown-menu li {
+                border-bottom: none;
+                border-top: 1px solid #e9ecef;
             }
 
-        .btn-outline-primary {
-            color: var(--primary-red);
-            border-color: var(--primary-red);
-            padding: 0.875rem 2rem;
-            font-weight: 600;
-            border-radius: 6px;
-            transition: all 0.3s ease;
-        }
-
-            .btn-outline-primary:hover {
-                background-color: var(--primary-red);
-                color: white;
-                border-color: var(--primary-red);
-                transform: translateY(-2px);
+            .mobile-dropdown-menu a {
+                padding: 0.8rem 1.5rem 0.8rem 2.5rem;
+                font-size: 0.9rem;
+                color: #666;
             }
 
         /* Page Title */
@@ -524,7 +522,7 @@
             margin-bottom: 1rem;
         }
 
-        /* Floating Stats */
+        /* Floating Stats - Updated with realistic figures */
         .floating-stats {
             position: absolute;
             bottom: 20px;
@@ -549,19 +547,79 @@
                 line-height: 1;
             }
 
+        .btn-primary {
+            background-color: var(--primary-red);
+            border-color: var(--primary-red);
+            padding: 0.875rem 2rem;
+            font-weight: 600;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+            .btn-primary:hover {
+                background-color: #c53030;
+                border-color: #c53030;
+                transform: translateY(-2px);
+                box-shadow: 0 10px 20px rgba(230, 57, 70, 0.2);
+            }
+
+        .btn-outline-primary {
+            color: var(--primary-red);
+            border-color: var(--primary-red);
+            padding: 0.875rem 2rem;
+            font-weight: 600;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+            .btn-outline-primary:hover {
+                background-color: var(--primary-red);
+                color: white;
+                border-color: var(--primary-red);
+                transform: translateY(-2px);
+            }
+
         /* ============================================= */
         /* MOBILE RESPONSIVE STYLES */
         /* ============================================= */
 
-        @media (max-width: 992px) {
-            /* Hide WhatsApp button on mobile */
-            .whatsapp-float {
-                display: none !important;
+        @media (max-width: 1200px) {
+            .navmenu {
+                margin-left: 100px;
             }
 
-            /* Show mobile apply button */
-            .mobile-apply-float {
-                display: flex;
+                .navmenu li {
+                    margin: 0 8px;
+                }
+        }
+
+        @media (max-width: 992px) {
+            /* Reset header for mobile */
+            .header {
+                height: 80px;
+                padding: 5px 0;
+            }
+
+            .header-container {
+                position: relative;
+                padding: 0 15px;
+            }
+
+            /* Logo styling for mobile */
+            .logo-wrapper {
+                position: static;
+                transform: none;
+                margin-right: auto;
+            }
+
+            .logo-image {
+                width: 60px;
+                height: 60px;
+            }
+
+            /* Hide desktop navigation on mobile */
+            .navmenu, .btn-getstarted {
+                display: none !important;
             }
 
             /* Show mobile menu toggle */
@@ -569,23 +627,14 @@
                 display: block;
             }
 
-            /* Hide desktop nav and apply button on mobile */
-            .navmenu, .btn-getstarted {
+            /* Show mobile apply button */
+            .mobile-apply-float {
+                display: flex;
+            }
+
+            /* WhatsApp button adjustment */
+            .whatsapp-float {
                 display: none !important;
-            }
-
-            /* Adjust header for mobile */
-            .header-container {
-                padding: 0.5rem 1rem;
-            }
-
-            .logo-image {
-                width: 54px;
-                height: 54px;
-            }
-
-            .sitename {
-                font-size: 1.5rem;
             }
 
             .page-title h1 {
@@ -620,17 +669,13 @@
         }
 
         @media (max-width: 768px) {
+            .header {
+                height: 70px;
+            }
+
             .logo-image {
-                width: 44px;
-                height: 44px;
-            }
-
-            .sitename {
-                font-size: 1.3rem;
-            }
-
-            .logo-container {
-                gap: 2px;
+                width: 55px;
+                height: 55px;
             }
 
             .page-title h1 {
@@ -669,21 +714,52 @@
         }
 
         @media (max-width: 480px) {
-            .logo-container {
-                gap: 8px;
+            .header {
+                height: 65px;
             }
 
             .logo-image {
-                width: 32px;
-                height: 32px;
+                width: 50px;
+                height: 50px;
             }
 
-            .sitename {
-                font-size: 1.1rem;
+            .page-title h1 {
+                font-size: 1.75rem;
+            }
+
+            .mobile-menu-container {
+                width: 280px;
+            }
+
+            .whatsapp-float {
+                width: 48px;
+                height: 48px;
+                font-size: 22px;
+                bottom: 80px;
+                right: 15px;
+            }
+
+            .mobile-apply-float {
+                height: 40px;
+                font-size: 14px;
+                bottom: 10px;
+                left: 10px;
+                right: 10px;
+            }
+
+            .floating-stats {
+                position: static;
+                margin-top: 1rem;
+                padding: 1rem;
+                gap: 1rem;
+            }
+
+            .stat-item .number {
+                font-size: 1.5rem;
             }
         }
 
-        /* Keep PC view unchanged */
+        /* Desktop specific */
         @media (min-width: 993px) {
             .mobile-menu-toggle,
             .mobile-apply-float,
@@ -692,8 +768,12 @@
                 display: none !important;
             }
 
-            .navmenu, .btn-getstarted {
-                display: flex !important;
+            .whatsapp-float {
+                bottom: 30px;
+                right: 30px;
+                width: 60px;
+                height: 60px;
+                font-size: 30px;
             }
         }
     </style>
@@ -701,8 +781,8 @@
 
 <body class="about-page">
 
-    <!-- WhatsApp Float Button - Hidden on Mobile -->
-    <a href="https://wa.me/27861000534?text=Hello%20Lehumo%20La%20Edishela,%20I%20would%20like%20to%20inquire%20about%20your%20loan%20services" class="whatsapp-float" target="_blank" aria-label="Chat with us on WhatsApp">
+    <!-- WhatsApp Float Button - Updated with new number -->
+    <a href="https://wa.me/27722927336?text=Hello%20Lehumo%20La%20Edishela,%20I%20would%20like%20to%20inquire%20about%20your%20financial%20services" class="whatsapp-float" target="_blank" aria-label="Chat with us on WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -736,9 +816,24 @@
                     <ul class="mobile-dropdown-menu" id="asset-dropdown">
                         <li><a href="vehicle-loans.html">Vehicle Loans</a></li>
                         <li><a href="luxury-loans.html">Luxury Assets</a></li>
-                        <li><a href="propertyloans.html">Property Loans</a></li>
-                        <li><a href="equipmentfinance.html">Equipment Finance</a></li>
-                        <li><a href="artcollectibles.html">Art & Collectibles</a></li>
+                        <li><a href="property-loans.html">Property Loans</a></li>
+                        <li><a href="equipment-finance.html">Equipment Finance</a></li>
+                        <li><a href="art-collectibles.html">Art & Collectibles</a></li>
+                    </ul>
+                </li>
+
+                <!-- Insurance Services -->
+                <li>
+                    <button class="mobile-dropdown-toggle" data-target="insurance-dropdown">
+                        <span>Insurance</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+                    <ul class="mobile-dropdown-menu" id="insurance-dropdown">
+                        <li><a href="business-insurance.html">Business Insurance</a></li>
+                        <li><a href="asset-insurance.html">Asset Insurance</a></li>
+                        <li><a href="vehicle-insurance.html">Vehicle Insurance</a></li>
+                        <li><a href="property-insurance.html">Property Insurance</a></li>
+                        <li><a href="life-insurance.html">Life Insurance</a></li>
                     </ul>
                 </li>
 
@@ -749,10 +844,10 @@
                         <i class="bi bi-chevron-down"></i>
                     </button>
                     <ul class="mobile-dropdown-menu" id="fleet-dropdown">
-                        <li><a href="fleetfinancing.html">Fleet Financing</a></li>
-                        <li><a href="vehiclesourcing.html">Vehicle Sourcing</a></li>
-                        <li><a href="truckloans.html">Truck & Trailer Loans</a></li>
-                        <li><a href="maintenance.html">Maintenance Packages</a></li>
+                        <li><a href="fleet-financing.html">Fleet Financing</a></li>
+                        <li><a href="vehicle-sourcing.html">Vehicle Sourcing</a></li>
+                        <li><a href="truck-loans.html">Truck & Trailer Loans</a></li>
+                        <li><a href="maintenance-packages.html">Maintenance Packages</a></li>
                     </ul>
                 </li>
 
@@ -770,31 +865,18 @@
                     </ul>
                 </li>
 
-                <!-- FAQ Dropdown -->
+                <!-- FAQ Dropdown with How To Apply inside -->
                 <li>
                     <button class="mobile-dropdown-toggle" data-target="faq-dropdown">
                         <span>FAQ</span>
                         <i class="bi bi-chevron-down"></i>
                     </button>
                     <ul class="mobile-dropdown-menu" id="faq-dropdown">
+                        <li><a href="apply-requirements.html">How To Apply</a></li>
                         <li><a href="faq-general.html">General Questions</a></li>
                         <li><a href="faq-application.html">Application Process</a></li>
                         <li><a href="faq-interest-rates.html">Interest & Rates</a></li>
                         <li><a href="faq-asset-requirements.html">Asset Requirements</a></li>
-                    </ul>
-                </li>
-
-                <!-- How To Apply Dropdown -->
-                <li>
-                    <button class="mobile-dropdown-toggle" data-target="apply-dropdown">
-                        <span>How To Apply</span>
-                        <i class="bi bi-chevron-down"></i>
-                    </button>
-                    <ul class="mobile-dropdown-menu" id="apply-dropdown">
-                        <li><a href="apply-requirements.html">Requirements</a></li>
-                        <li><a href="apply-documentation.html">Documentation</a></li>
-                        <li><a href="apply-process.html">Process Steps</a></li>
-                        <li><a href="apply-timeline.html">Timeline</a></li>
                     </ul>
                 </li>
 
@@ -804,13 +886,13 @@
     </div>
 
     <header id="header" class="header d-flex align-items-center fixed-top">
-        <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-
-            <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-                <div class="logo-container">
+        <div class="header-container container-fluid container-xl">
+            <!-- Logo wrapper - absolutely positioned for desktop, normal for mobile -->
+            <div class="logo-wrapper">
+                <a href="index.html" class="logo-link">
                     <img src="assets/img/logo.png" alt="Lehumo La Edishela Logo" class="logo-image">
-                </div>
-            </a>
+                </a>
+            </div>
 
             <!-- Mobile Menu Toggle -->
             <button class="mobile-menu-toggle" id="mobileMenuToggle">
@@ -822,25 +904,43 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html" class="active">About Us</a></li>
+
+                    <!-- Asset Loans Dropdown -->
                     <li class="dropdown">
                         <a href="#"><span>Asset Loans</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                         <ul>
                             <li><a href="vehicle-loans.html">Vehicle Loans</a></li>
                             <li><a href="luxury-loans.html">Luxury Assets</a></li>
-                            <li><a href="propertyloans.html">Property Loans</a></li>
-                            <li><a href="equipmentfinance.html">Equipment Finance</a></li>
-                            <li><a href="artcollectibles.html">Art & Collectibles</a></li>
+                            <li><a href="property-loans.html">Property Loans</a></li>
+                            <li><a href="equipment-finance.html">Equipment Finance</a></li>
+                            <li><a href="art-collectibles.html">Art & Collectibles</a></li>
                         </ul>
                     </li>
+
+                    <!-- Insurance Dropdown -->
+                    <li class="dropdown">
+                        <a href="#"><span>Insurance</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="business-insurance.html">Business Insurance</a></li>
+                            <li><a href="asset-insurance.html">Asset Insurance</a></li>
+                            <li><a href="vehicle-insurance.html">Vehicle Insurance</a></li>
+                            <li><a href="property-insurance.html">Property Insurance</a></li>
+                            <li><a href="life-insurance.html">Life Insurance</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Commercial Fleet Dropdown -->
                     <li class="dropdown">
                         <a href="#"><span>Commercial Fleet</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                         <ul>
-                            <li><a href="fleetfinancing.html">Fleet Financing</a></li>
-                            <li><a href="vehiclesourcing.html">Vehicle Sourcing</a></li>
-                            <li><a href="truckloans.html">Truck & Trailer Loans</a></li>
-                            <li><a href="maintenance.html">Maintenance Packages</a></li>
+                            <li><a href="fleet-financing.html">Fleet Financing</a></li>
+                            <li><a href="vehicle-sourcing.html">Vehicle Sourcing</a></li>
+                            <li><a href="truck-loans.html">Truck & Trailer Loans</a></li>
+                            <li><a href="maintenance-packages.html">Maintenance Packages</a></li>
                         </ul>
                     </li>
+
+                    <!-- Bridging Finance Dropdown -->
                     <li class="dropdown">
                         <a href="#"><span>Bridging Finance</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                         <ul>
@@ -850,27 +950,21 @@
                             <li><a href="development-finance.html">Development Finance</a></li>
                         </ul>
                     </li>
+
+                    <!-- FAQ Dropdown with How To Apply inside -->
                     <li class="dropdown">
                         <a href="#"><span>FAQ</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                         <ul>
+                            <li><a href="apply-requirements.html">How To Apply</a></li>
                             <li><a href="faq-general.html">General Questions</a></li>
                             <li><a href="faq-application.html">Application Process</a></li>
                             <li><a href="faq-interest-rates.html">Interest & Rates</a></li>
                             <li><a href="faq-asset-requirements.html">Asset Requirements</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown">
-                        <a href="#"><span>How To Apply</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                        <ul>
-                            <li><a href="apply-requirements.html">Requirements</a></li>
-                            <li><a href="apply-documentation.html">Documentation</a></li>
-                            <li><a href="apply-process.html">Process Steps</a></li>
-                            <li><a href="apply-timeline.html">Timeline</a></li>
-                        </ul>
-                    </li>
+
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
-                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
 
             <a class="btn-getstarted" href="apply.html">Apply Now</a>
@@ -884,7 +978,7 @@
         <div class="page-title dark-background" data-aos="fade">
             <div class="container position-relative">
                 <h1>About Us</h1>
-                <p>Your trusted partner for fast, secure asset-backed loans. FSCA registered with over R2 billion in approved loans and 15,000+ happy clients.</p>
+                <p>Your trusted partner for professional financial services. FSCA registered and NCR approved, providing secured and unsecured loans, bridging finance, and comprehensive insurance solutions.</p>
                 <nav class="breadcrumbs">
                     <ol>
                         <li><a href="index.html">Home</a></li>
@@ -901,8 +995,8 @@
                 <div class="row">
                     <div class="col-lg-8 mx-auto text-center mb-5">
                         <div class="intro-content" data-aos="fade-up" data-aos-delay="200">
-                            <h2>Solving Financial Challenges with Simple Solutions</h2>
-                            <p class="lead">We started with one simple idea: help people get cash from their assets when they need it most. Today, we've helped over 15,000 clients with more than R2 billion in approved loans.</p>
+                            <h2>Professional Financial Solutions for Your Peace of Mind</h2>
+                            <p class="lead">We started with a simple mission: to provide accessible, transparent financial services that help individuals and businesses thrive. Today, we've helped over 5,000 clients with more than R500 million in finance arranged.</p>
                         </div>
                     </div>
                 </div>
@@ -913,12 +1007,12 @@
                             <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="img-fluid rounded-4" alt="Lehumo La Edishela Team">
                             <div class="floating-stats">
                                 <div class="stat-item">
-                                    <span class="number">R2BN+</span>
-                                    <span class="label">Loans Approved</span>
+                                    <span class="number">R500M+</span>
+                                    <span class="label">Finance Arranged</span>
                                 </div>
                                 <div class="stat-item">
-                                    <span class="number">15K+</span>
-                                    <span class="label">Happy Clients</span>
+                                    <span class="number">5,000+</span>
+                                    <span class="label">Clients Served</span>
                                 </div>
                             </div>
                         </div>
@@ -930,9 +1024,9 @@
                                 <i class="bi bi-lightbulb"></i>
                                 <span>Our Story</span>
                             </div>
-                            <h3>Born from a Need for Better Solutions</h3>
-                            <p>We saw too many people struggling when they needed cash quickly. Traditional banks took weeks to approve loans, and many people had valuable assets sitting idle. We asked: "Why can't people use what they already own to get the cash they need, fast?"</p>
-                            <p>That question led us to create Lehumo La Edishela. We built a system that's simple, fast, and fair. We value your assets properly, approve loans quickly, and give you money when you need it most. Whether it's for a business opportunity, an emergency, or a big purchase, we're here to help.</p>
+                            <h3>Born from a Need for Better Financial Solutions</h3>
+                            <p>We recognized that many individuals and businesses struggled to access the financial services they needed. Traditional institutions often had slow processes, complex requirements, and limited product offerings. We asked: "How can we make quality financial services more accessible and transparent?"</p>
+                            <p>That question led us to create Lehumo La Edishela. We built a comprehensive financial services platform that's simple, fast, and fair. Whether you need a secured loan against your assets, unsecured personal finance, bridging finance for property transactions, or insurance to protect what matters most, we're here to help with professional advice and tailored solutions.</p>
 
                             <div class="mission-box">
                                 <div class="mission-icon">
@@ -940,7 +1034,7 @@
                                 </div>
                                 <div class="mission-text">
                                     <h4>Our Mission</h4>
-                                    <p>"To provide simple, fast financial solutions that help people unlock the value in their assets when they need it most."</p>
+                                    <p>"To provide accessible, transparent, and professional financial services that help our clients achieve their goals with confidence and peace of mind."</p>
                                 </div>
                             </div>
                         </div>
@@ -952,7 +1046,7 @@
                         <div class="features-grid" data-aos="fade-up" data-aos-delay="200">
                             <div class="section-header text-center mb-5">
                                 <h3>What Makes Us Different</h3>
-                                <p>Six reasons why thousands of clients choose us for their financial needs</p>
+                                <p>Six reasons why clients choose us for their financial needs</p>
                             </div>
 
                             <div class="row g-4">
@@ -962,17 +1056,17 @@
                                             <i class="bi bi-shield-check"></i>
                                         </div>
                                         <h4>FSCA Registered</h4>
-                                        <p>We're fully regulated by the Financial Sector Conduct Authority, so you can trust us with your valuable assets.</p>
+                                        <p>We are fully regulated by the Financial Sector Conduct Authority, ensuring professional and ethical service you can trust.</p>
                                     </div>
                                 </div>
 
                                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
                                     <div class="feature-card">
                                         <div class="feature-icon">
-                                            <i class="bi bi-clock-history"></i>
+                                            <i class="bi bi-building"></i>
                                         </div>
-                                        <h4>Fast Approvals</h4>
-                                        <p>Get a decision in hours, not weeks. Most approvals happen the same day, with money in your account quickly.</p>
+                                        <h4>NCR Approved</h4>
+                                        <p>Registered with the National Credit Regulator, we adhere to all credit regulations and treat clients fairly and transparently.</p>
                                     </div>
                                 </div>
 
@@ -981,8 +1075,8 @@
                                         <div class="feature-icon">
                                             <i class="bi bi-cash-coin"></i>
                                         </div>
-                                        <h4>Fair Valuations</h4>
-                                        <p>We give you a fair value for your assets. Our experts know what your items are really worth.</p>
+                                        <h4>Competitive Rates</h4>
+                                        <p>We offer transparent pricing with no hidden fees and interest rates that reflect your specific risk profile.</p>
                                     </div>
                                 </div>
 
@@ -991,8 +1085,8 @@
                                         <div class="feature-icon">
                                             <i class="bi bi-headset"></i>
                                         </div>
-                                        <h4>Personal Service</h4>
-                                        <p>You talk to real people who understand your needs. We guide you through every step of the process.</p>
+                                        <h4>Expert Advice</h4>
+                                        <p>Our qualified consultants provide professional guidance to help you make informed financial decisions.</p>
                                     </div>
                                 </div>
 
@@ -1001,8 +1095,8 @@
                                         <div class="feature-icon">
                                             <i class="bi bi-briefcase"></i>
                                         </div>
-                                        <h4>Flexible Terms</h4>
-                                        <p>We create repayment plans that work with your budget. We understand that everyone's situation is different.</p>
+                                        <h4>Tailored Solutions</h4>
+                                        <p>We take time to understand your needs and create solutions that work for your specific situation.</p>
                                     </div>
                                 </div>
 
@@ -1011,8 +1105,8 @@
                                         <div class="feature-icon">
                                             <i class="bi bi-lock"></i>
                                         </div>
-                                        <h4>Secure Process</h4>
-                                        <p>Your assets are fully insured and securely managed. We take the security of your valuables seriously.</p>
+                                        <h4>Secure & Confidential</h4>
+                                        <p>Your personal and financial information is protected with industry-standard security and confidentiality.</p>
                                     </div>
                                 </div>
                             </div>
@@ -1025,7 +1119,7 @@
                         <div class="journey-timeline" data-aos="fade-up" data-aos-delay="200">
                             <div class="timeline-header text-center mb-5">
                                 <h3>Our Journey So Far</h3>
-                                <p>Key moments in our mission to provide better financial solutions</p>
+                                <p>Key moments in our mission to provide better financial services</p>
                             </div>
 
                             <div class="timeline-container">
@@ -1036,8 +1130,8 @@
                                         <span class="year">2015</span>
                                     </div>
                                     <div class="milestone-content">
-                                        <h4>Seeing the Problem</h4>
-                                        <p>We noticed how many people struggled to get quick cash from banks. They had valuable assets but couldn't use them when they needed money fast.</p>
+                                        <h4>Identifying the Need</h4>
+                                        <p>We recognized that individuals and businesses needed more accessible, transparent financial services than what traditional institutions offered.</p>
                                     </div>
                                 </div>
 
@@ -1046,8 +1140,8 @@
                                         <span class="year">2017</span>
                                     </div>
                                     <div class="milestone-content">
-                                        <h4>Finding the Solution</h4>
-                                        <p>We developed our fast approval system and started helping clients get cash against their vehicles, luxury items, and other assets within hours.</p>
+                                        <h4>FSCA Registration</h4>
+                                        <p>We obtained our FSCA license and began offering secured loan products, helping clients access finance against their valuable assets.</p>
                                     </div>
                                 </div>
 
@@ -1056,8 +1150,8 @@
                                         <span class="year">2020</span>
                                     </div>
                                     <div class="milestone-content">
-                                        <h4>Growing Our Services</h4>
-                                        <p>Expanded to offer bridging finance, commercial fleet loans, and more specialized services to meet our clients' diverse needs.</p>
+                                        <h4>Expanding Our Services</h4>
+                                        <p>We added unsecured loans, bridging finance, and commercial fleet solutions to meet our clients' diverse financial needs.</p>
                                     </div>
                                 </div>
 
@@ -1066,8 +1160,8 @@
                                         <span class="year">2023</span>
                                     </div>
                                     <div class="milestone-content">
-                                        <h4>Reaching Milestones</h4>
-                                        <p>Helped our 15,000th client and approved over R2 billion in loans. Became one of South Africa's most trusted asset-backed lenders.</p>
+                                        <h4>NCR Approval & Insurance</h4>
+                                        <p>We achieved NCR approval and launched comprehensive insurance services, becoming a full-service financial provider.</p>
                                     </div>
                                 </div>
                             </div>
@@ -1080,8 +1174,8 @@
                         <div class="cta-banner" data-aos="zoom-in" data-aos-delay="300">
                             <div class="cta-overlay">
                                 <div class="cta-content">
-                                    <h3>Ready to Get Cash From Your Assets?</h3>
-                                    <p>Join thousands of clients who've discovered our fast, simple way to get the money they need.</p>
+                                    <h3>Ready to Discuss Your Financial Needs?</h3>
+                                    <p>Join thousands of clients who've discovered our professional, transparent approach to financial services.</p>
                                     <div class="cta-buttons">
                                         <a href="apply.html" class="btn btn-primary me-3">Apply Now</a>
                                         <a href="contact.html" class="btn btn-outline-primary">Talk to Our Team</a>
@@ -1103,48 +1197,49 @@
             <div class="row gy-4">
                 <div class="col-lg-4 col-md-6 footer-about">
                     <a href="index.html" class="d-flex align-items-center mb-3" style="text-decoration: none;">
-                        <div class="logo-container">
-                            <img src="assets/img/logo.png" alt="Lehumo La Edishela Logo" class="logo-image">
-                            <h1 class="sitename">LEHUMO LA EDISHELA</h1>
-                        </div>
+                        <img src="assets/img/logo.png" alt="Lehumo La Edishela Logo" class="logo-image me-3">
+                        <span class="sitename">LEHUMO LA EDISHELA</span>
                     </a>
                     <div class="footer-contact">
-                        <p class="mb-3">Your trusted partner for asset-backed loans. Fast approvals, great rates, and FSCA registered for your peace of mind.</p>
-                        <p class="mb-2"><strong>Need to talk to us?</strong></p>
-                        <p class="mb-2"><i class="bi bi-telephone me-2"></i> 0861 000 534</p>
-                        <p class="mb-3"><i class="bi bi-envelope me-2"></i> info@lehumo.co.za</p>
-                        <p><i class="bi bi-shield-check me-2"></i> FSCA Registered</p>
+                        <p class="mb-3">Your trusted partner for financial services and insurance. FSCA registered and NCR approved for your peace of mind.</p>
+                        <p class="mb-2"><strong>Contact Us:</strong></p>
+                        <p class="mb-2"><i class="bi bi-telephone me-2"></i> 072 292 7336</p>
+                        <p class="mb-2"><i class="bi bi-envelope me-2"></i> info@edi-h.co.za</p>
+                        <p class="mb-2"><i class="bi bi-whatsapp me-2"></i> 072 292 7336</p>
+                        <p><i class="bi bi-shield-check me-2"></i> FSCA Registered | NCR Approved</p>
                     </div>
                 </div>
 
                 <div class="col-lg-2 col-md-3 footer-links">
                     <h4 class="mb-3">Quick Links</h4>
-                    <ul>
-                        <li><i class="bi bi-chevron-right"></i> <a href="index.html">Home</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="about.html">About Us</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="contact.html">Contact Us</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="apply.html">Apply Now</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="faq.html">FAQ & Help</a></li>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html">Home</a></li>
+                        <li class="mb-2"><a href="about.html">About Us</a></li>
+                        <li class="mb-2"><a href="contact.html">Contact Us</a></li>
+                        <li class="mb-2"><a href="apply.html">Apply Now</a></li>
+                        <li class="mb-2"><a href="faq.html">FAQ</a></li>
                     </ul>
                 </div>
 
-                <div class="col-lg-2 col-md-3 footer-links">
+                <div class="col-lg-3 col-md-3 footer-links">
                     <h4 class="mb-3">Our Services</h4>
-                    <ul>
-                        <li><i class="bi bi-chevron-right"></i> <a href="vehicle-loans.html">Vehicle Loans</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="luxury-loans.html">Luxury Asset Loans</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="bridging-finance.html">Bridging Finance</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="commercial-finance.html">Commercial Finance</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="fleetfinancing.html">Fleet Financing</a></li>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="secured-loans.html">Secured Loans</a></li>
+                        <li class="mb-2"><a href="unsecured-loans.html">Unsecured Loans</a></li>
+                        <li class="mb-2"><a href="bridging-finance.html">Bridging Finance</a></li>
+                        <li class="mb-2"><a href="business-insurance.html">Business Insurance</a></li>
+                        <li class="mb-2"><a href="asset-insurance.html">Asset Insurance</a></li>
+                        <li class="mb-2"><a href="commercial-fleet.html">Commercial Fleet</a></li>
                     </ul>
                 </div>
 
-                <div class="col-lg-4 col-md-12">
+                <div class="col-lg-3 col-md-12">
                     <h4 class="mb-3">Contact Details</h4>
                     <div class="contact-info mb-3">
-                        <p><i class="bi bi-geo-alt me-2"></i> Sandton, Johannesburg</p>
-                        <p><i class="bi bi-clock me-2"></i> Mon-Fri: 8am-6pm | Sat: 9am-1pm</p>
-                        <p><i class="bi bi-building me-2"></i> Nationwide Service</p>
+                        <p class="mb-2"><i class="bi bi-geo-alt me-2"></i> Johannesburg, South Africa</p>
+                        <p class="mb-2"><i class="bi bi-clock me-2"></i> Mon-Fri: 8am-5pm</p>
+                        <p class="mb-2"><i class="bi bi-clock me-2"></i> Sat: 9am-12pm</p>
+                        <p class="mb-2"><i class="bi bi-building me-2"></i> Nationwide Service</p>
                     </div>
                     <div class="social-links d-flex mt-4">
                         <a href="#" class="me-3"><i class="bi bi-linkedin"></i></a>
@@ -1157,8 +1252,8 @@
         </div>
 
         <div class="container copyright text-center mt-4 pt-4 border-top border-secondary">
-            <p class="mb-2">© 2023 Lehumo La Edishela Financial Services. All rights reserved.</p>
-            <div class="credits">
+            <p class="mb-2">© 2025 Lehumo La Edishela Financial Services. All rights reserved.</p>
+            <div class="credits small">
                 <a href="privacy.html" class="me-3">Privacy Policy</a> |
                 <a href="terms.html" class="mx-3">Terms of Service</a> |
                 <a href="complaints.html" class="ms-3">Complaints Procedure</a>
@@ -1174,12 +1269,9 @@
 
     <!-- Vendor JS Files -->
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
     <script src="assets/vendor/aos/aos.js"></script>
     <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
     <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
 
     <!-- Main JS File -->
@@ -1204,7 +1296,6 @@
             mobileMenuContainer.classList.remove('active');
             document.body.style.overflow = 'auto';
 
-            // Close all dropdowns
             const dropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
             dropdownToggles.forEach(toggle => {
                 toggle.classList.remove('active');
@@ -1238,7 +1329,6 @@
                 toggle.classList.toggle('active');
                 targetMenu.classList.toggle('active');
 
-                // Close other dropdowns
                 document.querySelectorAll('.mobile-dropdown-toggle').forEach(otherToggle => {
                     if (otherToggle !== toggle) {
                         otherToggle.classList.remove('active');
@@ -1253,47 +1343,11 @@
             }
         });
 
-        // WhatsApp button interaction
-        const whatsappBtn = document.querySelector('.whatsapp-float');
-        if (whatsappBtn) {
-            whatsappBtn.addEventListener('click', function () {
-                // Optional: Track WhatsApp clicks
-                console.log('WhatsApp button clicked from About page');
-            });
-        }
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                if (this.getAttribute('href') === '#') return;
-
-                e.preventDefault();
-
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 100,
-                        behavior: 'smooth'
-                    });
-
-                    // Close mobile menu if open
-                    if (window.innerWidth <= 992) {
-                        closeMobileMenu();
-                    }
-                }
-            });
-        });
-
-        // Header scroll effect
-        window.addEventListener('scroll', function () {
-            const header = document.querySelector('.header');
-            if (window.scrollY > 100) {
-                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
-            } else {
-                header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
-            }
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
         });
 
         // Close mobile menu when clicking menu links
@@ -1303,6 +1357,18 @@
                     closeMobileMenu();
                 }
             });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.15)';
+                header.style.backgroundColor = 'rgba(255, 255, 255, 1)';
+            } else {
+                header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+                header.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
+            }
         });
     </script>
 
